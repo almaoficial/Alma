@@ -1,0 +1,157 @@
+{
+  "experimento": "ALMA-EXP19",
+  "seeds": [
+    1921,
+    1922,
+    1923,
+    1924
+  ],
+  "por_seed": [
+    {
+      "seed": 1921,
+      "probe": {
+        "agente_seleccionado": "F",
+        "acc_probe_por_agente": {
+          "A": 0.75,
+          "B": 0.4375,
+          "C": 0.8125,
+          "D": 0.625,
+          "E": 0.4375,
+          "F": 0.9375,
+          "G": 0.5
+        },
+        "acierto_probe": true,
+        "f1": 0.5635,
+        "llamadas": 5112,
+        "E": 0.110224
+      },
+      "individual": {
+        "agente": "C",
+        "f1": 0.3249,
+        "llamadas": 5000,
+        "E": 0.06497
+      },
+      "voto": {
+        "f1": 0.5319,
+        "llamadas": 35000,
+        "E": 0.015198
+      },
+      "hits_pool": 657,
+      "hits_probe": 1
+    },
+    {
+      "seed": 1922,
+      "probe": {
+        "agente_seleccionado": "D",
+        "acc_probe_por_agente": {
+          "A": 0.6875,
+          "B": 0.4375,
+          "C": 0.75,
+          "D": 0.8125,
+          "E": 0.5,
+          "F": 0.8125,
+          "G": 0.5
+        },
+        "acierto_probe": false,
+        "f1": 0.3997,
+        "llamadas": 5112,
+        "E": 0.078179
+      },
+      "individual": {
+        "agente": "A",
+        "f1": 0.2469,
+        "llamadas": 5000,
+        "E": 0.049374
+      },
+      "voto": {
+        "f1": 0.5093,
+        "llamadas": 35000,
+        "E": 0.014552
+      },
+      "hits_pool": 597,
+      "hits_probe": 2
+    },
+    {
+      "seed": 1923,
+      "probe": {
+        "agente_seleccionado": "D",
+        "acc_probe_por_agente": {
+          "A": 0.5,
+          "B": 0.75,
+          "C": 0.6875,
+          "D": 0.8125,
+          "E": 0.5,
+          "F": 0.75,
+          "G": 0.4375
+        },
+        "acierto_probe": false,
+        "f1": 0.413,
+        "llamadas": 5112,
+        "E": 0.080788
+      },
+      "individual": {
+        "agente": "G",
+        "f1": 0.2289,
+        "llamadas": 5000,
+        "E": 0.04578
+      },
+      "voto": {
+        "f1": 0.5285,
+        "llamadas": 35000,
+        "E": 0.015099
+      },
+      "hits_pool": 624,
+      "hits_probe": 1
+    },
+    {
+      "seed": 1924,
+      "probe": {
+        "agente_seleccionado": "F",
+        "acc_probe_por_agente": {
+          "A": 0.5625,
+          "B": 0.75,
+          "C": 0.625,
+          "D": 0.625,
+          "E": 0.625,
+          "F": 0.8125,
+          "G": 0.625
+        },
+        "acierto_probe": true,
+        "f1": 0.5466,
+        "llamadas": 5112,
+        "E": 0.106923
+      },
+      "individual": {
+        "agente": "B",
+        "f1": 0.3074,
+        "llamadas": 5000,
+        "E": 0.061481
+      },
+      "voto": {
+        "f1": 0.496,
+        "llamadas": 35000,
+        "E": 0.014171
+      },
+      "hits_pool": 620,
+      "hits_probe": 1
+    }
+  ],
+  "medias": {
+    "E_probe": 0.094029,
+    "E_individual": 0.055401,
+    "E_voto": 0.014755,
+    "F1_probe": 0.4807,
+    "F1_individual": 0.277,
+    "F1_voto": 0.5164
+  },
+  "diffs_E_probe_menos_ind": [
+    0.045254,
+    0.028805,
+    0.035008,
+    0.045442
+  ],
+  "criterio": "E_probe > E_individual Y E_probe > E_voto (medias)",
+  "veredicto": "PASS",
+  "pasa": true,
+  "acierto_probe_seeds": 2
+}

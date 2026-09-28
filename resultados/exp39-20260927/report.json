@@ -1,0 +1,65 @@
+{
+  "preregistro": "resultados/exp39-20260927/preregistro.json",
+  "replicas": 6,
+  "pnl_buyhold": 0.085041,
+  "tabla_regla_x_replica": {
+    "regla36": [
+      -0.008281,
+      -0.020355,
+      -0.029983,
+      0.220403,
+      0.095114,
+      0.124726
+    ],
+    "regla37": [
+      -0.016937,
+      0.01757,
+      0.010164,
+      0.084267,
+      0.027767,
+      0.059524
+    ],
+    "regla38": [
+      -0.030489,
+      -0.059054,
+      -0.045529,
+      0.189436,
+      0.077812,
+      0.086945
+    ]
+  },
+  "efecto_neto": {
+    "regla36": {
+      "media": -0.021437,
+      "desvio": 0.100289,
+      "media_menos_1sd": -0.121727
+    },
+    "regla37": {
+      "media": -0.054649,
+      "desvio": 0.036254,
+      "media_menos_1sd": -0.090902
+    },
+    "regla38": {
+      "media": -0.048521,
+      "desvio": 0.097967,
+      "media_menos_1sd": -0.146488
+    }
+  },
+  "costo_total_usd": 0.0,
+  "veredicto": {
+    "pasa": false,
+    "reglas_que_pasan": [],
+    "criterio": {
+      "efecto": "P&L_regla(replica) - P&L_buyhold",
+      "pass": "alguna regla con media(efecto) > 0 y media(efecto) - 1*desvio(efecto) > -0.01"
+    },
+    "motivos": [
+      "buyhold (referencia fija): +8.5041%",
+      "regla36: efecto neto media=-2.1437%, desvio=+10.0289%, media-1sd=-12.1727% | por replica: -9.332%, -10.540%, -11.502%, +13.536%, +1.007%, +3.969%",
+      "regla37: efecto neto media=-5.4649%, desvio=+3.6254%, media-1sd=-9.0902% | por replica: -10.198%, -6.747%, -7.488%, -0.077%, -5.727%, -2.552%",
+      "regla38: efecto neto media=-4.8521%, desvio=+9.7967%, media-1sd=-14.6488% | por replica: -11.553%, -14.409%, -13.057%, +10.440%, -0.723%, +0.190%",
+      "ninguna regla cumple media>0 y media-1sd>-1% (vara intacta)"
+    ]
+  },
+  "duracion_s": 0.3
+}

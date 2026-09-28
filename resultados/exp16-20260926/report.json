@@ -1,0 +1,206 @@
+{
+  "preregistro": {
+    "experimento": "ALMA-EXP16: replicación multi-seed de ALMA v2 — ¿son confiables los veredictos de una sola seed?",
+    "fecha": "2026-09-26T16:00:57",
+    "criterio_exito": {
+      "rango_max_confiable": 1.0,
+      "interpretacion": "rango(max-min) del regret entre seeds > 1.0 => veredictos de una sola seed NO confiables; < 1.0 => se sostienen"
+    },
+    "diseno": {
+      "oraculo": "COPIADO de EXP12 (3 brazos x 2 intentos, 720 mediciones, fases 16A-*); sin medir de nuevo",
+      "stream": "10 bloques x 12 idéntico a EXP12 (verificado), flip real 8/9 alternancias",
+      "politica": "réplica exacta de ALMA v2 de EXP13 (probe q=0,1,2 + re-probe q=10,11; Thompson; prior warm con olvido 0.5^d; fix1: default = prior-best warm, cambio si alternativo supera por > 0.05; fix2: poda de brazos muertos). Fases propias por seed: 16B-s{seed}-probe/full (pulls frescos por réplica).",
+      "seeds": [
+        1616,
+        1717,
+        1818,
+        1919
+      ],
+      "comparacion": "mejor brazo fijo entre los 3 (replay del oráculo)",
+      "rng": "pareado por (seed,bloque,q)",
+      "freno_costo": "si proyección > US$1,00: detener (exit 2)"
+    },
+    "orden_bloques": [
+      {
+        "bloque": "calculo",
+        "mejor_oraculo": "cot",
+        "margen": 0.115
+      },
+      {
+        "bloque": "codigo",
+        "mejor_oraculo": "single",
+        "margen": 0.01
+      },
+      {
+        "bloque": "qa_multihop",
+        "mejor_oraculo": "cot",
+        "margen": 0.115
+      },
+      {
+        "bloque": "herramientas",
+        "mejor_oraculo": "single",
+        "margen": 0.0413
+      },
+      {
+        "bloque": "logica",
+        "mejor_oraculo": "cot",
+        "margen": 0.115
+      },
+      {
+        "bloque": "puzzles",
+        "mejor_oraculo": "single",
+        "margen": 0.01
+      },
+      {
+        "bloque": "gsm8k-a",
+        "mejor_oraculo": "cot",
+        "margen": 0.1087
+      },
+      {
+        "bloque": "mmlu-a",
+        "mejor_oraculo": "single",
+        "margen": 0.01
+      },
+      {
+        "bloque": "gsm8k-b",
+        "mejor_oraculo": "cot",
+        "margen": 0.1712
+      },
+      {
+        "bloque": "mmlu-b",
+        "mejor_oraculo": "cot",
+        "margen": 0.0525
+      }
+    ],
+    "seed": [
+      1616,
+      1717,
+      1818,
+      1919
+    ],
+    "modo": "mock"
+  },
+  "regret_por_seed": {
+    "1616": -3.775,
+    "1717": -7.985,
+    "1818": -7.695,
+    "1919": -8.715
+  },
+  "estadistica": {
+    "n": 4,
+    "media": -7.0425,
+    "desv": 2.2202,
+    "min": -8.715,
+    "max": -3.775,
+    "rango": 4.94
+  },
+  "regret_fijas": {
+    "fija_single": 16.795,
+    "fija_cot": 4.12,
+    "fija_reflexion": 21.67
+  },
+  "politicas": {
+    "1616": {
+      "regret": -3.775,
+      "cambios_reprobe": 2,
+      "selecciones": {
+        "single": 7,
+        "reflexion": 14,
+        "cot": 49
+      },
+      "podas": [
+        {
+          "bloque": 1,
+          "brazo": "single",
+          "media_emp": 0.5971,
+          "mejor_emp": 0.74
+        }
+      ],
+      "brazos_activos_final": [
+        "cot",
+        "reflexion"
+      ]
+    },
+    "1717": {
+      "regret": -7.985,
+      "cambios_reprobe": 3,
+      "selecciones": {
+        "single": 30,
+        "cot": 40
+      },
+      "podas": [
+        {
+          "bloque": 1,
+          "brazo": "reflexion",
+          "media_emp": 0.425,
+          "mejor_emp": 0.69
+        }
+      ],
+      "brazos_activos_final": [
+        "single",
+        "cot"
+      ]
+    },
+    "1818": {
+      "regret": -7.695,
+      "cambios_reprobe": 3,
+      "selecciones": {
+        "single": 29,
+        "reflexion": 2,
+        "cot": 39
+      },
+      "podas": [
+        {
+          "bloque": 1,
+          "brazo": "reflexion",
+          "media_emp": 0.425,
+          "mejor_emp": 0.7132
+        }
+      ],
+      "brazos_activos_final": [
+        "single",
+        "cot"
+      ]
+    },
+    "1919": {
+      "regret": -8.715,
+      "cambios_reprobe": 3,
+      "selecciones": {
+        "cot": 42,
+        "single": 28
+      },
+      "podas": [
+        {
+          "bloque": 1,
+          "brazo": "reflexion",
+          "media_emp": 0.425,
+          "mejor_emp": 0.7156
+        }
+      ],
+      "brazos_activos_final": [
+        "single",
+        "cot"
+      ]
+    }
+  },
+  "costo_total_usd": 0.0239,
+  "proyeccion_usd": 0.147,
+  "detenido_por_costo": false,
+  "experiencias_nuevas": 1600,
+  "store_chain_ok": true,
+  "veredicto": {
+    "pasa": false,
+    "criterio": {
+      "rango_max_confiable": 1.0,
+      "interpretacion": "rango(max-min) del regret entre seeds > 1.0 => veredictos de una sola seed NO confiables; < 1.0 => se sostienen"
+    },
+    "motivos": [
+      "regrets por seed: 1616=-3.7750, 1717=-7.9850, 1818=-7.6950, 1919=-8.7150",
+      "media=-7.0425 desv=2.2202 min=-8.7150 max=-3.7750 rango=4.9400 (umbral pre-registrado 1.0)",
+      "criterio: rango < 1.0 => veredictos de una sola seed se sostienen; rango > 1.0 => NO confiables",
+      "referencia mejor fija (cot)=4.1200",
+      "regret fijas: single=16.79, cot=4.12, reflexion=21.67"
+    ]
+  },
+  "duracion_s": 4.6
+}

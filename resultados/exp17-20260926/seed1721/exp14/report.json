@@ -1,0 +1,591 @@
+{
+  "preregistro": {
+    "experimento": "ALMA-EXP14: fase \"sueño\" — consolidación offline entre bloques",
+    "fecha": "2026-09-26T20:21:06",
+    "criterio_exito": {
+      "sueno_gana_a_control": true
+    },
+    "diseno": {
+      "oraculo": "COPIADO de EXP12 (3 brazos x 2 intentos, 720 mediciones, fases 14A-*); sin medir de nuevo",
+      "stream": "10 bloques x 12 idéntico a EXP12 (verificado), flip real 8/9 alternancias, brazos en juego: cot/single",
+      "politica_control": "réplica exacta de ALMA v2 de EXP13 (probe q=0,1,2 + re-probe q=10,11; Thompson; prior warm con olvido 0.5^d; fix1: default = prior-best warm, cambio si alternativo supera por > 0.05; fix2: poda de brazos muertos)",
+      "politica_sueno": "idéntica + consolidación offline ENTRE bloques: replay de experiencias propias guardadas (cómputo local, sin API, sin decidir) -> priors lentos con olvido suave 0.9^d; el default del probe (fix1) usa los priors consolidados en vez del warm",
+      "comparacion": "mejor brazo fijo entre los 3 (replay del oráculo)",
+      "rng": "pareado por (politica,bloque,q), seed 1721",
+      "freno_costo": "si proyección > US$1,00: detener (exit 2)"
+    },
+    "orden_bloques": [
+      {
+        "bloque": "calculo",
+        "mejor_oraculo": "cot",
+        "margen": 0.115
+      },
+      {
+        "bloque": "codigo",
+        "mejor_oraculo": "single",
+        "margen": 0.01
+      },
+      {
+        "bloque": "qa_multihop",
+        "mejor_oraculo": "cot",
+        "margen": 0.115
+      },
+      {
+        "bloque": "herramientas",
+        "mejor_oraculo": "single",
+        "margen": 0.0413
+      },
+      {
+        "bloque": "logica",
+        "mejor_oraculo": "cot",
+        "margen": 0.115
+      },
+      {
+        "bloque": "puzzles",
+        "mejor_oraculo": "single",
+        "margen": 0.01
+      },
+      {
+        "bloque": "gsm8k-a",
+        "mejor_oraculo": "cot",
+        "margen": 0.1087
+      },
+      {
+        "bloque": "mmlu-a",
+        "mejor_oraculo": "single",
+        "margen": 0.01
+      },
+      {
+        "bloque": "gsm8k-b",
+        "mejor_oraculo": "cot",
+        "margen": 0.1712
+      },
+      {
+        "bloque": "mmlu-b",
+        "mejor_oraculo": "cot",
+        "margen": 0.0525
+      }
+    ],
+    "seed": 1721,
+    "modo": "mock"
+  },
+  "regret_total": {
+    "alma_control": -1.905,
+    "alma_sueno": -7.405,
+    "fija_single": 16.795,
+    "fija_cot": 4.12,
+    "fija_reflexion": 21.67
+  },
+  "verdad_bloque": [
+    "cot",
+    "single",
+    "cot",
+    "single",
+    "cot",
+    "single",
+    "cot",
+    "single",
+    "cot",
+    "cot"
+  ],
+  "politicas": {
+    "control": {
+      "regret": -1.905,
+      "diagnostico": [
+        {
+          "bloque": 0,
+          "clase": "calculo",
+          "mejor_oraculo": "cot",
+          "prior_means": {
+            "single": 0.5,
+            "cot": 0.5,
+            "reflexion": 0.5
+          },
+          "slow_means": null,
+          "brazos_activos": [
+            "single",
+            "cot",
+            "reflexion"
+          ],
+          "eleccion_control": "cot",
+          "eleccion_sueno": "cot",
+          "inicial": "cot",
+          "final": "cot",
+          "cambio": false
+        },
+        {
+          "bloque": 1,
+          "clase": "codigo",
+          "mejor_oraculo": "single",
+          "prior_means": {
+            "single": 0.4977,
+            "cot": 0.5677,
+            "reflexion": 0.456
+          },
+          "slow_means": null,
+          "brazos_activos": [
+            "single",
+            "cot"
+          ],
+          "eleccion_control": "single",
+          "eleccion_sueno": "single",
+          "inicial": "single",
+          "final": "single",
+          "cambio": false
+        },
+        {
+          "bloque": 2,
+          "clase": "qa_multihop",
+          "mejor_oraculo": "cot",
+          "prior_means": {
+            "single": 0.6359,
+            "cot": 0.6362
+          },
+          "slow_means": null,
+          "brazos_activos": [
+            "single",
+            "cot"
+          ],
+          "eleccion_control": "cot",
+          "eleccion_sueno": "cot",
+          "inicial": "cot",
+          "final": "cot",
+          "cambio": false
+        },
+        {
+          "bloque": 3,
+          "clase": "herramientas",
+          "mejor_oraculo": "single",
+          "prior_means": {
+            "single": 0.6005,
+            "cot": 0.6254
+          },
+          "slow_means": null,
+          "brazos_activos": [
+            "single",
+            "cot"
+          ],
+          "eleccion_control": "single",
+          "eleccion_sueno": "single",
+          "inicial": "single",
+          "final": "single",
+          "cambio": false
+        },
+        {
+          "bloque": 4,
+          "clase": "logica",
+          "mejor_oraculo": "cot",
+          "prior_means": {
+            "single": 0.5334,
+            "cot": 0.5132
+          },
+          "slow_means": null,
+          "brazos_activos": [
+            "single",
+            "cot"
+          ],
+          "eleccion_control": "cot",
+          "eleccion_sueno": "cot",
+          "inicial": "cot",
+          "final": "cot",
+          "cambio": false
+        },
+        {
+          "bloque": 5,
+          "clase": "puzzles",
+          "mejor_oraculo": "single",
+          "prior_means": {
+            "single": 0.5802,
+            "cot": 0.6127
+          },
+          "slow_means": null,
+          "brazos_activos": [
+            "single",
+            "cot"
+          ],
+          "eleccion_control": "cot",
+          "eleccion_sueno": "cot",
+          "inicial": "cot",
+          "final": "cot",
+          "cambio": false
+        },
+        {
+          "bloque": 6,
+          "clase": "gsm8k-a",
+          "mejor_oraculo": "cot",
+          "prior_means": {
+            "single": 0.4922,
+            "cot": 0.5057
+          },
+          "slow_means": null,
+          "brazos_activos": [
+            "single",
+            "cot"
+          ],
+          "eleccion_control": "cot",
+          "eleccion_sueno": "cot",
+          "inicial": "cot",
+          "final": "cot",
+          "cambio": false
+        },
+        {
+          "bloque": 7,
+          "clase": "mmlu-a",
+          "mejor_oraculo": "single",
+          "prior_means": {
+            "single": 0.4675,
+            "cot": 0.5502
+          },
+          "slow_means": null,
+          "brazos_activos": [
+            "single",
+            "cot"
+          ],
+          "eleccion_control": "cot",
+          "eleccion_sueno": "cot",
+          "inicial": "cot",
+          "final": "cot",
+          "cambio": false
+        },
+        {
+          "bloque": 8,
+          "clase": "gsm8k-b",
+          "mejor_oraculo": "cot",
+          "prior_means": {
+            "single": 0.5291,
+            "cot": 0.5735
+          },
+          "slow_means": null,
+          "brazos_activos": [
+            "single",
+            "cot"
+          ],
+          "eleccion_control": "cot",
+          "eleccion_sueno": "cot",
+          "inicial": "cot",
+          "final": "cot",
+          "cambio": false
+        },
+        {
+          "bloque": 9,
+          "clase": "mmlu-b",
+          "mejor_oraculo": "cot",
+          "prior_means": {
+            "single": 0.461,
+            "cot": 0.5729
+          },
+          "slow_means": null,
+          "brazos_activos": [
+            "single",
+            "cot"
+          ],
+          "eleccion_control": "cot",
+          "eleccion_sueno": "cot",
+          "inicial": "cot",
+          "final": "cot",
+          "cambio": false
+        }
+      ],
+      "cambios_reprobe": 0,
+      "thompson_arms": {
+        "single": 30,
+        "cot": 40
+      },
+      "podas": [
+        {
+          "bloque": 1,
+          "brazo": "reflexion",
+          "media_emp": 0.35,
+          "mejor_emp": 0.7132
+        }
+      ],
+      "brazos_activos_final": [
+        "single",
+        "cot"
+      ],
+      "desacuerdos_reglas": 0,
+      "desacuerdo_saldo_sueno": 0
+    },
+    "sueno": {
+      "regret": -7.405,
+      "diagnostico": [
+        {
+          "bloque": 0,
+          "clase": "calculo",
+          "mejor_oraculo": "cot",
+          "prior_means": {
+            "single": 0.5,
+            "cot": 0.5,
+            "reflexion": 0.5
+          },
+          "slow_means": {
+            "single": 0.5,
+            "cot": 0.5,
+            "reflexion": 0.5
+          },
+          "brazos_activos": [
+            "single",
+            "cot",
+            "reflexion"
+          ],
+          "eleccion_control": "cot",
+          "eleccion_sueno": "cot",
+          "inicial": "cot",
+          "final": "cot",
+          "cambio": false
+        },
+        {
+          "bloque": 1,
+          "clase": "codigo",
+          "mejor_oraculo": "single",
+          "prior_means": {
+            "single": 0.4875,
+            "cot": 0.5385,
+            "reflexion": 0.4682
+          },
+          "slow_means": {
+            "single": 0.575,
+            "cot": 0.6186,
+            "reflexion": 0.4667
+          },
+          "brazos_activos": [
+            "single",
+            "cot"
+          ],
+          "eleccion_control": "single",
+          "eleccion_sueno": "single",
+          "inicial": "single",
+          "final": "single",
+          "cambio": false
+        },
+        {
+          "bloque": 2,
+          "clase": "qa_multihop",
+          "mejor_oraculo": "cot",
+          "prior_means": {
+            "single": 0.6387,
+            "cot": 0.6417
+          },
+          "slow_means": {
+            "single": 0.7351,
+            "cot": 0.6534,
+            "reflexion": 0.4221
+          },
+          "brazos_activos": [
+            "single",
+            "cot"
+          ],
+          "eleccion_control": "cot",
+          "eleccion_sueno": "cot",
+          "inicial": "cot",
+          "final": "single",
+          "cambio": true
+        },
+        {
+          "bloque": 3,
+          "clase": "herramientas",
+          "mejor_oraculo": "single",
+          "prior_means": {
+            "single": 0.6061,
+            "cot": 0.6424
+          },
+          "slow_means": {
+            "single": 0.7353,
+            "cot": 0.7538,
+            "reflexion": 0.4007
+          },
+          "brazos_activos": [
+            "single",
+            "cot"
+          ],
+          "eleccion_control": "single",
+          "eleccion_sueno": "single",
+          "inicial": "single",
+          "final": "single",
+          "cambio": false
+        },
+        {
+          "bloque": 4,
+          "clase": "logica",
+          "mejor_oraculo": "cot",
+          "prior_means": {
+            "single": 0.5353,
+            "cot": 0.5217
+          },
+          "slow_means": {
+            "single": 0.7389,
+            "cot": 0.6784,
+            "reflexion": 0.4626
+          },
+          "brazos_activos": [
+            "single",
+            "cot"
+          ],
+          "eleccion_control": "cot",
+          "eleccion_sueno": "cot",
+          "inicial": "cot",
+          "final": "cot",
+          "cambio": false
+        },
+        {
+          "bloque": 5,
+          "clase": "puzzles",
+          "mejor_oraculo": "single",
+          "prior_means": {
+            "single": 0.5916,
+            "cot": 0.6193
+          },
+          "slow_means": {
+            "single": 0.7293,
+            "cot": 0.7225,
+            "reflexion": 0.4707
+          },
+          "brazos_activos": [
+            "single",
+            "cot"
+          ],
+          "eleccion_control": "cot",
+          "eleccion_sueno": "cot",
+          "inicial": "cot",
+          "final": "single",
+          "cambio": true
+        },
+        {
+          "bloque": 6,
+          "clase": "gsm8k-a",
+          "mejor_oraculo": "cot",
+          "prior_means": {
+            "single": 0.4956,
+            "cot": 0.5104
+          },
+          "slow_means": {
+            "single": 0.7189,
+            "cot": 0.6936,
+            "reflexion": 0.5346
+          },
+          "brazos_activos": [
+            "single",
+            "cot"
+          ],
+          "eleccion_control": "cot",
+          "eleccion_sueno": "single",
+          "inicial": "single",
+          "final": "cot",
+          "cambio": true
+        },
+        {
+          "bloque": 7,
+          "clase": "mmlu-a",
+          "mejor_oraculo": "single",
+          "prior_means": {
+            "single": 0.4668,
+            "cot": 0.5574
+          },
+          "slow_means": {
+            "single": 0.6973,
+            "cot": 0.7196,
+            "reflexion": 0.5816
+          },
+          "brazos_activos": [
+            "single",
+            "cot"
+          ],
+          "eleccion_control": "cot",
+          "eleccion_sueno": "cot",
+          "inicial": "cot",
+          "final": "cot",
+          "cambio": false
+        },
+        {
+          "bloque": 8,
+          "clase": "gsm8k-b",
+          "mejor_oraculo": "cot",
+          "prior_means": {
+            "single": 0.5303,
+            "cot": 0.5737
+          },
+          "slow_means": {
+            "single": 0.6812,
+            "cot": 0.7098,
+            "reflexion": 0.5682
+          },
+          "brazos_activos": [
+            "single",
+            "cot"
+          ],
+          "eleccion_control": "cot",
+          "eleccion_sueno": "cot",
+          "inicial": "cot",
+          "final": "cot",
+          "cambio": false
+        },
+        {
+          "bloque": 9,
+          "clase": "mmlu-b",
+          "mejor_oraculo": "cot",
+          "prior_means": {
+            "single": 0.4615,
+            "cot": 0.5707
+          },
+          "slow_means": {
+            "single": 0.6544,
+            "cot": 0.7163,
+            "reflexion": 0.5345
+          },
+          "brazos_activos": [
+            "single",
+            "cot"
+          ],
+          "eleccion_control": "cot",
+          "eleccion_sueno": "cot",
+          "inicial": "cot",
+          "final": "cot",
+          "cambio": false
+        }
+      ],
+      "cambios_reprobe": 3,
+      "thompson_arms": {
+        "single": 29,
+        "cot": 37,
+        "reflexion": 4
+      },
+      "podas": [
+        {
+          "bloque": 1,
+          "brazo": "reflexion",
+          "media_emp": 0.425,
+          "mejor_emp": 0.7294
+        }
+      ],
+      "brazos_activos_final": [
+        "single",
+        "cot"
+      ],
+      "desacuerdos_reglas": 3,
+      "desacuerdo_saldo_sueno": -1
+    }
+  },
+  "costo_total_usd": 0.0116,
+  "proyeccion_usd": 0.0735,
+  "detenido_por_costo": false,
+  "experiencias_nuevas": 1160,
+  "store_chain_ok": true,
+  "veredicto": {
+    "pasa": true,
+    "criterio": {
+      "sueno_gana_a_control": true
+    },
+    "motivos": [
+      "regret sueño=-7.4050 vs control=-1.9050 (diff=-5.5000)",
+      "referencia mejor fija (cot)=4.1200 (sueño diff=-11.5250)",
+      "regret fijas: single=16.79, cot=4.12, reflexion=21.67",
+      "verdad por bloque: ['cot', 'single', 'cot', 'single', 'cot', 'single', 'cot', 'single', 'cot', 'cot']",
+      "decisión final control por bloque: ['cot', 'single', 'cot', 'single', 'cot', 'cot', 'cot', 'cot', 'cot', 'cot']",
+      "decisión final sueño por bloque: ['cot', 'single', 'single', 'single', 'cot', 'single', 'cot', 'cot', 'cot', 'cot']",
+      "podas control: [{'bloque': 1, 'brazo': 'reflexion', 'media_emp': 0.35, 'mejor_emp': 0.7132}] | sueño: [{'bloque': 1, 'brazo': 'reflexion', 'media_emp': 0.425, 'mejor_emp': 0.7294}]",
+      "brazos Thompson control: {'single': 30, 'cot': 40} | sueño: {'single': 29, 'cot': 37, 'reflexion': 4}",
+      "desacuerdos entre reglas (probe+reprobe): 3, saldo a favor del sueño: -1 (+1 cuando solo sueño acertó la verdad, -1 cuando solo control)"
+    ]
+  },
+  "duracion_s": 5.1
+}

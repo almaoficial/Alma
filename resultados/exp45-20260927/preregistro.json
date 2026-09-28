@@ -1,0 +1,80 @@
+{
+  "experimento": "ALMA-EXP45: loop de skills estilo Hermes sobre stream con regímenes recurrentes (mock)",
+  "fase": "mock",
+  "fecha": "2026-09-27T18:42:13",
+  "hipotesis": "Un prior Thompson condicionado por régimen (skill: la experiencia pasada del mismo régimen persiste y se reutiliza, como las skills de Hermes Agent) reduce el regret frente al prior ciego al régimen, porque los regímenes recurren (3 x 4) y el brazo ganador por régimen es estable (titular en tech/deportes, contexto en dinero).",
+  "nota_refutacion": "Si FAIL aun en este mundo diseñado para que las skills puedan ayudar (recurrencia garantizada), el loop de skills en esta forma no aporta sobre la maquinaria base.",
+  "stream": {
+    "fuente": "CONSTRUIDO: categorías sorteadas con frecuencias empíricas del feed real (data_exp44/feed_units.json)",
+    "n_items": 120,
+    "bloques": 12,
+    "tam_bloque": 10,
+    "regimenes": [
+      "dinero",
+      "tech",
+      "deportes",
+      "deportes",
+      "tech",
+      "deportes",
+      "tech",
+      "tech",
+      "deportes",
+      "dinero",
+      "dinero",
+      "dinero"
+    ],
+    "semilla_orden": 45,
+    "composicion_bloque": "8 items del grupo del régimen + 2 de ruido (uno de cada otro grupo)",
+    "grupos": {
+      "tech": [
+        "adaptive systems",
+        "agentes de ia",
+        "agentes ia",
+        "ai agents",
+        "ai industry",
+        "ai models",
+        "ai platforms",
+        "ai research",
+        "auto-mejora de ia",
+        "ia investigación",
+        "ia que se mejora sola",
+        "inteligencia artificial",
+        "investigación en ia",
+        "modelos de ia",
+        "self-improving ai",
+        "sistemas adaptativos"
+      ],
+      "dinero": [
+        "dinero con ia",
+        "finances",
+        "finanzas",
+        "ingresos con ia",
+        "negocios"
+      ],
+      "deportes": [
+        "fútbol",
+        "fútbol amateur",
+        "mundial 2026"
+      ]
+    },
+    "oraculo": "tasas mock calibradas por categoría (data_exp44/tasas.json)",
+    "sesgo_seleccion": "Stream CONSTRUIDO (no es el feed crudo): las categorías se sortean con las frecuencias empíricas del feed real de Muse (22-27/9/2026), pero la secuencia de regímenes está diseñada (3 regímenes x 4 recurrencias). Es el mundo mínimo donde una skill PUEDE ayudar: sin recurrencia, el mecanismo es intestable por definición (lección EXP44: rotación 8/8 mata cualquier aprendizaje)."
+  },
+  "politicas": {
+    "control": "maquinaria EXP44: probe Q1 (mide 4 brazos) + Thompson (5 items) + re-probe Q2 + Thompson; prior warm con olvido 0.5^d, N0=2; probe con contabilidad honesta (fav del prior ciego)",
+    "skills": "idéntica, salvo que tras el probe Q1 el prior se reconstruye condicionado a la firma del régimen (warm olvido solo sobre bloques pasados con la misma firma; fallback a ciego si no hay). El scoring de probe sigue con fav ciego en ambas: UN solo moving part."
+  },
+  "mecanismo_skill": {
+    "firma": "grupo mayoritario entre las categorías de los 3 items del probe Q1 (desempate determinista: primer item)",
+    "skill": "para cada firma, la historia (bloque, brazo, reward) de bloques pasados con esa firma; el prior usa warm olvido 0.5^d sobre esa historia",
+    "soporte_minimo": "1 bloque pasado con la firma (si no hay, fallback al prior ciego)",
+    "fuente_experiencia": "toda la experiencia observada por la política (probe + Thompson), etiquetada por bloque"
+  },
+  "rng": "números comunes: cada outcome de brazo se sortea con seed por (réplica, bloque, item, brazo); control y tratamiento ven el mismo oráculo. Pareado por réplica.",
+  "criterio": {
+    "efecto": "regret(skills) - regret(control), media sobre réplicas (pareadas, RNG común)",
+    "pass": "media(efecto) < 0"
+  },
+  "replicas": 5,
+  "modo": "mock, US$0"
+}

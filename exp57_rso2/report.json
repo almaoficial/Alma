@@ -1,0 +1,387 @@
+{
+  "experimento": "ALMA-EXP57: ablación RSO + replicación seed 57 (mock, US$0)",
+  "preregistro": "preregistro.md (mismo directorio)",
+  "validez_seed56_reproduce_exp56": true,
+  "parte_a_ablacion": {
+    "variantes": {
+      "INIT": {
+        "scaffold": {
+          "umbral_base": 2,
+          "umbral_divisor": 3,
+          "gate_margin": 0.0,
+          "n0": 2,
+          "decay": 0.5
+        },
+        "train_media": 85.6667,
+        "train_por_replica": [
+          78.0,
+          86.0,
+          93.0
+        ],
+        "heldout_media": 87.5,
+        "heldout_por_replica": [
+          95.0,
+          80.0
+        ]
+      },
+      "EVO": {
+        "scaffold": {
+          "umbral_base": 1,
+          "umbral_divisor": 2,
+          "gate_margin": 0.0,
+          "n0": 4,
+          "decay": 0.5
+        },
+        "train_media": 79.3333,
+        "train_por_replica": [
+          67.0,
+          82.0,
+          89.0
+        ],
+        "heldout_media": 83.0,
+        "heldout_por_replica": [
+          86.0,
+          80.0
+        ]
+      },
+      "V1_revert_n0": {
+        "scaffold": {
+          "umbral_base": 1,
+          "umbral_divisor": 2,
+          "gate_margin": 0.0,
+          "n0": 2,
+          "decay": 0.5
+        },
+        "train_media": 80.0,
+        "train_por_replica": [
+          67.0,
+          84.0,
+          89.0
+        ],
+        "heldout_media": 87.0,
+        "heldout_por_replica": [
+          93.0,
+          81.0
+        ]
+      },
+      "V2_revert_ub": {
+        "scaffold": {
+          "umbral_base": 2,
+          "umbral_divisor": 2,
+          "gate_margin": 0.0,
+          "n0": 4,
+          "decay": 0.5
+        },
+        "train_media": 84.0,
+        "train_por_replica": [
+          80.0,
+          83.0,
+          89.0
+        ],
+        "heldout_media": 91.0,
+        "heldout_por_replica": [
+          95.0,
+          87.0
+        ]
+      },
+      "V3_revert_ud": {
+        "scaffold": {
+          "umbral_base": 1,
+          "umbral_divisor": 3,
+          "gate_margin": 0.0,
+          "n0": 4,
+          "decay": 0.5
+        },
+        "train_media": 81.3333,
+        "train_por_replica": [
+          71.0,
+          83.0,
+          90.0
+        ],
+        "heldout_media": 82.5,
+        "heldout_por_replica": [
+          84.0,
+          81.0
+        ]
+      }
+    },
+    "mejora_heldout_evo": 4.5,
+    "deltas": {
+      "V1_revert_n0": {
+        "mejora_heldout": 0.5,
+        "delta_vs_evo": 4.0
+      },
+      "V2_revert_ub": {
+        "mejora_heldout": -3.5,
+        "delta_vs_evo": 8.0
+      },
+      "V3_revert_ud": {
+        "mejora_heldout": 5.0,
+        "delta_vs_evo": -0.5
+      }
+    }
+  },
+  "parte_b": {
+    "prop_seed": 57,
+    "n_rondas": 24,
+    "n_keeps": 5,
+    "scaffold_final": {
+      "umbral_base": 1,
+      "umbral_divisor": 2,
+      "gate_margin": 0.0,
+      "n0": 4,
+      "decay": 0.25
+    },
+    "trayectoria": [
+      {
+        "ronda": 1,
+        "dim": "decay",
+        "de": 0.5,
+        "a": 0.75,
+        "metrica_antes": 85.6667,
+        "metrica_despues": 87.6667,
+        "keep": false
+      },
+      {
+        "ronda": 2,
+        "dim": "umbral_divisor",
+        "de": 3,
+        "a": 6,
+        "metrica_antes": 85.6667,
+        "metrica_despues": 85.3333,
+        "keep": true
+      },
+      {
+        "ronda": 3,
+        "dim": "decay",
+        "de": 0.5,
+        "a": 0.25,
+        "metrica_antes": 85.3333,
+        "metrica_despues": 85.0,
+        "keep": true
+      },
+      {
+        "ronda": 4,
+        "dim": "umbral_divisor",
+        "de": 6,
+        "a": 3,
+        "metrica_antes": 85.0,
+        "metrica_despues": 86.6667,
+        "keep": false
+      },
+      {
+        "ronda": 5,
+        "dim": "umbral_base",
+        "de": 2,
+        "a": 3,
+        "metrica_antes": 85.0,
+        "metrica_despues": 86.6667,
+        "keep": false
+      },
+      {
+        "ronda": 6,
+        "dim": "umbral_base",
+        "de": 2,
+        "a": 3,
+        "metrica_antes": 85.0,
+        "metrica_despues": 86.6667,
+        "keep": false
+      },
+      {
+        "ronda": 7,
+        "dim": "decay",
+        "de": 0.25,
+        "a": 0.5,
+        "metrica_antes": 85.0,
+        "metrica_despues": 85.3333,
+        "keep": false
+      },
+      {
+        "ronda": 8,
+        "dim": "umbral_divisor",
+        "de": 6,
+        "a": 4,
+        "metrica_antes": 85.0,
+        "metrica_despues": 86.3333,
+        "keep": false
+      },
+      {
+        "ronda": 9,
+        "dim": "n0",
+        "de": 2,
+        "a": 4,
+        "metrica_antes": 85.0,
+        "metrica_despues": 84.0,
+        "keep": true
+      },
+      {
+        "ronda": 10,
+        "dim": "umbral_base",
+        "de": 2,
+        "a": 1,
+        "metrica_antes": 84.0,
+        "metrica_despues": 83.3333,
+        "keep": true
+      },
+      {
+        "ronda": 11,
+        "dim": "umbral_divisor",
+        "de": 6,
+        "a": 4,
+        "metrica_antes": 83.3333,
+        "metrica_despues": 83.3333,
+        "keep": false
+      },
+      {
+        "ronda": 12,
+        "dim": "umbral_base",
+        "de": 1,
+        "a": 3,
+        "metrica_antes": 83.3333,
+        "metrica_despues": 84.6667,
+        "keep": false
+      },
+      {
+        "ronda": 13,
+        "dim": "umbral_divisor",
+        "de": 6,
+        "a": 2,
+        "metrica_antes": 83.3333,
+        "metrica_despues": 81.0,
+        "keep": true
+      },
+      {
+        "ronda": 14,
+        "dim": "umbral_divisor",
+        "de": 2,
+        "a": 3,
+        "metrica_antes": 81.0,
+        "metrica_despues": 82.6667,
+        "keep": false
+      },
+      {
+        "ronda": 15,
+        "dim": "gate_margin",
+        "de": 0.0,
+        "a": 0.1,
+        "metrica_antes": 81.0,
+        "metrica_despues": 81.0,
+        "keep": false
+      },
+      {
+        "ronda": 16,
+        "dim": "umbral_divisor",
+        "de": 2,
+        "a": 3,
+        "metrica_antes": 81.0,
+        "metrica_despues": 82.6667,
+        "keep": false
+      },
+      {
+        "ronda": 17,
+        "dim": "umbral_divisor",
+        "de": 2,
+        "a": 4,
+        "metrica_antes": 81.0,
+        "metrica_despues": 83.3333,
+        "keep": false
+      },
+      {
+        "ronda": 18,
+        "dim": "umbral_divisor",
+        "de": 2,
+        "a": 3,
+        "metrica_antes": 81.0,
+        "metrica_despues": 82.6667,
+        "keep": false
+      },
+      {
+        "ronda": 19,
+        "dim": "umbral_divisor",
+        "de": 2,
+        "a": 4,
+        "metrica_antes": 81.0,
+        "metrica_despues": 83.3333,
+        "keep": false
+      },
+      {
+        "ronda": 20,
+        "dim": "n0",
+        "de": 4,
+        "a": 1,
+        "metrica_antes": 81.0,
+        "metrica_despues": 83.6667,
+        "keep": false
+      },
+      {
+        "ronda": 21,
+        "dim": "gate_margin",
+        "de": 0.0,
+        "a": 0.1,
+        "metrica_antes": 81.0,
+        "metrica_despues": 81.0,
+        "keep": false
+      },
+      {
+        "ronda": 22,
+        "dim": "umbral_base",
+        "de": 1,
+        "a": 2,
+        "metrica_antes": 81.0,
+        "metrica_despues": 86.6667,
+        "keep": false
+      },
+      {
+        "ronda": 23,
+        "dim": "umbral_base",
+        "de": 1,
+        "a": 3,
+        "metrica_antes": 81.0,
+        "metrica_despues": 88.0,
+        "keep": false
+      },
+      {
+        "ronda": 24,
+        "dim": "decay",
+        "de": 0.25,
+        "a": 0.75,
+        "metrica_antes": 81.0,
+        "metrica_despues": 81.3333,
+        "keep": false
+      }
+    ],
+    "train": {
+      "init_media": 85.6667,
+      "init_por_replica": [
+        78.0,
+        86.0,
+        93.0
+      ],
+      "evo_media": 81.0,
+      "evo_por_replica": [
+        73.0,
+        81.0,
+        89.0
+      ],
+      "mejora": 4.6667
+    },
+    "heldout": {
+      "init_media": 87.5,
+      "init_por_replica": [
+        95.0,
+        80.0
+      ],
+      "evo_media": 84.5,
+      "evo_por_replica": [
+        88.0,
+        81.0
+      ],
+      "mejora": 3.0
+    },
+    "criterio": "PASS_B ssi media_heldout(evo_B) < media_heldout(INIT)",
+    "veredicto": "PASS",
+    "mismo_scaffold_que_exp56": false
+  },
+  "costo_total_usd": 0.0,
+  "duracion_s": 3.0
+}

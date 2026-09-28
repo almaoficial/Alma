@@ -1,0 +1,348 @@
+{
+  "preregistro": {
+    "experimento": "ALMA-EXP12: el flip real (mejor brazo alterna por bloque)",
+    "fecha": "2026-09-27T01:29:50",
+    "criterio_exito": {
+      "alma_gana_a_mejor_fija": true
+    },
+    "diseno": {
+      "problemas": "72 sintéticos (6 clases x 12) + 24 GSM8K frescos + 24 MMLU frescos (0 reutilizados del oráculo de EXP11); selección seed 1212 en data_exp12/seleccion.json",
+      "stream": "10 bloques x 12, clase-puros; ordenados tras el oráculo (greedy determinista) para alternar el mejor brazo",
+      "oraculo": "3 brazos x 2 intentos por problema (fases 12A-oracle-r1/r2)",
+      "politica": "probe q=0,1,2 + re-probe q=10,11 (3 brazos) + Thompson resto; prior warm con olvido 0.5^d; regla: default single, cambio si mejor alt. supera por > 0.05",
+      "comparacion": "mejor brazo fijo entre los 3 (replay del oráculo)",
+      "rng": "pareado por (bloque,q), seed 1212",
+      "freno_costo": "si proyección tras oráculo > US$1,00: detener (exit 2)"
+    },
+    "orden_bloques": [
+      {
+        "bloque": "calculo",
+        "mejor_oraculo": "cot",
+        "margen": 0.115,
+        "medias": {
+          "single": 0.45,
+          "cot": 0.565,
+          "reflexion": 0.425
+        }
+      },
+      {
+        "bloque": "codigo",
+        "mejor_oraculo": "single",
+        "margen": 0.01,
+        "medias": {
+          "single": 0.95,
+          "cot": 0.94,
+          "reflexion": 0.8
+        }
+      },
+      {
+        "bloque": "qa_multihop",
+        "mejor_oraculo": "cot",
+        "margen": 0.115,
+        "medias": {
+          "single": 0.6375,
+          "cot": 0.7525,
+          "reflexion": 0.5813
+        }
+      },
+      {
+        "bloque": "herramientas",
+        "mejor_oraculo": "single",
+        "margen": 0.0725,
+        "medias": {
+          "single": 0.325,
+          "cot": 0.2525,
+          "reflexion": 0.1125
+        }
+      },
+      {
+        "bloque": "logica",
+        "mejor_oraculo": "cot",
+        "margen": 0.115,
+        "medias": {
+          "single": 0.825,
+          "cot": 0.94,
+          "reflexion": 0.8
+        }
+      },
+      {
+        "bloque": "puzzles",
+        "mejor_oraculo": "single",
+        "margen": 0.01,
+        "medias": {
+          "single": 0.2,
+          "cot": 0.19,
+          "reflexion": 0.05
+        }
+      },
+      {
+        "bloque": "gsm8k-a",
+        "mejor_oraculo": "cot",
+        "margen": 0.2025,
+        "medias": {
+          "single": 0.325,
+          "cot": 0.69,
+          "reflexion": 0.4875
+        }
+      },
+      {
+        "bloque": "mmlu-a",
+        "mejor_oraculo": "single",
+        "margen": 0.0725,
+        "medias": {
+          "single": 0.6688,
+          "cot": 0.5962,
+          "reflexion": 0.4875
+        }
+      },
+      {
+        "bloque": "gsm8k-b",
+        "mejor_oraculo": "cot",
+        "margen": 0.2025,
+        "medias": {
+          "single": 0.2,
+          "cot": 0.6275,
+          "reflexion": 0.425
+        }
+      },
+      {
+        "bloque": "mmlu-b",
+        "mejor_oraculo": "cot",
+        "margen": 0.0525,
+        "medias": {
+          "single": 0.7,
+          "cot": 0.7525,
+          "reflexion": 0.5813
+        }
+      }
+    ],
+    "alternancias": "8/9",
+    "brazos_en_juego": [
+      "cot",
+      "single"
+    ],
+    "seed": 1821,
+    "modo": "api"
+  },
+  "regret_total": {
+    "alma": 6.795,
+    "fija_single": 16.73,
+    "fija_cot": 4.43,
+    "fija_reflexion": 23.105
+  },
+  "verdad_bloque": [
+    "cot",
+    "single",
+    "cot",
+    "single",
+    "cot",
+    "single",
+    "cot",
+    "single",
+    "cot",
+    "cot"
+  ],
+  "diagnostico_bloques": [
+    {
+      "bloque": 0,
+      "clase": "calculo",
+      "mejor_oraculo": "cot",
+      "medias_oraculo": {
+        "single": 0.45,
+        "cot": 0.565,
+        "reflexion": 0.425
+      },
+      "prior_means": {
+        "single": 0.5,
+        "cot": 0.5,
+        "reflexion": 0.5
+      },
+      "inicial": "single",
+      "final": "cot",
+      "cambio": true
+    },
+    {
+      "bloque": 1,
+      "clase": "codigo",
+      "mejor_oraculo": "single",
+      "medias_oraculo": {
+        "single": 0.95,
+        "cot": 0.94,
+        "reflexion": 0.8
+      },
+      "prior_means": {
+        "single": 0.475,
+        "cot": 0.5268,
+        "reflexion": 0.4565
+      },
+      "inicial": "single",
+      "final": "single",
+      "cambio": false
+    },
+    {
+      "bloque": 2,
+      "clase": "qa_multihop",
+      "mejor_oraculo": "cot",
+      "medias_oraculo": {
+        "single": 0.6375,
+        "cot": 0.7525,
+        "reflexion": 0.5813
+      },
+      "prior_means": {
+        "single": 0.6398,
+        "cot": 0.6581,
+        "reflexion": 0.5841
+      },
+      "inicial": "single",
+      "final": "single",
+      "cambio": false
+    },
+    {
+      "bloque": 3,
+      "clase": "herramientas",
+      "mejor_oraculo": "single",
+      "medias_oraculo": {
+        "single": 0.325,
+        "cot": 0.2525,
+        "reflexion": 0.1125
+      },
+      "prior_means": {
+        "single": 0.6024,
+        "cot": 0.6405,
+        "reflexion": 0.5678
+      },
+      "inicial": "single",
+      "final": "single",
+      "cambio": false
+    },
+    {
+      "bloque": 4,
+      "clase": "logica",
+      "mejor_oraculo": "cot",
+      "medias_oraculo": {
+        "single": 0.825,
+        "cot": 0.94,
+        "reflexion": 0.8
+      },
+      "prior_means": {
+        "single": 0.5046,
+        "cot": 0.495,
+        "reflexion": 0.4278
+      },
+      "inicial": "single",
+      "final": "cot",
+      "cambio": true
+    },
+    {
+      "bloque": 5,
+      "clase": "puzzles",
+      "mejor_oraculo": "single",
+      "medias_oraculo": {
+        "single": 0.2,
+        "cot": 0.19,
+        "reflexion": 0.05
+      },
+      "prior_means": {
+        "single": 0.5863,
+        "cot": 0.6076,
+        "reflexion": 0.5414
+      },
+      "inicial": "single",
+      "final": "single",
+      "cambio": false
+    },
+    {
+      "bloque": 6,
+      "clase": "gsm8k-a",
+      "mejor_oraculo": "cot",
+      "medias_oraculo": {
+        "single": 0.325,
+        "cot": 0.69,
+        "reflexion": 0.4875
+      },
+      "prior_means": {
+        "single": 0.464,
+        "cot": 0.4742,
+        "reflexion": 0.409
+      },
+      "inicial": "cot",
+      "final": "cot",
+      "cambio": false
+    },
+    {
+      "bloque": 7,
+      "clase": "mmlu-a",
+      "mejor_oraculo": "single",
+      "medias_oraculo": {
+        "single": 0.6688,
+        "cot": 0.5962,
+        "reflexion": 0.4875
+      },
+      "prior_means": {
+        "single": 0.4343,
+        "cot": 0.5331,
+        "reflexion": 0.4521
+      },
+      "inicial": "single",
+      "final": "single",
+      "cambio": false
+    },
+    {
+      "bloque": 8,
+      "clase": "gsm8k-b",
+      "mejor_oraculo": "cot",
+      "medias_oraculo": {
+        "single": 0.2,
+        "cot": 0.6275,
+        "reflexion": 0.425
+      },
+      "prior_means": {
+        "single": 0.5166,
+        "cot": 0.5585,
+        "reflexion": 0.4789
+      },
+      "inicial": "reflexion",
+      "final": "cot",
+      "cambio": true
+    },
+    {
+      "bloque": 9,
+      "clase": "mmlu-b",
+      "mejor_oraculo": "cot",
+      "medias_oraculo": {
+        "single": 0.7,
+        "cot": 0.7525,
+        "reflexion": 0.5813
+      },
+      "prior_means": {
+        "single": 0.4336,
+        "cot": 0.563,
+        "reflexion": 0.4705
+      },
+      "inicial": "single",
+      "final": "cot",
+      "cambio": true
+    }
+  ],
+  "costo_total_usd": 0.0,
+  "proyeccion_usd": 0.0,
+  "detenido_por_costo": false,
+  "experiencias_nuevas": 940,
+  "store_chain_ok": true,
+  "veredicto": {
+    "pasa": false,
+    "criterio": {
+      "alma_gana_a_mejor_fija": true
+    },
+    "motivos": [
+      "regret alma=6.7950 vs mejor fija (cot)=4.4300 (diff=+2.3650)",
+      "regret fijas: single=16.73, cot=4.43, reflexion=23.10",
+      "verdad por bloque: ['cot', 'single', 'cot', 'single', 'cot', 'single', 'cot', 'single', 'cot', 'cot']",
+      "decisión final por bloque: ['cot', 'single', 'single', 'single', 'cot', 'single', 'cot', 'single', 'cot', 'cot']",
+      "cambios tras re-probe: 4/10",
+      "brazos usados en Thompson: {'cot': 36, 'reflexion': 15, 'single': 19}",
+      "alternancias reales del stream: 8/9 (brazos en juego: ['cot', 'single'])"
+    ]
+  },
+  "duracion_s": 0.2
+}

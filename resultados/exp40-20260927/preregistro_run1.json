@@ -1,0 +1,21 @@
+{
+  "experimento": "ALMA-EXP40: test de régimen previo al probe",
+  "fecha": "2026-09-27T18:01:10",
+  "motivacion": "Serie 36-39: ninguna variante del probe le gana a buyhold; el ruido de semilla domina al efecto-regla. EXP39: 'sin un test de régimen previo al probe no hay qué decidir'.",
+  "diseno": {
+    "test_regimen": "exponente de Hurst por R/S clásico sobre log-precios de las 72h previas al bloque (sub-ventanas [8, 12, 18, 24, 36]); sin lookahead",
+    "umbral": "H >= 0.55 -> tendencia, si no lateral",
+    "warmup": "ventana < 24 puntos (bloque 0) -> lateral por defecto",
+    "politica": "tendencia -> brazo momentum todo el bloque; lateral -> flat todo el bloque (sin probe)",
+    "comparacion": "common random numbers contra regla36 (EXP36) y buyhold; EXP40 es determinista (réplicas idénticas por construcción)",
+    "replicas": 6,
+    "stream": "idéntico a EXP36-39: Kraken XBTUSD 1h, 720 velas, 719 retornos",
+    "costos": "1bp por cambio de posición, exactos en la trayectoria de EXP40 (incluye transiciones entre bloques)"
+  },
+  "criterio": {
+    "efecto": "P&L_exp40(réplica) - P&L_buyhold",
+    "pass": "media(efecto) > 0 y media(efecto) - 1*desvío(efecto) > -0.01",
+    "secundario": "tasa de acierto del clasificador vs régimen verdadero ex-post (|retorno del bloque| > 0.02), medida en bloques 1..29"
+  },
+  "modo": "mock, replay puro, US$0"
+}

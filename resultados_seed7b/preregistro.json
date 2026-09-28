@@ -1,0 +1,17 @@
+{
+  "experimento": "ALMA-EXP1: la prueba de la selección",
+  "fecha": "2026-09-23T02:51:30",
+  "criterio_exito": {
+    "reward_ratio_min": 0.9,
+    "cost_ratio_max": 1.1,
+    "min_clases_supera_global": 4
+  },
+  "versiones": {
+    "alma": "0.1.0",
+    "registry": "1.0.0",
+    "evaluator": "eval-v1",
+    "taxonomia": "tax-v1"
+  },
+  "seed": 7,
+  "modo": "mock"
+}

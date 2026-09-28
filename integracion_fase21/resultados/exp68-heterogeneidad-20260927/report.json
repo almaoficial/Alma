@@ -1,0 +1,157 @@
+{
+  "experimento": "EXP68",
+  "descripcion": "detector de heterogeneidad: validaci\u00f3n a dos puntas",
+  "K": 3,
+  "J": 3,
+  "modo_veredicto": "probe",
+  "scaffold": {
+    "n0": 4,
+    "umbral_base": 1,
+    "umbral_divisor": 3,
+    "decay": 0.5,
+    "gate_margin": 0.0
+  },
+  "replicas": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "criterio": "PASS <=> media(\u0394_B) >= 0 y media(\u0394_A) > 0, \u0394 = regret(baseline) - regret(detector) pareado",
+  "mundo_A": {
+    "base_regs": [
+      82.0,
+      89.0,
+      84.0,
+      71.0,
+      77.0
+    ],
+    "trat_regs": [
+      76.0,
+      81.0,
+      83.0,
+      62.0,
+      71.0
+    ],
+    "deltas": [
+      6.0,
+      8.0,
+      1.0,
+      9.0,
+      6.0
+    ],
+    "delta_medio": 6.0,
+    "ic95": [
+      2.173548066419755,
+      9.826451933580245
+    ],
+    "sd": 3.082207001484488,
+    "diagnosticos": [
+      {
+        "enganches": [
+          12
+        ],
+        "restauraciones": [],
+        "modo_final": "encogido",
+        "comprometido_final": "contexto"
+      },
+      {
+        "enganches": [
+          5
+        ],
+        "restauraciones": [],
+        "modo_final": "encogido",
+        "comprometido_final": "contexto"
+      },
+      {
+        "enganches": [
+          16
+        ],
+        "restauraciones": [],
+        "modo_final": "encogido",
+        "comprometido_final": "contexto"
+      },
+      {
+        "enganches": [
+          5
+        ],
+        "restauraciones": [],
+        "modo_final": "encogido",
+        "comprometido_final": "contexto"
+      },
+      {
+        "enganches": [
+          9
+        ],
+        "restauraciones": [],
+        "modo_final": "encogido",
+        "comprometido_final": "contexto"
+      }
+    ]
+  },
+  "mundo_B": {
+    "base_regs": [
+      79.0,
+      93.0,
+      94.0,
+      106.0,
+      105.0
+    ],
+    "trat_regs": [
+      79.0,
+      93.0,
+      94.0,
+      106.0,
+      105.0
+    ],
+    "deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delta_medio": 0.0,
+    "ic95": [
+      0.0,
+      0.0
+    ],
+    "sd": 0.0,
+    "diagnosticos": [
+      {
+        "enganches": [],
+        "restauraciones": [],
+        "modo_final": "explorar",
+        "comprometido_final": null
+      },
+      {
+        "enganches": [
+          23
+        ],
+        "restauraciones": [],
+        "modo_final": "encogido",
+        "comprometido_final": "titular"
+      },
+      {
+        "enganches": [],
+        "restauraciones": [],
+        "modo_final": "explorar",
+        "comprometido_final": null
+      },
+      {
+        "enganches": [],
+        "restauraciones": [],
+        "modo_final": "explorar",
+        "comprometido_final": null
+      },
+      {
+        "enganches": [],
+        "restauraciones": [],
+        "modo_final": "explorar",
+        "comprometido_final": null
+      }
+    ]
+  },
+  "veredicto": "PASS"
+}

@@ -1,0 +1,23 @@
+{
+  "nombre": "fase0-scaffold-evolucionado",
+  "descripcion": "Puerta de fase 0: el Resolver como servicio (alma_service) reproduce la política del scaffold evolucionado (EXP56/57: n0=4, umbral_base=1) sobre el mismo mundo (stream 24 bloques, oráculo calibrado, control verbatim importado de run_experiment49).",
+  "hipotesis": "El servicio alma_service preserva el scaffold validado por los mocks: bit-identidad vs la implementación independiente de EXP56 y efecto medio < 0.",
+  "criterios": [
+    "PASS",
+    "FAIL"
+  ],
+  "criterio_exito": "PASS ssi (a) reg_trat_bloques por réplica es bit-idéntico a exp56_rso/run_experiment56.py con el scaffold validado Y (b) media(efecto) < 0.",
+  "criterio_cierre": "N/A: es puerta de fase, no línea de mocks.",
+  "n_replicas": 5,
+  "control": "run_experiment49.correr_replica_endurecido",
+  "tratamiento": "alma_service.resolver.correr_replica_servicio",
+  "stream": "run_experiment47.construir_stream",
+  "notas_diseno": {
+    "bit_identidad_fuente": "exp56_rso/run_experiment56.py::correr_replica_param con alma_service/scaffold.py::DEFAULT_SCAFFOLD",
+    "campo_bit": "reg_trat_bloques",
+    "efecto": "reg_trat - reg_ctrl por réplica",
+    "vara": "fija, calibrada en EXP51",
+    "scaffold": "n0=4, umbral_base=1, umbral_divisor=3, decay=0.5, gate_margin=0.0 (EXP56/57)"
+  },
+  "pre_registrado_en": "2026-09-27T20:04:31+0000"
+}

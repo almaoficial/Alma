@@ -1,0 +1,181 @@
+{
+  "preregistro": {
+    "experimento": "ALMA-EXP3: probe transfer vs blind borrow",
+    "fecha": "2026-09-25T20:23:54",
+    "criterio_exito": {
+      "reward_ratio_min": 0.9,
+      "cost_ratio_max": 1.25,
+      "min_clases_supera_global": 4
+    },
+    "diseno": {
+      "n_probe": 3,
+      "probe_archs": [
+        "single",
+        "cot"
+      ],
+      "margen_probe": 0.05,
+      "justificacion_probe": "prior empírico: oráculo siempre en {single, cot} en 10 clases EXP1+EXP2; margen pro-barato: no pagar razonamiento caro por ventajas ruidosas en 3 muestras",
+      "fase_c_omitida": "EXP3 evalúa transferencia, no H2"
+    },
+    "versiones": {
+      "alma": "0.1.0",
+      "registry": "1.0.0",
+      "evaluator": "eval-v1",
+      "taxonomia": "tax-v2-exp2"
+    },
+    "seed": 456,
+    "modo": "api"
+  },
+  "fase_a": {
+    "oraculo": {
+      "logica": "cot",
+      "traduccion": "single",
+      "resumen": "cot",
+      "depuracion": "single",
+      "conocimiento": "cot"
+    },
+    "oracle_reward": {
+      "logica": 0.94,
+      "traduccion": 0.95,
+      "resumen": 0.94,
+      "depuracion": 0.95,
+      "conocimiento": 0.8775
+    },
+    "mejor_fija_global": "cot"
+  },
+  "fase_b3": {
+    "logica": {
+      "oraculo": "cot",
+      "probe_arch_elegida": "single",
+      "probe_medias": {
+        "single": 0.95,
+        "cot": 0.94
+      },
+      "blind": {
+        "reward_ratio": 0.8777,
+        "cost_ratio": 0.1149
+      },
+      "probe": {
+        "reward_ratio": 0.8777,
+        "cost_ratio": 0.1149
+      },
+      "probe_mas_barato_que_blind": false
+    },
+    "traduccion": {
+      "oraculo": "single",
+      "probe_arch_elegida": "single",
+      "probe_medias": {
+        "single": 0.95,
+        "cot": 0.94
+      },
+      "blind": {
+        "reward_ratio": 0.9895,
+        "cost_ratio": 4.3976
+      },
+      "probe": {
+        "reward_ratio": 1.0,
+        "cost_ratio": 0.9829
+      },
+      "probe_mas_barato_que_blind": true
+    },
+    "resumen": {
+      "oraculo": "cot",
+      "probe_arch_elegida": "single",
+      "probe_medias": {
+        "single": 0.95,
+        "cot": 0.94
+      },
+      "blind": {
+        "reward_ratio": 1.0,
+        "cost_ratio": 1.0039
+      },
+      "probe": {
+        "reward_ratio": 0.9441,
+        "cost_ratio": 0.1578
+      },
+      "probe_mas_barato_que_blind": true
+    },
+    "depuracion": {
+      "oraculo": "single",
+      "probe_arch_elegida": "single",
+      "probe_medias": {
+        "single": 0.95,
+        "cot": 0.94
+      },
+      "blind": {
+        "reward_ratio": 0.9237,
+        "cost_ratio": 7.7777
+      },
+      "probe": {
+        "reward_ratio": 1.0,
+        "cost_ratio": 0.9919
+      },
+      "probe_mas_barato_que_blind": true
+    },
+    "conocimiento": {
+      "oraculo": "cot",
+      "probe_arch_elegida": "cot",
+      "probe_medias": {
+        "single": 0.7,
+        "cot": 0.94
+      },
+      "blind": {
+        "reward_ratio": 0.9402,
+        "cost_ratio": 0.1639
+      },
+      "probe": {
+        "reward_ratio": 1.0,
+        "cost_ratio": 1.2695
+      },
+      "probe_mas_barato_que_blind": false
+    }
+  },
+  "gates": {
+    "nucleo_intacto": true,
+    "privilegios_ok": true,
+    "regresion_detectada": true,
+    "rollback_ok": true
+  },
+  "budget": {
+    "resolucion": {
+      "limite_usd": 50.0,
+      "gastado_usd": 0.05924594999999996,
+      "restante_usd": 49.94075405
+    },
+    "seleccion": {
+      "limite_usd": 1.0,
+      "gastado_usd": 0.0,
+      "restante_usd": 1.0
+    },
+    "experimentacion": {
+      "limite_usd": 5.0,
+      "gastado_usd": 0.0,
+      "restante_usd": 5.0
+    }
+  },
+  "costo_total_usd": 0.0592,
+  "experiencias": 510,
+  "store_chain_ok": true,
+  "veredicto": {
+    "pasa": false,
+    "criterio": {
+      "reward_ratio_min": 0.9,
+      "cost_ratio_max": 1.25,
+      "min_clases_supera_global": 4
+    },
+    "motivos": [
+      "probe reward_ratio medio = 0.964 (mínimo 0.9)",
+      "probe cost_ratio medio = 0.703 (máximo 1.25)",
+      "probe supera a la mejor fija global en 2/5 clases (mínimo 4)",
+      "(diagnóstico) blind: reward_ratio=0.946 cost_ratio=2.692"
+    ],
+    "medido": {
+      "reward_ratio_probe": 0.9644,
+      "cost_ratio_probe": 0.7034,
+      "clases_supera_global": 2,
+      "blind_reward_ratio": 0.9462,
+      "blind_cost_ratio": 2.6916
+    }
+  },
+  "duracion_s": 1521.4
+}

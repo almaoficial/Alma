@@ -1,0 +1,25 @@
+# Runtime: bases de datos vivas, logs, pids
+*.db
+*.db-shm
+*.db-wal
+*.log
+*.pid
+ingles_pendiente.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Secretos: nunca al repo
+.env
+.env.*
+*.pem
+*.key
+credentials*.json
+*secret*.json
+
+# Sistema
+.DS_Store

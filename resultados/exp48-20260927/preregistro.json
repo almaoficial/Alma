@@ -1,0 +1,65 @@
+{
+  "experimento": "ALMA-EXP48: anti-misfire — re-validación barata del brazo de la skill antes de saltar el probe (mock)",
+  "fase": "mock",
+  "fecha": "2026-09-27T19:09:37",
+  "hipotesis": "(1) La re-validación barata (1 item) baja la tasa de misfires del skip respecto al ~37% (14/38) de EXP47, porque filtra skills cuyo brazo se volvió stale antes de comprometer 10 items. (2) El tratamiento reduce el regret frente al skip sin confirmación: media sobre réplicas pareadas de regret(skip-confirm) - regret(skip) < 0.",
+  "variante_elegida": "(a) re-validación barata. Descartada (b) umbral endurecido con el horizonte: endurecer el umbral ataca las victorias ruidosas pero no la staleness (el brazo deja de matchear el bloque actual); la re-validación mide evidencia fresca del bloque en curso, el antídoto directo contra un brazo stale. Un solo moving part: el gate de confirmación en el tratamiento.",
+  "nota_refutacion": "Si la confirmación no baja los misfires o no reduce el regret, el gate barato no alcanza: el problema está en la calidad de la evidencia acumulada (victorias ruidosas), no solo en la staleness. El próximo paso sería entonces la variante (b) o cerrar la línea de skills.",
+  "condicion_alcance": "En mundos sin recurrencia (feed real: rotación 8/8 en EXP44) las skills nunca alcanzan soporte fuerte (>=2 victorias pareadas): el mecanismo de salto de probe solo opera donde hay recurrencia. No generalizar a streams sin recurrencia.",
+  "stream": {
+    "fuente": "IDÉNTICO al de EXP47 (misma función run_experiment47.construir_stream, bit-idéntico): 240 items, 24 bloques x 10, 3 regímenes x 8 recurrencias, seeds 45/47, namespace de RNG del oráculo 'exp45-...'.",
+    "n_items": 240,
+    "bloques": 24,
+    "tam_bloque": 10,
+    "regimenes": [
+      "dinero",
+      "tech",
+      "deportes",
+      "deportes",
+      "tech",
+      "deportes",
+      "tech",
+      "tech",
+      "deportes",
+      "dinero",
+      "dinero",
+      "dinero",
+      "deportes",
+      "dinero",
+      "deportes",
+      "dinero",
+      "deportes",
+      "dinero",
+      "tech",
+      "tech",
+      "deportes",
+      "tech",
+      "dinero",
+      "tech"
+    ],
+    "oraculo": "tasas mock calibradas por categoría (data_exp44/tasas.json)",
+    "sesgo_seleccion": "Stream CONSTRUIDO (no es el feed crudo): las categorías se sortean con las frecuencias empíricas del feed real de Muse (22-27/9/2026), pero la secuencia de regímenes está diseñada (3 regímenes x 8 recurrencias). Es el mundo mínimo donde una skill PUEDE ayudar: sin recurrencia, el mecanismo es intestable por definición (lección EXP44: rotación 8/8 mata cualquier aprendizaje). EXTENSIÓN ESTRICTA de EXP46: los bloques 0-11 son bit-idénticos a EXP46 (mismo orden, misma secuencia de sorteo con random.Random(45), mismo namespace de RNG del oráculo); los bloques 12-23 agregan 4 recurrencias más por régimen."
+  },
+  "politicas": {
+    "control": "El tratamiento 'skip' de EXP47 VERBATIM (misma función run_experiment47.correr_replica con politica='skip', importada): skills condicionan el prior; con soporte fuerte (>=2 victorias) se salta el probe y se juega el brazo de la skill en los 10 items.",
+    "skip-confirm": "Idéntica al control, salvo el gate de confirmación: antes de saltar se gasta 1 item (q=0) en re-validación — se miden los 4 brazos (full-information, seeds de oráculo idénticas), la política juega el brazo de la skill (costo honesto = 1 item). Se confirma ssi reward(skill_arm) == 1.0. Si confirma: skip en items 1-9 sin probe. Si no confirma: camino de probe completo en items 1-9 (Q1'=(1,2,3), Q2=(6,7), Thompson en el resto), con la observación del item 0 ya incorporada a la historia de todos los brazos (no se re-sortea)."
+  },
+  "mecanismo_skill": {
+    "firma": "idéntica a EXP47 (grupo mayoritario de los primeros 3 items del bloque)",
+    "skill_arm": "idéntico a EXP47 (argmax de la media del prior condicionado a la firma, warm olvido 0.5^d)",
+    "soporte_fuerte": "idéntico a EXP47 (>=2 victorias pareadas del skill_arm en bloques pasados no-saltados con la misma firma; victoria = media en los 5 items de probe estrictamente mayor que cada otro brazo)",
+    "victoria_para_soporte_en_fallback": "el cómputo de victorias usa los 5 items de probe canónicos; en bloques con confirmación rechazada son los items 1,2,3,6,7 (el item 0 de confirmación no cuenta como probe para el cómputo de victorias, pero sí queda en la historia observada)",
+    "misfire_definicion": "IDÉNTICA a EXP47: en un bloque saltado (confirmado), el brazo de la skill no es el mejor ex post (accuracy sobre los 10 items con RNG común, contrafactual). Tasa de misfires = misfires / skips confirmados.",
+    "bloque_saltado": "idéntico a EXP47 (sin probe Q1/Q2 ni bandit; rewards observados agregados a la skill; no aporta comparación pareada)"
+  },
+  "rng": "namespace del oráculo idéntico a EXP45/46/47 ('exp45-r{rep}-b{b}-q{q}-{a}'); el item de confirmación usa los mismos seeds que el Q1 del control para q=0 (pareado). Control y tratamiento ven el mismo oráculo. Pareado por réplica.",
+  "criterio": {
+    "efecto": "regret(skip-confirm) - regret(skip) sobre 24 bloques, media sobre réplicas (pareadas, RNG común)",
+    "pasa_1": "tasa_misfires_tratamiento < 14/38 (~0.368, EXP47), con n_skips_tratamiento > 0 [comparación contra número fijo de otro experimento, documentada como tal]",
+    "pasa_2": "media(efecto) < 0  [misma vara que EXP46/47]",
+    "pass": "pasa_1 Y pasa_2",
+    "diagnostico_auxiliar": "tasa de misfires del control (debe reproducir ~37% de EXP47 — chequeo de sanidad); confirmaciones por réplica (intentos / confirmadas / rechazadas); reproducibilidad bit-idéntica del control vs EXP47"
+  },
+  "replicas": 5,
+  "modo": "mock, US$0"
+}

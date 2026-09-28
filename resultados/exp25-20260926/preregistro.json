@@ -1,0 +1,28 @@
+{
+  "experimento": "ALMA-EXP25: barrido de presupuesto del probe en transferencia",
+  "fecha": "2026-09-26T19:25:00-04:00",
+  "pregunta": "EXP24 dejó la frase quirúrgica: 'con 8 pulls, un evento de cola cruza cualquier umbral razonable — ruido irreducible'. Este experimento no pregunta sí/no: mapea CUÁNTOS pulls necesita el probe para que la transferencia se vuelva confiable.",
+  "hipotesis": "La confiabilidad de la transferencia crece con el presupuesto del probe (el error estándar del gap cae como 1/sqrt(k), así que los eventos de cola que cruzan el umbral se vuelven raros). Se espera un umbral de presupuesto donde el veredicto se estabiliza (probe confiablemente mejor que el vecino). Si ningún presupuesto hasta 64 da veredicto confiable, el límite es estructural y se declara como tal.",
+  "diseno": {
+    "trampa": "Idéntica a EXP21/24: 5 clases con fingerprint; C1 a d=0.04 de la clase nueva N (la MÁS CERCANA) pero con mejor brazo DISTINTO (single vs cot de N). N: cot=0.90, single=0.78, reflexion=0.65. Recompensa Bernoulli por pull.",
+    "presupuestos_probe": [8, 16, 32, 64],
+    "nota_stream": "Con 3 candidatas y k pulls por candidata, el probe consume 3k pulls. Para mantener constante el presupuesto de explotación/adaptación post-probe (96 pulls, igual que EXP21/24), el stream por presupuesto es STREAM_k = 3k + 96 → 120, 144, 192, 288. TODAS las estrategias usan el mismo STREAM_k dentro de cada presupuesto (comparación intra-presupuesto válida). Entre presupuestos se compara con regret por pull.",
+    "brazos_por_presupuesto": {
+      "probe_v2": "Lógica v2 noise-aware (réplica de EXP24(b)): k pulls × 3 candidatas (mejores brazos de las 3 clases más cercanas); gap = m1 - m2. Si gap > 0.15 → compromiso DURO con el ganador el resto del stream. Si no → Thompson Beta-Bernoulli adaptativo con priors del probe + re-probe cada 24 pulls (1 pull forzado por candidata). Se registra compromiso y gap.",
+      "vecino_manual": "Baseline EXP2: explota el brazo de la trampa C1 (single) × STREAM_k pulls. 0 exploración.",
+      "cero_diag": "Diagnóstico fuera del criterio: Thompson Beta-Bernoulli × STREAM_k sin memoria."
+    },
+    "umbral_ruido": 0.15,
+    "reprobe_cada": 24,
+    "metrica": "regret = suma(0.90 - r_t) sobre el stream de cada estrategia; regret_por_pull = regret / STREAM_k para la curva entre presupuestos",
+    "memoria": "para cada clase conocida, su mejor brazo registrado CORRECTAMENTE (se aísla la SELECCIÓN, igual que EXP21/24)"
+  },
+  "criterio_por_presupuesto": "media(regret(probe_v2)) < media(regret(vecino)) en las 4 seeds del presupuesto",
+  "regla_confiabilidad": "si los diffs regret(probe_v2)-regret(vecino) cambian de signo entre las 4 seeds del presupuesto → NO CONFIABLE en ese presupuesto (regla EXP16/17/21/24)",
+  "veredicto_global": "PASS/FAIL/NO CONFIABLE se dictamina POR PRESUPUESTO. El entregable es la curva confiabilidad-vs-presupuesto: el menor k con veredicto confiable (en cualquier dirección), o la declaración de límite estructural si ninguno lo es.",
+  "seeds": [2521, 2522, 2523, 2524],
+  "seeds_nuevas": "distintas de EXP21 (2121-2124) y EXP24 (2421-2424); namespace RNG propio 'exp25' con sub-namespace por presupuesto; mismas 4 seeds en los 4 presupuestos para aislar el efecto del presupuesto del azar entre seeds",
+  "modo": "mock 100%",
+  "llamadas_api": 0,
+  "costo_usd": 0
+}

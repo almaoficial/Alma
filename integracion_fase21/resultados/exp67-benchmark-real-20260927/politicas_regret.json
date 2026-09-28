@@ -1,0 +1,183 @@
+{
+  "fase": "exp67-politicas",
+  "meta": {
+    "experimento": "ALMA-EXP67 fase de politicas",
+    "politicas": [
+      "fija-single",
+      "fija-cot",
+      "fija-reflexion",
+      "thompson-global",
+      "alma-full"
+    ],
+    "stream": "9 bloques x 20 (orden pre-registrado)",
+    "seed": 67,
+    "evaluador": "reward = 0.75*exito + 0.25*(1 - costo_rel/5), costo_rel {single:1.0, cot:1.2, reflexion:4.0}",
+    "rng": "pareado por posicion: random.Random(f'exp67-{seed}-{pos}')",
+    "pulls_politica": 900,
+    "pulls_probe": 27,
+    "llamadas_api": 918,
+    "costo_total_usd": 0.2667,
+    "freno_usd": 0.45,
+    "duracion_s": 3042.5
+  },
+  "regret_total_por_politica": {
+    "fija-single": 19.645,
+    "fija-cot": 10.945,
+    "fija-reflexion": 36.895,
+    "thompson-global": 10.995,
+    "alma-full": 3.445
+  },
+  "regret_por_bloque": {
+    "fija-single": [
+      5.94,
+      0.0,
+      0.375,
+      0.0,
+      7.41,
+      0.0,
+      5.18,
+      0.74,
+      0.0
+    ],
+    "fija-cot": [
+      0.14,
+      1.7,
+      1.325,
+      3.95,
+      0.86,
+      0.95,
+      0.13,
+      0.94,
+      0.95
+    ],
+    "fija-reflexion": [
+      2.94,
+      3.75,
+      4.125,
+      6.75,
+      4.41,
+      3.75,
+      2.93,
+      4.49,
+      3.75
+    ],
+    "thompson-global": [
+      1.42,
+      1.08,
+      -0.215,
+      0.38,
+      2.96,
+      0.54,
+      1.73,
+      1.47,
+      1.63
+    ],
+    "alma-full": [
+      0.87,
+      0.25,
+      0.595,
+      0.0,
+      0.86,
+      0.0,
+      0.13,
+      0.74,
+      0.0
+    ]
+  },
+  "elecciones_probe": {
+    "0": {
+      "slice": "gsm8k",
+      "saltado": false,
+      "skill_arm": "single",
+      "elegido": "cot",
+      "medias": {
+        "single": 0.7,
+        "cot": 0.94,
+        "reflexion": 0.8
+      }
+    },
+    "1": {
+      "slice": "mmlu",
+      "saltado": false,
+      "skill_arm": "cot",
+      "elegido": "single",
+      "medias": {
+        "single": 0.95,
+        "cot": 0.69,
+        "reflexion": 0.55
+      }
+    },
+    "2": {
+      "slice": "mbpp",
+      "saltado": false,
+      "skill_arm": "cot",
+      "elegido": "single",
+      "medias": {
+        "single": 0.45,
+        "cot": 0.19,
+        "reflexion": 0.05
+      }
+    },
+    "3": {
+      "slice": "mmlu",
+      "saltado": true,
+      "skill_arm": "single",
+      "wins": 1,
+      "K": 1,
+      "umbral": 1,
+      "misfire": false,
+      "mejor_oraculo": "single"
+    },
+    "4": {
+      "slice": "gsm8k",
+      "saltado": true,
+      "skill_arm": "cot",
+      "wins": 1,
+      "K": 1,
+      "umbral": 1,
+      "misfire": false,
+      "mejor_oraculo": "cot"
+    },
+    "5": {
+      "slice": "mbpp",
+      "saltado": true,
+      "skill_arm": "single",
+      "wins": 1,
+      "K": 1,
+      "umbral": 1,
+      "misfire": false,
+      "mejor_oraculo": "single"
+    },
+    "6": {
+      "slice": "gsm8k",
+      "saltado": true,
+      "skill_arm": "cot",
+      "wins": 1,
+      "K": 1,
+      "umbral": 1,
+      "misfire": false,
+      "mejor_oraculo": "cot"
+    },
+    "7": {
+      "slice": "mmlu",
+      "saltado": true,
+      "skill_arm": "single",
+      "wins": 1,
+      "K": 1,
+      "umbral": 1,
+      "misfire": false,
+      "mejor_oraculo": "single"
+    },
+    "8": {
+      "slice": "mbpp",
+      "saltado": true,
+      "skill_arm": "single",
+      "wins": 1,
+      "K": 1,
+      "umbral": 1,
+      "misfire": false,
+      "mejor_oraculo": "single"
+    }
+  },
+  "nota_veredicto": "SIN veredicto PASS/FAIL: lo dictamina el padre contra la vara pre-registrada (regret(alma-full) < mejor fija y < thompson-global)."
+}

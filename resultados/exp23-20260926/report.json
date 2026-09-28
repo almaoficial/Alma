@@ -1,0 +1,224 @@
+{
+  "experimento": "ALMA-EXP23",
+  "pregunta": "A horizonte largo (R=50), donde la deriva si muerde, \u00bfmorir despues de reportar PAGA el renacimiento?",
+  "seeds": [
+    2321,
+    2322,
+    2323,
+    2324,
+    2325,
+    2326,
+    2327,
+    2328
+  ],
+  "por_seed": [
+    {
+      "seed": 2321,
+      "persistentes": {
+        "mse_medio": 0.122108,
+        "llamadas": 350,
+        "M": 42.737714,
+        "sesgo_abs_medio_ronda50": 0.6709
+      },
+      "baterias": {
+        "mse_medio": 0.066711,
+        "llamadas_reportes": 350,
+        "M_s1": 46.697361,
+        "s_star": 0.8304
+      },
+      "diff_M_pers_menos_bat_s1": -3.959647
+    },
+    {
+      "seed": 2322,
+      "persistentes": {
+        "mse_medio": 0.117601,
+        "llamadas": 350,
+        "M": 41.160264,
+        "sesgo_abs_medio_ronda50": 0.3238
+      },
+      "baterias": {
+        "mse_medio": 0.066652,
+        "llamadas_reportes": 350,
+        "M_s1": 46.656071,
+        "s_star": 0.7644
+      },
+      "diff_M_pers_menos_bat_s1": -5.495806
+    },
+    {
+      "seed": 2323,
+      "persistentes": {
+        "mse_medio": 0.07527,
+        "llamadas": 350,
+        "M": 26.34439,
+        "sesgo_abs_medio_ronda50": 1.134
+      },
+      "baterias": {
+        "mse_medio": 0.07939,
+        "llamadas_reportes": 350,
+        "M_s1": 55.572844,
+        "s_star": -0.0519
+      },
+      "diff_M_pers_menos_bat_s1": -29.228455
+    },
+    {
+      "seed": 2324,
+      "persistentes": {
+        "mse_medio": 0.127495,
+        "llamadas": 350,
+        "M": 44.623331,
+        "sesgo_abs_medio_ronda50": 1.0369
+      },
+      "baterias": {
+        "mse_medio": 0.061402,
+        "llamadas_reportes": 350,
+        "M_s1": 42.981663,
+        "s_star": 1.0764
+      },
+      "diff_M_pers_menos_bat_s1": 1.641668
+    },
+    {
+      "seed": 2325,
+      "persistentes": {
+        "mse_medio": 0.466924,
+        "llamadas": 350,
+        "M": 163.423283,
+        "sesgo_abs_medio_ronda50": 0.7916
+      },
+      "baterias": {
+        "mse_medio": 0.074214,
+        "llamadas_reportes": 350,
+        "M_s1": 51.949879,
+        "s_star": 5.2916
+      },
+      "diff_M_pers_menos_bat_s1": 111.473403
+    },
+    {
+      "seed": 2326,
+      "persistentes": {
+        "mse_medio": 0.094627,
+        "llamadas": 350,
+        "M": 33.119455,
+        "sesgo_abs_medio_ronda50": 0.5454
+      },
+      "baterias": {
+        "mse_medio": 0.060074,
+        "llamadas_reportes": 350,
+        "M_s1": 42.052013,
+        "s_star": 0.5752
+      },
+      "diff_M_pers_menos_bat_s1": -8.932559
+    },
+    {
+      "seed": 2327,
+      "persistentes": {
+        "mse_medio": 0.061297,
+        "llamadas": 350,
+        "M": 21.45384,
+        "sesgo_abs_medio_ronda50": 0.6258
+      },
+      "baterias": {
+        "mse_medio": 0.098045,
+        "llamadas_reportes": 350,
+        "M_s1": 68.631308,
+        "s_star": -0.3748
+      },
+      "diff_M_pers_menos_bat_s1": -47.177468
+    },
+    {
+      "seed": 2328,
+      "persistentes": {
+        "mse_medio": 0.176901,
+        "llamadas": 350,
+        "M": 61.915212,
+        "sesgo_abs_medio_ronda50": 1.0847
+      },
+      "baterias": {
+        "mse_medio": 0.095948,
+        "llamadas_reportes": 350,
+        "M_s1": 67.163886,
+        "s_star": 0.8437
+      },
+      "diff_M_pers_menos_bat_s1": -5.248674
+    }
+  ],
+  "medias": {
+    "M_persistentes": 54.347186,
+    "M_baterias_s1": 52.713128,
+    "MSE_medio_persistentes": 0.155278,
+    "MSE_medio_baterias": 0.075304,
+    "sesgo_abs_medio_r50_persistentes": 0.7766
+  },
+  "diffs_M_pers_menos_bat_s1": [
+    -3.959647,
+    -5.495806,
+    -29.228455,
+    1.641668,
+    111.473403,
+    -8.932559,
+    -47.177468,
+    -5.248674
+  ],
+  "criterio": "M_baterias(s=1) < M_persistentes en la media de 8 seeds; M = MSE_medio x llamadas",
+  "veredicto": "NO CONFIABLE",
+  "pasa": false,
+  "break_even_spawn": {
+    "s_star_por_seed": [
+      0.8304,
+      0.7644,
+      -0.0519,
+      1.0764,
+      5.2916,
+      0.5752,
+      -0.3748,
+      0.8437
+    ],
+    "s_star_media": 1.1194,
+    "s_star_mediana": 0.7974,
+    "curva_M_vs_s": [
+      {
+        "s": 0.0,
+        "M_baterias": 26.3566,
+        "M_persistentes": 54.3472,
+        "ganan_baterias": true
+      },
+      {
+        "s": 0.5,
+        "M_baterias": 39.5349,
+        "M_persistentes": 54.3472,
+        "ganan_baterias": true
+      },
+      {
+        "s": 1.0,
+        "M_baterias": 52.7131,
+        "M_persistentes": 54.3472,
+        "ganan_baterias": true
+      },
+      {
+        "s": 1.5,
+        "M_baterias": 65.8914,
+        "M_persistentes": 54.3472,
+        "ganan_baterias": false
+      },
+      {
+        "s": 2.0,
+        "M_baterias": 79.0697,
+        "M_persistentes": 54.3472,
+        "ganan_baterias": false
+      },
+      {
+        "s": 3.0,
+        "M_baterias": 105.4263,
+        "M_persistentes": 54.3472,
+        "ganan_baterias": false
+      }
+    ],
+    "interpretacion": "s* = costo de spawn al que M_bat = M_pers. s* >> 1: las baterias pagan holgadamente; s* ~ 1: borde; s* < 1: ni con spawn barato pagan."
+  },
+  "sanity_check_diagnostico": {
+    "drift_cero_seed9999": {
+      "mse_persistentes": 0.072153,
+      "mse_baterias": 0.082733,
+      "nota": "con drift=0 ambos brazos son el mismo proceso: MSE del mismo orden (no identicos: RNG distinto)."
+    }
+  }
+}

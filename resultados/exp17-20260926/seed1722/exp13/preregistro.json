@@ -1,0 +1,70 @@
+{
+  "experimento": "ALMA-EXP13: fixes contra los patrones sistemáticos de EXP12",
+  "fecha": "2026-09-26T20:21:11",
+  "criterio_exito": {
+    "v2_gana_a_v1_y_a_mejor_fija": true
+  },
+  "diseno": {
+    "oraculo": "COPIADO de EXP12 (3 brazos x 2 intentos, 720 mediciones, fases 13A-*); sin medir de nuevo",
+    "stream": "10 bloques x 12 idéntico a EXP12 (verificado), flip real 8/9 alternancias, brazos en juego: cot/single",
+    "politica_v1_control": "réplica exacta de EXP12 (probe q=0,1,2 + re-probe q=10,11; Thompson; prior warm con olvido 0.5^d; default single, cambio si mejor alt. supera por > 0.05)",
+    "politica_v2": "mismo stack + fix1 (default = prior-best; cambio solo si alternativo supera AL PRIOR-BEST por > 0.05) + fix2 (poda: media empírica < mejor - 0.10 durante 2 bloques consecutivos -> fuera del Thompson; mínimo 2 brazos activos)",
+    "comparacion": "mejor brazo fijo entre los 3 (replay del oráculo)",
+    "rng": "pareado por (politica,bloque,q), seed 1722",
+    "freno_costo": "si proyección > US$1,00: detener (exit 2)"
+  },
+  "orden_bloques": [
+    {
+      "bloque": "calculo",
+      "mejor_oraculo": "cot",
+      "margen": 0.115
+    },
+    {
+      "bloque": "codigo",
+      "mejor_oraculo": "single",
+      "margen": 0.01
+    },
+    {
+      "bloque": "qa_multihop",
+      "mejor_oraculo": "cot",
+      "margen": 0.115
+    },
+    {
+      "bloque": "herramientas",
+      "mejor_oraculo": "single",
+      "margen": 0.0413
+    },
+    {
+      "bloque": "logica",
+      "mejor_oraculo": "cot",
+      "margen": 0.115
+    },
+    {
+      "bloque": "puzzles",
+      "mejor_oraculo": "single",
+      "margen": 0.01
+    },
+    {
+      "bloque": "gsm8k-a",
+      "mejor_oraculo": "cot",
+      "margen": 0.1087
+    },
+    {
+      "bloque": "mmlu-a",
+      "mejor_oraculo": "single",
+      "margen": 0.01
+    },
+    {
+      "bloque": "gsm8k-b",
+      "mejor_oraculo": "cot",
+      "margen": 0.1712
+    },
+    {
+      "bloque": "mmlu-b",
+      "mejor_oraculo": "cot",
+      "margen": 0.0525
+    }
+  ],
+  "seed": 1722,
+  "modo": "mock"
+}

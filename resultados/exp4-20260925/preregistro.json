@@ -1,0 +1,35 @@
+{
+  "experimento": "ALMA-EXP4: forward transfer (warm vs cold)",
+  "fecha": "2026-09-25T22:22:48",
+  "criterio_exito": {
+    "diff_regret_medio_max": 0.0,
+    "min_clases_gana_warm": 5
+  },
+  "diseno": {
+    "clases": [
+      "calculo",
+      "codigo",
+      "qa_multihop",
+      "herramientas",
+      "puzzles",
+      "logica",
+      "traduccion",
+      "resumen",
+      "depuracion",
+      "conocimiento"
+    ],
+    "orden_seed": 789,
+    "n0_pseudo": 2,
+    "ventana_regret": 6,
+    "oraculo": "proxy mejor-de-{single,cot}",
+    "warm": "medias globales del repertorio (no por similitud)",
+    "rng": "determinista por (clase, problema), pareado cold/warm"
+  },
+  "versiones": {
+    "alma": "0.1.0",
+    "registry": "1.0.0",
+    "evaluator": "eval-v1"
+  },
+  "seed": 789,
+  "modo": "api"
+}

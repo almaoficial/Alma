@@ -1,0 +1,77 @@
+{
+  "agentes_tabla_fija_TPR_TNR": {
+    "A": [
+      0.6,
+      0.6
+    ],
+    "B": [
+      0.65,
+      0.62
+    ],
+    "C": [
+      0.58,
+      0.7
+    ],
+    "D": [
+      0.75,
+      0.72
+    ],
+    "E": [
+      0.62,
+      0.58
+    ],
+    "F": [
+      0.85,
+      0.82
+    ],
+    "G": [
+      0.55,
+      0.55
+    ]
+  },
+  "brazos": {
+    "individual": "Un agente elegido UNIFORMEMENTE AL AZAR por seed. Costo = M llamadas.",
+    "probe": "Cada agente clasifica P=16 candidatos etiquetados frescos (CON errores correlacionados, mismo modelo); se selecciona argmax(accuracy), empate -> indice menor; el seleccionado clasifica todo el pool. Costo = 7*P + M llamadas.",
+    "voto": "Los 7 agentes clasifican todo el pool CON errores correlacionados; decision por mayoria (>=4/7) por candidato. Costo = 7*M llamadas."
+  },
+  "caveats_honestos": [
+    "rho=0.5 es una eleccion, no una medicion: los LLMs reales pueden correlacionar mas o menos. El experimento prueba robustez a UN nivel de correlacion, no a todos.",
+    "Los agentes siguen siendo tablas fijas con TPR/TNR, no LLMs reales: se ataca el caveat de independencia, no el de realismo total.",
+    "El brazo voto sigue estructuralmente desfavorecido en eficiencia (7x costo): la comparacion real es probe vs individual.",
+    "El probe selecciona por accuracy (no F1): con 12,5% de prevalencia un probe de 16 puede tener 0-2 positivos.",
+    "Con correlacion, la accuracy del probe es mas ruidosa (menor tamaño efectivo de muestra): la seleccion puede degradarse vs EXP19. Eso es exactamente lo que se mide."
+  ],
+  "comparacion_exp19_numeros": {
+    "E_individual": 0.0554,
+    "E_probe": 0.094,
+    "E_voto": 0.0148,
+    "F1_individual": 0.277,
+    "F1_probe": 0.4807,
+    "F1_voto": 0.5164,
+    "veredicto": "PASS (4/4 seeds, sin cambio de signo)"
+  },
+  "criterio_pre_registrado_sin_mover": "E_probe > E_individual Y E_probe > E_voto, donde E = F1/llamadas*1000, evaluado en la MEDIA de las 4 seeds. PASS si ambas se cumplen; FAIL si alguna falla.",
+  "diseno": {
+    "N_agentes": 7,
+    "P_probe": 16,
+    "metrica_primaria": "E = F1 / llamadas * 1000 (puntos de F1 por cada 1000 llamadas mock).",
+    "modelo_correlacion_exacta": "Latente gaussiana equicorrelacionada POR CANDIDATO: C ~ N(0,1) compartida por candidato; Z_a = sqrt(rho)*C + sqrt(1-rho)*eps_a con eps_a ~ N(0,1) independientes por agente; el agente a ACIERTA sii Phi(Z_a) < p_a(label), donde p_a = TPR_a si label=1, TNR_a si label=0; rho = 0.5. Preserva las MARGINALES exactas de EXP19 (cada agente acierta con prob. TPR/TNR). La correlacion de ERRORES BINARIOS observada sera menor que 0.5 por atenuacion del umbral (esperado ~0.2-0.35); se reporta como sanity check (media de las 21 correlaciones de Pearson por pares sobre el pool). Aplicado a: clasificacion del pool (los 3 brazos) y clasificacion del probe (16 etiquetados).",
+    "modo": "mock PURO (US$0, cero llamadas a API; EXP18 corre en paralelo con la key, no interferir)",
+    "pool_por_seed": "M=5000 candidatos, d=8 features binarias uniformes, regenerados por seed (seeds NUEVAS, distintas de EXP19)",
+    "regla_hits": "HIT <=> (f1=1 AND f4=1 AND f7=0); prevalencia esperada 12,5%"
+  },
+  "experimento": "ALMA-EXP20: ¿sobrevive la seleccion con ERRORES CORRELACIONADOS? (modo mock)",
+  "fecha": "2026-09-26T16:45:00",
+  "hipotesis_H1": "Con errores correlacionados (rho=0.5 en la latente), el enjambre con probe-seleccion estilo ALMA sigue superando en F1-por-costo al agente individual y al enjambre por voto sin seleccion. La seleccion NO era un artefacto de la independencia.",
+  "motivo": "EXP19 dio PASS (la seleccion hace eficiente al enjambre) pero con el caveat de errores independientes entre agentes; los LLMs reales correlacionan sus errores. Refutacion primero: si el PASS era un artefacto de la independencia, hay que matarlo aca.",
+  "refutacion": "Si E_probe <= E_individual con errores correlacionados, el PASS de EXP19 era un artefacto de la independencia: la seleccion solo funciona cuando los errores son independientes. Si E_voto >= E_probe, escalar ingenuamente le gana a seleccionar bajo correlacion.",
+  "regla_de_confiabilidad": "Si el signo de (E_probe - E_individual) cambia entre seeds, el veredicto es NO CONFIABLE aunque la media pase.",
+  "seeds_pre_registradas": [
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "modelo_correlacion_exacta": "Latente gaussiana equicorrelacionada POR CANDIDATO: C ~ N(0,1) compartida por candidato; Z_a = sqrt(rho)*C + sqrt(1-rho)*eps_a con eps_a ~ N(0,1) independientes por agente; el agente a PREDICE 1 sii Phi(Z_a) < q_a(label), donde q_a = TPR_a si label=1, (1-TNR_a) si label=0; acierta sii pred == label; rho = 0.5. Preserva las MARGINALES exactas de EXP19 (P(pred=1|y=1)=TPR_a, P(pred=0|y=0)=TNR_a). La correlación de ERRORES BINARIOS observada será menor que 0.5 por atenuación del umbral (esperado ~0.2-0.35); se reporta como sanity check. Aplicado a: clasificación del pool (los 3 brazos) y clasificación del probe (16 etiquetados).",
+  "correccion_bug_20260926": "Primera corrida descartada: probs_para pasaba q=TNR_a en label=0 en vez de (1-TNR_a), violando la intención pre-registrada de marginales idénticas a EXP19 (F sacaba accuracy 0.25 en el probe). Se corrigió el código y esta documentación; criterio, seeds, rho y diseño sin cambios. Solo la corrida corregida cuenta. Segunda parte del mismo bug: en los brazos single-agent del pool (probe-seleccionado e individual) también se pasaba TNR en label=0 en vez de (1-TNR) (F1 de F daba 0.22 vs teórico ~0.55). Corregido a q=TPR/(1-TNR)."
+}

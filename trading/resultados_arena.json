@@ -1,0 +1,542 @@
+{
+  "ventanas": [
+    {
+      "inicio": "2016-01-01",
+      "fin": "2017-12-31",
+      "competidores": {
+        "ALMA v1": {
+          "metricas": {
+            "retorno_neto": 0.2737105147180303,
+            "sharpe": 0.7333907444999314,
+            "max_drawdown": 0.24410494068499555,
+            "dias": 377
+          },
+          "params": {
+            "ventana_probe": 63,
+            "umbral_evi": 2.0,
+            "umbral_cd": 1.5
+          }
+        },
+        "ALMA v2": {
+          "metricas": {
+            "retorno_neto": 0.2737105147180303,
+            "sharpe": 0.7333907444999314,
+            "max_drawdown": 0.24410494068499555,
+            "dias": 377
+          },
+          "params": {
+            "ventana_probe": 63,
+            "umbral_evi": 2.0,
+            "umbral_cd": 1.5,
+            "penalidad_churn": 0.0
+          }
+        },
+        "ALMA v3": {
+          "metricas": {
+            "retorno_neto": 0.27554095938587064,
+            "sharpe": 2.170367653941728,
+            "max_drawdown": 0.051553356275676476,
+            "dias": 377
+          },
+          "params": {}
+        },
+        "fijo_hold": {
+          "metricas": {
+            "retorno_neto": 0.2755409593858713,
+            "sharpe": 2.1703676539417263,
+            "max_drawdown": 0.051553356275676254,
+            "dias": 377
+          },
+          "params": null
+        },
+        "fijo_momentum": {
+          "metricas": {
+            "retorno_neto": 0.5252662153926997,
+            "sharpe": 1.190759488673158,
+            "max_drawdown": 0.244104940684996,
+            "dias": 377
+          },
+          "params": null
+        },
+        "fijo_reversion": {
+          "metricas": {
+            "retorno_neto": 0.184953371122887,
+            "sharpe": 0.6541649722661284,
+            "max_drawdown": 0.2134843497257226,
+            "dias": 377
+          },
+          "params": null
+        },
+        "fijo_cash": {
+          "metricas": {
+            "retorno_neto": 0.0,
+            "sharpe": 0.0,
+            "max_drawdown": 0.0,
+            "dias": 377
+          },
+          "params": null
+        }
+      }
+    },
+    {
+      "inicio": "2018-01-01",
+      "fin": "2019-12-31",
+      "competidores": {
+        "ALMA v1": {
+          "metricas": {
+            "retorno_neto": 0.16526284224340837,
+            "sharpe": 0.47727338774894895,
+            "max_drawdown": 0.6436261450061955,
+            "dias": 377
+          },
+          "params": {
+            "ventana_probe": 63,
+            "umbral_evi": 2.0,
+            "umbral_cd": 1.5
+          }
+        },
+        "ALMA v2": {
+          "metricas": {
+            "retorno_neto": 0.16526284224340837,
+            "sharpe": 0.47727338774894895,
+            "max_drawdown": 0.6436261450061955,
+            "dias": 377
+          },
+          "params": {
+            "ventana_probe": 63,
+            "umbral_evi": 2.0,
+            "umbral_cd": 1.5,
+            "penalidad_churn": 0.0
+          }
+        },
+        "ALMA v3": {
+          "metricas": {
+            "retorno_neto": 0.1753336708159472,
+            "sharpe": 0.9743313523460283,
+            "max_drawdown": 0.11463984788239956,
+            "dias": 377
+          },
+          "params": {}
+        },
+        "fijo_hold": {
+          "metricas": {
+            "retorno_neto": 0.18228339990501774,
+            "sharpe": 0.8465067605271882,
+            "max_drawdown": 0.24737441543884753,
+            "dias": 377
+          },
+          "params": null
+        },
+        "fijo_momentum": {
+          "metricas": {
+            "retorno_neto": -0.027907525524054067,
+            "sharpe": 0.11981434371243714,
+            "max_drawdown": 1.0843152742300135,
+            "dias": 377
+          },
+          "params": null
+        },
+        "fijo_reversion": {
+          "metricas": {
+            "retorno_neto": -0.39304864612174295,
+            "sharpe": -0.515528861706707,
+            "max_drawdown": 1.4823295718334215,
+            "dias": 377
+          },
+          "params": null
+        },
+        "fijo_cash": {
+          "metricas": {
+            "retorno_neto": 0.0,
+            "sharpe": 0.0,
+            "max_drawdown": 0.0,
+            "dias": 377
+          },
+          "params": null
+        }
+      }
+    },
+    {
+      "inicio": "2020-01-01",
+      "fin": "2021-12-31",
+      "competidores": {
+        "ALMA v1": {
+          "metricas": {
+            "retorno_neto": 1.218569888607651,
+            "sharpe": 1.25325836834436,
+            "max_drawdown": 0.5121233068534419,
+            "dias": 379
+          },
+          "params": {
+            "ventana_probe": 63,
+            "umbral_evi": 2.0,
+            "umbral_cd": 1.5
+          }
+        },
+        "ALMA v2": {
+          "metricas": {
+            "retorno_neto": 1.2968468266839688,
+            "sharpe": 1.2921504772759889,
+            "max_drawdown": 0.5121233068534419,
+            "dias": 379
+          },
+          "params": {
+            "ventana_probe": 63,
+            "umbral_evi": 2.0,
+            "umbral_cd": 1.5,
+            "penalidad_churn": 0.01
+          }
+        },
+        "ALMA v3": {
+          "metricas": {
+            "retorno_neto": 0.6667877319977189,
+            "sharpe": 0.947734944964184,
+            "max_drawdown": 0.5888395764695078,
+            "dias": 379
+          },
+          "params": {}
+        },
+        "fijo_hold": {
+          "metricas": {
+            "retorno_neto": 0.49924652134337855,
+            "sharpe": 1.9715779503293769,
+            "max_drawdown": 0.10424593261109316,
+            "dias": 379
+          },
+          "params": null
+        },
+        "fijo_momentum": {
+          "metricas": {
+            "retorno_neto": 1.9005342325631496,
+            "sharpe": 1.542757131407982,
+            "max_drawdown": 0.5888395764695078,
+            "dias": 379
+          },
+          "params": null
+        },
+        "fijo_reversion": {
+          "metricas": {
+            "retorno_neto": 0.5769635839440044,
+            "sharpe": 0.9693827496173324,
+            "max_drawdown": 0.37234400833671977,
+            "dias": 379
+          },
+          "params": null
+        },
+        "fijo_cash": {
+          "metricas": {
+            "retorno_neto": 0.0,
+            "sharpe": 0.0,
+            "max_drawdown": 0.0,
+            "dias": 379
+          },
+          "params": null
+        }
+      }
+    },
+    {
+      "inicio": "2022-01-01",
+      "fin": "2023-12-31",
+      "competidores": {
+        "ALMA v1": {
+          "metricas": {
+            "retorno_neto": -0.03656429346314638,
+            "sharpe": 0.07364610568835346,
+            "max_drawdown": 0.6134542143274035,
+            "dias": 375
+          },
+          "params": {
+            "ventana_probe": 63,
+            "umbral_evi": 2.0,
+            "umbral_cd": 1.5
+          }
+        },
+        "ALMA v2": {
+          "metricas": {
+            "retorno_neto": -0.03656429346314638,
+            "sharpe": 0.07364610568835346,
+            "max_drawdown": 0.6134542143274035,
+            "dias": 375
+          },
+          "params": {
+            "ventana_probe": 63,
+            "umbral_evi": 2.0,
+            "umbral_cd": 1.5,
+            "penalidad_churn": 0.01
+          }
+        },
+        "ALMA v3": {
+          "metricas": {
+            "retorno_neto": 0.15040893555143175,
+            "sharpe": 0.6003939331828443,
+            "max_drawdown": 0.24330264316120687,
+            "dias": 375
+          },
+          "params": {}
+        },
+        "fijo_hold": {
+          "metricas": {
+            "retorno_neto": 0.2275591912888486,
+            "sharpe": 0.8878144989982716,
+            "max_drawdown": 0.20500965995668352,
+            "dias": 375
+          },
+          "params": null
+        },
+        "fijo_momentum": {
+          "metricas": {
+            "retorno_neto": 0.21749788881486865,
+            "sharpe": 0.5705022099289047,
+            "max_drawdown": 0.3639962930754488,
+            "dias": 375
+          },
+          "params": null
+        },
+        "fijo_reversion": {
+          "metricas": {
+            "retorno_neto": 0.051426530476178955,
+            "sharpe": 0.3085309915038031,
+            "max_drawdown": 1.8763268068172145,
+            "dias": 375
+          },
+          "params": null
+        },
+        "fijo_cash": {
+          "metricas": {
+            "retorno_neto": 0.0,
+            "sharpe": 0.0,
+            "max_drawdown": 0.0,
+            "dias": 375
+          },
+          "params": null
+        }
+      }
+    },
+    {
+      "inicio": "2024-01-01",
+      "fin": "2026-09-25",
+      "competidores": {
+        "ALMA v1": {
+          "metricas": {
+            "retorno_neto": 0.4576438535188956,
+            "sharpe": 0.612777850313688,
+            "max_drawdown": 1.0020295517238522,
+            "dias": 560
+          },
+          "params": {
+            "ventana_probe": 63,
+            "umbral_evi": 2.0,
+            "umbral_cd": 1.5
+          }
+        },
+        "ALMA v2": {
+          "metricas": {
+            "retorno_neto": 0.814339114386917,
+            "sharpe": 0.8458623401853862,
+            "max_drawdown": 1.0020295517238522,
+            "dias": 560
+          },
+          "params": {
+            "ventana_probe": 63,
+            "umbral_evi": 3.0,
+            "umbral_cd": 1.5,
+            "penalidad_churn": 0.01
+          }
+        },
+        "ALMA v3": {
+          "metricas": {
+            "retorno_neto": 0.058760621315991024,
+            "sharpe": 0.2268402264110538,
+            "max_drawdown": 0.3070068808501465,
+            "dias": 560
+          },
+          "params": {}
+        },
+        "fijo_hold": {
+          "metricas": {
+            "retorno_neto": 0.36264068934594307,
+            "sharpe": 0.9236034740775174,
+            "max_drawdown": 0.23578426277964626,
+            "dias": 560
+          },
+          "params": null
+        },
+        "fijo_momentum": {
+          "metricas": {
+            "retorno_neto": 0.1619707554926486,
+            "sharpe": 0.3731136177838834,
+            "max_drawdown": 1.1539227498098783,
+            "dias": 560
+          },
+          "params": null
+        },
+        "fijo_reversion": {
+          "metricas": {
+            "retorno_neto": 1.0311447161549347,
+            "sharpe": 1.045013618335527,
+            "max_drawdown": 0.3174710359471551,
+            "dias": 560
+          },
+          "params": null
+        },
+        "fijo_cash": {
+          "metricas": {
+            "retorno_neto": 0.0,
+            "sharpe": 0.0,
+            "max_drawdown": 0.0,
+            "dias": 560
+          },
+          "params": null
+        }
+      }
+    }
+  ],
+  "campeon_inicial": "reversion",
+  "asaltos": [
+    {
+      "retador": "ALMA v1",
+      "campeon_vigente": "reversion",
+      "ventanas_ganadas": 2,
+      "toma_titulo": false,
+      "detalle": [
+        {
+          "ventana": "2016-01-01\u21922017-12-31",
+          "gana_ventana": true,
+          "ret_retador": 0.2737105147180303,
+          "ret_campeon": 0.184953371122887,
+          "dd_retador": 0.24410494068499555,
+          "dd_campeon": 0.2134843497257226
+        },
+        {
+          "ventana": "2018-01-01\u21922019-12-31",
+          "gana_ventana": true,
+          "ret_retador": 0.16526284224340837,
+          "ret_campeon": -0.39304864612174295,
+          "dd_retador": 0.6436261450061955,
+          "dd_campeon": 1.4823295718334215
+        },
+        {
+          "ventana": "2020-01-01\u21922021-12-31",
+          "gana_ventana": false,
+          "ret_retador": 1.218569888607651,
+          "ret_campeon": 0.5769635839440044,
+          "dd_retador": 0.5121233068534419,
+          "dd_campeon": 0.37234400833671977
+        },
+        {
+          "ventana": "2022-01-01\u21922023-12-31",
+          "gana_ventana": false,
+          "ret_retador": -0.03656429346314638,
+          "ret_campeon": 0.051426530476178955,
+          "dd_retador": 0.6134542143274035,
+          "dd_campeon": 1.8763268068172145
+        },
+        {
+          "ventana": "2024-01-01\u21922026-09-25",
+          "gana_ventana": false,
+          "ret_retador": 0.4576438535188956,
+          "ret_campeon": 1.0311447161549347,
+          "dd_retador": 1.0020295517238522,
+          "dd_campeon": 0.3174710359471551
+        }
+      ]
+    },
+    {
+      "retador": "ALMA v2",
+      "campeon_vigente": "reversion",
+      "ventanas_ganadas": 2,
+      "toma_titulo": false,
+      "detalle": [
+        {
+          "ventana": "2016-01-01\u21922017-12-31",
+          "gana_ventana": true,
+          "ret_retador": 0.2737105147180303,
+          "ret_campeon": 0.184953371122887,
+          "dd_retador": 0.24410494068499555,
+          "dd_campeon": 0.2134843497257226
+        },
+        {
+          "ventana": "2018-01-01\u21922019-12-31",
+          "gana_ventana": true,
+          "ret_retador": 0.16526284224340837,
+          "ret_campeon": -0.39304864612174295,
+          "dd_retador": 0.6436261450061955,
+          "dd_campeon": 1.4823295718334215
+        },
+        {
+          "ventana": "2020-01-01\u21922021-12-31",
+          "gana_ventana": false,
+          "ret_retador": 1.2968468266839688,
+          "ret_campeon": 0.5769635839440044,
+          "dd_retador": 0.5121233068534419,
+          "dd_campeon": 0.37234400833671977
+        },
+        {
+          "ventana": "2022-01-01\u21922023-12-31",
+          "gana_ventana": false,
+          "ret_retador": -0.03656429346314638,
+          "ret_campeon": 0.051426530476178955,
+          "dd_retador": 0.6134542143274035,
+          "dd_campeon": 1.8763268068172145
+        },
+        {
+          "ventana": "2024-01-01\u21922026-09-25",
+          "gana_ventana": false,
+          "ret_retador": 0.814339114386917,
+          "ret_campeon": 1.0311447161549347,
+          "dd_retador": 1.0020295517238522,
+          "dd_campeon": 0.3174710359471551
+        }
+      ]
+    },
+    {
+      "retador": "ALMA v3",
+      "campeon_vigente": "reversion",
+      "ventanas_ganadas": 3,
+      "toma_titulo": true,
+      "detalle": [
+        {
+          "ventana": "2016-01-01\u21922017-12-31",
+          "gana_ventana": true,
+          "ret_retador": 0.27554095938587064,
+          "ret_campeon": 0.184953371122887,
+          "dd_retador": 0.051553356275676476,
+          "dd_campeon": 0.2134843497257226
+        },
+        {
+          "ventana": "2018-01-01\u21922019-12-31",
+          "gana_ventana": true,
+          "ret_retador": 0.1753336708159472,
+          "ret_campeon": -0.39304864612174295,
+          "dd_retador": 0.11463984788239956,
+          "dd_campeon": 1.4823295718334215
+        },
+        {
+          "ventana": "2020-01-01\u21922021-12-31",
+          "gana_ventana": false,
+          "ret_retador": 0.6667877319977189,
+          "ret_campeon": 0.5769635839440044,
+          "dd_retador": 0.5888395764695078,
+          "dd_campeon": 0.37234400833671977
+        },
+        {
+          "ventana": "2022-01-01\u21922023-12-31",
+          "gana_ventana": true,
+          "ret_retador": 0.15040893555143175,
+          "ret_campeon": 0.051426530476178955,
+          "dd_retador": 0.24330264316120687,
+          "dd_campeon": 1.8763268068172145
+        },
+        {
+          "ventana": "2024-01-01\u21922026-09-25",
+          "gana_ventana": false,
+          "ret_retador": 0.058760621315991024,
+          "ret_campeon": 1.0311447161549347,
+          "dd_retador": 0.3070068808501465,
+          "dd_campeon": 0.3174710359471551
+        }
+      ]
+    }
+  ],
+  "campeon_final": "ALMA v3"
+}

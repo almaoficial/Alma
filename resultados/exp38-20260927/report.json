@@ -1,0 +1,627 @@
+{
+  "preregistro": "resultados/exp38-20260927/preregistro.json",
+  "umbrales": {
+    "K_SENAL": 1.0
+  },
+  "pnl_total": {
+    "alma38": -0.025157,
+    "fijas": {
+      "momentum": -0.185338,
+      "meanrev": 0.029538,
+      "buyhold": 0.085041,
+      "flat": 0.0
+    },
+    "mejor_fija": "buyhold"
+  },
+  "pnl_mitades": {
+    "alma38_h1": 0.052626,
+    "alma38_h2": -0.077783,
+    "exp36_h1": -0.04213,
+    "exp36_h2": 0.12671,
+    "fijas_h1": {
+      "momentum": -0.038108,
+      "meanrev": -0.037692,
+      "buyhold": -0.004808,
+      "flat": 0.0
+    },
+    "fijas_h2": {
+      "momentum": -0.14723,
+      "meanrev": 0.06723,
+      "buyhold": 0.089849,
+      "flat": 0.0
+    }
+  },
+  "diagnostico_bloques": [
+    {
+      "bloque": 0,
+      "inicial": "meanrev",
+      "final": "meanrev",
+      "debil_inicial": false,
+      "debil_final": false,
+      "gap_inicial": 0.05366,
+      "umbral_inicial": 0.03097,
+      "gap_final": 0.03117,
+      "umbral_final": 0.02862,
+      "cambio": false,
+      "pnl_bloque_alma": 0.003208,
+      "pnl_bloque_fijas": {
+        "momentum": -0.017238,
+        "meanrev": 0.011438,
+        "buyhold": 0.002681,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 1,
+      "inicial": "flat",
+      "final": "flat",
+      "debil_inicial": true,
+      "debil_final": true,
+      "gap_inicial": 0.0,
+      "umbral_inicial": 0.0141,
+      "gap_final": 0.001,
+      "umbral_final": 0.02084,
+      "cambio": false,
+      "pnl_bloque_alma": -0.017933,
+      "pnl_bloque_fijas": {
+        "momentum": 0.00975,
+        "meanrev": -0.01375,
+        "buyhold": 0.011606,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 2,
+      "inicial": "flat",
+      "final": "flat",
+      "debil_inicial": true,
+      "debil_final": true,
+      "gap_inicial": 0.00204,
+      "umbral_inicial": 0.03947,
+      "gap_final": 0.01191,
+      "umbral_final": 0.02265,
+      "cambio": false,
+      "pnl_bloque_alma": 0.026367,
+      "pnl_bloque_fijas": {
+        "momentum": -0.006681,
+        "meanrev": 0.001881,
+        "buyhold": -0.001345,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 3,
+      "inicial": "flat",
+      "final": "flat",
+      "debil_inicial": true,
+      "debil_final": true,
+      "gap_inicial": 0.00572,
+      "umbral_inicial": 0.02415,
+      "gap_final": 0.01288,
+      "umbral_final": 0.03373,
+      "cambio": false,
+      "pnl_bloque_alma": -0.000407,
+      "pnl_bloque_fijas": {
+        "momentum": 0.009586,
+        "meanrev": -0.013986,
+        "buyhold": -0.020953,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 4,
+      "inicial": "flat",
+      "final": "flat",
+      "debil_inicial": true,
+      "debil_final": true,
+      "gap_inicial": 0.00836,
+      "umbral_inicial": 0.03957,
+      "gap_final": 0.01035,
+      "umbral_final": 0.01799,
+      "cambio": false,
+      "pnl_bloque_alma": 0.01619,
+      "pnl_bloque_fijas": {
+        "momentum": -0.01333,
+        "meanrev": 0.00773,
+        "buyhold": 0.001542,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 5,
+      "inicial": "flat",
+      "final": "flat",
+      "debil_inicial": true,
+      "debil_final": true,
+      "gap_inicial": 0.00234,
+      "umbral_inicial": 0.00979,
+      "gap_final": 0.00951,
+      "umbral_final": 0.01254,
+      "cambio": false,
+      "pnl_bloque_alma": -0.022434,
+      "pnl_bloque_fijas": {
+        "momentum": 0.023049,
+        "meanrev": -0.028649,
+        "buyhold": 0.04713,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 6,
+      "inicial": "flat",
+      "final": "flat",
+      "debil_inicial": true,
+      "debil_final": true,
+      "gap_inicial": 0.00167,
+      "umbral_inicial": 0.09566,
+      "gap_final": 0.04182,
+      "umbral_final": 0.05799,
+      "cambio": false,
+      "pnl_bloque_alma": 0.01545,
+      "pnl_bloque_fijas": {
+        "momentum": -0.035442,
+        "meanrev": 0.029442,
+        "buyhold": -0.019235,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 7,
+      "inicial": "flat",
+      "final": "buyhold",
+      "debil_inicial": true,
+      "debil_final": false,
+      "gap_inicial": 0.01911,
+      "umbral_inicial": 0.04033,
+      "gap_final": 0.02306,
+      "umbral_final": 0.0142,
+      "cambio": true,
+      "pnl_bloque_alma": 0.000358,
+      "pnl_bloque_fijas": {
+        "momentum": -0.004467,
+        "meanrev": -0.000333,
+        "buyhold": 0.007487,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 8,
+      "inicial": "flat",
+      "final": "flat",
+      "debil_inicial": true,
+      "debil_final": true,
+      "gap_inicial": 0.01791,
+      "umbral_inicial": 0.0283,
+      "gap_final": 0.00306,
+      "umbral_final": 0.02435,
+      "cambio": false,
+      "pnl_bloque_alma": 0.005032,
+      "pnl_bloque_fijas": {
+        "momentum": -0.012497,
+        "meanrev": 0.006497,
+        "buyhold": -0.004159,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 9,
+      "inicial": "flat",
+      "final": "flat",
+      "debil_inicial": true,
+      "debil_final": true,
+      "gap_inicial": 0.01815,
+      "umbral_inicial": 0.02958,
+      "gap_final": 0.00821,
+      "umbral_final": 0.02505,
+      "cambio": false,
+      "pnl_bloque_alma": -0.011512,
+      "pnl_bloque_fijas": {
+        "momentum": 0.01197,
+        "meanrev": -0.01637,
+        "buyhold": -0.007012,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 10,
+      "inicial": "flat",
+      "final": "flat",
+      "debil_inicial": true,
+      "debil_final": true,
+      "gap_inicial": 0.0,
+      "umbral_inicial": 0.03775,
+      "gap_final": 0.01011,
+      "umbral_final": 0.02491,
+      "cambio": false,
+      "pnl_bloque_alma": 0.008809,
+      "pnl_bloque_fijas": {
+        "momentum": -0.011262,
+        "meanrev": 0.006862,
+        "buyhold": -0.008522,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 11,
+      "inicial": "momentum",
+      "final": "buyhold",
+      "debil_inicial": false,
+      "debil_final": false,
+      "gap_inicial": 0.00873,
+      "umbral_inicial": 0.00701,
+      "gap_final": 0.02061,
+      "umbral_final": 0.01561,
+      "cambio": true,
+      "pnl_bloque_alma": 0.016017,
+      "pnl_bloque_fijas": {
+        "momentum": -0.023206,
+        "meanrev": 0.018806,
+        "buyhold": 0.003437,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 12,
+      "inicial": "momentum",
+      "final": "momentum",
+      "debil_inicial": false,
+      "debil_final": false,
+      "gap_inicial": 0.04593,
+      "umbral_inicial": 0.03977,
+      "gap_final": 0.03969,
+      "umbral_final": 0.02965,
+      "cambio": false,
+      "pnl_bloque_alma": 0.00523,
+      "pnl_bloque_fijas": {
+        "momentum": 0.010315,
+        "meanrev": -0.014715,
+        "buyhold": -0.018578,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 13,
+      "inicial": "flat",
+      "final": "flat",
+      "debil_inicial": true,
+      "debil_final": true,
+      "gap_inicial": 0.00743,
+      "umbral_inicial": 0.0211,
+      "gap_final": 0.00559,
+      "umbral_final": 0.01259,
+      "cambio": false,
+      "pnl_bloque_alma": 0.009041,
+      "pnl_bloque_fijas": {
+        "momentum": 0.024438,
+        "meanrev": -0.029638,
+        "buyhold": 0.003199,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 14,
+      "inicial": "flat",
+      "final": "flat",
+      "debil_inicial": true,
+      "debil_final": true,
+      "gap_inicial": 0.0291,
+      "umbral_inicial": 0.06482,
+      "gap_final": 0.00973,
+      "umbral_final": 0.03748,
+      "cambio": false,
+      "pnl_bloque_alma": -0.002729,
+      "pnl_bloque_fijas": {
+        "momentum": -0.001153,
+        "meanrev": -0.004847,
+        "buyhold": -0.004027,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 15,
+      "inicial": "flat",
+      "final": "flat",
+      "debil_inicial": true,
+      "debil_final": true,
+      "gap_inicial": 0.0052,
+      "umbral_inicial": 0.01049,
+      "gap_final": 0.00967,
+      "umbral_final": 0.01527,
+      "cambio": false,
+      "pnl_bloque_alma": -0.008111,
+      "pnl_bloque_fijas": {
+        "momentum": -0.00658,
+        "meanrev": 0.00058,
+        "buyhold": 0.001382,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 16,
+      "inicial": "flat",
+      "final": "flat",
+      "debil_inicial": true,
+      "debil_final": true,
+      "gap_inicial": 0.00805,
+      "umbral_inicial": 0.01387,
+      "gap_final": 0.00383,
+      "umbral_final": 0.02813,
+      "cambio": false,
+      "pnl_bloque_alma": 0.00105,
+      "pnl_bloque_fijas": {
+        "momentum": -0.005731,
+        "meanrev": 0.000131,
+        "buyhold": 0.021028,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 17,
+      "inicial": "flat",
+      "final": "flat",
+      "debil_inicial": true,
+      "debil_final": true,
+      "gap_inicial": 0.01628,
+      "umbral_inicial": 0.06641,
+      "gap_final": 0.00214,
+      "umbral_final": 0.04513,
+      "cambio": false,
+      "pnl_bloque_alma": -0.019108,
+      "pnl_bloque_fijas": {
+        "momentum": -0.008733,
+        "meanrev": 0.003533,
+        "buyhold": -0.025642,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 18,
+      "inicial": "meanrev",
+      "final": "meanrev",
+      "debil_inicial": false,
+      "debil_final": false,
+      "gap_inicial": 0.14553,
+      "umbral_inicial": 0.08485,
+      "gap_final": 0.10059,
+      "umbral_final": 0.05609,
+      "cambio": false,
+      "pnl_bloque_alma": 0.007482,
+      "pnl_bloque_fijas": {
+        "momentum": -0.036735,
+        "meanrev": 0.029535,
+        "buyhold": -0.016729,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 19,
+      "inicial": "flat",
+      "final": "flat",
+      "debil_inicial": true,
+      "debil_final": true,
+      "gap_inicial": 0.0221,
+      "umbral_inicial": 0.07883,
+      "gap_final": 0.01318,
+      "umbral_final": 0.04519,
+      "cambio": false,
+      "pnl_bloque_alma": -0.007098,
+      "pnl_bloque_fijas": {
+        "momentum": -0.014994,
+        "meanrev": 0.009394,
+        "buyhold": 0.012867,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 20,
+      "inicial": "flat",
+      "final": "flat",
+      "debil_inicial": true,
+      "debil_final": true,
+      "gap_inicial": 0.0036,
+      "umbral_inicial": 0.01448,
+      "gap_final": 0.00713,
+      "umbral_final": 0.0238,
+      "cambio": false,
+      "pnl_bloque_alma": -0.038357,
+      "pnl_bloque_fijas": {
+        "momentum": -0.004826,
+        "meanrev": -0.000374,
+        "buyhold": 0.056117,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 21,
+      "inicial": "flat",
+      "final": "flat",
+      "debil_inicial": true,
+      "debil_final": true,
+      "gap_inicial": 0.03269,
+      "umbral_inicial": 0.04278,
+      "gap_final": 0.01311,
+      "umbral_final": 0.02693,
+      "cambio": false,
+      "pnl_bloque_alma": 0.010464,
+      "pnl_bloque_fijas": {
+        "momentum": -0.020452,
+        "meanrev": 0.015652,
+        "buyhold": 0.005626,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 22,
+      "inicial": "momentum",
+      "final": "flat",
+      "debil_inicial": false,
+      "debil_final": true,
+      "gap_inicial": 0.0299,
+      "umbral_inicial": 0.01851,
+      "gap_final": 0.00541,
+      "umbral_final": 0.02003,
+      "cambio": true,
+      "pnl_bloque_alma": -0.009993,
+      "pnl_bloque_fijas": {
+        "momentum": 0.003661,
+        "meanrev": -0.008461,
+        "buyhold": -0.003702,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 23,
+      "inicial": "flat",
+      "final": "flat",
+      "debil_inicial": true,
+      "debil_final": true,
+      "gap_inicial": 0.00792,
+      "umbral_inicial": 0.02408,
+      "gap_final": 0.00638,
+      "umbral_final": 0.02148,
+      "cambio": false,
+      "pnl_bloque_alma": 0.015232,
+      "pnl_bloque_fijas": {
+        "momentum": 0.018062,
+        "meanrev": -0.022862,
+        "buyhold": 0.057585,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 24,
+      "inicial": "flat",
+      "final": "flat",
+      "debil_inicial": true,
+      "debil_final": true,
+      "gap_inicial": 0.03535,
+      "umbral_inicial": 0.0685,
+      "gap_final": 0.0152,
+      "umbral_final": 0.04905,
+      "cambio": false,
+      "pnl_bloque_alma": 0.008855,
+      "pnl_bloque_fijas": {
+        "momentum": -0.012696,
+        "meanrev": 0.007896,
+        "buyhold": 0.008005,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 25,
+      "inicial": "flat",
+      "final": "flat",
+      "debil_inicial": true,
+      "debil_final": true,
+      "gap_inicial": 0.00455,
+      "umbral_inicial": 0.03121,
+      "gap_final": 0.02274,
+      "umbral_final": 0.02544,
+      "cambio": false,
+      "pnl_bloque_alma": -0.03444,
+      "pnl_bloque_fijas": {
+        "momentum": -0.007076,
+        "meanrev": 0.002276,
+        "buyhold": -0.026278,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 26,
+      "inicial": "meanrev",
+      "final": "flat",
+      "debil_inicial": false,
+      "debil_final": true,
+      "gap_inicial": 0.04213,
+      "umbral_inicial": 0.02171,
+      "gap_final": 0.0227,
+      "umbral_final": 0.04977,
+      "cambio": true,
+      "pnl_bloque_alma": 0.008813,
+      "pnl_bloque_fijas": {
+        "momentum": -0.036688,
+        "meanrev": 0.030288,
+        "buyhold": -0.002465,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 27,
+      "inicial": "flat",
+      "final": "flat",
+      "debil_inicial": true,
+      "debil_final": true,
+      "gap_inicial": 0.00704,
+      "umbral_inicial": 0.05466,
+      "gap_final": 0.00422,
+      "umbral_final": 0.03656,
+      "cambio": false,
+      "pnl_bloque_alma": -0.003746,
+      "pnl_bloque_fijas": {
+        "momentum": 0.003115,
+        "meanrev": -0.007515,
+        "buyhold": -0.003737,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 28,
+      "inicial": "flat",
+      "final": "flat",
+      "debil_inicial": true,
+      "debil_final": true,
+      "gap_inicial": 0.00167,
+      "umbral_inicial": 0.03983,
+      "gap_final": 0.01376,
+      "umbral_final": 0.03026,
+      "cambio": false,
+      "pnl_bloque_alma": -0.000355,
+      "pnl_bloque_fijas": {
+        "momentum": -0.011757,
+        "meanrev": 0.006157,
+        "buyhold": 0.004321,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 29,
+      "inicial": "flat",
+      "final": "flat",
+      "debil_inicial": true,
+      "debil_final": true,
+      "gap_inicial": 0.00897,
+      "umbral_inicial": 0.01286,
+      "gap_final": 0.00576,
+      "umbral_final": 0.02749,
+      "cambio": false,
+      "pnl_bloque_alma": -0.006531,
+      "pnl_bloque_fijas": {
+        "momentum": -0.00774,
+        "meanrev": 0.00294,
+        "buyhold": 0.003411,
+        "flat": 0.0
+      }
+    }
+  ],
+  "bloques_debiles": 24,
+  "switches_reprobe": 4,
+  "criterio_secundario": {
+    "recorta_sangrado": true,
+    "retiene_tendencia": false
+  },
+  "costo_total_usd": 0.0,
+  "veredicto": {
+    "pasa": false,
+    "criterio": "pnl_total(alma38) > pnl_total(mejor_fija)",
+    "motivos": [
+      "P&L total: ALMA38=-2.5157% vs mejor fija (buyhold)=+8.5041% (diff=-11.0198%)",
+      "P&L fijas: momentum=-18.534%, meanrev=+2.954%, buyhold=+8.504%, flat=+0.000%",
+      "1ra mitad (lateral): ALMA38=+5.263% (EXP36: -4.213%) | fijas: momentum=-3.811%, meanrev=-3.769%, buyhold=-0.481%, flat=+0.000%",
+      "2da mitad (tendencia): ALMA38=-7.778% (EXP36: +12.671%) | fijas: momentum=-14.723%, meanrev=+6.723%, buyhold=+8.985%, flat=+0.000%",
+      "bloques con señal débil (probe en flat): 24/30 (Thompson igual corrió)",
+      "cambios tras re-probe: 4/30 bloques",
+      "secundario: recorta sangrado=SI, retiene tendencia=NO"
+    ]
+  },
+  "duracion_s": 0.0
+}

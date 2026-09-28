@@ -1,0 +1,10 @@
+{
+  "experimento": "ALMA-EXP27",
+  "fecha": "2026-09-27",
+  "pregunta": "¿El mapa de parecido (fingerprint → vecino más cercano) agrega valor sobre un probe sin mapa que evalúa candidatos de todas las clases por igual?",
+  "hipotesis": "El fingerprint es el eslabón débil (diagnóstico EXP26). Un probe sin mapa —shortlist por frecuencia global de 'mejor brazo' entre clases conocidas— no rinde peor que el probe con fingerprint. Si media(mapless) < media(fingerprint), el mapa va a la basura.",
+  "diseno": "100% mock, US$0. 8 seeds nuevas [2721-2728]. 2 episodios por seed, 120 pulls cada uno: EP1 fingerprint-correcto (N_a cerca de C0, comparten mejor brazo), EP2 trampa (N_b cerca de C1, mejor brazo distinto). Tratamientos: (a) fingerprint + probe v2 consciente de ruido (shortlist = top-3 de la clase vecina); (b) mapless + probe v2 (shortlist = top-3 brazos por frecuencia de ser mejores entre las 5 clases, sin juicio de parecido); mismo presupuesto de probe (8 pulls x brazo) y misma regla de ruido (gap>0.15 compromiso duro, si no Thompson adaptativo con re-probe cada 24). (c) vecino manual x120 (referencia). (d) desde cero Thompson x120 (diagnóstico). Regret = suma(0.90 - r) incluyendo pulls del probe, sumado EP1+EP2.",
+  "criterio": "media regret(b) < media regret(a) → PASS (el mapa es peso muerto).",
+  "regla_confiabilidad": "cambio de signo en diffs(b-a) por seed → NO CONFIABLE.",
+  "secundario": "media(b) vs media(c) vecino (EXP24: v2 <= vecino 4/4)."
+}

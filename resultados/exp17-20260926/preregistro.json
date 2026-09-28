@@ -1,0 +1,33 @@
+{
+  "experimento": "ALMA-EXP17: re-verificación multi-seed de EXP12-EXP15 (modo mock)",
+  "fecha": "2026-09-26T16:20:00",
+  "motivo": "EXP16 demostró que los veredictos de una sola seed NO son confiables (rango del regret de v2 entre 4 seeds: 4,94 vs umbral 1,0).",
+  "correccion_registro": "El brief de EXP17 decía que EXP12-15 'dieron PASS'. FALSO según los report.json: los cuatro registraron FAIL (veredicto.pasa=false). La pregunta honesta es si los FAIL de una sola seed se sostienen multi-seed o son ruido de seed.",
+  "veredictos_originales_api_una_seed": {
+    "EXP12": {"criterio": "alma_gana_a_mejor_fija", "alma": 8.615, "mejor_fija_cot": 4.12, "veredicto": "FAIL"},
+    "EXP13": {"criterio": "v2_gana_a_v1_y_a_mejor_fija", "v1": 8.285, "v2": 4.615, "mejor_fija_cot": 4.12, "veredicto": "FAIL"},
+    "EXP14": {"criterio": "sueno_gana_a_control", "control": 7.075, "sueno": 7.525, "veredicto": "FAIL"},
+    "EXP15": {"criterio": "eps_empata_a_v2 (margen 0.5)", "v2": 8.255, "eps": 12.295, "veredicto": "FAIL (la refutación no prosperó: la complejidad paga)"}
+  },
+  "diseno": {
+    "oraculo": "FIJO — copiado de las 720 mediciones api de EXP12 (fases 12A-oracle-r1/r2). No se re-mide.",
+    "stream": "FIJO — 10 bloques x 12 idéntico a EXP12 (verificado por assert en los scripts).",
+    "modo": "mock (US$0, sin llamadas a la API). MockBackend con TASAS12.",
+    "seeds_pre_registradas": [1721, 1722, 1723, 1724],
+    "variacion": "solo el ruido de ejecución de la política (realizaciones mock de rewards + RNG interno Thompson/eps-greedy, pareado por (politica,bloque,q)).",
+    "mapeo": {
+      "EXP12": "v1 de run_experiment13.py (= réplica exacta de la política EXP12) vs mejor fija",
+      "EXP13": "v1 vs v2 vs mejor fija (run_experiment13.py)",
+      "EXP14": "control vs sueño (run_experiment14.py)",
+      "EXP15": "control v2 vs eps-greedy (run_experiment15.py)"
+    }
+  },
+  "criterios_pre_registrados_sin_mover": {
+    "EXP12": "alma_gana_a_mejor_fija",
+    "EXP13": "v2_gana_a_v1_y_a_mejor_fija",
+    "EXP14": "sueno_gana_a_control",
+    "EXP15": "eps <= v2 + 0.5"
+  },
+  "regla_interpretacion": "Si el rango (max-min) del regret entre seeds supera 1,0, el veredicto de una sola seed NO es confiable (umbral EXP16). Se reporta el veredicto por seed contra el criterio pre-registrado, sin mover el arco.",
+  "caveat_honesto": "El mock mide estabilidad ante ruido de seed con rewards sintéticos bien calibrados; NO replica la dificultad del modo api (en api, v2 dio +4,615; en mock EXP16 dio negativo). Un veredicto que se sostiene en mock habla de estabilidad de la comparación, no del resultado api."
+}

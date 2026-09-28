@@ -1,0 +1,112 @@
+{
+  "split": "A",
+  "seeds": {
+    "world": 101,
+    "loop": 1001,
+    "tglobal": 1002
+  },
+  "n_dias": 120,
+  "ventana_eval": [
+    61,
+    120
+  ],
+  "politicas": {
+    "alma_full": {
+      "energia_eval": {
+        "n": 60,
+        "media": 5.867600716825726,
+        "sd": 1.3501706106534903
+      },
+      "reward_eval": {
+        "n": 60,
+        "media": 0.6085911668642231,
+        "sd": 0.15934413751825405
+      },
+      "cumplimiento_eval": 0.7666666666666667,
+      "tasa_probe_eval": 0.55,
+      "mapa_fija": null,
+      "skip_days_total": 0,
+      "probe_days_total": 70
+    },
+    "mejor_fija": {
+      "energia_eval": {
+        "n": 60,
+        "media": 6.297800789800139,
+        "sd": 1.354397643909765
+      },
+      "reward_eval": {
+        "n": 60,
+        "media": 0.6470511725400108,
+        "sd": 0.18675699700547685
+      },
+      "cumplimiento_eval": 0.7833333333333333,
+      "tasa_probe_eval": 0.0,
+      "mapa_fija": {
+        "libre": "playa",
+        "turno": "descanso"
+      }
+    },
+    "thompson_global": {
+      "energia_eval": {
+        "n": 60,
+        "media": 5.736014172223936,
+        "sd": 1.5904817846223882
+      },
+      "reward_eval": {
+        "n": 60,
+        "media": 0.6083566578396395,
+        "sd": 0.16690574486357307
+      },
+      "cumplimiento_eval": 0.8,
+      "tasa_probe_eval": 0.5666666666666667,
+      "mapa_fija": null
+    }
+  },
+  "delta_loop_vs_fija": {
+    "delta": -0.43020007297441243,
+    "ic95": [
+      -0.9037177735990678,
+      0.04839036235536742
+    ],
+    "pass": false
+  },
+  "delta_loop_vs_tglobal": {
+    "delta": 0.13158654460178987,
+    "ic95": [
+      -0.37591501457114607,
+      0.6540550448935178
+    ]
+  },
+  "bloques": [
+    {
+      "start": 1,
+      "len": 24,
+      "p_turno": 0.5
+    },
+    {
+      "start": 25,
+      "len": 18,
+      "p_turno": 0.65
+    },
+    {
+      "start": 43,
+      "len": 25,
+      "p_turno": 0.8
+    },
+    {
+      "start": 68,
+      "len": 19,
+      "p_turno": 0.8
+    },
+    {
+      "start": 87,
+      "len": 15,
+      "p_turno": 0.65
+    },
+    {
+      "start": 102,
+      "len": 25,
+      "p_turno": 0.65
+    }
+  ]
+}

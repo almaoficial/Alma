@@ -1,0 +1,445 @@
+{
+  "preregistro": "resultados/exp41-20260927/preregistro.json",
+  "calibracion": {
+    "mejor": {
+      "W": 24,
+      "T": 0.68,
+      "bal_acc": 0.6753,
+      "recall": {
+        "tendencia": 0.7143,
+        "lateral": 0.6364
+      },
+      "hits": 19
+    },
+    "tabla_completa": [
+      {
+        "W": 24,
+        "T": 0.68,
+        "bal_acc": 0.6753,
+        "hits": 19
+      },
+      {
+        "W": 24,
+        "T": 0.7,
+        "bal_acc": 0.6721,
+        "hits": 21
+      },
+      {
+        "W": 24,
+        "T": 0.64,
+        "bal_acc": 0.6558,
+        "hits": 16
+      },
+      {
+        "W": 24,
+        "T": 0.62,
+        "bal_acc": 0.6331,
+        "hits": 15
+      },
+      {
+        "W": 24,
+        "T": 0.5,
+        "bal_acc": 0.6136,
+        "hits": 12
+      },
+      {
+        "W": 24,
+        "T": 0.56,
+        "bal_acc": 0.6104,
+        "hits": 14
+      },
+      {
+        "W": 24,
+        "T": 0.58,
+        "bal_acc": 0.6104,
+        "hits": 14
+      },
+      {
+        "W": 24,
+        "T": 0.6,
+        "bal_acc": 0.6104,
+        "hits": 14
+      },
+      {
+        "W": 24,
+        "T": 0.66,
+        "bal_acc": 0.6071,
+        "hits": 16
+      },
+      {
+        "W": 24,
+        "T": 0.54,
+        "bal_acc": 0.5877,
+        "hits": 13
+      },
+      {
+        "W": 168,
+        "T": 0.5,
+        "bal_acc": 0.5649,
+        "hits": 12
+      },
+      {
+        "W": 24,
+        "T": 0.52,
+        "bal_acc": 0.5422,
+        "hits": 11
+      },
+      {
+        "W": 168,
+        "T": 0.58,
+        "bal_acc": 0.5325,
+        "hits": 17
+      },
+      {
+        "W": 168,
+        "T": 0.54,
+        "bal_acc": 0.5162,
+        "hits": 12
+      },
+      {
+        "W": 168,
+        "T": 0.52,
+        "bal_acc": 0.4935,
+        "hits": 11
+      },
+      {
+        "W": 168,
+        "T": 0.6,
+        "bal_acc": 0.4838,
+        "hits": 17
+      },
+      {
+        "W": 72,
+        "T": 0.56,
+        "bal_acc": 0.4675,
+        "hits": 12
+      },
+      {
+        "W": 168,
+        "T": 0.56,
+        "bal_acc": 0.4643,
+        "hits": 14
+      },
+      {
+        "W": 168,
+        "T": 0.62,
+        "bal_acc": 0.4578,
+        "hits": 18
+      },
+      {
+        "W": 168,
+        "T": 0.68,
+        "bal_acc": 0.4545,
+        "hits": 20
+      },
+      {
+        "W": 168,
+        "T": 0.7,
+        "bal_acc": 0.4545,
+        "hits": 20
+      },
+      {
+        "W": 72,
+        "T": 0.52,
+        "bal_acc": 0.4481,
+        "hits": 9
+      },
+      {
+        "W": 72,
+        "T": 0.5,
+        "bal_acc": 0.4253,
+        "hits": 8
+      },
+      {
+        "W": 168,
+        "T": 0.66,
+        "bal_acc": 0.4091,
+        "hits": 18
+      },
+      {
+        "W": 72,
+        "T": 0.54,
+        "bal_acc": 0.3994,
+        "hits": 9
+      },
+      {
+        "W": 168,
+        "T": 0.64,
+        "bal_acc": 0.3864,
+        "hits": 17
+      },
+      {
+        "W": 72,
+        "T": 0.7,
+        "bal_acc": 0.3409,
+        "hits": 15
+      },
+      {
+        "W": 72,
+        "T": 0.58,
+        "bal_acc": 0.3247,
+        "hits": 10
+      },
+      {
+        "W": 72,
+        "T": 0.62,
+        "bal_acc": 0.3214,
+        "hits": 12
+      },
+      {
+        "W": 72,
+        "T": 0.66,
+        "bal_acc": 0.3182,
+        "hits": 14
+      },
+      {
+        "W": 72,
+        "T": 0.68,
+        "bal_acc": 0.3182,
+        "hits": 14
+      },
+      {
+        "W": 72,
+        "T": 0.6,
+        "bal_acc": 0.2987,
+        "hits": 11
+      },
+      {
+        "W": 72,
+        "T": 0.64,
+        "bal_acc": 0.2727,
+        "hits": 12
+      }
+    ],
+    "n_bloques_tendencia_verdaderos": 7
+  },
+  "test": {
+    "pnl_exp41": -0.135766,
+    "pnl_buyhold": 0.085041,
+    "hit_rate_bloques_1_29": 0.4828,
+    "aciertos": 14,
+    "clasifico_tendencia": 8,
+    "verdad_tendencia": 7,
+    "verdaderos_positivos": 0,
+    "detalle": [
+      {
+        "bloque": 1,
+        "hurst": 0.5094,
+        "clase": "lateral",
+        "verdad": "lateral",
+        "retorno_bloque": 0.011606
+      },
+      {
+        "bloque": 2,
+        "hurst": 0.7452,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": -0.001345
+      },
+      {
+        "bloque": 3,
+        "hurst": 0.4571,
+        "clase": "lateral",
+        "verdad": "tendencia",
+        "retorno_bloque": -0.020953
+      },
+      {
+        "bloque": 4,
+        "hurst": 0.6584,
+        "clase": "lateral",
+        "verdad": "lateral",
+        "retorno_bloque": 0.001542
+      },
+      {
+        "bloque": 5,
+        "hurst": 0.6426,
+        "clase": "lateral",
+        "verdad": "tendencia",
+        "retorno_bloque": 0.04713
+      },
+      {
+        "bloque": 6,
+        "hurst": 0.4161,
+        "clase": "lateral",
+        "verdad": "lateral",
+        "retorno_bloque": -0.019235
+      },
+      {
+        "bloque": 7,
+        "hurst": 0.557,
+        "clase": "lateral",
+        "verdad": "lateral",
+        "retorno_bloque": 0.007487
+      },
+      {
+        "bloque": 8,
+        "hurst": 0.9014,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": -0.004159
+      },
+      {
+        "bloque": 9,
+        "hurst": 0.5318,
+        "clase": "lateral",
+        "verdad": "lateral",
+        "retorno_bloque": -0.007012
+      },
+      {
+        "bloque": 10,
+        "hurst": 0.6906,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": -0.008522
+      },
+      {
+        "bloque": 11,
+        "hurst": 0.8168,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": 0.003437
+      },
+      {
+        "bloque": 12,
+        "hurst": 0.6705,
+        "clase": "lateral",
+        "verdad": "lateral",
+        "retorno_bloque": -0.018578
+      },
+      {
+        "bloque": 13,
+        "hurst": 0.4918,
+        "clase": "lateral",
+        "verdad": "lateral",
+        "retorno_bloque": 0.003199
+      },
+      {
+        "bloque": 14,
+        "hurst": 0.6552,
+        "clase": "lateral",
+        "verdad": "lateral",
+        "retorno_bloque": -0.004027
+      },
+      {
+        "bloque": 15,
+        "hurst": 0.5497,
+        "clase": "lateral",
+        "verdad": "lateral",
+        "retorno_bloque": 0.001382
+      },
+      {
+        "bloque": 16,
+        "hurst": 0.4775,
+        "clase": "lateral",
+        "verdad": "tendencia",
+        "retorno_bloque": 0.021028
+      },
+      {
+        "bloque": 17,
+        "hurst": 0.5404,
+        "clase": "lateral",
+        "verdad": "tendencia",
+        "retorno_bloque": -0.025642
+      },
+      {
+        "bloque": 18,
+        "hurst": 0.7774,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": -0.016729
+      },
+      {
+        "bloque": 19,
+        "hurst": 0.5354,
+        "clase": "lateral",
+        "verdad": "lateral",
+        "retorno_bloque": 0.012867
+      },
+      {
+        "bloque": 20,
+        "hurst": 0.424,
+        "clase": "lateral",
+        "verdad": "tendencia",
+        "retorno_bloque": 0.056117
+      },
+      {
+        "bloque": 21,
+        "hurst": 0.6628,
+        "clase": "lateral",
+        "verdad": "lateral",
+        "retorno_bloque": 0.005626
+      },
+      {
+        "bloque": 22,
+        "hurst": 0.6819,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": -0.003702
+      },
+      {
+        "bloque": 23,
+        "hurst": 0.4917,
+        "clase": "lateral",
+        "verdad": "tendencia",
+        "retorno_bloque": 0.057585
+      },
+      {
+        "bloque": 24,
+        "hurst": 0.6047,
+        "clase": "lateral",
+        "verdad": "lateral",
+        "retorno_bloque": 0.008005
+      },
+      {
+        "bloque": 25,
+        "hurst": 0.6424,
+        "clase": "lateral",
+        "verdad": "tendencia",
+        "retorno_bloque": -0.026278
+      },
+      {
+        "bloque": 26,
+        "hurst": 0.781,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": -0.002465
+      },
+      {
+        "bloque": 27,
+        "hurst": 0.5743,
+        "clase": "lateral",
+        "verdad": "lateral",
+        "retorno_bloque": -0.003737
+      },
+      {
+        "bloque": 28,
+        "hurst": 0.8111,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": 0.004321
+      },
+      {
+        "bloque": 29,
+        "hurst": 0.3116,
+        "clase": "lateral",
+        "verdad": "lateral",
+        "retorno_bloque": 0.003411
+      }
+    ]
+  },
+  "criterios": {
+    "a_clasificador": false,
+    "b_pnl": false
+  },
+  "costo_total_usd": 0.0,
+  "veredicto": {
+    "pasa": false,
+    "motivos": [
+      "calibración (período distinto, Coinbase 2026-07-29->2026-08-28): (W*=24, T*=0.68) bal.acc=0.6753",
+      "(a) clasificador en test: acierto 14/29 = 48.3% vs umbral 55% -> NO CUMPLE (tendencia clasificada en 8, verdad 7, TP 0)",
+      "(b) P&L: EXP41=-13.5766% vs buyhold=+8.5041% -> NO CUMPLE",
+      "FAIL (vara intacta)"
+    ]
+  },
+  "duracion_s": 0.2
+}

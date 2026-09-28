@@ -1,0 +1,18 @@
+{
+  "experimento": "ALMA-EXP9: memoria con olvido (decaimiento exponencial)",
+  "fecha": "2026-09-26T02:22:10",
+  "criterio_exito": {
+    "olvido_gana_total": true,
+    "olvido_gana_postflip": true
+  },
+  "diseno": {
+    "stream": "reordenado con flip brusco (orig [1,7,9,3,5,4,2,0,6,8]); bloques 0-4 pro-cot, 5-9 pro-single",
+    "oraculo": "firme EXP8 (media de 3 intentos), 0 llamadas nuevas",
+    "control": "probe continuo + prior warm uniforme (decay=1.0)",
+    "tratamiento": "probe continuo + prior warm con decaimiento 0.5^d",
+    "replay_thompson": "oráculo firme como pull (fuente única)",
+    "rng": "pareado por (bloque,q), seed 999"
+  },
+  "seed": 999,
+  "modo": "replay"
+}

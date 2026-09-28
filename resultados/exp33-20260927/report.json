@@ -1,0 +1,111 @@
+{
+  "experimento": "ALMA-EXP33",
+  "seeds": [
+    3221,
+    3222,
+    3223,
+    3224,
+    3225,
+    3226,
+    3227,
+    3228
+  ],
+  "episodios_por_seed_regimen": 50,
+  "tratamientos": [
+    "siempre",
+    "evi",
+    "evi-cd"
+  ],
+  "regret_medio_por_regimen": {
+    "estacionario": {
+      "siempre": 55.185,
+      "evi": 13.674,
+      "evi-cd": 14.61
+    },
+    "flip": {
+      "siempre": 54.345,
+      "evi": 66.924,
+      "evi-cd": 69.285
+    }
+  },
+  "regret_medio_pooled": {
+    "siempre": 54.765,
+    "evi": 40.299,
+    "evi-cd": 41.9475
+  },
+  "tasa_probe_por_regimen": {
+    "estacionario": {
+      "siempre": 1.0,
+      "evi": 0.1468,
+      "evi-cd": 0.1527
+    },
+    "flip": {
+      "siempre": 1.0,
+      "evi": 0.2233,
+      "evi-cd": 0.3827
+    }
+  },
+  "tasa_deteccion_evi_cd_por_regimen": {
+    "estacionario": 0.009,
+    "flip": 0.1593
+  },
+  "diffs_evi_cd_menos_control_por_seed": {
+    "estacionario": {
+      "vs_siempre": {
+        "3221": -39.408,
+        "3222": -36.744,
+        "3223": -40.224,
+        "3224": -38.136,
+        "3225": -42.0,
+        "3226": -44.664,
+        "3227": -37.272,
+        "3228": -46.152
+      },
+      "vs_evi": {
+        "3221": 0.48,
+        "3222": 9.096,
+        "3223": 0.552,
+        "3224": 6.648,
+        "3225": 0.264,
+        "3226": -4.464,
+        "3227": 0.048,
+        "3228": -5.136
+      }
+    },
+    "flip": {
+      "vs_siempre": {
+        "3221": 14.64,
+        "3222": 14.832,
+        "3223": 14.52,
+        "3224": 16.344,
+        "3225": 18.984,
+        "3226": 10.656,
+        "3227": 16.584,
+        "3228": 12.96
+      },
+      "vs_evi": {
+        "3221": 3.36,
+        "3222": 2.472,
+        "3223": 3.72,
+        "3224": -0.12,
+        "3225": 4.944,
+        "3226": -0.84,
+        "3227": 3.744,
+        "3228": 1.608
+      }
+    }
+  },
+  "gana": {
+    "estacionario": {
+      "vs_siempre": true,
+      "vs_evi": false
+    },
+    "flip": {
+      "vs_siempre": false,
+      "vs_evi": false
+    }
+  },
+  "criterio": "PASS si regret_medio(evi-cd) < regret_medio(siempre) Y < regret_medio(evi) en AMBOS regímenes",
+  "replicacion_exp32_verificada": true,
+  "veredicto": "NO CONFIABLE"
+}

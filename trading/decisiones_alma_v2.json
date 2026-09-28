@@ -1,0 +1,682 @@
+[
+  {
+    "fecha": "2015-07-06",
+    "brazo": "reversion",
+    "motivo": "prior-decay (mejor con decaimiento hasta hoy)"
+  },
+  {
+    "fecha": "2015-07-06",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2015-08-04",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2015-09-02",
+    "brazo": "cash",
+    "motivo": "EVI: ganancia 0.0335 > costo x2.0 + churn 0.0100 (reversion->cash)"
+  },
+  {
+    "fecha": "2015-10-02",
+    "brazo": "reversion",
+    "motivo": "EVI: ganancia 0.0803 > costo x2.0 + churn 0.0100 (cash->reversion)"
+  },
+  {
+    "fecha": "2015-11-02",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2015-12-02",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2016-01-04",
+    "brazo": "momentum",
+    "motivo": "EVI: ganancia 0.1050 > costo x2.0 + churn 0.0100 (reversion->momentum)"
+  },
+  {
+    "fecha": "2016-02-03",
+    "brazo": "cash",
+    "motivo": "EVI: ganancia 0.0733 > costo x2.0 + churn 0.0100 (momentum->cash)"
+  },
+  {
+    "fecha": "2016-03-04",
+    "brazo": "cash",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2016-04-05",
+    "brazo": "reversion",
+    "motivo": "EVI: ganancia 0.1246 > costo x2.0 + churn 0.0100 (cash->reversion)"
+  },
+  {
+    "fecha": "2016-05-04",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2016-06-03",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2016-07-05",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2016-08-03",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2016-09-01",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2016-10-03",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2016-11-01",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2016-12-01",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2017-01-03",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2017-02-02",
+    "brazo": "hold",
+    "motivo": "deteccion-cambio (z<-1.5): re-probe forzado -> hold"
+  },
+  {
+    "fecha": "2017-03-06",
+    "brazo": "reversion",
+    "motivo": "EVI: ganancia 0.0505 > costo x2.0 + churn 0.0100 (hold->reversion)"
+  },
+  {
+    "fecha": "2017-04-04",
+    "brazo": "momentum",
+    "motivo": "EVI: ganancia 0.2684 > costo x2.0 + churn 0.0100 (reversion->momentum)"
+  },
+  {
+    "fecha": "2017-05-04",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2017-06-05",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2017-07-05",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2017-08-03",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2017-09-01",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2017-10-03",
+    "brazo": "reversion",
+    "motivo": "EVI: ganancia 0.1302 > costo x2.0 + churn 0.0100 (momentum->reversion)"
+  },
+  {
+    "fecha": "2017-11-01",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2017-12-01",
+    "brazo": "reversion",
+    "motivo": "deteccion-cambio (z<-1.5): re-probe forzado -> reversion"
+  },
+  {
+    "fecha": "2018-01-03",
+    "brazo": "momentum",
+    "motivo": "EVI: ganancia 0.1855 > costo x2.0 + churn 0.0100 (reversion->momentum)"
+  },
+  {
+    "fecha": "2018-02-02",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2018-03-06",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2018-04-05",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2018-05-04",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2018-06-05",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2018-07-05",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2018-08-03",
+    "brazo": "reversion",
+    "motivo": "EVI: ganancia 0.0231 > costo x2.0 + churn 0.0100 (momentum->reversion)"
+  },
+  {
+    "fecha": "2018-09-04",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2018-10-03",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2018-11-01",
+    "brazo": "cash",
+    "motivo": "EVI: ganancia 0.2070 > costo x2.0 + churn 0.0100 (reversion->cash)"
+  },
+  {
+    "fecha": "2018-12-03",
+    "brazo": "cash",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2019-01-04",
+    "brazo": "cash",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2019-02-05",
+    "brazo": "cash",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2019-03-07",
+    "brazo": "reversion",
+    "motivo": "EVI: ganancia 0.0614 > costo x2.0 + churn 0.0100 (cash->reversion)"
+  },
+  {
+    "fecha": "2019-04-05",
+    "brazo": "hold",
+    "motivo": "deteccion-cambio (z<-1.5): re-probe forzado -> hold"
+  },
+  {
+    "fecha": "2019-05-07",
+    "brazo": "hold",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2019-06-06",
+    "brazo": "momentum",
+    "motivo": "EVI: ganancia 0.0650 > costo x2.0 + churn 0.0100 (hold->momentum)"
+  },
+  {
+    "fecha": "2019-07-08",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2019-08-06",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2019-09-05",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2019-10-04",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2019-11-04",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2019-12-04",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2020-01-06",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2020-02-05",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2020-03-06",
+    "brazo": "momentum",
+    "motivo": "deteccion-cambio (z<-1.5): re-probe forzado -> momentum"
+  },
+  {
+    "fecha": "2020-04-06",
+    "brazo": "momentum",
+    "motivo": "deteccion-cambio (z<-1.5): re-probe forzado -> momentum"
+  },
+  {
+    "fecha": "2020-05-06",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2020-06-05",
+    "brazo": "reversion",
+    "motivo": "EVI: ganancia 0.2793 > costo x2.0 + churn 0.0100 (momentum->reversion)"
+  },
+  {
+    "fecha": "2020-07-07",
+    "brazo": "momentum",
+    "motivo": "EVI: ganancia 0.4069 > costo x2.0 + churn 0.0100 (reversion->momentum)"
+  },
+  {
+    "fecha": "2020-08-05",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2020-09-03",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2020-10-05",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2020-11-03",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2020-12-03",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2021-01-05",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2021-02-04",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2021-03-08",
+    "brazo": "reversion",
+    "motivo": "deteccion-cambio (z<-1.5): re-probe forzado -> reversion"
+  },
+  {
+    "fecha": "2021-04-07",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2021-05-06",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2021-06-07",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2021-07-07",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2021-08-05",
+    "brazo": "momentum",
+    "motivo": "deteccion-cambio (z<-1.5): re-probe forzado -> momentum"
+  },
+  {
+    "fecha": "2021-09-03",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2021-10-05",
+    "brazo": "reversion",
+    "motivo": "EVI: ganancia 0.1634 > costo x2.0 + churn 0.0100 (momentum->reversion)"
+  },
+  {
+    "fecha": "2021-11-03",
+    "brazo": "momentum",
+    "motivo": "EVI: ganancia 0.2228 > costo x2.0 + churn 0.0100 (reversion->momentum)"
+  },
+  {
+    "fecha": "2021-12-03",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2022-01-04",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2022-02-03",
+    "brazo": "cash",
+    "motivo": "EVI: ganancia 0.2569 > costo x2.0 + churn 0.0100 (momentum->cash)"
+  },
+  {
+    "fecha": "2022-03-07",
+    "brazo": "cash",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2022-04-05",
+    "brazo": "cash",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2022-05-05",
+    "brazo": "momentum",
+    "motivo": "EVI: ganancia 0.2117 > costo x2.0 + churn 0.0100 (cash->momentum)"
+  },
+  {
+    "fecha": "2022-06-06",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2022-07-07",
+    "brazo": "cash",
+    "motivo": "deteccion-cambio (z<-1.5): re-probe forzado -> cash"
+  },
+  {
+    "fecha": "2022-08-05",
+    "brazo": "cash",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2022-09-06",
+    "brazo": "reversion",
+    "motivo": "EVI: ganancia 0.1515 > costo x2.0 + churn 0.0100 (cash->reversion)"
+  },
+  {
+    "fecha": "2022-10-05",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2022-11-03",
+    "brazo": "cash",
+    "motivo": "EVI: ganancia 0.0515 > costo x2.0 + churn 0.0100 (reversion->cash)"
+  },
+  {
+    "fecha": "2022-12-05",
+    "brazo": "reversion",
+    "motivo": "EVI: ganancia 0.0460 > costo x2.0 + churn 0.0100 (cash->reversion)"
+  },
+  {
+    "fecha": "2023-01-05",
+    "brazo": "momentum",
+    "motivo": "deteccion-cambio (z<-1.5): re-probe forzado -> momentum"
+  },
+  {
+    "fecha": "2023-02-06",
+    "brazo": "reversion",
+    "motivo": "EVI: ganancia 0.0150 > costo x2.0 + churn 0.0100 (momentum->reversion)"
+  },
+  {
+    "fecha": "2023-03-08",
+    "brazo": "momentum",
+    "motivo": "EVI: ganancia 0.2386 > costo x2.0 + churn 0.0100 (reversion->momentum)"
+  },
+  {
+    "fecha": "2023-04-06",
+    "brazo": "reversion",
+    "motivo": "EVI: ganancia 0.4600 > costo x2.0 + churn 0.0100 (momentum->reversion)"
+  },
+  {
+    "fecha": "2023-05-08",
+    "brazo": "momentum",
+    "motivo": "EVI: ganancia 0.0926 > costo x2.0 + churn 0.0100 (reversion->momentum)"
+  },
+  {
+    "fecha": "2023-06-07",
+    "brazo": "reversion",
+    "motivo": "EVI: ganancia 0.1920 > costo x2.0 + churn 0.0100 (momentum->reversion)"
+  },
+  {
+    "fecha": "2023-07-10",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2023-08-08",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2023-09-07",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2023-10-06",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2023-11-06",
+    "brazo": "momentum",
+    "motivo": "EVI: ganancia 0.0386 > costo x2.0 + churn 0.0100 (reversion->momentum)"
+  },
+  {
+    "fecha": "2023-12-06",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2024-01-08",
+    "brazo": "reversion",
+    "motivo": "EVI: ganancia 0.1054 > costo x2.0 + churn 0.0100 (momentum->reversion)"
+  },
+  {
+    "fecha": "2024-02-07",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2024-03-08",
+    "brazo": "momentum",
+    "motivo": "EVI: ganancia 0.3145 > costo x2.0 + churn 0.0100 (reversion->momentum)"
+  },
+  {
+    "fecha": "2024-04-09",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2024-05-08",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2024-06-07",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2024-07-10",
+    "brazo": "hold",
+    "motivo": "EVI: ganancia 0.0159 > costo x2.0 + churn 0.0100 (momentum->hold)"
+  },
+  {
+    "fecha": "2024-08-08",
+    "brazo": "hold",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2024-09-09",
+    "brazo": "reversion",
+    "motivo": "EVI: ganancia 0.0673 > costo x2.0 + churn 0.0100 (hold->reversion)"
+  },
+  {
+    "fecha": "2024-10-08",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2024-11-06",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2024-12-06",
+    "brazo": "momentum",
+    "motivo": "EVI: ganancia 0.3941 > costo x2.0 + churn 0.0100 (reversion->momentum)"
+  },
+  {
+    "fecha": "2025-01-08",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2025-02-10",
+    "brazo": "momentum",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2025-03-12",
+    "brazo": "cash",
+    "motivo": "deteccion-cambio (z<-1.5): re-probe forzado -> cash"
+  },
+  {
+    "fecha": "2025-04-10",
+    "brazo": "cash",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2025-05-12",
+    "brazo": "cash",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2025-06-11",
+    "brazo": "momentum",
+    "motivo": "EVI: ganancia 0.1744 > costo x2.0 + churn 0.0100 (cash->momentum)"
+  },
+  {
+    "fecha": "2025-07-14",
+    "brazo": "momentum",
+    "motivo": "deteccion-cambio (z<-1.5): re-probe forzado -> momentum"
+  },
+  {
+    "fecha": "2025-08-12",
+    "brazo": "reversion",
+    "motivo": "EVI: ganancia 0.0719 > costo x2.0 + churn 0.0100 (momentum->reversion)"
+  },
+  {
+    "fecha": "2025-09-11",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2025-10-10",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2025-11-10",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2025-12-10",
+    "brazo": "momentum",
+    "motivo": "EVI: ganancia 0.0942 > costo x2.0 + churn 0.0100 (reversion->momentum)"
+  },
+  {
+    "fecha": "2026-01-12",
+    "brazo": "reversion",
+    "motivo": "EVI: ganancia 0.0640 > costo x2.0 + churn 0.0100 (momentum->reversion)"
+  },
+  {
+    "fecha": "2026-02-11",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2026-03-13",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2026-04-14",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2026-05-13",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2026-06-12",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2026-07-15",
+    "brazo": "reversion",
+    "motivo": "mantener (EVI no justifica)"
+  },
+  {
+    "fecha": "2026-08-13",
+    "brazo": "hold",
+    "motivo": "deteccion-cambio (z<-1.5): re-probe forzado -> hold"
+  },
+  {
+    "fecha": "2026-09-14",
+    "brazo": "hold",
+    "motivo": "mantener (EVI no justifica)"
+  }
+]

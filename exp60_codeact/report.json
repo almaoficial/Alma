@@ -1,0 +1,78 @@
+{
+  "experimento": "ALMA-EXP60: CodeAct (plantillas) en el probe (mock, US$0)",
+  "preregistro": "preregistro.md (mismo directorio)",
+  "scaffold_control": {
+    "umbral_base": 1,
+    "umbral_divisor": 3,
+    "gate_margin": 0.0,
+    "n0": 4,
+    "decay": 0.5
+  },
+  "umbrales_gap": {
+    "T_HI": 0.15,
+    "T_MID": 0.08,
+    "T_LO": 0.03
+  },
+  "sanidad_bit_identica": true,
+  "replicas": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "por_replica": [
+    {
+      "rep": 0,
+      "reg_ctrl": 71.0,
+      "reg_trat": 73.0,
+      "efecto": 2.0,
+      "reg_mejor_fija": 84.0
+    },
+    {
+      "rep": 1,
+      "reg_ctrl": 83.0,
+      "reg_trat": 82.0,
+      "efecto": -1.0,
+      "reg_mejor_fija": 89.0
+    },
+    {
+      "rep": 2,
+      "reg_ctrl": 90.0,
+      "reg_trat": 88.0,
+      "efecto": -2.0,
+      "reg_mejor_fija": 88.0
+    },
+    {
+      "rep": 3,
+      "reg_ctrl": 84.0,
+      "reg_trat": 85.0,
+      "efecto": 1.0,
+      "reg_mejor_fija": 80.0
+    },
+    {
+      "rep": 4,
+      "reg_ctrl": 81.0,
+      "reg_trat": 85.0,
+      "efecto": 4.0,
+      "reg_mejor_fija": 80.0
+    }
+  ],
+  "efecto_medio": 0.8,
+  "reg_ctrl_medio": 81.8,
+  "reg_trat_medio": 82.6,
+  "reg_mejor_fija_media": 84.2,
+  "plantillas": {
+    "uso_bloques": {
+      "T3_duelo": 16,
+      "T1_confianza": 10,
+      "T2_mixta": 12,
+      "T0_solo": 8
+    },
+    "n_bloques_probe": 46
+  },
+  "criterio": "PASS ssi media(reg_trat - reg_ctrl) < 0",
+  "veredicto": "FAIL",
+  "costo_total_usd": 0.0,
+  "duracion_s": 0.3
+}

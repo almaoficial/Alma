@@ -1,0 +1,464 @@
+{
+  "preregistro": "preregistro.json (mismo directorio)",
+  "n_items": 120,
+  "n_bloques": 12,
+  "detalle_replicas": [
+    {
+      "replica": 0,
+      "efecto": 1.0,
+      "reg_control": 46.0,
+      "reg_skip": 47.0,
+      "reg_mejor_fija_ctrl": 38.0,
+      "reg_mejor_fija_skip": 38.0,
+      "mejor_fija": "titular",
+      "skills_usadas_ctrl": "9/12 bloques",
+      "probes_saltados_skip": "1/12 bloques",
+      "misfires_skip": 0
+    },
+    {
+      "replica": 1,
+      "efecto": 0.0,
+      "reg_control": 50.0,
+      "reg_skip": 50.0,
+      "reg_mejor_fija_ctrl": 45.0,
+      "reg_mejor_fija_skip": 45.0,
+      "mejor_fija": "contexto",
+      "skills_usadas_ctrl": "9/12 bloques",
+      "probes_saltados_skip": "0/12 bloques",
+      "misfires_skip": 0
+    },
+    {
+      "replica": 2,
+      "efecto": 0.0,
+      "reg_control": 50.0,
+      "reg_skip": 50.0,
+      "reg_mejor_fija_ctrl": 45.0,
+      "reg_mejor_fija_skip": 45.0,
+      "mejor_fija": "titular",
+      "skills_usadas_ctrl": "9/12 bloques",
+      "probes_saltados_skip": "0/12 bloques",
+      "misfires_skip": 0
+    },
+    {
+      "replica": 3,
+      "efecto": -1.0,
+      "reg_control": 51.0,
+      "reg_skip": 50.0,
+      "reg_mejor_fija_ctrl": 37.0,
+      "reg_mejor_fija_skip": 37.0,
+      "mejor_fija": "titular",
+      "skills_usadas_ctrl": "9/12 bloques",
+      "probes_saltados_skip": "2/12 bloques",
+      "misfires_skip": 1
+    },
+    {
+      "replica": 4,
+      "efecto": -3.0,
+      "reg_control": 45.0,
+      "reg_skip": 42.0,
+      "reg_mejor_fija_ctrl": 38.0,
+      "reg_mejor_fija_skip": 38.0,
+      "mejor_fija": "titular",
+      "skills_usadas_ctrl": "9/12 bloques",
+      "probes_saltados_skip": "1/12 bloques",
+      "misfires_skip": 0
+    }
+  ],
+  "efecto_medio": -0.6,
+  "saltados_det_rep0": [
+    {
+      "bloque": 11,
+      "firma": "dinero",
+      "brazo_skill": "contexto",
+      "soporte_wins": 2,
+      "acc_skill": 0.8,
+      "mejor_expost": "contexto",
+      "acc_mejor": 0.8,
+      "misfire": false
+    }
+  ],
+  "diagnostico_bloques_rep0": {
+    "control": [
+      {
+        "bloque": 0,
+        "regimen": "dinero",
+        "firma": "dinero",
+        "probe_saltado": false,
+        "soporte_wins": 0,
+        "skill_usada": false,
+        "acc_pol": 0.2,
+        "acc_fijas": {
+          "titular": 0.4,
+          "contexto": 0.7,
+          "mayoria": 0.2,
+          "estable": 0.4
+        }
+      },
+      {
+        "bloque": 1,
+        "regimen": "tech",
+        "firma": "tech",
+        "probe_saltado": false,
+        "soporte_wins": 0,
+        "skill_usada": false,
+        "acc_pol": 0.8,
+        "acc_fijas": {
+          "titular": 0.8,
+          "contexto": 0.6,
+          "mayoria": 0.1,
+          "estable": 0.8
+        }
+      },
+      {
+        "bloque": 2,
+        "regimen": "deportes",
+        "firma": "deportes",
+        "probe_saltado": false,
+        "soporte_wins": 0,
+        "skill_usada": false,
+        "acc_pol": 0.5,
+        "acc_fijas": {
+          "titular": 0.8,
+          "contexto": 0.5,
+          "mayoria": 0.0,
+          "estable": 0.5
+        }
+      },
+      {
+        "bloque": 3,
+        "regimen": "deportes",
+        "firma": "tech",
+        "probe_saltado": false,
+        "soporte_wins": 0,
+        "skill_usada": true,
+        "acc_pol": 0.4,
+        "acc_fijas": {
+          "titular": 0.6,
+          "contexto": 0.5,
+          "mayoria": 0.2,
+          "estable": 0.6
+        }
+      },
+      {
+        "bloque": 4,
+        "regimen": "tech",
+        "firma": "tech",
+        "probe_saltado": false,
+        "soporte_wins": 0,
+        "skill_usada": true,
+        "acc_pol": 0.1,
+        "acc_fijas": {
+          "titular": 0.6,
+          "contexto": 0.5,
+          "mayoria": 0.0,
+          "estable": 0.3
+        }
+      },
+      {
+        "bloque": 5,
+        "regimen": "deportes",
+        "firma": "deportes",
+        "probe_saltado": false,
+        "soporte_wins": 0,
+        "skill_usada": true,
+        "acc_pol": 0.5,
+        "acc_fijas": {
+          "titular": 0.8,
+          "contexto": 0.6,
+          "mayoria": 0.1,
+          "estable": 0.7
+        }
+      },
+      {
+        "bloque": 6,
+        "regimen": "tech",
+        "firma": "tech",
+        "probe_saltado": false,
+        "soporte_wins": 0,
+        "skill_usada": true,
+        "acc_pol": 0.7,
+        "acc_fijas": {
+          "titular": 0.7,
+          "contexto": 0.3,
+          "mayoria": 0.1,
+          "estable": 0.7
+        }
+      },
+      {
+        "bloque": 7,
+        "regimen": "tech",
+        "firma": "tech",
+        "probe_saltado": false,
+        "soporte_wins": 0,
+        "skill_usada": true,
+        "acc_pol": 0.9,
+        "acc_fijas": {
+          "titular": 0.9,
+          "contexto": 0.4,
+          "mayoria": 0.1,
+          "estable": 0.6
+        }
+      },
+      {
+        "bloque": 8,
+        "regimen": "deportes",
+        "firma": "deportes",
+        "probe_saltado": false,
+        "soporte_wins": 0,
+        "skill_usada": true,
+        "acc_pol": 1.0,
+        "acc_fijas": {
+          "titular": 1.0,
+          "contexto": 0.2,
+          "mayoria": 0.1,
+          "estable": 0.5
+        }
+      },
+      {
+        "bloque": 9,
+        "regimen": "dinero",
+        "firma": "dinero",
+        "probe_saltado": false,
+        "soporte_wins": 0,
+        "skill_usada": true,
+        "acc_pol": 0.7,
+        "acc_fijas": {
+          "titular": 0.7,
+          "contexto": 0.8,
+          "mayoria": 0.1,
+          "estable": 0.8
+        }
+      },
+      {
+        "bloque": 10,
+        "regimen": "dinero",
+        "firma": "dinero",
+        "probe_saltado": false,
+        "soporte_wins": 0,
+        "skill_usada": true,
+        "acc_pol": 0.7,
+        "acc_fijas": {
+          "titular": 0.6,
+          "contexto": 0.9,
+          "mayoria": 0.1,
+          "estable": 0.5
+        }
+      },
+      {
+        "bloque": 11,
+        "regimen": "dinero",
+        "firma": "dinero",
+        "probe_saltado": false,
+        "soporte_wins": 0,
+        "skill_usada": true,
+        "acc_pol": 0.9,
+        "acc_fijas": {
+          "titular": 0.3,
+          "contexto": 0.8,
+          "mayoria": 0.1,
+          "estable": 0.7
+        }
+      }
+    ],
+    "skip": [
+      {
+        "bloque": 0,
+        "regimen": "dinero",
+        "firma": "dinero",
+        "probe_saltado": false,
+        "soporte_wins": 0,
+        "skill_usada": false,
+        "acc_pol": 0.2,
+        "acc_fijas": {
+          "titular": 0.4,
+          "contexto": 0.7,
+          "mayoria": 0.2,
+          "estable": 0.4
+        }
+      },
+      {
+        "bloque": 1,
+        "regimen": "tech",
+        "firma": "tech",
+        "probe_saltado": false,
+        "soporte_wins": 0,
+        "skill_usada": false,
+        "acc_pol": 0.8,
+        "acc_fijas": {
+          "titular": 0.8,
+          "contexto": 0.6,
+          "mayoria": 0.1,
+          "estable": 0.8
+        }
+      },
+      {
+        "bloque": 2,
+        "regimen": "deportes",
+        "firma": "deportes",
+        "probe_saltado": false,
+        "soporte_wins": 0,
+        "skill_usada": false,
+        "acc_pol": 0.5,
+        "acc_fijas": {
+          "titular": 0.8,
+          "contexto": 0.5,
+          "mayoria": 0.0,
+          "estable": 0.5
+        }
+      },
+      {
+        "bloque": 3,
+        "regimen": "deportes",
+        "firma": "tech",
+        "probe_saltado": false,
+        "soporte_wins": 1,
+        "skill_usada": true,
+        "acc_pol": 0.4,
+        "acc_fijas": {
+          "titular": 0.6,
+          "contexto": 0.5,
+          "mayoria": 0.2,
+          "estable": 0.6
+        }
+      },
+      {
+        "bloque": 4,
+        "regimen": "tech",
+        "firma": "tech",
+        "probe_saltado": false,
+        "soporte_wins": 0,
+        "skill_usada": true,
+        "acc_pol": 0.1,
+        "acc_fijas": {
+          "titular": 0.6,
+          "contexto": 0.5,
+          "mayoria": 0.0,
+          "estable": 0.3
+        }
+      },
+      {
+        "bloque": 5,
+        "regimen": "deportes",
+        "firma": "deportes",
+        "probe_saltado": false,
+        "soporte_wins": 0,
+        "skill_usada": true,
+        "acc_pol": 0.5,
+        "acc_fijas": {
+          "titular": 0.8,
+          "contexto": 0.6,
+          "mayoria": 0.1,
+          "estable": 0.7
+        }
+      },
+      {
+        "bloque": 6,
+        "regimen": "tech",
+        "firma": "tech",
+        "probe_saltado": false,
+        "soporte_wins": 1,
+        "skill_usada": true,
+        "acc_pol": 0.7,
+        "acc_fijas": {
+          "titular": 0.7,
+          "contexto": 0.3,
+          "mayoria": 0.1,
+          "estable": 0.7
+        }
+      },
+      {
+        "bloque": 7,
+        "regimen": "tech",
+        "firma": "tech",
+        "probe_saltado": false,
+        "soporte_wins": 1,
+        "skill_usada": true,
+        "acc_pol": 0.9,
+        "acc_fijas": {
+          "titular": 0.9,
+          "contexto": 0.4,
+          "mayoria": 0.1,
+          "estable": 0.6
+        }
+      },
+      {
+        "bloque": 8,
+        "regimen": "deportes",
+        "firma": "deportes",
+        "probe_saltado": false,
+        "soporte_wins": 1,
+        "skill_usada": true,
+        "acc_pol": 1.0,
+        "acc_fijas": {
+          "titular": 1.0,
+          "contexto": 0.2,
+          "mayoria": 0.1,
+          "estable": 0.5
+        }
+      },
+      {
+        "bloque": 9,
+        "regimen": "dinero",
+        "firma": "dinero",
+        "probe_saltado": false,
+        "soporte_wins": 1,
+        "skill_usada": true,
+        "acc_pol": 0.7,
+        "acc_fijas": {
+          "titular": 0.7,
+          "contexto": 0.8,
+          "mayoria": 0.1,
+          "estable": 0.8
+        }
+      },
+      {
+        "bloque": 10,
+        "regimen": "dinero",
+        "firma": "dinero",
+        "probe_saltado": false,
+        "soporte_wins": 0,
+        "skill_usada": true,
+        "acc_pol": 0.7,
+        "acc_fijas": {
+          "titular": 0.6,
+          "contexto": 0.9,
+          "mayoria": 0.1,
+          "estable": 0.5
+        }
+      },
+      {
+        "bloque": 11,
+        "regimen": "dinero",
+        "firma": "dinero",
+        "probe_saltado": true,
+        "soporte_wins": 2,
+        "brazo_skill": "contexto",
+        "acc_pol": 0.8,
+        "acc_fijas": {
+          "titular": 0.3,
+          "contexto": 0.8,
+          "mayoria": 0.1,
+          "estable": 0.7
+        }
+      }
+    ]
+  },
+  "reproducibilidad_exp45": true,
+  "costo_total_usd": 0.0,
+  "veredicto": {
+    "pasa": true,
+    "criterio": {
+      "efecto": "regret(skip) - regret(control), media sobre réplicas (pareadas, RNG común)",
+      "pass": "media(efecto) < 0"
+    },
+    "motivos": [
+      "items=120, bloques=12, réplicas pareadas=5 (RNG común)",
+      "efecto medio (reg_skip - reg_control) = -0.600 (por réplica: +1.00, +0.00, +0.00, -1.00, -3.00)",
+      "regret medio control: 48.40 | skip: 47.80 | mejor fija: 40.60",
+      "probes saltados (media): 0.8 bloques/réplica; misfires totales: 1",
+      "reproducibilidad vs EXP45 (control == su tratamiento): True",
+      "PASS (vara intacta)"
+    ]
+  },
+  "duracion_s": 0.1
+}

@@ -1,0 +1,767 @@
+{
+  "experimento": "ALMA-EXP25: barrido de presupuesto del probe",
+  "presupuestos": [
+    8,
+    16,
+    32,
+    64
+  ],
+  "umbral_ruido": 0.15,
+  "por_presupuesto": {
+    "8": {
+      "k": 8,
+      "stream": 120,
+      "seeds": [
+        2521,
+        2522,
+        2523,
+        2524
+      ],
+      "celdas": [
+        {
+          "seed": 2521,
+          "k": 8,
+          "stream": 120,
+          "candidatas_probe": [
+            "single",
+            "cot",
+            "reflexion"
+          ],
+          "vecino": {
+            "brazo": "single",
+            "regret": 14.0,
+            "regret_por_pull": 0.1167
+          },
+          "probe_v2": {
+            "medias_probe": {
+              "single": 0.75,
+              "cot": 0.875,
+              "reflexion": 0.625
+            },
+            "ganador_probe": "cot",
+            "gap": 0.125,
+            "acierto_probe": true,
+            "compromiso": "adaptativo",
+            "pulls_adaptativos": 92,
+            "re_probes": 4,
+            "regret": 11.2,
+            "regret_por_pull": 0.0933
+          },
+          "cero_diag": {
+            "regret": 9.0,
+            "regret_por_pull": 0.075,
+            "nota": "diagnóstico, fuera del criterio pre-registrado"
+          }
+        },
+        {
+          "seed": 2522,
+          "k": 8,
+          "stream": 120,
+          "candidatas_probe": [
+            "single",
+            "cot",
+            "reflexion"
+          ],
+          "vecino": {
+            "brazo": "single",
+            "regret": 25.0,
+            "regret_por_pull": 0.2083
+          },
+          "probe_v2": {
+            "medias_probe": {
+              "single": 1.0,
+              "cot": 0.875,
+              "reflexion": 0.875
+            },
+            "ganador_probe": "single",
+            "gap": 0.125,
+            "acierto_probe": false,
+            "compromiso": "adaptativo",
+            "pulls_adaptativos": 92,
+            "re_probes": 4,
+            "regret": 7.2,
+            "regret_por_pull": 0.06
+          },
+          "cero_diag": {
+            "regret": 6.0,
+            "regret_por_pull": 0.05,
+            "nota": "diagnóstico, fuera del criterio pre-registrado"
+          }
+        },
+        {
+          "seed": 2523,
+          "k": 8,
+          "stream": 120,
+          "candidatas_probe": [
+            "single",
+            "cot",
+            "reflexion"
+          ],
+          "vecino": {
+            "brazo": "single",
+            "regret": 5.0,
+            "regret_por_pull": 0.0417
+          },
+          "probe_v2": {
+            "medias_probe": {
+              "single": 0.75,
+              "cot": 1.0,
+              "reflexion": 0.875
+            },
+            "ganador_probe": "cot",
+            "gap": 0.125,
+            "acierto_probe": true,
+            "compromiso": "adaptativo",
+            "pulls_adaptativos": 92,
+            "re_probes": 4,
+            "regret": 1.2,
+            "regret_por_pull": 0.01
+          },
+          "cero_diag": {
+            "regret": 6.0,
+            "regret_por_pull": 0.05,
+            "nota": "diagnóstico, fuera del criterio pre-registrado"
+          }
+        },
+        {
+          "seed": 2524,
+          "k": 8,
+          "stream": 120,
+          "candidatas_probe": [
+            "single",
+            "cot",
+            "reflexion"
+          ],
+          "vecino": {
+            "brazo": "single",
+            "regret": 8.0,
+            "regret_por_pull": 0.0667
+          },
+          "probe_v2": {
+            "medias_probe": {
+              "single": 0.625,
+              "cot": 1.0,
+              "reflexion": 0.375
+            },
+            "ganador_probe": "cot",
+            "gap": 0.375,
+            "acierto_probe": true,
+            "compromiso": "duro",
+            "pulls_adaptativos": 0,
+            "re_probes": 0,
+            "regret": 0.0,
+            "regret_por_pull": 0.0
+          },
+          "cero_diag": {
+            "regret": 0.0,
+            "regret_por_pull": 0.0,
+            "nota": "diagnóstico, fuera del criterio pre-registrado"
+          }
+        }
+      ],
+      "medias_regret": {
+        "probe_v2": 4.9,
+        "vecino_manual": 13.0,
+        "desde_cero_diag": 5.25
+      },
+      "medias_regret_por_pull": {
+        "probe_v2": 0.0408,
+        "vecino_manual": 0.1084,
+        "desde_cero_diag": 0.0437
+      },
+      "diffs_probe_menos_vecino": [
+        -2.8,
+        -17.8,
+        -3.8,
+        -8.0
+      ],
+      "compromisos": [
+        "adaptativo",
+        "adaptativo",
+        "adaptativo",
+        "duro"
+      ],
+      "gaps": [
+        0.125,
+        0.125,
+        0.125,
+        0.375
+      ],
+      "aciertos_probe": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "veredicto": "PASS",
+      "pasa": true
+    },
+    "16": {
+      "k": 16,
+      "stream": 144,
+      "seeds": [
+        2521,
+        2522,
+        2523,
+        2524
+      ],
+      "celdas": [
+        {
+          "seed": 2521,
+          "k": 16,
+          "stream": 144,
+          "candidatas_probe": [
+            "single",
+            "cot",
+            "reflexion"
+          ],
+          "vecino": {
+            "brazo": "single",
+            "regret": 16.6,
+            "regret_por_pull": 0.1153
+          },
+          "probe_v2": {
+            "medias_probe": {
+              "single": 0.8125,
+              "cot": 0.875,
+              "reflexion": 0.75
+            },
+            "ganador_probe": "cot",
+            "gap": 0.0625,
+            "acierto_probe": true,
+            "compromiso": "adaptativo",
+            "pulls_adaptativos": 92,
+            "re_probes": 4,
+            "regret": 3.8,
+            "regret_por_pull": 0.0264
+          },
+          "cero_diag": {
+            "regret": 11.6,
+            "regret_por_pull": 0.0806,
+            "nota": "diagnóstico, fuera del criterio pre-registrado"
+          }
+        },
+        {
+          "seed": 2522,
+          "k": 16,
+          "stream": 144,
+          "candidatas_probe": [
+            "single",
+            "cot",
+            "reflexion"
+          ],
+          "vecino": {
+            "brazo": "single",
+            "regret": 7.6,
+            "regret_por_pull": 0.0528
+          },
+          "probe_v2": {
+            "medias_probe": {
+              "single": 0.75,
+              "cot": 0.875,
+              "reflexion": 0.4375
+            },
+            "ganador_probe": "cot",
+            "gap": 0.125,
+            "acierto_probe": true,
+            "compromiso": "adaptativo",
+            "pulls_adaptativos": 92,
+            "re_probes": 4,
+            "regret": 14.8,
+            "regret_por_pull": 0.1028
+          },
+          "cero_diag": {
+            "regret": 19.6,
+            "regret_por_pull": 0.1361,
+            "nota": "diagnóstico, fuera del criterio pre-registrado"
+          }
+        },
+        {
+          "seed": 2523,
+          "k": 16,
+          "stream": 144,
+          "candidatas_probe": [
+            "single",
+            "cot",
+            "reflexion"
+          ],
+          "vecino": {
+            "brazo": "single",
+            "regret": 8.6,
+            "regret_por_pull": 0.0597
+          },
+          "probe_v2": {
+            "medias_probe": {
+              "single": 0.75,
+              "cot": 0.9375,
+              "reflexion": 0.75
+            },
+            "ganador_probe": "cot",
+            "gap": 0.1875,
+            "acierto_probe": true,
+            "compromiso": "duro",
+            "pulls_adaptativos": 0,
+            "re_probes": 0,
+            "regret": 3.6,
+            "regret_por_pull": 0.025
+          },
+          "cero_diag": {
+            "regret": 3.6,
+            "regret_por_pull": 0.025,
+            "nota": "diagnóstico, fuera del criterio pre-registrado"
+          }
+        },
+        {
+          "seed": 2524,
+          "k": 16,
+          "stream": 144,
+          "candidatas_probe": [
+            "single",
+            "cot",
+            "reflexion"
+          ],
+          "vecino": {
+            "brazo": "single",
+            "regret": 21.6,
+            "regret_por_pull": 0.15
+          },
+          "probe_v2": {
+            "medias_probe": {
+              "single": 0.75,
+              "cot": 1.0,
+              "reflexion": 0.875
+            },
+            "ganador_probe": "cot",
+            "gap": 0.125,
+            "acierto_probe": true,
+            "compromiso": "adaptativo",
+            "pulls_adaptativos": 92,
+            "re_probes": 4,
+            "regret": 6.8,
+            "regret_por_pull": 0.0472
+          },
+          "cero_diag": {
+            "regret": 10.6,
+            "regret_por_pull": 0.0736,
+            "nota": "diagnóstico, fuera del criterio pre-registrado"
+          }
+        }
+      ],
+      "medias_regret": {
+        "probe_v2": 7.25,
+        "vecino_manual": 13.6,
+        "desde_cero_diag": 11.35
+      },
+      "medias_regret_por_pull": {
+        "probe_v2": 0.0503,
+        "vecino_manual": 0.0945,
+        "desde_cero_diag": 0.0788
+      },
+      "diffs_probe_menos_vecino": [
+        -12.8,
+        7.2,
+        -5.0,
+        -14.8
+      ],
+      "compromisos": [
+        "adaptativo",
+        "adaptativo",
+        "duro",
+        "adaptativo"
+      ],
+      "gaps": [
+        0.0625,
+        0.125,
+        0.1875,
+        0.125
+      ],
+      "aciertos_probe": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "veredicto": "NO CONFIABLE",
+      "pasa": false
+    },
+    "32": {
+      "k": 32,
+      "stream": 192,
+      "seeds": [
+        2521,
+        2522,
+        2523,
+        2524
+      ],
+      "celdas": [
+        {
+          "seed": 2521,
+          "k": 32,
+          "stream": 192,
+          "candidatas_probe": [
+            "single",
+            "cot",
+            "reflexion"
+          ],
+          "vecino": {
+            "brazo": "single",
+            "regret": 29.8,
+            "regret_por_pull": 0.1552
+          },
+          "probe_v2": {
+            "medias_probe": {
+              "single": 0.7812,
+              "cot": 0.9688,
+              "reflexion": 0.6562
+            },
+            "ganador_probe": "cot",
+            "gap": 0.1875,
+            "acierto_probe": true,
+            "compromiso": "duro",
+            "pulls_adaptativos": 0,
+            "re_probes": 0,
+            "regret": 14.8,
+            "regret_por_pull": 0.0771
+          },
+          "cero_diag": {
+            "regret": 9.8,
+            "regret_por_pull": 0.051,
+            "nota": "diagnóstico, fuera del criterio pre-registrado"
+          }
+        },
+        {
+          "seed": 2522,
+          "k": 32,
+          "stream": 192,
+          "candidatas_probe": [
+            "single",
+            "cot",
+            "reflexion"
+          ],
+          "vecino": {
+            "brazo": "single",
+            "regret": 12.8,
+            "regret_por_pull": 0.0667
+          },
+          "probe_v2": {
+            "medias_probe": {
+              "single": 0.7812,
+              "cot": 0.8438,
+              "reflexion": 0.625
+            },
+            "ganador_probe": "cot",
+            "gap": 0.0625,
+            "acierto_probe": true,
+            "compromiso": "adaptativo",
+            "pulls_adaptativos": 92,
+            "re_probes": 4,
+            "regret": 23.0,
+            "regret_por_pull": 0.1198
+          },
+          "cero_diag": {
+            "regret": 8.8,
+            "regret_por_pull": 0.0458,
+            "nota": "diagnóstico, fuera del criterio pre-registrado"
+          }
+        },
+        {
+          "seed": 2523,
+          "k": 32,
+          "stream": 192,
+          "candidatas_probe": [
+            "single",
+            "cot",
+            "reflexion"
+          ],
+          "vecino": {
+            "brazo": "single",
+            "regret": 23.8,
+            "regret_por_pull": 0.124
+          },
+          "probe_v2": {
+            "medias_probe": {
+              "single": 0.6875,
+              "cot": 0.9062,
+              "reflexion": 0.5938
+            },
+            "ganador_probe": "cot",
+            "gap": 0.2188,
+            "acierto_probe": true,
+            "compromiso": "duro",
+            "pulls_adaptativos": 0,
+            "re_probes": 0,
+            "regret": 20.8,
+            "regret_por_pull": 0.1083
+          },
+          "cero_diag": {
+            "regret": 3.8,
+            "regret_por_pull": 0.0198,
+            "nota": "diagnóstico, fuera del criterio pre-registrado"
+          }
+        },
+        {
+          "seed": 2524,
+          "k": 32,
+          "stream": 192,
+          "candidatas_probe": [
+            "single",
+            "cot",
+            "reflexion"
+          ],
+          "vecino": {
+            "brazo": "single",
+            "regret": 17.8,
+            "regret_por_pull": 0.0927
+          },
+          "probe_v2": {
+            "medias_probe": {
+              "single": 0.75,
+              "cot": 0.9375,
+              "reflexion": 0.5312
+            },
+            "ganador_probe": "cot",
+            "gap": 0.1875,
+            "acierto_probe": true,
+            "compromiso": "duro",
+            "pulls_adaptativos": 0,
+            "re_probes": 0,
+            "regret": 17.8,
+            "regret_por_pull": 0.0927
+          },
+          "cero_diag": {
+            "regret": 4.8,
+            "regret_por_pull": 0.025,
+            "nota": "diagnóstico, fuera del criterio pre-registrado"
+          }
+        }
+      ],
+      "medias_regret": {
+        "probe_v2": 19.1,
+        "vecino_manual": 21.05,
+        "desde_cero_diag": 6.8
+      },
+      "medias_regret_por_pull": {
+        "probe_v2": 0.0995,
+        "vecino_manual": 0.1096,
+        "desde_cero_diag": 0.0354
+      },
+      "diffs_probe_menos_vecino": [
+        -15.0,
+        10.2,
+        -3.0,
+        0.0
+      ],
+      "compromisos": [
+        "duro",
+        "adaptativo",
+        "duro",
+        "duro"
+      ],
+      "gaps": [
+        0.1875,
+        0.0625,
+        0.2188,
+        0.1875
+      ],
+      "aciertos_probe": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "veredicto": "NO CONFIABLE",
+      "pasa": false
+    },
+    "64": {
+      "k": 64,
+      "stream": 288,
+      "seeds": [
+        2521,
+        2522,
+        2523,
+        2524
+      ],
+      "celdas": [
+        {
+          "seed": 2521,
+          "k": 64,
+          "stream": 288,
+          "candidatas_probe": [
+            "single",
+            "cot",
+            "reflexion"
+          ],
+          "vecino": {
+            "brazo": "single",
+            "regret": 30.2,
+            "regret_por_pull": 0.1049
+          },
+          "probe_v2": {
+            "medias_probe": {
+              "single": 0.7188,
+              "cot": 0.9219,
+              "reflexion": 0.5625
+            },
+            "ganador_probe": "cot",
+            "gap": 0.2031,
+            "acierto_probe": true,
+            "compromiso": "duro",
+            "pulls_adaptativos": 0,
+            "re_probes": 0,
+            "regret": 40.2,
+            "regret_por_pull": 0.1396
+          },
+          "cero_diag": {
+            "regret": 1.2,
+            "regret_por_pull": 0.0042,
+            "nota": "diagnóstico, fuera del criterio pre-registrado"
+          }
+        },
+        {
+          "seed": 2522,
+          "k": 64,
+          "stream": 288,
+          "candidatas_probe": [
+            "single",
+            "cot",
+            "reflexion"
+          ],
+          "vecino": {
+            "brazo": "single",
+            "regret": 34.2,
+            "regret_por_pull": 0.1188
+          },
+          "probe_v2": {
+            "medias_probe": {
+              "single": 0.875,
+              "cot": 0.9219,
+              "reflexion": 0.625
+            },
+            "ganador_probe": "cot",
+            "gap": 0.0469,
+            "acierto_probe": true,
+            "compromiso": "adaptativo",
+            "pulls_adaptativos": 92,
+            "re_probes": 4,
+            "regret": 24.4,
+            "regret_por_pull": 0.0847
+          },
+          "cero_diag": {
+            "regret": 0.2,
+            "regret_por_pull": 0.0007,
+            "nota": "diagnóstico, fuera del criterio pre-registrado"
+          }
+        },
+        {
+          "seed": 2523,
+          "k": 64,
+          "stream": 288,
+          "candidatas_probe": [
+            "single",
+            "cot",
+            "reflexion"
+          ],
+          "vecino": {
+            "brazo": "single",
+            "regret": 36.2,
+            "regret_por_pull": 0.1257
+          },
+          "probe_v2": {
+            "medias_probe": {
+              "single": 0.8281,
+              "cot": 0.9062,
+              "reflexion": 0.7188
+            },
+            "ganador_probe": "cot",
+            "gap": 0.0781,
+            "acierto_probe": true,
+            "compromiso": "adaptativo",
+            "pulls_adaptativos": 92,
+            "re_probes": 4,
+            "regret": 19.4,
+            "regret_por_pull": 0.0674
+          },
+          "cero_diag": {
+            "regret": 2.2,
+            "regret_por_pull": 0.0076,
+            "nota": "diagnóstico, fuera del criterio pre-registrado"
+          }
+        },
+        {
+          "seed": 2524,
+          "k": 64,
+          "stream": 288,
+          "candidatas_probe": [
+            "single",
+            "cot",
+            "reflexion"
+          ],
+          "vecino": {
+            "brazo": "single",
+            "regret": 42.2,
+            "regret_por_pull": 0.1465
+          },
+          "probe_v2": {
+            "medias_probe": {
+              "single": 0.7656,
+              "cot": 0.9062,
+              "reflexion": 0.6719
+            },
+            "ganador_probe": "cot",
+            "gap": 0.1406,
+            "acierto_probe": true,
+            "compromiso": "adaptativo",
+            "pulls_adaptativos": 92,
+            "re_probes": 4,
+            "regret": 24.4,
+            "regret_por_pull": 0.0847
+          },
+          "cero_diag": {
+            "regret": 23.2,
+            "regret_por_pull": 0.0806,
+            "nota": "diagnóstico, fuera del criterio pre-registrado"
+          }
+        }
+      ],
+      "medias_regret": {
+        "probe_v2": 27.1,
+        "vecino_manual": 35.7,
+        "desde_cero_diag": 6.7
+      },
+      "medias_regret_por_pull": {
+        "probe_v2": 0.0941,
+        "vecino_manual": 0.124,
+        "desde_cero_diag": 0.0233
+      },
+      "diffs_probe_menos_vecino": [
+        10.0,
+        -9.8,
+        -16.8,
+        -17.8
+      ],
+      "compromisos": [
+        "duro",
+        "adaptativo",
+        "adaptativo",
+        "adaptativo"
+      ],
+      "gaps": [
+        0.2031,
+        0.0469,
+        0.0781,
+        0.1406
+      ],
+      "aciertos_probe": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "veredicto": "NO CONFIABLE",
+      "pasa": false
+    }
+  },
+  "umbral_estabilizacion_k": 8,
+  "lectura_umbral": "el menor presupuesto con veredicto confiable es k=8",
+  "criterio": "POR PRESUPUESTO: media(regret probe_v2) < media(regret vecino); cambio de signo en diffs -> NO CONFIABLE en ese presupuesto"
+}

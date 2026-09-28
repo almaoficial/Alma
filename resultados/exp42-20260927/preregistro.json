@@ -1,0 +1,81 @@
+{
+  "experimento": "ALMA-EXP42: generalizacion a traves de ventanas",
+  "fecha": "2026-09-27T18:14:05",
+  "ventanas": [
+    {
+      "id": "W1",
+      "pair": "XBTUSD",
+      "asset": "BTC",
+      "desde": "2026-08-28",
+      "hasta": "2026-09-27"
+    },
+    {
+      "id": "W2",
+      "pair": "XBTUSD",
+      "asset": "BTC",
+      "desde": "2026-05-01",
+      "hasta": "2026-05-31"
+    },
+    {
+      "id": "W3",
+      "pair": "XBTUSD",
+      "asset": "BTC",
+      "desde": "2026-01-15",
+      "hasta": "2026-02-14"
+    },
+    {
+      "id": "W4",
+      "pair": "ETHUSD",
+      "asset": "ETH",
+      "desde": "2026-08-28",
+      "hasta": "2026-09-27"
+    },
+    {
+      "id": "W5",
+      "pair": "ETHUSD",
+      "asset": "ETH",
+      "desde": "2026-04-01",
+      "hasta": "2026-05-01"
+    },
+    {
+      "id": "W6",
+      "pair": "SOLUSD",
+      "asset": "SOL",
+      "desde": "2026-08-28",
+      "hasta": "2026-09-27"
+    }
+  ],
+  "K": 6,
+  "ventanas_efectivas": [
+    "W1",
+    "W3",
+    "W4",
+    "W5",
+    "W6"
+  ],
+  "nota_K": "W2 (BTC 2026-05-01->2026-05-31) excluida: hueco real de 5h (2026-05-08 02:00-06:00 UTC) en los datos horarios de Coinbase; K efectivo = 5, pre-registrado aqui",
+  "fuentes": "Coinbase Exchange publico (BTC-USD/ETH-USD/SOL-USD, granularity=3600) para las 6 ventanas. Kraken descartado: verificado 2026-09-27 que ignora `since` y devuelve solo las ~720 velas mas recientes, insuficiente para 888 velas alineadas (168 lookback + 720 stream).",
+  "replicas_por_ventana": 4,
+  "politicas": [
+    "buyhold",
+    "flat",
+    "regla36",
+    "regimen_adx"
+  ],
+  "regla36": "probe continuo + re-probe + olvido (identica a EXP36/39)",
+  "regimen_adx": {
+    "indicador": "ADX-14 Wilder",
+    "lookback_h": 168,
+    "umbral": 25.0,
+    "tendencia": "momentum",
+    "lateral": "flat",
+    "nota": "congelado, sin tuning por ventana"
+  },
+  "costo_bp": 0.0001,
+  "crn": "misma semilla Thompson entre politicas dentro de (ventana, replica): NS=exp42-{w}-r{r}",
+  "criterio": {
+    "efecto": "media_replicas(P&L_politica - P&L_buyhold) por ventana",
+    "pass": "alguna politica no-buyhold con media_w(efecto) > 0 y (media - 1*desvio_muestral) > -0.02"
+  },
+  "modo": "mock, replay puro, US$0"
+}

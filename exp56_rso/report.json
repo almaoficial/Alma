@@ -1,0 +1,325 @@
+{
+  "experimento": "ALMA-EXP56: RSO estilo MiniMax (mock, US$0)",
+  "preregistro": "preregistro.md (mismo directorio)",
+  "n_items": 240,
+  "n_bloques": 24,
+  "espacio_mutacion": {
+    "umbral_base": [
+      1,
+      2,
+      3
+    ],
+    "umbral_divisor": [
+      2,
+      3,
+      4,
+      6
+    ],
+    "gate_margin": [
+      0.0,
+      0.05,
+      0.1
+    ],
+    "n0": [
+      1,
+      2,
+      4
+    ],
+    "decay": [
+      0.25,
+      0.5,
+      0.75
+    ]
+  },
+  "scaffold_inicial": {
+    "umbral_base": 2,
+    "umbral_divisor": 3,
+    "gate_margin": 0.0,
+    "n0": 2,
+    "decay": 0.5
+  },
+  "scaffold_final": {
+    "umbral_base": 1,
+    "umbral_divisor": 2,
+    "gate_margin": 0.0,
+    "n0": 4,
+    "decay": 0.5
+  },
+  "cambio_neto": {
+    "umbral_base": [
+      2,
+      1
+    ],
+    "umbral_divisor": [
+      3,
+      2
+    ],
+    "n0": [
+      2,
+      4
+    ]
+  },
+  "n_rondas": 24,
+  "prop_seed": 56,
+  "train_replicas": [
+    0,
+    1,
+    2
+  ],
+  "heldout_replicas": [
+    3,
+    4
+  ],
+  "sanidad_bit_identica_exp51": true,
+  "n_keeps": 3,
+  "trayectoria": [
+    {
+      "ronda": 1,
+      "dim": "umbral_divisor",
+      "de": 3,
+      "a": 2,
+      "metrica_antes": 85.6667,
+      "metrica_despues": 87.0,
+      "keep": false
+    },
+    {
+      "ronda": 2,
+      "dim": "umbral_base",
+      "de": 2,
+      "a": 3,
+      "metrica_antes": 85.6667,
+      "metrica_despues": 87.0,
+      "keep": false
+    },
+    {
+      "ronda": 3,
+      "dim": "umbral_divisor",
+      "de": 3,
+      "a": 4,
+      "metrica_antes": 85.6667,
+      "metrica_despues": 86.0,
+      "keep": false
+    },
+    {
+      "ronda": 4,
+      "dim": "gate_margin",
+      "de": 0.0,
+      "a": 0.05,
+      "metrica_antes": 85.6667,
+      "metrica_despues": 85.6667,
+      "keep": false
+    },
+    {
+      "ronda": 5,
+      "dim": "n0",
+      "de": 2,
+      "a": 1,
+      "metrica_antes": 85.6667,
+      "metrica_despues": 88.6667,
+      "keep": false
+    },
+    {
+      "ronda": 6,
+      "dim": "n0",
+      "de": 2,
+      "a": 4,
+      "metrica_antes": 85.6667,
+      "metrica_despues": 82.3333,
+      "keep": true
+    },
+    {
+      "ronda": 7,
+      "dim": "umbral_divisor",
+      "de": 3,
+      "a": 2,
+      "metrica_antes": 82.3333,
+      "metrica_despues": 84.0,
+      "keep": false
+    },
+    {
+      "ronda": 8,
+      "dim": "decay",
+      "de": 0.5,
+      "a": 0.25,
+      "metrica_antes": 82.3333,
+      "metrica_despues": 84.6667,
+      "keep": false
+    },
+    {
+      "ronda": 9,
+      "dim": "decay",
+      "de": 0.5,
+      "a": 0.25,
+      "metrica_antes": 82.3333,
+      "metrica_despues": 84.6667,
+      "keep": false
+    },
+    {
+      "ronda": 10,
+      "dim": "umbral_base",
+      "de": 2,
+      "a": 1,
+      "metrica_antes": 82.3333,
+      "metrica_despues": 81.3333,
+      "keep": true
+    },
+    {
+      "ronda": 11,
+      "dim": "gate_margin",
+      "de": 0.0,
+      "a": 0.1,
+      "metrica_antes": 81.3333,
+      "metrica_despues": 81.3333,
+      "keep": false
+    },
+    {
+      "ronda": 12,
+      "dim": "gate_margin",
+      "de": 0.0,
+      "a": 0.05,
+      "metrica_antes": 81.3333,
+      "metrica_despues": 81.3333,
+      "keep": false
+    },
+    {
+      "ronda": 13,
+      "dim": "decay",
+      "de": 0.5,
+      "a": 0.25,
+      "metrica_antes": 81.3333,
+      "metrica_despues": 82.6667,
+      "keep": false
+    },
+    {
+      "ronda": 14,
+      "dim": "umbral_divisor",
+      "de": 3,
+      "a": 2,
+      "metrica_antes": 81.3333,
+      "metrica_despues": 79.3333,
+      "keep": true
+    },
+    {
+      "ronda": 15,
+      "dim": "umbral_base",
+      "de": 1,
+      "a": 2,
+      "metrica_antes": 79.3333,
+      "metrica_despues": 84.0,
+      "keep": false
+    },
+    {
+      "ronda": 16,
+      "dim": "umbral_base",
+      "de": 1,
+      "a": 2,
+      "metrica_antes": 79.3333,
+      "metrica_despues": 84.0,
+      "keep": false
+    },
+    {
+      "ronda": 17,
+      "dim": "decay",
+      "de": 0.5,
+      "a": 0.25,
+      "metrica_antes": 79.3333,
+      "metrica_despues": 81.0,
+      "keep": false
+    },
+    {
+      "ronda": 18,
+      "dim": "umbral_divisor",
+      "de": 2,
+      "a": 6,
+      "metrica_antes": 79.3333,
+      "metrica_despues": 81.6667,
+      "keep": false
+    },
+    {
+      "ronda": 19,
+      "dim": "gate_margin",
+      "de": 0.0,
+      "a": 0.05,
+      "metrica_antes": 79.3333,
+      "metrica_despues": 79.3333,
+      "keep": false
+    },
+    {
+      "ronda": 20,
+      "dim": "gate_margin",
+      "de": 0.0,
+      "a": 0.05,
+      "metrica_antes": 79.3333,
+      "metrica_despues": 79.3333,
+      "keep": false
+    },
+    {
+      "ronda": 21,
+      "dim": "umbral_divisor",
+      "de": 2,
+      "a": 4,
+      "metrica_antes": 79.3333,
+      "metrica_despues": 80.6667,
+      "keep": false
+    },
+    {
+      "ronda": 22,
+      "dim": "n0",
+      "de": 4,
+      "a": 1,
+      "metrica_antes": 79.3333,
+      "metrica_despues": 84.0,
+      "keep": false
+    },
+    {
+      "ronda": 23,
+      "dim": "decay",
+      "de": 0.5,
+      "a": 0.75,
+      "metrica_antes": 79.3333,
+      "metrica_despues": 81.3333,
+      "keep": false
+    },
+    {
+      "ronda": 24,
+      "dim": "decay",
+      "de": 0.5,
+      "a": 0.25,
+      "metrica_antes": 79.3333,
+      "metrica_despues": 81.0,
+      "keep": false
+    }
+  ],
+  "train": {
+    "init_media": 85.6667,
+    "init_por_replica": [
+      78.0,
+      86.0,
+      93.0
+    ],
+    "evo_media": 79.3333,
+    "evo_por_replica": [
+      67.0,
+      82.0,
+      89.0
+    ],
+    "mejora": 6.3333
+  },
+  "heldout": {
+    "init_media": 87.5,
+    "init_por_replica": [
+      95.0,
+      80.0
+    ],
+    "evo_media": 83.0,
+    "evo_por_replica": [
+      86.0,
+      80.0
+    ],
+    "mejora": 4.5
+  },
+  "criterio": "PASS ssi media_heldout(evolucionado) < media_heldout(inicial)",
+  "veredicto": "PASS",
+  "costo_total_usd": 0.0,
+  "duracion_s": 1.4
+}

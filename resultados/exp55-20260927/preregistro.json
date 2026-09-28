@@ -1,0 +1,7 @@
+{
+  "experimento": "ALMA-EXP55: ablación TTRL (mock, US$0)",
+  "preregistro_md": "exp55_ablacion/preregistro.md (pre-registro vinculante, escrito antes de correr)",
+  "fecha": "2026-09-27T19:58:48",
+  "criterio": "PASS_X ⟺ media(regret(X) − regret(control)) < 0, 5 réplicas pareadas",
+  "regla_interpretacion": "A PASS+B FAIL→voto; B PASS+A FAIL→commit; ambos PASS→comparar magnitudes vs EXP54(−2,20); ambos FAIL→EXP54 fue ruido"
+}

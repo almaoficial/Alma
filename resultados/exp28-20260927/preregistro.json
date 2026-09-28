@@ -1,0 +1,10 @@
+{
+  "experimento": "ALMA-EXP28",
+  "fecha": "2026-09-27",
+  "pregunta": "¿Un shortlist híbrido (top-3 del vecino del mapa + top-3 global por frecuencia, sin duplicados) captura lo mejor de los dos mundos?",
+  "hipotesis": "El híbrido nunca es peor que ninguno de los dos por separado: empata al fingerprint cuando el mapa acierta (EP1) y empata al sin-mapa cuando el mapa erra (EP2). Es el diseño candidato para ALMA v2.1.",
+  "diseno": "100% mock, US$0. 8 seeds nuevas [2821-2828]. Mismos 2 episodios de EXP27 (EP1 mapa-correcto, EP2 trampa), 120 pulls c/u. Tratamientos: (a) fingerprint+probe v2; (b) mapless+probe v2; (h) híbrido+probe v2 (misma regla de ruido, 8 pulls por brazo; el híbrido paga su seguro con más pulls de probe); (c) vecino x120; (d) cero (diagnóstico). Regret = suma(0.90-r) con probe incluido, EP1+EP2.",
+  "criterio": "media(h) <= media(a) Y media(h) <= media(b) → PASS (nunca peor que ninguno).",
+  "regla_confiabilidad": "cambio de signo en diffs(h-a) o en diffs(h-b) → NO CONFIABLE.",
+  "costo": "US$0 (mock)"
+}

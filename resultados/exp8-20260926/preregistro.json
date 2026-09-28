@@ -1,0 +1,16 @@
+{
+  "experimento": "ALMA-EXP8: oráculo de 3 intentos (enderezar la vara)",
+  "fecha": "2026-09-26T02:01:53",
+  "criterio_exito": {
+    "exp5_mantiene_pass": true,
+    "exp6_mantiene_fail": true,
+    "exp7_mantiene_pass": true
+  },
+  "diseno": {
+    "oraculo": "3 intentos por (problema, brazo): 5A-oracle + 8A-oracle-r2 + 8A-oracle-r3; vara = max sobre brazos del promedio de 3",
+    "politicas": "replay de datos guardados, 0 llamadas nuevas",
+    "stream": "reutilizado de EXP5: 10 clases x 12, seed 999"
+  },
+  "seed": 999,
+  "modo": "api"
+}

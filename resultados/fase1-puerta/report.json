@@ -1,0 +1,150 @@
+{
+  "nombre": "fase1-puerta-proveedor-real",
+  "preregistro": "resultados/fase1-puerta/preregistro.json",
+  "duracion_s": 853.7,
+  "parte_a_replicas": [
+    {
+      "replica": 0,
+      "seed": 11,
+      "regret_total": 9.0,
+      "skills": [
+        {
+          "firma": "aritmetica",
+          "recomienda": "cot",
+          "version": 2,
+          "path": "/home/hatch/workspace/alma-prototype/resultados/fase1-puerta/rep0/skills/firmas/aritmetica/SKILL.md"
+        },
+        {
+          "firma": "razonamiento",
+          "recomienda": "cot",
+          "version": 1,
+          "path": "/home/hatch/workspace/alma-prototype/resultados/fase1-puerta/rep0/skills/firmas/razonamiento/SKILL.md"
+        }
+      ],
+      "generaciones": 2,
+      "refinamientos": [
+        {
+          "accion": "refinar",
+          "firma": "aritmetica",
+          "skill": "/home/hatch/workspace/alma-prototype/resultados/fase1-puerta/rep0/skills/firmas/aritmetica/SKILL.md",
+          "version": 2,
+          "antes": "single",
+          "ahora": "cot"
+        }
+      ],
+      "skills_usadas": 4,
+      "probes_saltados": 0,
+      "modo_recurrencia": "skills",
+      "tasa_recurrencia": 0.75,
+      "costo_usd": 0.009507,
+      "llamados_llm": 128,
+      "cadena_ok": true
+    },
+    {
+      "replica": 1,
+      "seed": 22,
+      "regret_total": 10.0,
+      "skills": [
+        {
+          "firma": "aritmetica",
+          "recomienda": "reflexion",
+          "version": 2,
+          "path": "/home/hatch/workspace/alma-prototype/resultados/fase1-puerta/rep1/skills/firmas/aritmetica/SKILL.md"
+        },
+        {
+          "firma": "razonamiento",
+          "recomienda": "cot",
+          "version": 1,
+          "path": "/home/hatch/workspace/alma-prototype/resultados/fase1-puerta/rep1/skills/firmas/razonamiento/SKILL.md"
+        }
+      ],
+      "generaciones": 2,
+      "refinamientos": [
+        {
+          "accion": "refinar",
+          "firma": "aritmetica",
+          "skill": "/home/hatch/workspace/alma-prototype/resultados/fase1-puerta/rep1/skills/firmas/aritmetica/SKILL.md",
+          "version": 2,
+          "antes": "single",
+          "ahora": "reflexion"
+        }
+      ],
+      "skills_usadas": 4,
+      "probes_saltados": 0,
+      "modo_recurrencia": "skills",
+      "tasa_recurrencia": 0.75,
+      "costo_usd": 0.009683,
+      "llamados_llm": 137,
+      "cadena_ok": true
+    },
+    {
+      "replica": 2,
+      "seed": 33,
+      "regret_total": 6.0,
+      "skills": [
+        {
+          "firma": "aritmetica",
+          "recomienda": "cot",
+          "version": 1,
+          "path": "/home/hatch/workspace/alma-prototype/resultados/fase1-puerta/rep2/skills/firmas/aritmetica/SKILL.md"
+        },
+        {
+          "firma": "razonamiento",
+          "recomienda": "cot",
+          "version": 2,
+          "path": "/home/hatch/workspace/alma-prototype/resultados/fase1-puerta/rep2/skills/firmas/razonamiento/SKILL.md"
+        }
+      ],
+      "generaciones": 2,
+      "refinamientos": [
+        {
+          "accion": "refinar",
+          "firma": "razonamiento",
+          "skill": "/home/hatch/workspace/alma-prototype/resultados/fase1-puerta/rep2/skills/firmas/razonamiento/SKILL.md",
+          "version": 2,
+          "antes": "reflexion",
+          "ahora": "cot"
+        }
+      ],
+      "skills_usadas": 4,
+      "probes_saltados": 0,
+      "modo_recurrencia": "skills",
+      "tasa_recurrencia": 0.75,
+      "costo_usd": 0.009608,
+      "llamados_llm": 137,
+      "cadena_ok": true
+    }
+  ],
+  "parte_b": {
+    "n_pares": 40,
+    "diferencia_media": 0.0,
+    "ic95": [
+      0.0,
+      0.0
+    ],
+    "por_firma": {
+      "aritmetica": {
+        "n": 20,
+        "dif_media": 0.0,
+        "raw_ok": 20.0,
+        "guiada_ok": 20.0
+      },
+      "razonamiento": {
+        "n": 20,
+        "dif_media": 0.0,
+        "raw_ok": 17.0,
+        "guiada_ok": 17.0
+      }
+    }
+  },
+  "costo_total_usd": 0.041175,
+  "criterios": {
+    "1_generacion": true,
+    "2_refinamiento": true,
+    "3_proveedor_consultado": true,
+    "4_modo_skills": true,
+    "5_costo": true,
+    "6_conductual": false
+  },
+  "veredicto": "FAIL"
+}

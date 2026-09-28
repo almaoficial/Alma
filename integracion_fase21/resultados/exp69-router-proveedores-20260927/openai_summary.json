@@ -1,0 +1,77 @@
+{
+  "experimento": "ALMA-EXP69 piloto OpenAI (router de proveedores)",
+  "proveedor": "openai",
+  "modelo": "gpt-4o-mini",
+  "precios_usd_por_1M": {
+    "input": 0.15,
+    "output": 0.6
+  },
+  "fase": "exp69-openai",
+  "pulls": 180,
+  "llamadas_api": 180,
+  "truncadas": 0,
+  "costo_total_usd": 0.0276,
+  "freno_usd": 0.25,
+  "duracion_s": 467.3,
+  "por_configuracion": {
+    "gsm8k/cot": {
+      "n": 20,
+      "reward_medio": 1.0,
+      "costo_medio_usd": 0.000183,
+      "reward_por_usd": 5471.96
+    },
+    "gsm8k/reflexion": {
+      "n": 20,
+      "reward_medio": 1.0,
+      "costo_medio_usd": 0.000234,
+      "reward_por_usd": 4281.74
+    },
+    "gsm8k/single": {
+      "n": 20,
+      "reward_medio": 0.3,
+      "costo_medio_usd": 1.8e-05,
+      "reward_por_usd": 16997.17
+    },
+    "mbpp/cot": {
+      "n": 20,
+      "reward_medio": 0.0,
+      "costo_medio_usd": 0.000181,
+      "reward_por_usd": 0.0
+    },
+    "mbpp/reflexion": {
+      "n": 20,
+      "reward_medio": 0.0,
+      "costo_medio_usd": 0.000237,
+      "reward_por_usd": 0.0
+    },
+    "mbpp/single": {
+      "n": 20,
+      "reward_medio": 0.0,
+      "costo_medio_usd": 3.9e-05,
+      "reward_por_usd": 0.0
+    },
+    "mmlu/cot": {
+      "n": 20,
+      "reward_medio": 0.5,
+      "costo_medio_usd": 0.000212,
+      "reward_por_usd": 2360.16
+    },
+    "mmlu/reflexion": {
+      "n": 20,
+      "reward_medio": 0.7,
+      "costo_medio_usd": 0.000251,
+      "reward_por_usd": 2792.74
+    },
+    "mmlu/single": {
+      "n": 20,
+      "reward_medio": 0.6,
+      "costo_medio_usd": 2.8e-05,
+      "reward_por_usd": 21582.73
+    }
+  },
+  "global": {
+    "reward_medio": 0.4556,
+    "costo_medio_usd": 0.000153,
+    "reward_por_usd": 2970.37
+  }
+}

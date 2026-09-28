@@ -1,0 +1,21 @@
+{
+  "experimento": "ALMA-EXP10: selección con 3 brazos (single/cot/reflexion)",
+  "fecha": "2026-09-26T02:24:45",
+  "criterio_exito": {
+    "alma3_gana_a_mejor_fija": true
+  },
+  "diseno": {
+    "brazos": [
+      "single",
+      "cot",
+      "reflexion"
+    ],
+    "oraculo_reflexion": "120 problemas x 2 intentos (fases 10A-oracle-r1/r2)",
+    "stream": "flip EXP9: orden nuevo [1,7,9,3,5,4,2,0,6,8]",
+    "politica": "probe continuo 3 brazos + Thompson prior uniforme",
+    "regla_probe": "default single; cambio si el mejor alternativo supera por > 0.05",
+    "rng": "pareado por (bloque,q), seed 999"
+  },
+  "seed": 999,
+  "modo": "api"
+}

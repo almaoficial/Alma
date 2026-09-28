@@ -1,0 +1,26 @@
+{
+  "experimento": "metaloop_rso",
+  "seed": 23,
+  "rondas": 2,
+  "criterio_parada": {
+    "tipo": "rondas_fijas",
+    "n": 2
+  },
+  "scaffold_partida": {
+    "decay": 0.5,
+    "gate_margin": 0.0,
+    "n0": 4,
+    "umbral_base": 1,
+    "umbral_divisor": 3
+  },
+  "heldout_partida": 82.5,
+  "criterio_adopcion": "puerta de dos splits: Δ_in ≥ 0 ∧ Δ_ho ≥ 0 ∧ max(Δ_in,Δ_ho) > 0 (Self-Harness §3.4)",
+  "validador": "congelado (e47/e56, splits [0,1,2]/[3,4])",
+  "evidencia_debilidades": {
+    "tipo": "paquete_evidencia",
+    "clusters": [],
+    "total_firmas": 0,
+    "advertencia": "descriptivo, no prescriptivo: los clusters auditan contexto, no dirigen mutaciones"
+  },
+  "timestamp": 1790550027.037792
+}

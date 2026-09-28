@@ -1,0 +1,58 @@
+{
+  "experimento": "ALMA-EXP32",
+  "seeds": [
+    3221,
+    3222,
+    3223,
+    3224,
+    3225,
+    3226,
+    3227,
+    3228
+  ],
+  "episodios_por_seed_regimen": 50,
+  "regret_medio_por_regimen": {
+    "estacionario": {
+      "siempre": 55.185,
+      "evi": 13.674
+    },
+    "flip": {
+      "siempre": 54.345,
+      "evi": 66.924
+    }
+  },
+  "regret_medio_pooled": {
+    "siempre": 54.765,
+    "evi": 40.299
+  },
+  "tasa_probe_EVI_por_regimen": {
+    "estacionario": 0.1468,
+    "flip": 0.2233
+  },
+  "diffs_evi_menos_siempre_por_seed": {
+    "estacionario": {
+      "3221": -39.888,
+      "3222": -45.84,
+      "3223": -40.776,
+      "3224": -44.784,
+      "3225": -42.264,
+      "3226": -40.2,
+      "3227": -37.32,
+      "3228": -41.016
+    },
+    "flip": {
+      "3221": 11.28,
+      "3222": 12.36,
+      "3223": 10.8,
+      "3224": 16.464,
+      "3225": 14.04,
+      "3226": 11.496,
+      "3227": 12.84,
+      "3228": 11.352
+    }
+  },
+  "gana_estacionario": true,
+  "gana_flip": false,
+  "criterio": "PASS si EVI < siempre-activo en AMBOS regímenes",
+  "veredicto": "FAIL"
+}

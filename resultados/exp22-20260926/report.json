@@ -1,0 +1,191 @@
+{
+  "experimento": "ALMA-EXP22",
+  "pregunta": "\u00bfMorir despues de reportar produce mejor se\u00f1al por costo que persistir?",
+  "seeds": [
+    2221,
+    2222,
+    2223,
+    2224
+  ],
+  "por_seed": [
+    {
+      "seed": 2221,
+      "persistentes": {
+        "mse_medio": 0.042401,
+        "llamadas": 70,
+        "M": 2.968039,
+        "sesgo_abs_medio_ronda10": 0.5199,
+        "mse_por_ronda": [
+          0.0902,
+          0.0852,
+          0.017,
+          0.0007,
+          0.0009,
+          0.0002,
+          0.2122,
+          0.0142,
+          0.003,
+          0.0004
+        ]
+      },
+      "baterias": {
+        "mse_medio": 0.074011,
+        "llamadas": 140,
+        "M": 10.361599,
+        "mse_por_ronda": [
+          0.0053,
+          0.2248,
+          0.1591,
+          0.0014,
+          0.1134,
+          0.0138,
+          0.1224,
+          0.0836,
+          0.0053,
+          0.011
+        ]
+      },
+      "diff_M_pers_menos_bat": -7.39356
+    },
+    {
+      "seed": 2222,
+      "persistentes": {
+        "mse_medio": 0.061061,
+        "llamadas": 70,
+        "M": 4.274273,
+        "sesgo_abs_medio_ronda10": 0.4144,
+        "mse_por_ronda": [
+          0.0205,
+          0.0551,
+          0.1964,
+          0.1469,
+          0.0042,
+          0.0,
+          0.0103,
+          0.0465,
+          0.0089,
+          0.1218
+        ]
+      },
+      "baterias": {
+        "mse_medio": 0.081781,
+        "llamadas": 140,
+        "M": 11.449383,
+        "mse_por_ronda": [
+          0.1358,
+          0.0498,
+          0.24,
+          0.0023,
+          0.0886,
+          0.0617,
+          0.0731,
+          0.0545,
+          0.0238,
+          0.0884
+        ]
+      },
+      "diff_M_pers_menos_bat": -7.17511
+    },
+    {
+      "seed": 2223,
+      "persistentes": {
+        "mse_medio": 0.112608,
+        "llamadas": 70,
+        "M": 7.882572,
+        "sesgo_abs_medio_ronda10": 0.5194,
+        "mse_por_ronda": [
+          0.0367,
+          0.2863,
+          0.164,
+          0.0024,
+          0.1126,
+          0.0031,
+          0.151,
+          0.0074,
+          0.0252,
+          0.3375
+        ]
+      },
+      "baterias": {
+        "mse_medio": 0.084247,
+        "llamadas": 140,
+        "M": 11.794612,
+        "mse_por_ronda": [
+          0.2546,
+          0.0022,
+          0.1273,
+          0.1741,
+          0.0232,
+          0.008,
+          0.1613,
+          0.0053,
+          0.0011,
+          0.0854
+        ]
+      },
+      "diff_M_pers_menos_bat": -3.91204
+    },
+    {
+      "seed": 2224,
+      "persistentes": {
+        "mse_medio": 0.051927,
+        "llamadas": 70,
+        "M": 3.634879,
+        "sesgo_abs_medio_ronda10": 0.1953,
+        "mse_por_ronda": [
+          0.0277,
+          0.01,
+          0.1012,
+          0.1547,
+          0.0585,
+          0.048,
+          0.0079,
+          0.0067,
+          0.1045,
+          0.0
+        ]
+      },
+      "baterias": {
+        "mse_medio": 0.12794,
+        "llamadas": 140,
+        "M": 17.911648,
+        "mse_por_ronda": [
+          0.14,
+          0.2559,
+          0.305,
+          0.0001,
+          0.0489,
+          0.1154,
+          0.0671,
+          0.0181,
+          0.0897,
+          0.2391
+        ]
+      },
+      "diff_M_pers_menos_bat": -14.276768
+    }
+  ],
+  "medias": {
+    "M_persistentes": 4.689941,
+    "M_baterias": 12.87931,
+    "MSE_medio_persistentes": 0.066999,
+    "MSE_medio_baterias": 0.091995,
+    "sesgo_abs_medio_r10_persistentes": 0.4123
+  },
+  "diffs_M_pers_menos_bat": [
+    -7.39356,
+    -7.17511,
+    -3.91204,
+    -14.276768
+  ],
+  "criterio": "M_baterias < M_persistentes (medias de 4 seeds); M = MSE_medio x llamadas",
+  "veredicto": "FAIL",
+  "pasa": false,
+  "sanity_check_diagnostico": {
+    "drift_cero_seed9999": {
+      "mse_persistentes": 0.081804,
+      "mse_baterias": 0.099472,
+      "nota": "con drift=0 ambos brazos son el mismo proceso: los MSE deberian ser del mismo orden (no identicos: RNG distinto)."
+    }
+  }
+}

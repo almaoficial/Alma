@@ -1,0 +1,99 @@
+{
+  "experimento": "ALMA-EXP47: ¿escala el efecto de las skills con recurrencia más larga? (cierre de la línea de skills) — mock",
+  "fase": "mock",
+  "fecha": "2026-09-27T19:06:53",
+  "hipotesis": "(a) Con 8 recurrencias por régimen, saltar el probe con soporte fuerte reduce el regret frente a la maquinaria con probe siempre: media sobre réplicas pareadas de regret(skip)-regret(control) < 0 (misma vara que EXP46). (b) ESCALA: la magnitud del efecto crece con la recurrencia — el efecto medio en EXP47 es más negativo que el -0.60 de EXP46, porque con el doble de recurrencias el salto tiene más bloques donde operar (comparación entre experimentos, documentada como tal).",
+  "nota_refutacion": "Si el efecto no crece con 8 recurrencias por régimen (el doble de oportunidades para el salto), el mecanismo no escala: el techo ~1-2% del regret es estructural del mundo, no del horizonte. Cerrar la línea.",
+  "regla_cierre": "Si NO se cumplen (a) y (b) a la vez, la línea de skills se cierra: el veredicto lo declara explícitamente y recomienda no más experimentos de skills en mock.",
+  "condicion_alcance": "En mundos sin recurrencia (feed real: rotación 8/8 en EXP44) las skills nunca alcanzan soporte fuerte (>=2 victorias pareadas): el mecanismo de salto de probe solo opera donde hay recurrencia. No generalizar a streams sin recurrencia.",
+  "stream": {
+    "fuente": "CONSTRUIDO: EXTENSIÓN ESTRICTA de EXP46 — bloques 0-11 bit-idénticos a EXP45/46 (mismo orden de regímenes, misma secuencia de sorteo de categorías con random.Random(45), mismo namespace de RNG del oráculo 'exp45-...'); bloques 12-23 agregan 4 recurrencias más por régimen (orden con random.Random(47).shuffle). Categorías sorteadas con frecuencias empíricas del feed real (data_exp44/feed_units.json).",
+    "n_items": 240,
+    "bloques": 24,
+    "tam_bloque": 10,
+    "regimenes": [
+      "dinero",
+      "tech",
+      "deportes",
+      "deportes",
+      "tech",
+      "deportes",
+      "tech",
+      "tech",
+      "deportes",
+      "dinero",
+      "dinero",
+      "dinero",
+      "deportes",
+      "dinero",
+      "deportes",
+      "dinero",
+      "deportes",
+      "dinero",
+      "tech",
+      "tech",
+      "deportes",
+      "tech",
+      "dinero",
+      "tech"
+    ],
+    "semilla_orden_base": 45,
+    "semilla_orden_extension": 47,
+    "composicion_bloque": "8 items del grupo del régimen + 2 de ruido (uno de cada otro grupo)",
+    "grupos": {
+      "tech": [
+        "adaptive systems",
+        "agentes de ia",
+        "agentes ia",
+        "ai agents",
+        "ai industry",
+        "ai models",
+        "ai platforms",
+        "ai research",
+        "auto-mejora de ia",
+        "ia investigación",
+        "ia que se mejora sola",
+        "inteligencia artificial",
+        "investigación en ia",
+        "modelos de ia",
+        "self-improving ai",
+        "sistemas adaptativos"
+      ],
+      "dinero": [
+        "dinero con ia",
+        "finances",
+        "finanzas",
+        "ingresos con ia",
+        "negocios"
+      ],
+      "deportes": [
+        "fútbol",
+        "fútbol amateur",
+        "mundial 2026"
+      ]
+    },
+    "oraculo": "tasas mock calibradas por categoría (data_exp44/tasas.json)",
+    "sesgo_seleccion": "Stream CONSTRUIDO (no es el feed crudo): las categorías se sortean con las frecuencias empíricas del feed real de Muse (22-27/9/2026), pero la secuencia de regímenes está diseñada (3 regímenes x 8 recurrencias). Es el mundo mínimo donde una skill PUEDE ayudar: sin recurrencia, el mecanismo es intestable por definición (lección EXP44: rotación 8/8 mata cualquier aprendizaje). EXTENSIÓN ESTRICTA de EXP46: los bloques 0-11 son bit-idénticos a EXP46 (mismo orden, misma secuencia de sorteo con random.Random(45), mismo namespace de RNG del oráculo); los bloques 12-23 agregan 4 recurrencias más por régimen."
+  },
+  "politicas": {
+    "control": "El tratamiento de EXP45/46: probe Q1 (mide 4 brazos) + Thompson (5 items) + re-probe Q2 + Thompson; tras Q1 el prior se reconstruye condicionado a la firma (skill); probe siempre.",
+    "skip": "Idéntica al control, salvo que si la skill de la firma del bloque tiene soporte fuerte se SALTA el probe (Q1 y Q2) y se juega el brazo de la skill en los 10 items. Contabilidad honesta: el probe saltado cuesta 0. Un solo moving part respecto a EXP46: el horizonte."
+  },
+  "mecanismo_skill": {
+    "firma": "grupo mayoritario entre los grupos de los primeros 3 items del bloque (observación gratuita; idéntica a la firma de EXP45/46)",
+    "skill_arm": "brazo con mayor media del prior condicionado a la firma (warm olvido 0.5^d sobre la historia de la skill); desempate determinista: primer máximo",
+    "soporte_fuerte": ">=2 victorias pareadas del skill_arm en bloques pasados no-saltados con la misma firma; victoria = media del skill_arm en los 5 items de probe (Q1+Q2, full-information) estrictamente mayor que la de cada otro brazo (margen implícito >= 0.2)",
+    "bloque_saltado": "sin probe Q1/Q2 ni bandit: se juega skill_arm en los 10 items; sus rewards observados se agregan a la historia de la skill (la skill sigue mejorándose con el uso); el bloque no aporta comparación pareada (no cuenta como victoria futura)",
+    "fuente_experiencia": "toda la experiencia observada por la política (probe + Thompson + bloques saltados), etiquetada por bloque"
+  },
+  "rng": "namespace del oráculo idéntico a EXP45/46: cada outcome de brazo se sortea con seed 'exp45-r{rep}-b{b}-q{q}-{a}'; los bloques 0-11 ven el mismo oráculo que EXP46 (extensión estricta), los bloques 12-23 son sorteos frescos sin colisión. Control y tratamiento ven el mismo oráculo. Pareado por réplica.",
+  "criterio": {
+    "efecto": "regret(skip) - regret(control) sobre 24 bloques, media sobre réplicas (pareadas, RNG común)",
+    "pass_a": "media(efecto) < 0  [misma vara que EXP46]",
+    "escala_b": "media(efecto) < -0.60  [más negativo que el efecto medio de EXP46; comparación entre experimentos]",
+    "diagnostico_auxiliar": "efecto en el segmento tardío (bloques 12-23) vs segmento temprano (bloques 0-11, que reproduce EXP46 bit-idéntico ≈ -0.60 por construcción); (b) se cumple ssi el segmento tardío es más negativo que -0.60",
+    "regla_cierre": "Si NO se cumplen (a) y (b) a la vez, la línea de skills se cierra: el veredicto lo declara explícitamente y recomienda no más experimentos de skills en mock."
+  },
+  "replicas": 5,
+  "modo": "mock, US$0"
+}

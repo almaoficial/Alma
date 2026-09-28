@@ -1,0 +1,241 @@
+{
+  "preregistro": "preregistro.json (mismo directorio)",
+  "n_items": 90,
+  "n_bloques": 9,
+  "efectos_por_replica": [
+    7.0,
+    11.0,
+    7.0,
+    5.0,
+    4.0
+  ],
+  "efecto_medio": 6.8,
+  "rotacion_intereses": {
+    "dominante_por_bloque": [
+      "ai research",
+      "ai industry",
+      "auto-mejora de ia",
+      "finanzas",
+      "inteligencia artificial",
+      "ingresos con ia",
+      "inglés",
+      "inteligencia artificial",
+      "agentes ia"
+    ],
+    "cambios": 8,
+    "n_bloques": 9
+  },
+  "diagnostico_bloques_rep0": [
+    {
+      "bloque": 0,
+      "ts_ini": "2026-09-22T20:05:00",
+      "dist_categorias": {
+        "ai research": 3,
+        "ai industry": 1,
+        "investigación en ia": 1,
+        "adaptive systems": 1,
+        "ai models": 2,
+        "sistemas adaptativos": 1,
+        "ai agents": 1
+      },
+      "elegido_probe1": "titular",
+      "elegido_probe2": "titular",
+      "acc_alma": 0.5,
+      "acc_fijas": {
+        "titular": 0.8,
+        "contexto": 0.4,
+        "mayoria": 0.2,
+        "estable": 0.6
+      }
+    },
+    {
+      "bloque": 1,
+      "ts_ini": "2026-09-23T09:50:00",
+      "dist_categorias": {
+        "ai research": 1,
+        "ai industry": 2,
+        "ai agents": 1,
+        "finances": 2,
+        "ai platforms": 2,
+        "self-improving ai": 1,
+        "ai models": 1
+      },
+      "elegido_probe1": "titular",
+      "elegido_probe2": "titular",
+      "acc_alma": 0.7,
+      "acc_fijas": {
+        "titular": 0.6,
+        "contexto": 0.6,
+        "mayoria": 0.1,
+        "estable": 0.7
+      }
+    },
+    {
+      "bloque": 2,
+      "ts_ini": "2026-09-23T20:35:00",
+      "dist_categorias": {
+        "self-improving ai": 1,
+        "ai models": 1,
+        "agentes de ia": 1,
+        "modelos de ia": 1,
+        "ia que se mejora sola": 1,
+        "auto-mejora de ia": 2,
+        "fútbol": 1,
+        "inteligencia artificial": 1,
+        "finanzas": 1
+      },
+      "elegido_probe1": "estable",
+      "elegido_probe2": "estable",
+      "acc_alma": 0.6,
+      "acc_fijas": {
+        "titular": 0.8,
+        "contexto": 0.6,
+        "mayoria": 0.0,
+        "estable": 0.7
+      }
+    },
+    {
+      "bloque": 3,
+      "ts_ini": "2026-09-24T09:40:00",
+      "dist_categorias": {
+        "finanzas": 2,
+        "fútbol": 1,
+        "inteligencia artificial": 2,
+        "modelos de ia": 1,
+        "agentes de ia": 2,
+        "negocios": 1,
+        "salud": 1
+      },
+      "elegido_probe1": "contexto",
+      "elegido_probe2": "titular",
+      "acc_alma": 0.5,
+      "acc_fijas": {
+        "titular": 0.8,
+        "contexto": 0.7,
+        "mayoria": 0.0,
+        "estable": 0.4
+      }
+    },
+    {
+      "bloque": 4,
+      "ts_ini": "2026-09-24T10:30:00",
+      "dist_categorias": {
+        "inglés": 1,
+        "negocios": 1,
+        "inteligencia artificial": 3,
+        "mundial 2026": 2,
+        "ingresos con ia": 1,
+        "fútbol amateur": 1,
+        "finanzas": 1
+      },
+      "elegido_probe1": "contexto",
+      "elegido_probe2": "contexto",
+      "acc_alma": 0.5,
+      "acc_fijas": {
+        "titular": 0.8,
+        "contexto": 0.7,
+        "mayoria": 0.1,
+        "estable": 0.6
+      }
+    },
+    {
+      "bloque": 5,
+      "ts_ini": "2026-09-24T20:40:00",
+      "dist_categorias": {
+        "ingresos con ia": 2,
+        "salud": 1,
+        "inteligencia artificial": 1,
+        "finanzas": 2,
+        "fútbol amateur": 1,
+        "meditación": 1,
+        "ia investigación": 1,
+        "recuperación": 1
+      },
+      "elegido_probe1": "contexto",
+      "elegido_probe2": "contexto",
+      "acc_alma": 0.7,
+      "acc_fijas": {
+        "titular": 0.5,
+        "contexto": 0.7,
+        "mayoria": 0.1,
+        "estable": 0.4
+      }
+    },
+    {
+      "bloque": 6,
+      "ts_ini": "2026-09-25T09:45:00",
+      "dist_categorias": {
+        "dinero con ia": 2,
+        "agentes ia": 2,
+        "inglés": 3,
+        "inteligencia artificial": 2,
+        "finanzas": 1
+      },
+      "elegido_probe1": "contexto",
+      "elegido_probe2": "contexto",
+      "acc_alma": 0.7,
+      "acc_fijas": {
+        "titular": 0.5,
+        "contexto": 0.6,
+        "mayoria": 0.2,
+        "estable": 0.6
+      }
+    },
+    {
+      "bloque": 7,
+      "ts_ini": "2026-09-25T20:30:00",
+      "dist_categorias": {
+        "finanzas": 2,
+        "hábitos": 1,
+        "inteligencia artificial": 3,
+        "alquiler": 1,
+        "dinero con ia": 1,
+        "agentes ia": 2
+      },
+      "elegido_probe1": "estable",
+      "elegido_probe2": "estable",
+      "acc_alma": 0.6,
+      "acc_fijas": {
+        "titular": 0.5,
+        "contexto": 0.4,
+        "mayoria": 0.3,
+        "estable": 0.9
+      }
+    },
+    {
+      "bloque": 8,
+      "ts_ini": "2026-09-26T09:30:00",
+      "dist_categorias": {
+        "inteligencia artificial": 3,
+        "agentes ia": 5,
+        "dinero con ia": 1,
+        "alquiler": 1
+      },
+      "elegido_probe1": "titular",
+      "elegido_probe2": "contexto",
+      "acc_alma": 0.3,
+      "acc_fijas": {
+        "titular": 0.5,
+        "contexto": 0.5,
+        "mayoria": 0.3,
+        "estable": 0.3
+      }
+    }
+  ],
+  "costo_total_usd": 0.0,
+  "veredicto": {
+    "pasa": false,
+    "criterio": {
+      "efecto": "regret(ALMA) - regret(mejor brazo fijo), media sobre réplicas",
+      "pass": "media(efecto) < 0"
+    },
+    "motivos": [
+      "items=90, bloques=9, categorías=['adaptive systems', 'agentes de ia', 'agentes ia', 'ai agents', 'ai industry', 'ai models', 'ai platforms', 'ai research', 'alquiler', 'auto-mejora de ia', 'dinero con ia', 'finances', 'finanzas', 'fútbol', 'fútbol amateur', 'hábitos', 'ia investigación', 'ia que se mejora sola', 'inglés', 'ingresos con ia', 'inteligencia artificial', 'investigación en ia', 'meditación', 'modelos de ia', 'mundial 2026', 'negocios', 'recuperación', 'salud', 'self-improving ai', 'sistemas adaptativos']",
+      "efecto medio (reg_alma - reg_mejor_fija) = +6.800 en 5 réplicas (por réplica: +7.00, +11.00, +7.00, +5.00, +4.00)",
+      "mejor fija por réplica: ['titular', 'contexto', 'contexto', 'titular', 'contexto']",
+      "ROTACIÓN DE INTERESES (diagnóstico): dominante por bloque = ['ai research', 'ai industry', 'auto-mejora de ia', 'finanzas', 'inteligencia artificial', 'ingresos con ia', 'inglés', 'inteligencia artificial', 'agentes ia']; cambios de dominante: 8/8 transiciones",
+      "FAIL (vara intacta)"
+    ]
+  },
+  "duracion_s": 0.0
+}

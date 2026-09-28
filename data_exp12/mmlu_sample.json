@@ -1,0 +1,242 @@
+[
+ {
+  "id": "mmlu12-high_school_mathematics-0014",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Suppose the graph of f is both increasing and concave up on a <= x <= b. Then, using the same number of subdivisions, and with L, R, M, and T denoting, respectively, left, right, midpoint, and trapezoid sums, it follows that\nA) R <= T <= M <= L\nB) L <= T <= M <= R\nC) R <= M <= T <= L\nD) L <= M <= T <= R\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_mathematics test (cais/mmlu)",
+  "materia": "high_school_mathematics",
+  "indice_original": 14
+ },
+ {
+  "id": "mmlu12-high_school_mathematics-0069",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Roslyn has twenty boxes. Thirteen of the boxes contain pencils, nine of the boxes contain pens, and three of the boxes contain neither pens nor pencils. How many boxes contain both pens and pencils?\nA) 5\nB) 2\nC) 13\nD) 139\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "A",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_mathematics test (cais/mmlu)",
+  "materia": "high_school_mathematics",
+  "indice_original": 69
+ },
+ {
+  "id": "mmlu12-conceptual_physics-0048",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: The vibrations in a longitudinal wave move in a direction\nA) along and parallel to the wave\nB) perpendicular to the wave\nC) Both of these\nD) Neither of these\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "A",
+  "verificador": "exact",
+  "fuente": "MMLU conceptual_physics test (cais/mmlu)",
+  "materia": "conceptual_physics",
+  "indice_original": 48
+ },
+ {
+  "id": "mmlu12-conceptual_physics-0034",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: General relativity predicts that\nA) light leaving the Sun is slowed by gravity.\nB) light passing the Sun is deflected.\nC) a clock on the Sun’s surface runs faster than on Earth.\nD) All of these.\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU conceptual_physics test (cais/mmlu)",
+  "materia": "conceptual_physics",
+  "indice_original": 34
+ },
+ {
+  "id": "mmlu12-college_mathematics-0093",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: The probability that a point (x, y) in R^2 is chosen follows a uniform random distribution within the region described by the inequality 0 < |x| + |y| < 1 . What is the probability that 2(x + y) > 1?\nA) 0\nB) 1/4\nC) sqrt(2)/4\nD) 1/sqrt(2)\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU college_mathematics test (cais/mmlu)",
+  "materia": "college_mathematics",
+  "indice_original": 93
+ },
+ {
+  "id": "mmlu12-formal_logic-0067",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Construct a complete truth table for the following argument. Then, using the truth table, determine whether the argument is valid or invalid. If the argument is invalid, choose an option which presents a counterexample. (There may be other counterexamples as well.)\n~C ⊃ D\nD ⊃ C / C\nA) Valid\nB) Invalid. Counterexample when C and D are true\nC) Invalid. Counterexample when C is true and D is false\nD) Invalid. Counterexample when D is true and C is false\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "A",
+  "verificador": "exact",
+  "fuente": "MMLU formal_logic test (cais/mmlu)",
+  "materia": "formal_logic",
+  "indice_original": 67
+ },
+ {
+  "id": "mmlu12-high_school_mathematics-0127",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Find the length of the curve y = ln x between the points where y = 1/2 and y = 1.\nA) 0.53\nB) 0.86\nC) 1.18\nD) 1.36\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_mathematics test (cais/mmlu)",
+  "materia": "high_school_mathematics",
+  "indice_original": 127
+ },
+ {
+  "id": "mmlu12-high_school_physics-0012",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: When hot water is poured into a beaker containing cold alcohol, the temperature of the mixture will eventually reach the same temperature. Considering the scale of the size of the molecules of the fluids, which of the following is the primary reason for this phenomenon?\nA) The high temperature water will rise to the top of the container until it has cooled and then mixes with the alcohol.\nB) The molecules of the water continue to have a higher kinetic energy than the molecules of the alcohol, but the two liquids mix until the energy is spread evenly throughout the container.\nC) The hot water produces thermal radiation that is absorbed by the cold alcohol until the kinetic energy of all the molecules is the same.\nD) The water molecules collide with the alcohol molecules, transferring energy until the average kinetic energy of both the water and alcohol molecules are the same.\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_physics test (cais/mmlu)",
+  "materia": "high_school_physics",
+  "indice_original": 12
+ },
+ {
+  "id": "mmlu12-formal_logic-0103",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Which of the following propositions is not an immediate (one-step) consequence in PL of the given premises?\nI ⊃ (J ≡ K)\n(J ≡ K) ⊃ (L ∨ M)\nI ⊃ ~L\nA) ~L\nB) J ≡ K\nC) I ⊃ (L ∨ M)\nD) ~L ⊃ (J ≡ K)\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU formal_logic test (cais/mmlu)",
+  "materia": "formal_logic",
+  "indice_original": 103
+ },
+ {
+  "id": "mmlu12-abstract_algebra-0052",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: In the group G = {2, 4, 6, 8) under multiplication modulo 10, the identity element is\nA) 6\nB) 8\nC) 4\nD) 2\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "A",
+  "verificador": "exact",
+  "fuente": "MMLU abstract_algebra test (cais/mmlu)",
+  "materia": "abstract_algebra",
+  "indice_original": 52
+ },
+ {
+  "id": "mmlu12-high_school_chemistry-0184",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Which of the following is expected to have the highest electronegativity?\nA) S\nB) Fe\nC) W\nD) Ag\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "A",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_chemistry test (cais/mmlu)",
+  "materia": "high_school_chemistry",
+  "indice_original": 184
+ },
+ {
+  "id": "mmlu12-high_school_chemistry-0130",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: To prepare a buffer, all of the following are needed except\nA) an acid with a pKa close to the desired pH\nB) a conjugate acid along with its conjugate base\nC) a buffer capacity sufficient to react with added acid or base\nD) triple-distilled water\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_chemistry test (cais/mmlu)",
+  "materia": "high_school_chemistry",
+  "indice_original": 130
+ },
+ {
+  "id": "mmlu12-college_chemistry-0082",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: The amplitude of a free induction decay drops to 25% of its initial intensity after 1.0 s. Assuming exponential relaxation and Ω = 0, determine the value of T2.\nA) 0.721 s\nB) 0.750 s\nC) 1.386 s\nD) 1.661 s\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU college_chemistry test (cais/mmlu)",
+  "materia": "college_chemistry",
+  "indice_original": 82
+ },
+ {
+  "id": "mmlu12-conceptual_physics-0232",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Boiling and freezing occur when water is subjected to\nA) decreased temperatures\nB) decreased atmospheric pressure\nC) increased temperatures\nD) increased atmospheric pressure\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU conceptual_physics test (cais/mmlu)",
+  "materia": "conceptual_physics",
+  "indice_original": 232
+ },
+ {
+  "id": "mmlu12-high_school_mathematics-0120",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: How many three-digit positive integers are there?\nA) 899\nB) 900\nC) 1000\nD) 999\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_mathematics test (cais/mmlu)",
+  "materia": "high_school_mathematics",
+  "indice_original": 120
+ },
+ {
+  "id": "mmlu12-machine_learning-0022",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: What is the rank of the following matrix? A = [[1, 1, 1], [1, 1, 1], [1, 1, 1]]\nA) 0\nB) 1\nC) 2\nD) 3\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU machine_learning test (cais/mmlu)",
+  "materia": "machine_learning",
+  "indice_original": 22
+ },
+ {
+  "id": "mmlu12-high_school_chemistry-0053",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Consider the Lewis structures for the following molecules: CO2, CO32-, NO2-, and NO3-. Which molecule or molecules exhibit sp2 hybridization around the central atom?\nA) CO2 and CO32-\nB) NO2- and NO3-\nC) CO32- and NO3-\nD) CO32-, NO2- and NO3-\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_chemistry test (cais/mmlu)",
+  "materia": "high_school_chemistry",
+  "indice_original": 53
+ },
+ {
+  "id": "mmlu12-high_school_chemistry-0044",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: para-dichlorobenzene is used as \"mothballs.\" This compound can also be named\nA) 1,2-dichlorobenzene\nB) 1,3-dichlorobenzene\nC) 2,4-dichlorobenzene\nD) 1,4-dichlorobenzene\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_chemistry test (cais/mmlu)",
+  "materia": "high_school_chemistry",
+  "indice_original": 44
+ },
+ {
+  "id": "mmlu12-college_mathematics-0016",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Suppose V is a real vector space of finite dimension n. Call the set of matrices from V into itself M(V). Let T be in M(V). Consider the two subspaces U = {X ∈ M(V) : TX = XT} and W = {TX − XT : X ∈ M(V)}. Which of the following must be TRUE?\nI. If V has a basis containing only eigenvectors of T then U = M(V).\nII. dim (U) + dim (W) = n^2\nIII. dim (U) < n\nA) I only\nB) II only\nC) III only\nD) I and II only\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU college_mathematics test (cais/mmlu)",
+  "materia": "college_mathematics",
+  "indice_original": 16
+ },
+ {
+  "id": "mmlu12-college_mathematics-0087",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: How many positive numbers x satisfy the equation cos(97x) = x?\nA) 1\nB) 15\nC) 31\nD) 49\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU college_mathematics test (cais/mmlu)",
+  "materia": "college_mathematics",
+  "indice_original": 87
+ },
+ {
+  "id": "mmlu12-high_school_chemistry-0161",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Neutral atoms of chlorine are bombarded by high-energy photons, causing the ejection of electrons from the various filled subshells. Electrons originally from which subshell would have the highest velocity after being ejected?\nA) 1s\nB) 2p\nC) 3p\nD) 3d\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_chemistry test (cais/mmlu)",
+  "materia": "high_school_chemistry",
+  "indice_original": 161
+ },
+ {
+  "id": "mmlu12-college_physics-0051",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: The best type of laser with which to do spectroscopy over a range of visible wavelengths is\nA) a dye laser\nB) a helium-neon laser\nC) an excimer laser\nD) a ruby laser\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "A",
+  "verificador": "exact",
+  "fuente": "MMLU college_physics test (cais/mmlu)",
+  "materia": "college_physics",
+  "indice_original": 51
+ },
+ {
+  "id": "mmlu12-abstract_algebra-0098",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: The element (4, 2) of Z_12 x Z_8 has order\nA) 4\nB) 8\nC) 12\nD) 6\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU abstract_algebra test (cais/mmlu)",
+  "materia": "abstract_algebra",
+  "indice_original": 98
+ },
+ {
+  "id": "mmlu12-college_mathematics-0050",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: In the xy-plane, the graph of x^(log y) = y^log x is\nA) the open first quadrant\nB) a closed curve\nC) a ray in the open first quadrant\nD) a single point\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "A",
+  "verificador": "exact",
+  "fuente": "MMLU college_mathematics test (cais/mmlu)",
+  "materia": "college_mathematics",
+  "indice_original": 50
+ }
+]

@@ -1,0 +1,165 @@
+{
+  "seed": 1212,
+  "fecha": "2026-09-26T12:11:43",
+  "sinteticas": {
+    "clases": [
+      "codigo",
+      "herramientas",
+      "puzzles",
+      "calculo",
+      "qa_multihop",
+      "logica"
+    ],
+    "total": 72,
+    "nota": "reutilizadas tal cual de data/ y data_exp2/ (EXP11 no las midió en su oráculo)"
+  },
+  "gsm8k": {
+    "fuente": "data_exp11/raw/gsm8k_test.jsonl (1319)",
+    "seleccionados": 24,
+    "metodo": "shuffle con seed 1212 excluyendo los 100 índices de EXP11, primeros 24",
+    "indices_originales": [
+      933,
+      512,
+      1172,
+      776,
+      53,
+      473,
+      280,
+      414,
+      409,
+      843,
+      1089,
+      604,
+      974,
+      811,
+      1088,
+      1185,
+      1117,
+      975,
+      411,
+      236,
+      381,
+      830,
+      231,
+      614
+    ],
+    "reutilizados_exp11": 0
+  },
+  "mmlu": {
+    "fuente": "data_exp11/raw/mmlu_*.json (pool 1499)",
+    "seleccionados": 24,
+    "metodo": "pool excluyendo los 100 (materia, índice) de EXP11, shuffle con seed 1212, primeros 24",
+    "seleccion": [
+      [
+        "high_school_mathematics",
+        14
+      ],
+      [
+        "high_school_mathematics",
+        69
+      ],
+      [
+        "conceptual_physics",
+        48
+      ],
+      [
+        "conceptual_physics",
+        34
+      ],
+      [
+        "college_mathematics",
+        93
+      ],
+      [
+        "formal_logic",
+        67
+      ],
+      [
+        "high_school_mathematics",
+        127
+      ],
+      [
+        "high_school_physics",
+        12
+      ],
+      [
+        "formal_logic",
+        103
+      ],
+      [
+        "abstract_algebra",
+        52
+      ],
+      [
+        "high_school_chemistry",
+        184
+      ],
+      [
+        "high_school_chemistry",
+        130
+      ],
+      [
+        "college_chemistry",
+        82
+      ],
+      [
+        "conceptual_physics",
+        232
+      ],
+      [
+        "high_school_mathematics",
+        120
+      ],
+      [
+        "machine_learning",
+        22
+      ],
+      [
+        "high_school_chemistry",
+        53
+      ],
+      [
+        "high_school_chemistry",
+        44
+      ],
+      [
+        "college_mathematics",
+        16
+      ],
+      [
+        "college_mathematics",
+        87
+      ],
+      [
+        "high_school_chemistry",
+        161
+      ],
+      [
+        "college_physics",
+        51
+      ],
+      [
+        "abstract_algebra",
+        98
+      ],
+      [
+        "college_mathematics",
+        50
+      ]
+    ],
+    "conteo_por_materia": {
+      "high_school_mathematics": 4,
+      "conceptual_physics": 3,
+      "college_mathematics": 4,
+      "formal_logic": 2,
+      "high_school_physics": 1,
+      "abstract_algebra": 2,
+      "high_school_chemistry": 5,
+      "college_chemistry": 1,
+      "machine_learning": 1,
+      "college_physics": 1
+    },
+    "reutilizados_exp11": 0
+  },
+  "total": 120
+}

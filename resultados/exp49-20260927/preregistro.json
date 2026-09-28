@@ -1,0 +1,66 @@
+{
+  "experimento": "ALMA-EXP49: umbral de soporte que se endurece con el horizonte — ÚLTIMO mock de la línea de skills (EXP45→48), con criterio de CIERRE pre-registrado",
+  "fase": "mock",
+  "fecha": "2026-09-27T19:11:29",
+  "hipotesis": "(1) Endurecer el umbral de soporte con el horizonte baja la tasa de misfires del skip por debajo del 30% (EXP47: 14/38 ≈ 37%; EXP48: 9/27 ≈ 33%), porque las victorias ruidosas ya no alcanzan para disparar el salto cuando la firma acumuló muchas oportunidades de comparación. (2) El tratamiento reduce el regret frente al skip de umbral fijo: media sobre réplicas pareadas de regret(skip-endurecido) - regret(skip) < 0.",
+  "variante_elegida": "(b) umbral endurecido con el horizonte (descartada en EXP48 a favor de la re-validación barata). Regla pre-registrada: umbral(K) = 2 + floor(K/3), con K = nº de bloques pasados no-saltados con la misma firma que aportaron comparación pareada. Un solo moving part respecto al control: el umbral.",
+  "nota_refutacion": "El endurecimiento ataca las victorias ruidosas, no la staleness (el brazo deja de matchear el bloque actual): advertencia ya registrada en EXP48. Si los misfires no bajan del 30% o el efecto no aparece, el problema no era el umbral fijo: era la calidad de la evidencia (firmas ruidosas con 2/10 de ruido por bloque) o la staleness. En ese caso la línea se cierra: el techo es del mundo, no del mecanismo.",
+  "regla_cierre_linea": "La línea de skills se CIERRA ssi se cumplen las tres condiciones a la vez: (c1) efecto medio (reg_trat - reg_ctrl) >= -1.5; (c2) tasa de misfires del tratamiento >= 0.3 (o sin skips: no evaluable → cuenta como no-bajada); (c3) el efecto sigue cargado por una sola réplica, i.e. sin la mejor réplica (la más negativa) la media del efecto sería >= 0. La vara de cierre (-1.5) es deliberadamente más exigente que la de PASS (< 0): un PASS débil con misfires altos y fragilidad entre réplicas no justifica seguir puliendo el gate; solo un efecto fuerte, o misfires bajos, o un efecto distribuido entre réplicas mantienen la línea abierta.",
+  "condicion_alcance": "En mundos sin recurrencia (feed real: rotación 8/8 en EXP44) las skills nunca alcanzan soporte fuerte (>=2 victorias pareadas): el mecanismo de salto de probe solo opera donde hay recurrencia. No generalizar a streams sin recurrencia.",
+  "stream": {
+    "fuente": "IDÉNTICO al de EXP47/48 (misma función run_experiment47.construir_stream, bit-idéntico): 240 items, 24 bloques x 10, 3 regímenes x 8 recurrencias, seeds 45/47, namespace de RNG del oráculo 'exp45-...'.",
+    "n_items": 240,
+    "bloques": 24,
+    "tam_bloque": 10,
+    "regimenes": [
+      "dinero",
+      "tech",
+      "deportes",
+      "deportes",
+      "tech",
+      "deportes",
+      "tech",
+      "tech",
+      "deportes",
+      "dinero",
+      "dinero",
+      "dinero",
+      "deportes",
+      "dinero",
+      "deportes",
+      "dinero",
+      "deportes",
+      "dinero",
+      "tech",
+      "tech",
+      "deportes",
+      "tech",
+      "dinero",
+      "tech"
+    ],
+    "oraculo": "tasas mock calibradas por categoría (data_exp44/tasas.json)",
+    "sesgo_seleccion": "Stream CONSTRUIDO (no es el feed crudo): las categorías se sortean con las frecuencias empíricas del feed real de Muse (22-27/9/2026), pero la secuencia de regímenes está diseñada (3 regímenes x 8 recurrencias). Es el mundo mínimo donde una skill PUEDE ayudar: sin recurrencia, el mecanismo es intestable por definición (lección EXP44: rotación 8/8 mata cualquier aprendizaje). EXTENSIÓN ESTRICTA de EXP46: los bloques 0-11 son bit-idénticos a EXP46 (mismo orden, misma secuencia de sorteo con random.Random(45), mismo namespace de RNG del oráculo); los bloques 12-23 agregan 4 recurrencias más por régimen."
+  },
+  "politicas": {
+    "control": "El tratamiento 'skip' de EXP47 VERBATIM (misma función run_experiment47.correr_replica con politica='skip', importada sin copiar): skills condicionan el prior; con soporte fuerte (umbral fijo >= 2 victorias) se salta el probe y se juega el brazo de la skill en los 10 items.",
+    "skip-endurecido": "Idéntica al control, salvo el umbral de soporte: umbral(K) = 2 + floor(K/3), con K = nº de bloques pasados no-saltados con la misma firma que aportaron comparación pareada. K=0,1,2 → 2 (idéntico al control); K=3,4,5 → 3; K=6,7 → 4. Todo lo demás (firma, skill_arm, conteo de victorias, definición de misfire, diagnóstico ex post, seeds de RNG, contabilidad honesta del probe saltado) es idéntico al control."
+  },
+  "mecanismo_skill": {
+    "firma": "idéntica a EXP47 (grupo mayoritario de los primeros 3 items del bloque)",
+    "skill_arm": "idéntico a EXP47 (argmax de la media del prior condicionado a la firma, warm olvido 0.5^d)",
+    "soporte": "conteo de victorias idéntico a EXP47 (>=2 victorias pareadas del skill_arm en bloques pasados no-saltados con la misma firma; victoria = media en los 5 items de probe estrictamente mayor que cada otro brazo); el UMBRAL se endurece: 2 + floor(K/3)",
+    "misfire_definicion": "IDÉNTICA a EXP47: en un bloque saltado, el brazo de la skill no es el mejor ex post (accuracy sobre los 10 items con RNG común, contrafactual). Tasa de misfires = misfires / skips.",
+    "bloque_saltado": "idéntico a EXP47 (sin probe Q1/Q2 ni bandit; rewards observados agregados a la skill; no aporta comparación pareada)"
+  },
+  "rng": "namespace del oráculo idéntico a EXP45/46/47/48 ('exp45-r{rep}-b{b}-q{q}-{a}'). Control y tratamiento ven el mismo oráculo. Pareado por réplica.",
+  "criterio": {
+    "efecto": "regret(skip-endurecido) - regret(skip) sobre 24 bloques, media sobre réplicas (pareadas, RNG común)",
+    "pasa_1": "media(efecto) < 0  [misma vara que EXP46/47/48]",
+    "pasa_2": "tasa_misfires_tratamiento < 0.3 con n_skips_tratamiento > 0 [la vara que EXP48 no alcanzó: 0.333]",
+    "pass": "pasa_1 Y pasa_2",
+    "cierre_linea": "cierra ssi (c1) media(efecto) >= -1.5 Y (c2) tasa_misfires_trat >= 0.30 (o sin skips) Y (c3) sin la mejor réplica la media del efecto sería >= 0 [regla pre-registrada: ver regla_cierre_linea]",
+    "diagnostico_auxiliar": "tasa de misfires del control (debe reproducir ~37% de EXP47 — chequeo de sanidad); reproducibilidad bit-idéntica del control vs EXP47; distribución de skips por umbral exigido (¿el endurecimiento muerde?); efecto sin la mejor réplica; distancia a la mejor fija."
+  },
+  "replicas": 5,
+  "modo": "mock, US$0"
+}

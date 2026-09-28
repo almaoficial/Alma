@@ -1,0 +1,45 @@
+{
+  "experimento": "ALMA-EXP21: la revancha de la transferencia",
+  "fecha": "2026-09-26T16:50:00-04:00",
+  "pregunta": "¿La selección por probe repara la transferencia? EXP2/EXP3 fallaron porque ALMA pidió prestado al vecino equivocado (transfirió de la clase más parecida por mapa manual, y era la incorrecta). Desde entonces se validó la SELECCIÓN por probe (EXP19/20).",
+  "hipotesis": "Medir le gana a parecerse: elegir QUÉ experiencia transferir por rendimiento medido en la clase nueva (probe) supera a pedir prestado a la clase más parecida por fingerprint (vecino manual = baseline EXP2) y a empezar de cero.",
+  "diseno": {
+    "modo": "mock 100%",
+    "costo_usd": 0,
+    "llamadas_api": 0,
+    "clases_conocidas_K": 5,
+    "fingerprint_dim": 4,
+    "brazos": ["single", "cot", "reflexion"],
+    "recompensa": "Bernoulli(p_brazo_clase) por pull; mejor brazo p=0.90 en toda clase",
+    "memoria": "para cada clase conocida, su mejor brazo registrado CORRECTAMENTE (el experimento aísla la SELECCIÓN, no la precisión de la memoria; supuesto documentado)",
+    "clase_nueva_N": {
+      "fingerprint": [0.2, 0.8, 0.2, 0.3],
+      "mejor_brazo": "cot",
+      "recompensas": {"cot": 0.90, "single": 0.78, "reflexion": 0.65}
+    },
+    "clase_trampa_C1": {
+      "fingerprint": [0.18, 0.82, 0.18, 0.28],
+      "mejor_brazo": "single",
+      "distancia_a_N": 0.04,
+      "nota": "Es la clase MÁS CERCANA a N por fingerprint pero con mejor brazo DISTINTO. Reconstruye exactamente el modo de fallo de EXP2: el mapa manual la elige y transfiere el brazo equivocado."
+    },
+    "otras_clases": {
+      "C0": {"fp": [0.9, 0.1, 0.2, 0.1], "mejor": "cot", "d_a_N": 1.01},
+      "C2": {"fp": [0.5, 0.5, 0.5, 0.5], "mejor": "reflexion", "d_a_N": 0.557},
+      "C3": {"fp": [0.3, 0.4, 0.3, 0.6], "mejor": "cot", "d_a_N": 0.52},
+      "C4": {"fp": [0.9, 0.1, 0.2, 0.1], "mejor": "single", "d_a_N": 1.01}
+    },
+    "tres_mas_cercanas_a_N": ["C1(single)=0.04", "C3(cot)=0.52", "C2(reflexion)=0.557"],
+    "estrategias": {
+      "a_vecino_manual": "baseline EXP2: explota 120 pulls el mejor brazo de la clase más cercana (C1 → single). 0 pulls de exploración.",
+      "b_probe_transfer": "probe: 8 pulls × 3 brazos candidatos (mejores brazos de las 3 clases más cercanas: single, cot, reflexion) = 24 pulls; elige el de mejor media medida (empate → orden fijo); explota el ganador los 96 restantes.",
+      "c_desde_cero": "control: Thompson sampling Beta-Bernoulli sobre los 3 brazos, 120 pulls, sin memoria."
+    },
+    "stream_por_estrategia": 120,
+    "metrica": "regret = suma(0.90 - r_t) sobre los 120 pulls de cada estrategia"
+  },
+  "criterio": "regret(probe-transfer) < regret(vecino) Y regret(probe-transfer) < regret(desde-cero), en la MEDIA de 4 seeds",
+  "regla_confiabilidad": "si los diffs regret(probe)-regret(vecino) cambian de signo entre seeds → NO CONFIABLE (regla EXP16/17)",
+  "seeds": [2121, 2122, 2123, 2124],
+  "comparacion_exp2": "EXP2 FAIL: reward_ratio 0.97, cost_ratio 3.72×, superó a la mejor fija global en 2/5 clases; el mapa manual de transferencia agrupó mal las clases. EXP21 reconstruye ese fallo en sintético y pregunta si la selección por probe lo repara."
+}

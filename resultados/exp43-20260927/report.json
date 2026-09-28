@@ -1,0 +1,48 @@
+{
+  "preregistro": "resultados/exp43-20260927/preregistro.json",
+  "ventanas": [
+    "W1",
+    "W3",
+    "W4",
+    "W5",
+    "W6"
+  ],
+  "efecto_honesto_por_ventana": {
+    "W1": -0.110363,
+    "W3": 0.207975,
+    "W4": -0.121667,
+    "W5": 0.000902,
+    "W6": -0.196805
+  },
+  "efecto_retroactivo_recomputado": {
+    "W1": -0.039205,
+    "W3": 0.481102,
+    "W4": 0.229448,
+    "W5": 0.288364,
+    "W6": 0.198235
+  },
+  "artefacto_contable_por_ventana": {
+    "W1": 0.071157,
+    "W3": 0.273128,
+    "W4": 0.351115,
+    "W5": 0.287462,
+    "W6": 0.39504
+  },
+  "validacion": {
+    "retro_vs_oficial_exp42_max_dif": 4.496211130633476e-07,
+    "honesto_vs_posthoc_exp42_max_dif": 3.744031577218587e-05,
+    "confiable": true
+  },
+  "resumen_honesto": {
+    "media_ventanas": -0.043991,
+    "desvio_ventanas": 0.157554,
+    "media_menos_1sd": -0.201545
+  },
+  "veredicto": {
+    "pasa_hipotesis": false,
+    "criterio": "media_w(efecto) > 0 y (media - 1*desvio_muestral) > -0.02",
+    "resultado": "FAIL de la hipotesis (refutacion pre-registrada confirmada)"
+  },
+  "costo_total_usd": 0.0,
+  "duracion_s": 0.8
+}

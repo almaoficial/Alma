@@ -1,0 +1,192 @@
+{
+  "preregistro": {
+    "experimento": "ALMA-EXP4: forward transfer (warm vs cold)",
+    "fecha": "2026-09-25T22:22:48",
+    "criterio_exito": {
+      "diff_regret_medio_max": 0.0,
+      "min_clases_gana_warm": 5
+    },
+    "diseno": {
+      "clases": [
+        "calculo",
+        "codigo",
+        "qa_multihop",
+        "herramientas",
+        "puzzles",
+        "logica",
+        "traduccion",
+        "resumen",
+        "depuracion",
+        "conocimiento"
+      ],
+      "orden_seed": 789,
+      "n0_pseudo": 2,
+      "ventana_regret": 6,
+      "oraculo": "proxy mejor-de-{single,cot}",
+      "warm": "medias globales del repertorio (no por similitud)",
+      "rng": "determinista por (clase, problema), pareado cold/warm"
+    },
+    "versiones": {
+      "alma": "0.1.0",
+      "registry": "1.0.0",
+      "evaluator": "eval-v1"
+    },
+    "seed": 789,
+    "modo": "api"
+  },
+  "orden_stream": [
+    "depuracion",
+    "traduccion",
+    "logica",
+    "qa_multihop",
+    "puzzles",
+    "herramientas",
+    "codigo",
+    "conocimiento",
+    "calculo",
+    "resumen"
+  ],
+  "por_clase": {
+    "depuracion": {
+      "oraculo_proxy": "single",
+      "oraculo_media": 0.95,
+      "n_repertorio_antes": 0,
+      "nota": "siembra del repertorio (solo cold)"
+    },
+    "traduccion": {
+      "oraculo_proxy": "single",
+      "oraculo_media": 0.95,
+      "n_repertorio_antes": 36,
+      "regret_cold_6": 0.75,
+      "regret_warm_6": 0.43,
+      "regret_cold_12": 1.46,
+      "regret_warm_12": 1.05,
+      "diff_warm_menos_cold": -0.32,
+      "gana_warm": true
+    },
+    "logica": {
+      "oraculo_proxy": "cot",
+      "oraculo_media": 0.94,
+      "n_repertorio_antes": 84,
+      "regret_cold_6": 0.42,
+      "regret_warm_6": 0.16,
+      "regret_cold_12": 1.64,
+      "regret_warm_12": 1.06,
+      "diff_warm_menos_cold": -0.26,
+      "gana_warm": true
+    },
+    "qa_multihop": {
+      "oraculo_proxy": "cot",
+      "oraculo_media": 0.69,
+      "n_repertorio_antes": 132,
+      "regret_cold_6": 0.51,
+      "regret_warm_6": 0.75,
+      "regret_cold_12": 2.46,
+      "regret_warm_12": 2.55,
+      "diff_warm_menos_cold": 0.24,
+      "gana_warm": false
+    },
+    "puzzles": {
+      "oraculo_proxy": "single",
+      "oraculo_media": 0.2,
+      "n_repertorio_antes": 180,
+      "regret_cold_6": 0.57,
+      "regret_warm_6": 0.38,
+      "regret_cold_12": 1.14,
+      "regret_warm_12": 0.94,
+      "diff_warm_menos_cold": -0.19,
+      "gana_warm": true
+    },
+    "herramientas": {
+      "oraculo_proxy": "single",
+      "oraculo_media": 0.325,
+      "n_repertorio_antes": 228,
+      "regret_cold_6": 1.46,
+      "regret_warm_6": 0.51,
+      "regret_cold_12": 1.96,
+      "regret_warm_12": 1.78,
+      "diff_warm_menos_cold": -0.95,
+      "gana_warm": true
+    },
+    "codigo": {
+      "oraculo_proxy": "single",
+      "oraculo_media": 0.95,
+      "n_repertorio_antes": 276,
+      "regret_cold_6": 1.56,
+      "regret_warm_6": 0.31,
+      "regret_cold_12": 2.18,
+      "regret_warm_12": 1.42,
+      "diff_warm_menos_cold": -1.25,
+      "gana_warm": true
+    },
+    "conocimiento": {
+      "oraculo_proxy": "cot",
+      "oraculo_media": 0.8775,
+      "n_repertorio_antes": 324,
+      "regret_cold_6": 1.305,
+      "regret_warm_6": 0.505,
+      "regret_cold_12": 1.07,
+      "regret_warm_12": 0.12,
+      "diff_warm_menos_cold": -0.8,
+      "gana_warm": true
+    },
+    "calculo": {
+      "oraculo_proxy": "cot",
+      "oraculo_media": 0.565,
+      "n_repertorio_antes": 372,
+      "regret_cold_6": 1.59,
+      "regret_warm_6": 0.46,
+      "regret_cold_12": 1.71,
+      "regret_warm_12": 1.33,
+      "diff_warm_menos_cold": -1.13,
+      "gana_warm": true
+    },
+    "resumen": {
+      "oraculo_proxy": "cot",
+      "oraculo_media": 0.94,
+      "n_repertorio_antes": 420,
+      "regret_cold_6": 1.99,
+      "regret_warm_6": 0.65,
+      "regret_cold_12": 2.48,
+      "regret_warm_12": 1.06,
+      "diff_warm_menos_cold": -1.34,
+      "gana_warm": true
+    }
+  },
+  "budget": {
+    "resolucion": {
+      "limite_usd": 50.0,
+      "gastado_usd": 0.05614364999999998,
+      "restante_usd": 49.94385635
+    },
+    "seleccion": {
+      "limite_usd": 1.0,
+      "gastado_usd": 0.0,
+      "restante_usd": 1.0
+    },
+    "experimentacion": {
+      "limite_usd": 5.0,
+      "gastado_usd": 0.0,
+      "restante_usd": 5.0
+    }
+  },
+  "costo_total_usd": 0.0561,
+  "experiencias": 468,
+  "store_chain_ok": true,
+  "veredicto": {
+    "pasa": true,
+    "criterio": {
+      "diff_regret_medio_max": 0.0,
+      "min_clases_gana_warm": 5
+    },
+    "motivos": [
+      "diff medio de regret (warm-cold, ventana 1-6) = -0.6667 (criterio < 0.0)",
+      "warm gana en 8/9 clases (mínimo 5)"
+    ],
+    "medido": {
+      "diff_regret_medio": -0.6667,
+      "clases_gana_warm": 8
+    }
+  },
+  "duracion_s": 1235.2
+}

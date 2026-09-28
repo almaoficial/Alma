@@ -1,0 +1,11 @@
+{
+  "experimento": "ALMA-EXP29",
+  "fecha": "2026-09-27",
+  "pregunta": "¿La distancia del fingerprint predice cuándo el mapa acierta? ¿Existe un umbral de distancia que sirva como gate de confianza para el diseño de dos carriles de v2.1?",
+  "hipotesis": "Si el espacio de fingerprints tiene estructura moderada (regiones donde el mismo brazo es mejor), la distancia al vecino más cercano discrimina: tareas 'cerca' → el mapa acierta con alta probabilidad; tareas 'lejos' → no. Eso daría la regla de decisión: distancia < umbral → copiar directo; si no → probe sin mapa.",
+  "diseno": "100% mock, US$0. Modelo de campo espacial: el espacio [0,1]^4 se particiona en M celdas de Voronoi (prototipos aleatorios), cada celda con un mejor brazo aleatorio (5 brazos). 12 clases conocidas muestrean el campo; 400 tareas nuevas por corrida. Para cada tarea: d = distancia al vecino más cercano conocido; acierto = (mejor brazo del vecino == mejor brazo verdadero). M en {2, 5, 20, 50, 200} (de estructura fuerte a débil). 8 seeds. Métrica: precisión del mapa en cuartil de distancia más cercano (Q1) vs más lejano (Q4).",
+  "criterio": "En M=20 (fragmentación moderada): precisión Q1 >= 0.60 Y precisión Q1 >= 2 × precisión Q4 → PASS (el gate existe). Se reporta la curva completa y el punto de quiebre.",
+  "regla_confiabilidad": "cambio de signo en (Q1-Q4) entre seeds en M=20 → NO CONFIABLE.",
+  "nota_honesta": "El mock mide CUÁNTA estructura necesita el gate, no si el fingerprint real la tiene. Eso se mide con datos reales (pendiente para mañana).",
+  "costo": "US$0 (mock)"
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "rep": 0,
+    "reg_ctrl": 71.0,
+    "reg_trat": 87.0,
+    "efecto": 16.0
+  },
+  {
+    "rep": 1,
+    "reg_ctrl": 83.0,
+    "reg_trat": 97.0,
+    "efecto": 14.0
+  },
+  {
+    "rep": 2,
+    "reg_ctrl": 90.0,
+    "reg_trat": 89.0,
+    "efecto": -1.0
+  },
+  {
+    "rep": 3,
+    "reg_ctrl": 84.0,
+    "reg_trat": 100.0,
+    "efecto": 16.0
+  },
+  {
+    "rep": 4,
+    "reg_ctrl": 81.0,
+    "reg_trat": 91.0,
+    "efecto": 10.0
+  }
+]

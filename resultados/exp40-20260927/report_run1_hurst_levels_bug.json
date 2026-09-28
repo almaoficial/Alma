@@ -1,0 +1,272 @@
+{
+  "preregistro": "resultados/exp40-20260927/preregistro.json",
+  "replicas": 6,
+  "pnl_buyhold": 0.085041,
+  "tabla_regla_x_replica": {
+    "exp40": [
+      -0.168201,
+      -0.168201,
+      -0.168201,
+      -0.168201,
+      -0.168201,
+      -0.168201
+    ],
+    "regla36": [
+      0.116722,
+      0.144865,
+      0.085237,
+      0.157071,
+      0.067842,
+      0.144291
+    ]
+  },
+  "efecto_neto": {
+    "exp40": {
+      "media": -0.253242,
+      "desvio": 0.0,
+      "media_menos_1sd": -0.253242
+    },
+    "regla36": {
+      "media": 0.034297,
+      "desvio": 0.03611,
+      "media_menos_1sd": -0.001813
+    }
+  },
+  "clasificador": {
+    "hit_rate_bloques_1_29": 0.2414,
+    "aciertos": 7,
+    "n_bloques": 29,
+    "clasifico_tendencia": 29,
+    "verdad_tendencia": 7,
+    "verdaderos_positivos": 7,
+    "detalle": [
+      {
+        "bloque": 0,
+        "hurst": null,
+        "clase": "lateral",
+        "verdad": "lateral",
+        "retorno_bloque": 0.002781
+      },
+      {
+        "bloque": 1,
+        "hurst": 0.8328,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": 0.011606
+      },
+      {
+        "bloque": 2,
+        "hurst": 0.7997,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": -0.001345
+      },
+      {
+        "bloque": 3,
+        "hurst": 0.9484,
+        "clase": "tendencia",
+        "verdad": "tendencia",
+        "retorno_bloque": -0.020953
+      },
+      {
+        "bloque": 4,
+        "hurst": 0.989,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": 0.001542
+      },
+      {
+        "bloque": 5,
+        "hurst": 0.9475,
+        "clase": "tendencia",
+        "verdad": "tendencia",
+        "retorno_bloque": 0.04713
+      },
+      {
+        "bloque": 6,
+        "hurst": 0.9724,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": -0.019235
+      },
+      {
+        "bloque": 7,
+        "hurst": 0.9537,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": 0.007487
+      },
+      {
+        "bloque": 8,
+        "hurst": 1.0,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": -0.004159
+      },
+      {
+        "bloque": 9,
+        "hurst": 0.9991,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": -0.007012
+      },
+      {
+        "bloque": 10,
+        "hurst": 0.9581,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": -0.008522
+      },
+      {
+        "bloque": 11,
+        "hurst": 0.8711,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": 0.003437
+      },
+      {
+        "bloque": 12,
+        "hurst": 1.0,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": -0.018578
+      },
+      {
+        "bloque": 13,
+        "hurst": 1.0,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": 0.003199
+      },
+      {
+        "bloque": 14,
+        "hurst": 0.9945,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": -0.004027
+      },
+      {
+        "bloque": 15,
+        "hurst": 1.0,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": 0.001382
+      },
+      {
+        "bloque": 16,
+        "hurst": 0.9073,
+        "clase": "tendencia",
+        "verdad": "tendencia",
+        "retorno_bloque": 0.021028
+      },
+      {
+        "bloque": 17,
+        "hurst": 0.9331,
+        "clase": "tendencia",
+        "verdad": "tendencia",
+        "retorno_bloque": -0.025642
+      },
+      {
+        "bloque": 18,
+        "hurst": 0.8509,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": -0.016729
+      },
+      {
+        "bloque": 19,
+        "hurst": 0.9221,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": 0.012867
+      },
+      {
+        "bloque": 20,
+        "hurst": 1.0,
+        "clase": "tendencia",
+        "verdad": "tendencia",
+        "retorno_bloque": 0.056117
+      },
+      {
+        "bloque": 21,
+        "hurst": 0.9146,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": 0.005626
+      },
+      {
+        "bloque": 22,
+        "hurst": 0.9172,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": -0.003702
+      },
+      {
+        "bloque": 23,
+        "hurst": 1.0,
+        "clase": "tendencia",
+        "verdad": "tendencia",
+        "retorno_bloque": 0.057585
+      },
+      {
+        "bloque": 24,
+        "hurst": 0.9715,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": 0.008005
+      },
+      {
+        "bloque": 25,
+        "hurst": 0.9927,
+        "clase": "tendencia",
+        "verdad": "tendencia",
+        "retorno_bloque": -0.026278
+      },
+      {
+        "bloque": 26,
+        "hurst": 1.0,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": -0.002465
+      },
+      {
+        "bloque": 27,
+        "hurst": 0.9401,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": -0.003737
+      },
+      {
+        "bloque": 28,
+        "hurst": 0.9736,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": 0.004321
+      },
+      {
+        "bloque": 29,
+        "hurst": 0.8918,
+        "clase": "tendencia",
+        "verdad": "lateral",
+        "retorno_bloque": 0.003411
+      }
+    ]
+  },
+  "costo_total_usd": 0.0,
+  "veredicto": {
+    "pasa": false,
+    "criterio": {
+      "efecto": "P&L_exp40(réplica) - P&L_buyhold",
+      "pass": "media(efecto) > 0 y media(efecto) - 1*desvío(efecto) > -0.01",
+      "secundario": "tasa de acierto del clasificador vs régimen verdadero ex-post (|retorno del bloque| > 0.02), medida en bloques 1..29"
+    },
+    "motivos": [
+      "buyhold (referencia fija): +8.5041%",
+      "exp40: P&L=-16.8201% (idéntico en las 6 réplicas: determinista), efecto neto media=-25.3242%, desvío=+0.0000%, media-1sd=-25.3242%",
+      "regla36 (CRN): efecto neto media=+3.4297%, desvío=+3.6110%",
+      "clasificador: acierto 7/29 = 24.1% (bloques 1..29); clasificó tendencia en 29, verdad ex-post tendencia en 7, verdaderos positivos 7",
+      "no cumple media>0 y media-1sd>-1% (vara intacta)"
+    ]
+  },
+  "duracion_s": 0.3
+}

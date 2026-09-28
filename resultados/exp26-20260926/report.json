@@ -1,0 +1,1384 @@
+{
+  "experimento": "ALMA-EXP26",
+  "umbral_ruido": 0.15,
+  "trampas": {
+    "N0": {
+      "trampa": "K1",
+      "candidatas": [
+        "single",
+        "cot"
+      ],
+      "distancias": {
+        "K1": 0.0707,
+        "K0": 0.7517,
+        "K3": 0.7517,
+        "K2": 1.0607
+      }
+    },
+    "N1": {
+      "trampa": "K0",
+      "candidatas": [
+        "cot",
+        "single",
+        "reflexion"
+      ],
+      "distancias": {
+        "K0": 0.0707,
+        "K1": 0.7517,
+        "K2": 0.7517,
+        "K3": 1.0607
+      }
+    },
+    "N2": {
+      "trampa": "K3",
+      "candidatas": [
+        "single",
+        "reflexion"
+      ],
+      "distancias": {
+        "K3": 0.0707,
+        "K1": 0.7517,
+        "K2": 0.7517,
+        "K0": 1.0607
+      }
+    },
+    "N3": {
+      "trampa": "K2",
+      "candidatas": [
+        "reflexion",
+        "cot",
+        "single"
+      ],
+      "distancias": {
+        "K2": 0.0707,
+        "K0": 0.7517,
+        "K3": 0.7517,
+        "K1": 1.0607
+      }
+    }
+  },
+  "por_horizonte": {
+    "h120": {
+      "seeds": [
+        2621,
+        2622,
+        2623,
+        2624,
+        2625,
+        2626
+      ],
+      "media_regret_a": 5.625,
+      "media_regret_b": 4.125,
+      "media_regret_c_diag": -0.5833,
+      "diffs_a_menos_b": [
+        -1.55,
+        0.2,
+        1.95,
+        8.45,
+        -0.55,
+        0.5
+      ],
+      "criterio": "regret(a) < regret(b) (medias); cambio de signo -> NO CONFIABLE",
+      "veredicto": "NO CONFIABLE",
+      "por_seed": [
+        {
+          "seed": 2621,
+          "regret_a": 2.45,
+          "regret_b": 4.0,
+          "regret_c": 0.25,
+          "por_clase": [
+            {
+              "clase": "N0",
+              "mejor": "cot",
+              "candidatas": [
+                "single",
+                "cot"
+              ],
+              "a": {
+                "gap": 0.125,
+                "compromiso": "adaptativo",
+                "ganador_probe": "single",
+                "acierto_probe": false,
+                "pulls_adaptativos": 100,
+                "re_probes": 4,
+                "regret": 2.6
+              },
+              "b": {
+                "regret": 5.0
+              },
+              "c": {
+                "brazo": "cot",
+                "regret": 1.0
+              }
+            },
+            {
+              "clase": "N1",
+              "mejor": "single",
+              "candidatas": [
+                "cot",
+                "single",
+                "reflexion"
+              ],
+              "a": {
+                "gap": 0.375,
+                "compromiso": "duro",
+                "ganador_probe": "single",
+                "acierto_probe": true,
+                "pulls_adaptativos": 0,
+                "re_probes": 0,
+                "regret": 2.0
+              },
+              "b": {
+                "regret": 1.0
+              },
+              "c": {
+                "brazo": "single",
+                "regret": -4.0
+              }
+            },
+            {
+              "clase": "N2",
+              "mejor": "reflexion",
+              "candidatas": [
+                "single",
+                "reflexion"
+              ],
+              "a": {
+                "gap": 0.375,
+                "compromiso": "duro",
+                "ganador_probe": "reflexion",
+                "acierto_probe": true,
+                "pulls_adaptativos": 0,
+                "re_probes": 0,
+                "regret": 2.0
+              },
+              "b": {
+                "regret": 9.0
+              },
+              "c": {
+                "brazo": "reflexion",
+                "regret": 2.0
+              }
+            },
+            {
+              "clase": "N3",
+              "mejor": "cot",
+              "candidatas": [
+                "reflexion",
+                "cot",
+                "single"
+              ],
+              "a": {
+                "gap": 0.0,
+                "compromiso": "adaptativo",
+                "ganador_probe": "reflexion",
+                "acierto_probe": false,
+                "pulls_adaptativos": 92,
+                "re_probes": 4,
+                "regret": 3.2
+              },
+              "b": {
+                "regret": 1.0
+              },
+              "c": {
+                "brazo": "cot",
+                "regret": 2.0
+              }
+            }
+          ]
+        },
+        {
+          "seed": 2622,
+          "regret_a": 3.7,
+          "regret_b": 3.5,
+          "regret_c": 0.0,
+          "por_clase": [
+            {
+              "clase": "N0",
+              "mejor": "cot",
+              "candidatas": [
+                "single",
+                "cot"
+              ],
+              "a": {
+                "gap": 0.0,
+                "compromiso": "adaptativo",
+                "ganador_probe": "single",
+                "acierto_probe": false,
+                "pulls_adaptativos": 100,
+                "re_probes": 4,
+                "regret": 2.6
+              },
+              "b": {
+                "regret": 6.0
+              },
+              "c": {
+                "brazo": "cot",
+                "regret": 2.0
+              }
+            },
+            {
+              "clase": "N1",
+              "mejor": "single",
+              "candidatas": [
+                "cot",
+                "single",
+                "reflexion"
+              ],
+              "a": {
+                "gap": 0.0,
+                "compromiso": "adaptativo",
+                "ganador_probe": "single",
+                "acierto_probe": true,
+                "pulls_adaptativos": 92,
+                "re_probes": 4,
+                "regret": 3.2
+              },
+              "b": {
+                "regret": 5.0
+              },
+              "c": {
+                "brazo": "single",
+                "regret": 2.0
+              }
+            },
+            {
+              "clase": "N2",
+              "mejor": "reflexion",
+              "candidatas": [
+                "single",
+                "reflexion"
+              ],
+              "a": {
+                "gap": 0.25,
+                "compromiso": "duro",
+                "ganador_probe": "reflexion",
+                "acierto_probe": true,
+                "pulls_adaptativos": 0,
+                "re_probes": 0,
+                "regret": 2.0
+              },
+              "b": {
+                "regret": -1.0
+              },
+              "c": {
+                "brazo": "reflexion",
+                "regret": -2.0
+              }
+            },
+            {
+              "clase": "N3",
+              "mejor": "cot",
+              "candidatas": [
+                "reflexion",
+                "cot",
+                "single"
+              ],
+              "a": {
+                "gap": 0.25,
+                "compromiso": "duro",
+                "ganador_probe": "cot",
+                "acierto_probe": true,
+                "pulls_adaptativos": 0,
+                "re_probes": 0,
+                "regret": 7.0
+              },
+              "b": {
+                "regret": 4.0
+              },
+              "c": {
+                "brazo": "cot",
+                "regret": -2.0
+              }
+            }
+          ]
+        },
+        {
+          "seed": 2623,
+          "regret_a": 6.2,
+          "regret_b": 4.25,
+          "regret_c": 0.75,
+          "por_clase": [
+            {
+              "clase": "N0",
+              "mejor": "cot",
+              "candidatas": [
+                "single",
+                "cot"
+              ],
+              "a": {
+                "gap": 0.25,
+                "compromiso": "duro",
+                "ganador_probe": "cot",
+                "acierto_probe": true,
+                "pulls_adaptativos": 0,
+                "re_probes": 0,
+                "regret": 0.0
+              },
+              "b": {
+                "regret": 1.0
+              },
+              "c": {
+                "brazo": "cot",
+                "regret": 0.0
+              }
+            },
+            {
+              "clase": "N1",
+              "mejor": "single",
+              "candidatas": [
+                "cot",
+                "single",
+                "reflexion"
+              ],
+              "a": {
+                "gap": 0.25,
+                "compromiso": "duro",
+                "ganador_probe": "cot",
+                "acierto_probe": false,
+                "pulls_adaptativos": 0,
+                "re_probes": 0,
+                "regret": 15.0
+              },
+              "b": {
+                "regret": 9.0
+              },
+              "c": {
+                "brazo": "single",
+                "regret": 0.0
+              }
+            },
+            {
+              "clase": "N2",
+              "mejor": "reflexion",
+              "candidatas": [
+                "single",
+                "reflexion"
+              ],
+              "a": {
+                "gap": 0.125,
+                "compromiso": "adaptativo",
+                "ganador_probe": "single",
+                "acierto_probe": false,
+                "pulls_adaptativos": 100,
+                "re_probes": 4,
+                "regret": 5.6
+              },
+              "b": {
+                "regret": 10.0
+              },
+              "c": {
+                "brazo": "reflexion",
+                "regret": 3.0
+              }
+            },
+            {
+              "clase": "N3",
+              "mejor": "cot",
+              "candidatas": [
+                "reflexion",
+                "cot",
+                "single"
+              ],
+              "a": {
+                "gap": 0.0,
+                "compromiso": "adaptativo",
+                "ganador_probe": "reflexion",
+                "acierto_probe": false,
+                "pulls_adaptativos": 92,
+                "re_probes": 4,
+                "regret": 4.2
+              },
+              "b": {
+                "regret": -3.0
+              },
+              "c": {
+                "brazo": "cot",
+                "regret": 0.0
+              }
+            }
+          ]
+        },
+        {
+          "seed": 2624,
+          "regret_a": 9.45,
+          "regret_b": 1.0,
+          "regret_c": -2.5,
+          "por_clase": [
+            {
+              "clase": "N0",
+              "mejor": "cot",
+              "candidatas": [
+                "single",
+                "cot"
+              ],
+              "a": {
+                "gap": 0.125,
+                "compromiso": "adaptativo",
+                "ganador_probe": "cot",
+                "acierto_probe": true,
+                "pulls_adaptativos": 100,
+                "re_probes": 4,
+                "regret": -0.4
+              },
+              "b": {
+                "regret": -3.0
+              },
+              "c": {
+                "brazo": "cot",
+                "regret": -5.0
+              }
+            },
+            {
+              "clase": "N1",
+              "mejor": "single",
+              "candidatas": [
+                "cot",
+                "single",
+                "reflexion"
+              ],
+              "a": {
+                "gap": 0.25,
+                "compromiso": "duro",
+                "ganador_probe": "reflexion",
+                "acierto_probe": false,
+                "pulls_adaptativos": 0,
+                "re_probes": 0,
+                "regret": 22.0
+              },
+              "b": {
+                "regret": 2.0
+              },
+              "c": {
+                "brazo": "single",
+                "regret": -2.0
+              }
+            },
+            {
+              "clase": "N2",
+              "mejor": "reflexion",
+              "candidatas": [
+                "single",
+                "reflexion"
+              ],
+              "a": {
+                "gap": 0.25,
+                "compromiso": "duro",
+                "ganador_probe": "reflexion",
+                "acierto_probe": true,
+                "pulls_adaptativos": 0,
+                "re_probes": 0,
+                "regret": 6.0
+              },
+              "b": {
+                "regret": -3.0
+              },
+              "c": {
+                "brazo": "reflexion",
+                "regret": -2.0
+              }
+            },
+            {
+              "clase": "N3",
+              "mejor": "cot",
+              "candidatas": [
+                "reflexion",
+                "cot",
+                "single"
+              ],
+              "a": {
+                "gap": 0.125,
+                "compromiso": "adaptativo",
+                "ganador_probe": "reflexion",
+                "acierto_probe": false,
+                "pulls_adaptativos": 92,
+                "re_probes": 4,
+                "regret": 10.2
+              },
+              "b": {
+                "regret": 8.0
+              },
+              "c": {
+                "brazo": "cot",
+                "regret": -1.0
+              }
+            }
+          ]
+        },
+        {
+          "seed": 2625,
+          "regret_a": 5.7,
+          "regret_b": 6.25,
+          "regret_c": 0.25,
+          "por_clase": [
+            {
+              "clase": "N0",
+              "mejor": "cot",
+              "candidatas": [
+                "single",
+                "cot"
+              ],
+              "a": {
+                "gap": 0.25,
+                "compromiso": "duro",
+                "ganador_probe": "cot",
+                "acierto_probe": true,
+                "pulls_adaptativos": 0,
+                "re_probes": 0,
+                "regret": 5.0
+              },
+              "b": {
+                "regret": 2.0
+              },
+              "c": {
+                "brazo": "cot",
+                "regret": 0.0
+              }
+            },
+            {
+              "clase": "N1",
+              "mejor": "single",
+              "candidatas": [
+                "cot",
+                "single",
+                "reflexion"
+              ],
+              "a": {
+                "gap": 0.125,
+                "compromiso": "adaptativo",
+                "ganador_probe": "single",
+                "acierto_probe": true,
+                "pulls_adaptativos": 92,
+                "re_probes": 4,
+                "regret": 7.2
+              },
+              "b": {
+                "regret": 14.0
+              },
+              "c": {
+                "brazo": "single",
+                "regret": 1.0
+              }
+            },
+            {
+              "clase": "N2",
+              "mejor": "reflexion",
+              "candidatas": [
+                "single",
+                "reflexion"
+              ],
+              "a": {
+                "gap": 0.125,
+                "compromiso": "adaptativo",
+                "ganador_probe": "reflexion",
+                "acierto_probe": true,
+                "pulls_adaptativos": 100,
+                "re_probes": 4,
+                "regret": 7.6
+              },
+              "b": {
+                "regret": 2.0
+              },
+              "c": {
+                "brazo": "reflexion",
+                "regret": -1.0
+              }
+            },
+            {
+              "clase": "N3",
+              "mejor": "cot",
+              "candidatas": [
+                "reflexion",
+                "cot",
+                "single"
+              ],
+              "a": {
+                "gap": 0.375,
+                "compromiso": "duro",
+                "ganador_probe": "cot",
+                "acierto_probe": true,
+                "pulls_adaptativos": 0,
+                "re_probes": 0,
+                "regret": 3.0
+              },
+              "b": {
+                "regret": 7.0
+              },
+              "c": {
+                "brazo": "cot",
+                "regret": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "seed": 2626,
+          "regret_a": 6.25,
+          "regret_b": 5.75,
+          "regret_c": -2.25,
+          "por_clase": [
+            {
+              "clase": "N0",
+              "mejor": "cot",
+              "candidatas": [
+                "single",
+                "cot"
+              ],
+              "a": {
+                "gap": 0.375,
+                "compromiso": "duro",
+                "ganador_probe": "cot",
+                "acierto_probe": true,
+                "pulls_adaptativos": 0,
+                "re_probes": 0,
+                "regret": 3.0
+              },
+              "b": {
+                "regret": 3.0
+              },
+              "c": {
+                "brazo": "cot",
+                "regret": 1.0
+              }
+            },
+            {
+              "clase": "N1",
+              "mejor": "single",
+              "candidatas": [
+                "cot",
+                "single",
+                "reflexion"
+              ],
+              "a": {
+                "gap": 0.0,
+                "compromiso": "adaptativo",
+                "ganador_probe": "cot",
+                "acierto_probe": false,
+                "pulls_adaptativos": 92,
+                "re_probes": 4,
+                "regret": 9.2
+              },
+              "b": {
+                "regret": 7.0
+              },
+              "c": {
+                "brazo": "single",
+                "regret": -6.0
+              }
+            },
+            {
+              "clase": "N2",
+              "mejor": "reflexion",
+              "candidatas": [
+                "single",
+                "reflexion"
+              ],
+              "a": {
+                "gap": 0.125,
+                "compromiso": "adaptativo",
+                "ganador_probe": "single",
+                "acierto_probe": false,
+                "pulls_adaptativos": 100,
+                "re_probes": 4,
+                "regret": 0.6
+              },
+              "b": {
+                "regret": 9.0
+              },
+              "c": {
+                "brazo": "reflexion",
+                "regret": -2.0
+              }
+            },
+            {
+              "clase": "N3",
+              "mejor": "cot",
+              "candidatas": [
+                "reflexion",
+                "cot",
+                "single"
+              ],
+              "a": {
+                "gap": 0.0,
+                "compromiso": "adaptativo",
+                "ganador_probe": "reflexion",
+                "acierto_probe": false,
+                "pulls_adaptativos": 92,
+                "re_probes": 4,
+                "regret": 12.2
+              },
+              "b": {
+                "regret": 4.0
+              },
+              "c": {
+                "brazo": "cot",
+                "regret": -2.0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "h240": {
+      "seeds": [
+        2631,
+        2632,
+        2633,
+        2634,
+        2635,
+        2636
+      ],
+      "media_regret_a": 8.725,
+      "media_regret_b": 8.25,
+      "media_regret_c_diag": 0.6667,
+      "diffs_a_menos_b": [
+        7.825,
+        1.9,
+        1.05,
+        1.6,
+        -5.85,
+        -3.675
+      ],
+      "criterio": "regret(a) < regret(b) (medias); cambio de signo -> NO CONFIABLE",
+      "veredicto": "NO CONFIABLE",
+      "por_seed": [
+        {
+          "seed": 2631,
+          "regret_a": 10.575,
+          "regret_b": 2.75,
+          "regret_c": 0.5,
+          "por_clase": [
+            {
+              "clase": "N0",
+              "mejor": "cot",
+              "candidatas": [
+                "single",
+                "cot"
+              ],
+              "a": {
+                "gap": 0.375,
+                "compromiso": "duro",
+                "ganador_probe": "cot",
+                "acierto_probe": true,
+                "pulls_adaptativos": 0,
+                "re_probes": 0,
+                "regret": 3.0
+              },
+              "b": {
+                "regret": 2.0
+              },
+              "c": {
+                "brazo": "cot",
+                "regret": -4.0
+              }
+            },
+            {
+              "clase": "N1",
+              "mejor": "single",
+              "candidatas": [
+                "cot",
+                "single",
+                "reflexion"
+              ],
+              "a": {
+                "gap": 0.0,
+                "compromiso": "adaptativo",
+                "ganador_probe": "cot",
+                "acierto_probe": false,
+                "pulls_adaptativos": 207,
+                "re_probes": 9,
+                "regret": 9.2
+              },
+              "b": {
+                "regret": 5.0
+              },
+              "c": {
+                "brazo": "single",
+                "regret": 1.0
+              }
+            },
+            {
+              "clase": "N2",
+              "mejor": "reflexion",
+              "candidatas": [
+                "single",
+                "reflexion"
+              ],
+              "a": {
+                "gap": 0.125,
+                "compromiso": "adaptativo",
+                "ganador_probe": "reflexion",
+                "acierto_probe": true,
+                "pulls_adaptativos": 215,
+                "re_probes": 9,
+                "regret": 3.1
+              },
+              "b": {
+                "regret": 5.0
+              },
+              "c": {
+                "brazo": "reflexion",
+                "regret": 4.0
+              }
+            },
+            {
+              "clase": "N3",
+              "mejor": "cot",
+              "candidatas": [
+                "reflexion",
+                "cot",
+                "single"
+              ],
+              "a": {
+                "gap": 0.25,
+                "compromiso": "duro",
+                "ganador_probe": "reflexion",
+                "acierto_probe": false,
+                "pulls_adaptativos": 0,
+                "re_probes": 0,
+                "regret": 27.0
+              },
+              "b": {
+                "regret": -1.0
+              },
+              "c": {
+                "brazo": "cot",
+                "regret": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "seed": 2632,
+          "regret_a": 14.15,
+          "regret_b": 12.25,
+          "regret_c": 1.0,
+          "por_clase": [
+            {
+              "clase": "N0",
+              "mejor": "cot",
+              "candidatas": [
+                "single",
+                "cot"
+              ],
+              "a": {
+                "gap": 0.125,
+                "compromiso": "adaptativo",
+                "ganador_probe": "cot",
+                "acierto_probe": true,
+                "pulls_adaptativos": 215,
+                "re_probes": 9,
+                "regret": 12.1
+              },
+              "b": {
+                "regret": 8.0
+              },
+              "c": {
+                "brazo": "cot",
+                "regret": 5.0
+              }
+            },
+            {
+              "clase": "N1",
+              "mejor": "single",
+              "candidatas": [
+                "cot",
+                "single",
+                "reflexion"
+              ],
+              "a": {
+                "gap": 0.125,
+                "compromiso": "adaptativo",
+                "ganador_probe": "single",
+                "acierto_probe": true,
+                "pulls_adaptativos": 207,
+                "re_probes": 9,
+                "regret": 11.2
+              },
+              "b": {
+                "regret": 15.0
+              },
+              "c": {
+                "brazo": "single",
+                "regret": 0.0
+              }
+            },
+            {
+              "clase": "N2",
+              "mejor": "reflexion",
+              "candidatas": [
+                "single",
+                "reflexion"
+              ],
+              "a": {
+                "gap": 0.125,
+                "compromiso": "adaptativo",
+                "ganador_probe": "single",
+                "acierto_probe": false,
+                "pulls_adaptativos": 215,
+                "re_probes": 9,
+                "regret": 11.1
+              },
+              "b": {
+                "regret": 8.0
+              },
+              "c": {
+                "brazo": "reflexion",
+                "regret": 2.0
+              }
+            },
+            {
+              "clase": "N3",
+              "mejor": "cot",
+              "candidatas": [
+                "reflexion",
+                "cot",
+                "single"
+              ],
+              "a": {
+                "gap": 0.0,
+                "compromiso": "adaptativo",
+                "ganador_probe": "reflexion",
+                "acierto_probe": false,
+                "pulls_adaptativos": 207,
+                "re_probes": 9,
+                "regret": 22.2
+              },
+              "b": {
+                "regret": 18.0
+              },
+              "c": {
+                "brazo": "cot",
+                "regret": -3.0
+              }
+            }
+          ]
+        },
+        {
+          "seed": 2633,
+          "regret_a": 8.3,
+          "regret_b": 7.25,
+          "regret_c": 0.0,
+          "por_clase": [
+            {
+              "clase": "N0",
+              "mejor": "cot",
+              "candidatas": [
+                "single",
+                "cot"
+              ],
+              "a": {
+                "gap": 0.375,
+                "compromiso": "duro",
+                "ganador_probe": "cot",
+                "acierto_probe": true,
+                "pulls_adaptativos": 0,
+                "re_probes": 0,
+                "regret": 4.0
+              },
+              "b": {
+                "regret": 10.0
+              },
+              "c": {
+                "brazo": "cot",
+                "regret": -2.0
+              }
+            },
+            {
+              "clase": "N1",
+              "mejor": "single",
+              "candidatas": [
+                "cot",
+                "single",
+                "reflexion"
+              ],
+              "a": {
+                "gap": 0.25,
+                "compromiso": "duro",
+                "ganador_probe": "single",
+                "acierto_probe": true,
+                "pulls_adaptativos": 0,
+                "re_probes": 0,
+                "regret": 5.0
+              },
+              "b": {
+                "regret": 1.0
+              },
+              "c": {
+                "brazo": "single",
+                "regret": 7.0
+              }
+            },
+            {
+              "clase": "N2",
+              "mejor": "reflexion",
+              "candidatas": [
+                "single",
+                "reflexion"
+              ],
+              "a": {
+                "gap": 0.25,
+                "compromiso": "duro",
+                "ganador_probe": "reflexion",
+                "acierto_probe": true,
+                "pulls_adaptativos": 0,
+                "re_probes": 0,
+                "regret": 1.0
+              },
+              "b": {
+                "regret": 5.0
+              },
+              "c": {
+                "brazo": "reflexion",
+                "regret": -6.0
+              }
+            },
+            {
+              "clase": "N3",
+              "mejor": "cot",
+              "candidatas": [
+                "reflexion",
+                "cot",
+                "single"
+              ],
+              "a": {
+                "gap": 0.0,
+                "compromiso": "adaptativo",
+                "ganador_probe": "reflexion",
+                "acierto_probe": false,
+                "pulls_adaptativos": 207,
+                "re_probes": 9,
+                "regret": 23.2
+              },
+              "b": {
+                "regret": 13.0
+              },
+              "c": {
+                "brazo": "cot",
+                "regret": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "seed": 2634,
+          "regret_a": 10.1,
+          "regret_b": 8.5,
+          "regret_c": 2.75,
+          "por_clase": [
+            {
+              "clase": "N0",
+              "mejor": "cot",
+              "candidatas": [
+                "single",
+                "cot"
+              ],
+              "a": {
+                "gap": 0.0,
+                "compromiso": "adaptativo",
+                "ganador_probe": "single",
+                "acierto_probe": false,
+                "pulls_adaptativos": 215,
+                "re_probes": 9,
+                "regret": 6.1
+              },
+              "b": {
+                "regret": 5.0
+              },
+              "c": {
+                "brazo": "cot",
+                "regret": 1.0
+              }
+            },
+            {
+              "clase": "N1",
+              "mejor": "single",
+              "candidatas": [
+                "cot",
+                "single",
+                "reflexion"
+              ],
+              "a": {
+                "gap": 0.0,
+                "compromiso": "adaptativo",
+                "ganador_probe": "cot",
+                "acierto_probe": false,
+                "pulls_adaptativos": 207,
+                "re_probes": 9,
+                "regret": 30.2
+              },
+              "b": {
+                "regret": 10.0
+              },
+              "c": {
+                "brazo": "single",
+                "regret": 0.0
+              }
+            },
+            {
+              "clase": "N2",
+              "mejor": "reflexion",
+              "candidatas": [
+                "single",
+                "reflexion"
+              ],
+              "a": {
+                "gap": 0.0,
+                "compromiso": "adaptativo",
+                "ganador_probe": "single",
+                "acierto_probe": false,
+                "pulls_adaptativos": 215,
+                "re_probes": 9,
+                "regret": 8.1
+              },
+              "b": {
+                "regret": 3.0
+              },
+              "c": {
+                "brazo": "reflexion",
+                "regret": 10.0
+              }
+            },
+            {
+              "clase": "N3",
+              "mejor": "cot",
+              "candidatas": [
+                "reflexion",
+                "cot",
+                "single"
+              ],
+              "a": {
+                "gap": 0.25,
+                "compromiso": "duro",
+                "ganador_probe": "cot",
+                "acierto_probe": true,
+                "pulls_adaptativos": 0,
+                "re_probes": 0,
+                "regret": -4.0
+              },
+              "b": {
+                "regret": 16.0
+              },
+              "c": {
+                "brazo": "cot",
+                "regret": 0.0
+              }
+            }
+          ]
+        },
+        {
+          "seed": 2635,
+          "regret_a": 4.9,
+          "regret_b": 10.75,
+          "regret_c": 1.0,
+          "por_clase": [
+            {
+              "clase": "N0",
+              "mejor": "cot",
+              "candidatas": [
+                "single",
+                "cot"
+              ],
+              "a": {
+                "gap": 0.125,
+                "compromiso": "adaptativo",
+                "ganador_probe": "cot",
+                "acierto_probe": true,
+                "pulls_adaptativos": 215,
+                "re_probes": 9,
+                "regret": -0.9
+              },
+              "b": {
+                "regret": 5.0
+              },
+              "c": {
+                "brazo": "cot",
+                "regret": 2.0
+              }
+            },
+            {
+              "clase": "N1",
+              "mejor": "single",
+              "candidatas": [
+                "cot",
+                "single",
+                "reflexion"
+              ],
+              "a": {
+                "gap": 0.0,
+                "compromiso": "adaptativo",
+                "ganador_probe": "cot",
+                "acierto_probe": false,
+                "pulls_adaptativos": 207,
+                "re_probes": 9,
+                "regret": 7.2
+              },
+              "b": {
+                "regret": 18.0
+              },
+              "c": {
+                "brazo": "single",
+                "regret": -1.0
+              }
+            },
+            {
+              "clase": "N2",
+              "mejor": "reflexion",
+              "candidatas": [
+                "single",
+                "reflexion"
+              ],
+              "a": {
+                "gap": 0.125,
+                "compromiso": "adaptativo",
+                "ganador_probe": "reflexion",
+                "acierto_probe": true,
+                "pulls_adaptativos": 215,
+                "re_probes": 9,
+                "regret": -0.9
+              },
+              "b": {
+                "regret": 16.0
+              },
+              "c": {
+                "brazo": "reflexion",
+                "regret": 1.0
+              }
+            },
+            {
+              "clase": "N3",
+              "mejor": "cot",
+              "candidatas": [
+                "reflexion",
+                "cot",
+                "single"
+              ],
+              "a": {
+                "gap": 0.125,
+                "compromiso": "adaptativo",
+                "ganador_probe": "cot",
+                "acierto_probe": true,
+                "pulls_adaptativos": 207,
+                "re_probes": 9,
+                "regret": 14.2
+              },
+              "b": {
+                "regret": 4.0
+              },
+              "c": {
+                "brazo": "cot",
+                "regret": 2.0
+              }
+            }
+          ]
+        },
+        {
+          "seed": 2636,
+          "regret_a": 4.325,
+          "regret_b": 8.0,
+          "regret_c": -1.25,
+          "por_clase": [
+            {
+              "clase": "N0",
+              "mejor": "cot",
+              "candidatas": [
+                "single",
+                "cot"
+              ],
+              "a": {
+                "gap": 0.375,
+                "compromiso": "duro",
+                "ganador_probe": "cot",
+                "acierto_probe": true,
+                "pulls_adaptativos": 0,
+                "re_probes": 0,
+                "regret": -2.0
+              },
+              "b": {
+                "regret": 10.0
+              },
+              "c": {
+                "brazo": "cot",
+                "regret": -2.0
+              }
+            },
+            {
+              "clase": "N1",
+              "mejor": "single",
+              "candidatas": [
+                "cot",
+                "single",
+                "reflexion"
+              ],
+              "a": {
+                "gap": 0.0,
+                "compromiso": "adaptativo",
+                "ganador_probe": "cot",
+                "acierto_probe": false,
+                "pulls_adaptativos": 207,
+                "re_probes": 9,
+                "regret": 0.2
+              },
+              "b": {
+                "regret": 6.0
+              },
+              "c": {
+                "brazo": "single",
+                "regret": -4.0
+              }
+            },
+            {
+              "clase": "N2",
+              "mejor": "reflexion",
+              "candidatas": [
+                "single",
+                "reflexion"
+              ],
+              "a": {
+                "gap": 0.125,
+                "compromiso": "adaptativo",
+                "ganador_probe": "single",
+                "acierto_probe": false,
+                "pulls_adaptativos": 215,
+                "re_probes": 9,
+                "regret": -0.9
+              },
+              "b": {
+                "regret": 12.0
+              },
+              "c": {
+                "brazo": "reflexion",
+                "regret": -2.0
+              }
+            },
+            {
+              "clase": "N3",
+              "mejor": "cot",
+              "candidatas": [
+                "reflexion",
+                "cot",
+                "single"
+              ],
+              "a": {
+                "gap": 0.25,
+                "compromiso": "duro",
+                "ganador_probe": "reflexion",
+                "acierto_probe": false,
+                "pulls_adaptativos": 0,
+                "re_probes": 0,
+                "regret": 20.0
+              },
+              "b": {
+                "regret": 4.0
+              },
+              "c": {
+                "brazo": "cot",
+                "regret": 3.0
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

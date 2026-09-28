@@ -1,0 +1,82 @@
+{
+  "experimento": "EXP61",
+  "descripcion": "techo del proveedor generativo (skills como priors)",
+  "modo": "mock US$0",
+  "criterio_pre_registrado": "PASS ssi efecto < -1.0",
+  "efecto_medio": 0.4,
+  "efectos_por_replica": [
+    2.0,
+    2.0,
+    3.0,
+    -2.0,
+    -3.0
+  ],
+  "veredicto": "FAIL",
+  "distancia_mejor_fija_trat": -2.0,
+  "distancia_mejor_fija_ctrl": -2.4,
+  "por_replica": [
+    {
+      "rep": 0,
+      "reg_ctrl": 71.0,
+      "reg_trat": 73.0,
+      "efecto": 2.0,
+      "efecto_early_0_11": 0.0,
+      "efecto_late_12_23": 2.0,
+      "bloques_con_skill": 21,
+      "mejor_fija": "titular",
+      "reg_mejor_fija": 84.0
+    },
+    {
+      "rep": 1,
+      "reg_ctrl": 83.0,
+      "reg_trat": 85.0,
+      "efecto": 2.0,
+      "efecto_early_0_11": 2.0,
+      "efecto_late_12_23": 0.0,
+      "bloques_con_skill": 21,
+      "mejor_fija": "titular",
+      "reg_mejor_fija": 89.0
+    },
+    {
+      "rep": 2,
+      "reg_ctrl": 90.0,
+      "reg_trat": 93.0,
+      "efecto": 3.0,
+      "efecto_early_0_11": 0.0,
+      "efecto_late_12_23": 3.0,
+      "bloques_con_skill": 21,
+      "mejor_fija": "titular",
+      "reg_mejor_fija": 88.0
+    },
+    {
+      "rep": 3,
+      "reg_ctrl": 84.0,
+      "reg_trat": 82.0,
+      "efecto": -2.0,
+      "efecto_early_0_11": 0.0,
+      "efecto_late_12_23": -2.0,
+      "bloques_con_skill": 21,
+      "mejor_fija": "titular",
+      "reg_mejor_fija": 80.0
+    },
+    {
+      "rep": 4,
+      "reg_ctrl": 81.0,
+      "reg_trat": 78.0,
+      "efecto": -3.0,
+      "efecto_early_0_11": -1.0,
+      "efecto_late_12_23": -2.0,
+      "bloques_con_skill": 21,
+      "mejor_fija": "titular",
+      "reg_mejor_fija": 80.0
+    }
+  ],
+  "scaffold_control": {
+    "umbral_base": 1,
+    "umbral_divisor": 3,
+    "gate_margin": 0.0,
+    "n0": 4,
+    "decay": 0.5
+  },
+  "n_replicas": 5
+}

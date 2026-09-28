@@ -1,0 +1,162 @@
+{
+  "experimento": "ALMA-EXP21",
+  "seeds": [
+    2121,
+    2122,
+    2123,
+    2124
+  ],
+  "por_seed": [
+    {
+      "seed": 2121,
+      "distancias": {
+        "C1": 0.04,
+        "C3": 0.5196,
+        "C2": 0.5568,
+        "C0": 1.01,
+        "C4": 1.01
+      },
+      "candidatas_probe": [
+        "single",
+        "cot",
+        "reflexion"
+      ],
+      "vecino": {
+        "brazo": "single",
+        "regret": 21.0
+      },
+      "probe": {
+        "ganador": "cot",
+        "medias_probe": {
+          "single": 0.875,
+          "cot": 1.0,
+          "reflexion": 0.5
+        },
+        "acierto": true,
+        "regret": 4.0
+      },
+      "cero": {
+        "regret": 2.0
+      }
+    },
+    {
+      "seed": 2122,
+      "distancias": {
+        "C1": 0.04,
+        "C3": 0.5196,
+        "C2": 0.5568,
+        "C0": 1.01,
+        "C4": 1.01
+      },
+      "candidatas_probe": [
+        "single",
+        "cot",
+        "reflexion"
+      ],
+      "vecino": {
+        "brazo": "single",
+        "regret": 14.0
+      },
+      "probe": {
+        "ganador": "reflexion",
+        "medias_probe": {
+          "single": 0.875,
+          "cot": 0.875,
+          "reflexion": 1.0
+        },
+        "acierto": false,
+        "regret": 28.0
+      },
+      "cero": {
+        "regret": 16.0
+      }
+    },
+    {
+      "seed": 2123,
+      "distancias": {
+        "C1": 0.04,
+        "C3": 0.5196,
+        "C2": 0.5568,
+        "C0": 1.01,
+        "C4": 1.01
+      },
+      "candidatas_probe": [
+        "single",
+        "cot",
+        "reflexion"
+      ],
+      "vecino": {
+        "brazo": "single",
+        "regret": 6.0
+      },
+      "probe": {
+        "ganador": "cot",
+        "medias_probe": {
+          "single": 0.875,
+          "cot": 1.0,
+          "reflexion": 0.5
+        },
+        "acierto": true,
+        "regret": 8.0
+      },
+      "cero": {
+        "regret": 4.0
+      }
+    },
+    {
+      "seed": 2124,
+      "distancias": {
+        "C1": 0.04,
+        "C3": 0.5196,
+        "C2": 0.5568,
+        "C0": 1.01,
+        "C4": 1.01
+      },
+      "candidatas_probe": [
+        "single",
+        "cot",
+        "reflexion"
+      ],
+      "vecino": {
+        "brazo": "single",
+        "regret": 13.0
+      },
+      "probe": {
+        "ganador": "cot",
+        "medias_probe": {
+          "single": 0.875,
+          "cot": 1.0,
+          "reflexion": 0.875
+        },
+        "acierto": true,
+        "regret": 0.0
+      },
+      "cero": {
+        "regret": 8.0
+      }
+    }
+  ],
+  "medias_regret": {
+    "probe_transfer": 10.0,
+    "vecino_manual": 13.5,
+    "desde_cero": 7.5
+  },
+  "diffs_probe_menos_vecino": [
+    -17.0,
+    14.0,
+    2.0,
+    -13.0
+  ],
+  "diffs_probe_menos_cero": [
+    2.0,
+    12.0,
+    4.0,
+    -8.0
+  ],
+  "criterio": "regret(probe) < regret(vecino) Y regret(probe) < regret(cero) (medias)",
+  "veredicto": "NO CONFIABLE",
+  "pasa": false,
+  "acierto_probe_seeds": 3,
+  "vecino_eligio_trampa": true,
+  "nota_exp2": "EXP2 FAIL (reward_ratio 0.97, cost_ratio 3.72x, 2/5 clases): el mapa manual transfirió al vecino equivocado."
+}

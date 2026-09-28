@@ -1,0 +1,38 @@
+[reintento] vault gpt-4o-mini: fallo transitorio (el CLI del skill falló (rc=4): {"error": "red: Remote end closed connection without response"}); reintento 2/3 en 2s...
+[reintento] vault gpt-4o-mini: fallo transitorio (el CLI del skill falló (rc=4): {"error": "red: <urlopen error [Errno 111] Connection refused>"}); reintento 3/3 en 4s...
+Candidatos: 120 problemas (72 sint + 24 gsm8k + 24 mmlu)
+Backend real (vault): gpt-4o-mini vía skill openai
+Fase 12A: oráculo 3 brazos x 2 intentos (idempotente)...
+Traceback (most recent call last):
+  File "/home/hatch/workspace/alma-prototype/run_experiment12.py", line 509, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/hatch/workspace/alma-prototype/run_experiment12.py", line 254, in main
+    pull(p, a, fase)
+  File "/home/hatch/workspace/alma-prototype/run_experiment5.py", line 136, in pull
+    res, met = rx.ejecutar_y_evaluar(p, arch, backend, evaluator,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/alma-prototype/run_experiment.py", line 90, in ejecutar_y_evaluar
+    res = ejecutar(arch_id, problema, backend)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/alma-prototype/alma/executors.py", line 241, in ejecutar
+    return RUNNERS[arch_id](problema, backend)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/alma-prototype/alma/executors.py", line 46, in _run_single
+    texto, costo = _call(backend, prompt, problema, "single",
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/alma-prototype/alma/executors.py", line 20, in _call
+    texto, uso = backend.complete(
+                 ^^^^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/alma-prototype/alma/backends.py", line 413, in complete
+    return con_reintento(
+           ^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/alma-prototype/alma/backends.py", line 52, in con_reintento
+    return fn()
+           ^^^^
+  File "/home/hatch/workspace/alma-prototype/alma/backends.py", line 414, in <lambda>
+    lambda: self._complete_una_vez(prompt, system=system),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/alma-prototype/alma/backends.py", line 432, in _complete_una_vez
+    raise BackendError(
+alma.backends.BackendError: el CLI del skill falló (rc=4): {"error": "red: <urlopen error [Errno 111] Connection refused>"}

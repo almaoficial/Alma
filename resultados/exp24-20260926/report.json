@@ -1,0 +1,248 @@
+{
+  "experimento": "ALMA-EXP24",
+  "seeds": [
+    2421,
+    2422,
+    2423,
+    2424
+  ],
+  "umbral_ruido": 0.15,
+  "por_seed": [
+    {
+      "seed": 2421,
+      "distancias": {
+        "C1": 0.04,
+        "C3": 0.5196,
+        "C2": 0.5568,
+        "C0": 1.01,
+        "C4": 1.01
+      },
+      "candidatas_probe": [
+        "single",
+        "cot",
+        "reflexion"
+      ],
+      "vecino": {
+        "brazo": "single",
+        "regret": 22.0
+      },
+      "probe_v1": {
+        "medias_probe": {
+          "single": 0.75,
+          "cot": 1.0,
+          "reflexion": 0.625
+        },
+        "ganador_probe": "cot",
+        "gap": 0.25,
+        "acierto_probe": true,
+        "compromiso": "duro",
+        "regret": 8.0
+      },
+      "probe_v2": {
+        "medias_probe": {
+          "single": 0.75,
+          "cot": 1.0,
+          "reflexion": 0.625
+        },
+        "ganador_probe": "cot",
+        "gap": 0.25,
+        "acierto_probe": true,
+        "compromiso": "duro",
+        "pulls_adaptativos": 0,
+        "re_probes": 0,
+        "regret": 6.0
+      },
+      "cero_diag": {
+        "regret": 9.0,
+        "nota": "diagnóstico, fuera del criterio pre-registrado"
+      }
+    },
+    {
+      "seed": 2422,
+      "distancias": {
+        "C1": 0.04,
+        "C3": 0.5196,
+        "C2": 0.5568,
+        "C0": 1.01,
+        "C4": 1.01
+      },
+      "candidatas_probe": [
+        "single",
+        "cot",
+        "reflexion"
+      ],
+      "vecino": {
+        "brazo": "single",
+        "regret": 15.0
+      },
+      "probe_v1": {
+        "medias_probe": {
+          "single": 0.75,
+          "cot": 0.5,
+          "reflexion": 0.5
+        },
+        "ganador_probe": "single",
+        "gap": 0.25,
+        "acierto_probe": false,
+        "compromiso": "duro",
+        "regret": 22.0
+      },
+      "probe_v2": {
+        "medias_probe": {
+          "single": 0.75,
+          "cot": 0.5,
+          "reflexion": 0.5
+        },
+        "ganador_probe": "single",
+        "gap": 0.25,
+        "acierto_probe": false,
+        "compromiso": "duro",
+        "pulls_adaptativos": 0,
+        "re_probes": 0,
+        "regret": 15.0
+      },
+      "cero_diag": {
+        "regret": 7.0,
+        "nota": "diagnóstico, fuera del criterio pre-registrado"
+      }
+    },
+    {
+      "seed": 2423,
+      "distancias": {
+        "C1": 0.04,
+        "C3": 0.5196,
+        "C2": 0.5568,
+        "C0": 1.01,
+        "C4": 1.01
+      },
+      "candidatas_probe": [
+        "single",
+        "cot",
+        "reflexion"
+      ],
+      "vecino": {
+        "brazo": "single",
+        "regret": 18.0
+      },
+      "probe_v1": {
+        "medias_probe": {
+          "single": 0.75,
+          "cot": 0.875,
+          "reflexion": 0.75
+        },
+        "ganador_probe": "cot",
+        "gap": 0.125,
+        "acierto_probe": true,
+        "compromiso": "duro",
+        "regret": -1.0
+      },
+      "probe_v2": {
+        "medias_probe": {
+          "single": 0.75,
+          "cot": 0.875,
+          "reflexion": 0.75
+        },
+        "ganador_probe": "cot",
+        "gap": 0.125,
+        "acierto_probe": true,
+        "compromiso": "adaptativo",
+        "pulls_adaptativos": 92,
+        "re_probes": 4,
+        "regret": 3.2
+      },
+      "cero_diag": {
+        "regret": -5.0,
+        "nota": "diagnóstico, fuera del criterio pre-registrado"
+      }
+    },
+    {
+      "seed": 2424,
+      "distancias": {
+        "C1": 0.04,
+        "C3": 0.5196,
+        "C2": 0.5568,
+        "C0": 1.01,
+        "C4": 1.01
+      },
+      "candidatas_probe": [
+        "single",
+        "cot",
+        "reflexion"
+      ],
+      "vecino": {
+        "brazo": "single",
+        "regret": 16.0
+      },
+      "probe_v1": {
+        "medias_probe": {
+          "single": 0.75,
+          "cot": 0.875,
+          "reflexion": 0.625
+        },
+        "ganador_probe": "cot",
+        "gap": 0.125,
+        "acierto_probe": true,
+        "compromiso": "duro",
+        "regret": 5.0
+      },
+      "probe_v2": {
+        "medias_probe": {
+          "single": 0.75,
+          "cot": 0.875,
+          "reflexion": 0.625
+        },
+        "ganador_probe": "cot",
+        "gap": 0.125,
+        "acierto_probe": true,
+        "compromiso": "adaptativo",
+        "pulls_adaptativos": 92,
+        "re_probes": 4,
+        "regret": 8.2
+      },
+      "cero_diag": {
+        "regret": 9.0,
+        "nota": "diagnóstico, fuera del criterio pre-registrado"
+      }
+    }
+  ],
+  "medias_regret": {
+    "probe_v2_noise_aware": 8.1,
+    "probe_v1_duro": 8.5,
+    "vecino_manual": 17.75,
+    "desde_cero_diag": 5.0
+  },
+  "diffs_v2_menos_v1": [
+    -2.0,
+    -7.0,
+    4.2,
+    3.2
+  ],
+  "diffs_v2_menos_vecino": [
+    -16.0,
+    0.0,
+    -14.8,
+    -7.8
+  ],
+  "criterio": "regret(v2) < regret(v1) Y regret(v2) < regret(vecino) (medias)",
+  "veredicto": "NO CONFIABLE",
+  "pasa": false,
+  "compromisos_v2": [
+    "duro",
+    "duro",
+    "adaptativo",
+    "adaptativo"
+  ],
+  "gaps_v2": [
+    0.25,
+    0.25,
+    0.125,
+    0.125
+  ],
+  "comparacion_exp21": {
+    "exp21_probe_v1_media": 10.0,
+    "exp21_vecino_media": 13.5,
+    "exp21_cero_media": 7.5,
+    "exp21_veredicto": "NO CONFIABLE (diffs con cambio de signo)",
+    "nota": "EXP24 usa seeds nuevas (2421-2424); la comparación es cualitativa, no pareada."
+  }
+}

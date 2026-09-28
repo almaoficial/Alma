@@ -1,0 +1,234 @@
+{
+  "experimento": "ALMA-EXP31",
+  "mock": true,
+  "costo_usd": 0.0,
+  "seeds": [
+    3121,
+    3122,
+    3123,
+    3124,
+    3125,
+    3126,
+    3127,
+    3128
+  ],
+  "por_seed": {
+    "3121": {
+      "pulls_medios": {
+        "triz": 1.67,
+        "fijo": 1.975,
+        "aleatorio": 1.99
+      },
+      "precision": {
+        "triz": 0.87,
+        "fijo": 0.815,
+        "aleatorio": 0.825
+      }
+    },
+    "3122": {
+      "pulls_medios": {
+        "triz": 1.55,
+        "fijo": 1.9,
+        "aleatorio": 2.07
+      },
+      "precision": {
+        "triz": 0.905,
+        "fijo": 0.825,
+        "aleatorio": 0.83
+      }
+    },
+    "3123": {
+      "pulls_medios": {
+        "triz": 1.56,
+        "fijo": 1.945,
+        "aleatorio": 1.89
+      },
+      "precision": {
+        "triz": 0.855,
+        "fijo": 0.82,
+        "aleatorio": 0.845
+      }
+    },
+    "3124": {
+      "pulls_medios": {
+        "triz": 1.64,
+        "fijo": 2.08,
+        "aleatorio": 2.04
+      },
+      "precision": {
+        "triz": 0.865,
+        "fijo": 0.815,
+        "aleatorio": 0.79
+      }
+    },
+    "3125": {
+      "pulls_medios": {
+        "triz": 1.645,
+        "fijo": 1.995,
+        "aleatorio": 2.015
+      },
+      "precision": {
+        "triz": 0.87,
+        "fijo": 0.815,
+        "aleatorio": 0.76
+      }
+    },
+    "3126": {
+      "pulls_medios": {
+        "triz": 1.555,
+        "fijo": 1.97,
+        "aleatorio": 2.025
+      },
+      "precision": {
+        "triz": 0.92,
+        "fijo": 0.825,
+        "aleatorio": 0.79
+      }
+    },
+    "3127": {
+      "pulls_medios": {
+        "triz": 1.64,
+        "fijo": 2.02,
+        "aleatorio": 2.12
+      },
+      "precision": {
+        "triz": 0.86,
+        "fijo": 0.785,
+        "aleatorio": 0.77
+      }
+    },
+    "3128": {
+      "pulls_medios": {
+        "triz": 1.695,
+        "fijo": 2.075,
+        "aleatorio": 2.115
+      },
+      "precision": {
+        "triz": 0.87,
+        "fijo": 0.815,
+        "aleatorio": 0.815
+      }
+    }
+  },
+  "wins_por_seed": {
+    "3121": true,
+    "3122": true,
+    "3123": true,
+    "3124": true,
+    "3125": true,
+    "3126": true,
+    "3127": true,
+    "3128": true
+  },
+  "W": 8,
+  "precision_media": {
+    "triz": 0.876875,
+    "fijo": 0.814375,
+    "aleatorio": 0.803125
+  },
+  "guarda_precision_ok": true,
+  "veredicto": "PASS",
+  "motivo": "W=8/8 seeds con pulls(TRIZ)<pulls(FIJO) y <pulls(ALEATORIO); precision media triz=0.877 fijo=0.814 aleatorio=0.803 (guarda <=3pp: ok).",
+  "sensibilidad_exploratoria": {
+    "descripcion": "Mismo diseño con la correlación tipo->mejor brazo debilitada a mitad de camino hacia uniforme. NO afecta el veredicto.",
+    "W_debilitado": 8,
+    "por_seed": {
+      "3121": {
+        "pulls_medios": {
+          "triz": 1.8,
+          "fijo": 1.995,
+          "aleatorio": 1.99
+        },
+        "precision": {
+          "triz": 0.825,
+          "fijo": 0.815,
+          "aleatorio": 0.845
+        }
+      },
+      "3122": {
+        "pulls_medios": {
+          "triz": 1.67,
+          "fijo": 1.925,
+          "aleatorio": 2.08
+        },
+        "precision": {
+          "triz": 0.84,
+          "fijo": 0.805,
+          "aleatorio": 0.83
+        }
+      },
+      "3123": {
+        "pulls_medios": {
+          "triz": 1.73,
+          "fijo": 1.98,
+          "aleatorio": 2.005
+        },
+        "precision": {
+          "triz": 0.85,
+          "fijo": 0.8,
+          "aleatorio": 0.835
+        }
+      },
+      "3124": {
+        "pulls_medios": {
+          "triz": 1.835,
+          "fijo": 2.115,
+          "aleatorio": 2.02
+        },
+        "precision": {
+          "triz": 0.82,
+          "fijo": 0.8,
+          "aleatorio": 0.795
+        }
+      },
+      "3125": {
+        "pulls_medios": {
+          "triz": 1.85,
+          "fijo": 1.965,
+          "aleatorio": 2.055
+        },
+        "precision": {
+          "triz": 0.85,
+          "fijo": 0.845,
+          "aleatorio": 0.785
+        }
+      },
+      "3126": {
+        "pulls_medios": {
+          "triz": 1.745,
+          "fijo": 1.985,
+          "aleatorio": 2.08
+        },
+        "precision": {
+          "triz": 0.885,
+          "fijo": 0.82,
+          "aleatorio": 0.795
+        }
+      },
+      "3127": {
+        "pulls_medios": {
+          "triz": 1.82,
+          "fijo": 2.05,
+          "aleatorio": 2.15
+        },
+        "precision": {
+          "triz": 0.83,
+          "fijo": 0.785,
+          "aleatorio": 0.79
+        }
+      },
+      "3128": {
+        "pulls_medios": {
+          "triz": 1.85,
+          "fijo": 2.045,
+          "aleatorio": 2.075
+        },
+        "precision": {
+          "triz": 0.855,
+          "fijo": 0.85,
+          "aleatorio": 0.835
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1002 @@
+[
+ {
+  "id": "mmlu-conceptual_physics-0213",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Astrophysicists are able to identify the elements in the outer layers of a star by studying its\nA) Doppler effect.\nB) molecular structure.\nC) temperature.\nD) spectrum.\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU conceptual_physics test (cais/mmlu)",
+  "materia": "conceptual_physics",
+  "indice_original": 213
+ },
+ {
+  "id": "mmlu-high_school_mathematics-0116",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Evaluate the sum\\[\\frac{1}{2^1} + \\frac{2}{2^2} + \\frac{3}{2^3} + \\cdots + \\frac{k}{2^k} + \\cdots \\]\nA) \\infty\nB) 1\nC) 2\nD) 4\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_mathematics test (cais/mmlu)",
+  "materia": "high_school_mathematics",
+  "indice_original": 116
+ },
+ {
+  "id": "mmlu-college_physics-0097",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: White light is normally incident on a puddle of water (index of refraction 1.33). A thin (500 nm) layer of oil (index of refraction 1.5) floats on the surface of the puddle. Of the following, the most strongly reflected wavelength is\nA) 500 nm\nB) 550 nm\nC) 600 nm\nD) 650 nm\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU college_physics test (cais/mmlu)",
+  "materia": "college_physics",
+  "indice_original": 97
+ },
+ {
+  "id": "mmlu-high_school_chemistry-0145",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Which of the following is the correct order of increasing acid strength?\nA) H2SeO3 < H2SO3 < HClO < HBrO\nB) HClO < H2SeO3 < HBrO < H2SO3\nC) HBrO < HClO < H2SeO3 < H2SO3\nD) H2SO3 < H2SeO3 < HClO < HBrO\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_chemistry test (cais/mmlu)",
+  "materia": "high_school_chemistry",
+  "indice_original": 145
+ },
+ {
+  "id": "mmlu-conceptual_physics-0124",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: The metal detectors people walk through at airports operate via\nA) Ohm’s law\nB) Faraday’s law\nC) Coulomb’s law\nD) Newton’s laws\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU conceptual_physics test (cais/mmlu)",
+  "materia": "conceptual_physics",
+  "indice_original": 124
+ },
+ {
+  "id": "mmlu-formal_logic-0100",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Which of the given formulas of PL is the best symbolization of the following sentence?\nEither England's importing beef is a necessary condition for France's subsidizing agriculture or China's promoting human rights is not a sufficient condition for South Africa's supplying diamonds.\nA) (E ≡ F) ∨ ~(C ≡ S)\nB) (E ≡ F) ∨ (~C ⊃ S)\nC) (E ⊃ F) ∨ ~(C ⊃ S)\nD) (F ⊃ E) ∨ ~(C ⊃ S)\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU formal_logic test (cais/mmlu)",
+  "materia": "formal_logic",
+  "indice_original": 100
+ },
+ {
+  "id": "mmlu-high_school_physics-0041",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Which of the following statements about images is true?\nA) Images produced by concave lenses are always real.\nB) Images produced by concave mirros are always real.\nC) Images produced by convex lenses can be both real and virtual.\nD) Images produced by convex mirrors can be both real and virtual.\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_physics test (cais/mmlu)",
+  "materia": "high_school_physics",
+  "indice_original": 41
+ },
+ {
+  "id": "mmlu-high_school_chemistry-0159",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Which of the following is a balanced chemical reaction?\nA) Na2SO4 + Ba(NO3)2 → BaSO4 + NaSO4\nB) AgNO3 + K2CrO4 → Ag2CrO4 + 2 KNO3\nC) 5 FeCl2 + 8 HCl + KMnO4 → 5 FeCl3 + MnCl2 + 4 H2O + KCl\nD) Al(NO3)3 + 3 KOH → Al(OH)3 + KNO3\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_chemistry test (cais/mmlu)",
+  "materia": "high_school_chemistry",
+  "indice_original": 159
+ },
+ {
+  "id": "mmlu-high_school_physics-0039",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: An object carries a charge of –1 C. How many excess electrons does it contain?\nA) 6.25 × 10^18\nB) 8.00 × 10^18\nC) 1.60 × 10^19\nD) 3.20 × 10^19\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "A",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_physics test (cais/mmlu)",
+  "materia": "high_school_physics",
+  "indice_original": 39
+ },
+ {
+  "id": "mmlu-formal_logic-0059",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Which of the given formulas of PL is the best symbolization of the following sentence?\nEither England's importing beef is a sufficient condition for France's subsidizing agriculture, or China doesn't promote human rights when and only when South Africa supplies diamonds.\nA) (E ⊃ F) ∨ (~C ⊃ S)\nB) (F ⊃ E) ∨ (S ⊃ ~C\nC) (E ⊃ F) ∨ ~(S ≡ C)\nD) (E ⊃ F) ∨ (~C ≡ S)\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU formal_logic test (cais/mmlu)",
+  "materia": "formal_logic",
+  "indice_original": 59
+ },
+ {
+  "id": "mmlu-college_mathematics-0089",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: The map x -> axa^2 of a group G into itself is a homomorphism if and only if\nA) G is abelian\nB) G = {e}\nC) a^3 = e\nD) a^2 = a\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU college_mathematics test (cais/mmlu)",
+  "materia": "college_mathematics",
+  "indice_original": 89
+ },
+ {
+  "id": "mmlu-conceptual_physics-0077",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Any atom that emits an alpha particle or beta particle\nA) becomes an atom of a different element always.\nB) may become an atom of a different element.\nC) becomes a different isotope of the same element.\nD) increases its mass.\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "A",
+  "verificador": "exact",
+  "fuente": "MMLU conceptual_physics test (cais/mmlu)",
+  "materia": "conceptual_physics",
+  "indice_original": 77
+ },
+ {
+  "id": "mmlu-high_school_chemistry-0066",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Which following pair of substances can be used to make a buffer solution?\nA) NaCl and HCl\nB) HC2H3O2 and KC2H3O2\nC) NaBr and KBr\nD) HIO3 and KClO3\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_chemistry test (cais/mmlu)",
+  "materia": "high_school_chemistry",
+  "indice_original": 66
+ },
+ {
+  "id": "mmlu-high_school_chemistry-0180",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Carbon exists in various forms called allotropes. Which of the following is not an allotrope of carbon?\nA) diamond\nB) soot\nC) buckminsterfullerene\nD) graphite\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_chemistry test (cais/mmlu)",
+  "materia": "high_school_chemistry",
+  "indice_original": 180
+ },
+ {
+  "id": "mmlu-high_school_physics-0086",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: A rock is dropped off a cliff and strikes the ground with an impact velocity of 30 m/s. How high was the cliff?\nA) 20 m\nB) 30 m\nC) 45 m\nD) 60 m\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_physics test (cais/mmlu)",
+  "materia": "high_school_physics",
+  "indice_original": 86
+ },
+ {
+  "id": "mmlu-high_school_physics-0054",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: A wooden block experiences a frictional force, f, as it slides across a table. If a block of the same material with half the height and twice the length were to slide across the table, what would be the frictional force it experienced?\nA) (1/2)f\nB) f\nC) 2f\nD) 4f\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_physics test (cais/mmlu)",
+  "materia": "high_school_physics",
+  "indice_original": 54
+ },
+ {
+  "id": "mmlu-abstract_algebra-0027",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Determine whether the polynomial in Z[x] satisfies an Eisenstein criterion for irreducibility over Q. 8x^3 + 6x^2 - 9x + 24\nA) Yes, with p=2.\nB) Yes, with p=3.\nC) Yes, with p=5.\nD) No.\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU abstract_algebra test (cais/mmlu)",
+  "materia": "abstract_algebra",
+  "indice_original": 27
+ },
+ {
+  "id": "mmlu-conceptual_physics-0197",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: To receive an electric shock there must be a\nA) current in one direction.\nB) presence of moisture.\nC) high voltage and low body resistance.\nD) voltage difference across part or all of your body.\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU conceptual_physics test (cais/mmlu)",
+  "materia": "conceptual_physics",
+  "indice_original": 197
+ },
+ {
+  "id": "mmlu-high_school_chemistry-0088",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: 2Ag+(aq) + Fe(s) → 2Ag(s) + Fe2+(aq) Which of the following would cause an increase in potential in the voltaic cell described by the above reaction?\nA) Increasing [Fe2+]\nB) Adding more Fe(s)\nC) Decreasing [Fe2+]\nD) Removing some Fe(s)\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_chemistry test (cais/mmlu)",
+  "materia": "high_school_chemistry",
+  "indice_original": 88
+ },
+ {
+  "id": "mmlu-high_school_physics-0091",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Which of the following types of electromagnetic radiation has the longest wavelength?\nA) Gamma rays\nB) Ultraviolet\nC) Blue light\nD) Orange light\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_physics test (cais/mmlu)",
+  "materia": "high_school_physics",
+  "indice_original": 91
+ },
+ {
+  "id": "mmlu-high_school_mathematics-0103",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: The hypotenuse of a right triangle measures 10 inches and one angle is $45^{\\circ}$. What is the number of square inches in the area of the triangle?\nA) 10\nB) 45\nC) 125\nD) 25\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_mathematics test (cais/mmlu)",
+  "materia": "high_school_mathematics",
+  "indice_original": 103
+ },
+ {
+  "id": "mmlu-high_school_chemistry-0202",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: During the study of the reaction A → 2B, a chemist constructs several graphs. The graph of [A] versus time and the graph of ln [A] versus time both give a curved line; however, the graph of 1/[A] versus time and gives a straight line. This implies the rate law is\nA) Rate = k[A]\nB) Rate = k[A]^2\nC) Rate = k[A]^0\nD) Rate = k[A]^-1\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_chemistry test (cais/mmlu)",
+  "materia": "high_school_chemistry",
+  "indice_original": 202
+ },
+ {
+  "id": "mmlu-abstract_algebra-0034",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Statement 1 | If T: V -> W is a linear transformation and dim(V ) < dim(W) < 1, then T must be injective. Statement 2 | Let dim(V) = n and suppose that T: V -> V is linear. If T is injective, then it is a bijection.\nA) True, True\nB) False, False\nC) True, False\nD) False, True\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "A",
+  "verificador": "exact",
+  "fuente": "MMLU abstract_algebra test (cais/mmlu)",
+  "materia": "abstract_algebra",
+  "indice_original": 34
+ },
+ {
+  "id": "mmlu-high_school_mathematics-0088",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: When the graph of a certain function $f(x)$ is shifted $2$ units to the right and stretched vertically by a factor of $2$ (meaning that all $y$-coordinates are doubled), the resulting figure is identical to the original graph. Given that $f(0)=0.1$, what is $f(10)$?\nA) 0.01\nB) 1\nC) 32\nD) 3.2\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_mathematics test (cais/mmlu)",
+  "materia": "high_school_mathematics",
+  "indice_original": 88
+ },
+ {
+  "id": "mmlu-conceptual_physics-0064",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: If the Sun were twice as massive, its pull on Mars would be\nA) unchanged\nB) twice as much\nC) half as much\nD) four times as much\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU conceptual_physics test (cais/mmlu)",
+  "materia": "conceptual_physics",
+  "indice_original": 64
+ },
+ {
+  "id": "mmlu-college_chemistry-0097",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: What is the NMR frequency of 31P in a 20.0 T magnetic field?\nA) 54.91 MHz\nB) 239.2 MHz\nC) 345.0 MHz\nD) 2167 MHz\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU college_chemistry test (cais/mmlu)",
+  "materia": "college_chemistry",
+  "indice_original": 97
+ },
+ {
+  "id": "mmlu-high_school_mathematics-0140",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: If we take sin x and change it to 3 sin 2x, what will happen to the domain and range of the function?\nA) Domain and range remain the same\nB) Domain is double; range remains the same\nC) Domain is tripled; range is doubled\nD) Domain is the same; range is tripled\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_mathematics test (cais/mmlu)",
+  "materia": "high_school_mathematics",
+  "indice_original": 140
+ },
+ {
+  "id": "mmlu-college_mathematics-0017",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Let F be a constant unit force that is parallel to the vector (-1, 0, 1) in xyz-space. What is the work done by F on a particle that moves along the path given by (t, t^2, t^3) between time t=0 and time t=1?\nA) -1/4\nB) -1/(4sqrt(2))\nC) 0\nD) sqrt(2)\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU college_mathematics test (cais/mmlu)",
+  "materia": "college_mathematics",
+  "indice_original": 17
+ },
+ {
+  "id": "mmlu-high_school_chemistry-0040",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Of the following pairs of elements, which pair has the second element with the larger electronegativity based on its position in the periodic table?\nA) Oxygen, chromium\nB) Chlorine, iodine\nC) Calcium, cesium\nD) Sulfur, nitrogen\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_chemistry test (cais/mmlu)",
+  "materia": "high_school_chemistry",
+  "indice_original": 40
+ },
+ {
+  "id": "mmlu-conceptual_physics-0223",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: When small pieces of material are assembled into a larger piece, the combined surface area\nA) greatly increases\nB) slightly increases\nC) decreases\nD) is unchanged\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU conceptual_physics test (cais/mmlu)",
+  "materia": "conceptual_physics",
+  "indice_original": 223
+ },
+ {
+  "id": "mmlu-formal_logic-0016",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Identify the antecedent of the following conditional proposition: The university raises tuition if, and only if, both the governor approves of it and the board of trustees recommends it.\nA) The university raises tuition.\nB) The governor approves of it.\nC) The board of trustees recommends it.\nD) None of the above\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU formal_logic test (cais/mmlu)",
+  "materia": "formal_logic",
+  "indice_original": 16
+ },
+ {
+  "id": "mmlu-high_school_mathematics-0266",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: If f is a linear function with nonzero slope, and c < d, which of the following must be FALSE?\nA) f (c) = f (d)\nB) f (c) ≠ f (d)\nC) f (c) > f (d)\nD) f (c) < f (d)\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "A",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_mathematics test (cais/mmlu)",
+  "materia": "high_school_mathematics",
+  "indice_original": 266
+ },
+ {
+  "id": "mmlu-college_physics-0012",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: The sign of the charge carriers in a doped semiconductor can be deduced by measuring which of the following properties?\nA) Specific heat\nB) Thermal conductivity\nC) Electrical resistivity\nD) Hall coefficient\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU college_physics test (cais/mmlu)",
+  "materia": "college_physics",
+  "indice_original": 12
+ },
+ {
+  "id": "mmlu-high_school_chemistry-0048",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: The functional group that represents an organic acid is written as (Note: R represents the rest of the molecule)\nA) RCHO\nB) ROH\nC) RCOOH\nD) RCl\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_chemistry test (cais/mmlu)",
+  "materia": "high_school_chemistry",
+  "indice_original": 48
+ },
+ {
+  "id": "mmlu-conceptual_physics-0147",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: To view your full-face image in a steamy mirror compared with the height of your face the minimum height of the patch to wipe away is\nA) one-quarter.\nB) one-half.\nC) the same.\nD) dependent on your distance from the mirror.\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU conceptual_physics test (cais/mmlu)",
+  "materia": "conceptual_physics",
+  "indice_original": 147
+ },
+ {
+  "id": "mmlu-college_physics-0092",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: A 3-microfarad capacitor is connected in series with a 6-microfarad capacitor. When a 300-volt potential difference is applied across this combination, the total energy stored in the two capacitors is\nA) 0.09 J\nB) 0.18 J\nC) 0.27 J\nD) 0.41 J\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "A",
+  "verificador": "exact",
+  "fuente": "MMLU college_physics test (cais/mmlu)",
+  "materia": "college_physics",
+  "indice_original": 92
+ },
+ {
+  "id": "mmlu-college_physics-0049",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: The rest mass of a particle with total energy 5.0 GeV and momentum 4.9 GeV/c is approximately\nA) 0.1 GeV/c^2\nB) 0.2 GeV/c^2\nC) 0.5 GeV/c^2\nD) 1.0 GeV/c^2\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU college_physics test (cais/mmlu)",
+  "materia": "college_physics",
+  "indice_original": 49
+ },
+ {
+  "id": "mmlu-conceptual_physics-0032",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: When an increase in speed doubles the momentum of a moving body its kinetic energy\nA) increases but less than doubles\nB) doubles\nC) more than doubles\nD) depends on factors not stated\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU conceptual_physics test (cais/mmlu)",
+  "materia": "conceptual_physics",
+  "indice_original": 32
+ },
+ {
+  "id": "mmlu-machine_learning-0023",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Statement 1| Density estimation (using say, the kernel density estimator) can be used to perform classification. Statement 2| The correspondence between logistic regression and Gaussian Naive Bayes (with identity class covariances) means that there is a one-to-one correspondence between the parameters of the two classifiers.\nA) True, True\nB) False, False\nC) True, False\nD) False, True\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU machine_learning test (cais/mmlu)",
+  "materia": "machine_learning",
+  "indice_original": 23
+ },
+ {
+  "id": "mmlu-abstract_algebra-0003",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Statement 1 | A factor group of a non-Abelian group is non-Abelian. Statement 2 | If K is a normal subgroup of H and H is a normal subgroup of G, then K is a normal subgroup of G.\nA) True, True\nB) False, False\nC) True, False\nD) False, True\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU abstract_algebra test (cais/mmlu)",
+  "materia": "abstract_algebra",
+  "indice_original": 3
+ },
+ {
+  "id": "mmlu-machine_learning-0061",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Statement 1| The Stanford Sentiment Treebank contained movie reviews, not book reviews. Statement 2| The Penn Treebank has been used for language modeling.\nA) True, True\nB) False, False\nC) True, False\nD) False, True\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "A",
+  "verificador": "exact",
+  "fuente": "MMLU machine_learning test (cais/mmlu)",
+  "materia": "machine_learning",
+  "indice_original": 61
+ },
+ {
+  "id": "mmlu-high_school_physics-0093",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: A convex lens of focal length f = 0.2 m is used to examine a small coin lying on a table. During the examination, the lens is held a distance 0.3 m above the coin and is moved slowly to a distance of 0.1 m above the coin. During this process, what happens to the image of the coin?\nA) The image continually increases in size.\nB) The image continually decreases in size.\nC) The image gets smaller at first and then bigger in size.\nD) The image flips over.\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_physics test (cais/mmlu)",
+  "materia": "high_school_physics",
+  "indice_original": 93
+ },
+ {
+  "id": "mmlu-formal_logic-0021",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Select the best translation into predicate logic. Marco moves from Italy to Spain. (i: Italy; m: Marco; s: Spain; Mxyz: x moves to y from z)\nA) Msim\nB) Mmis\nC) Mims\nD) Mmsi\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU formal_logic test (cais/mmlu)",
+  "materia": "formal_logic",
+  "indice_original": 21
+ },
+ {
+  "id": "mmlu-abstract_algebra-0005",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Statement 1 | If a group has an element of order 15 it must have at least 8 elements of order 15. Statement 2 | If a group has more than 8 elements of order 15, it must have at least 16 elements of order 15.\nA) True, True\nB) False, False\nC) True, False\nD) False, True\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "A",
+  "verificador": "exact",
+  "fuente": "MMLU abstract_algebra test (cais/mmlu)",
+  "materia": "abstract_algebra",
+  "indice_original": 5
+ },
+ {
+  "id": "mmlu-high_school_mathematics-0224",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: What is the area, in square units, of a square whose sides are the same length as the radius of a circle with a circumference of $12\\pi$ units?\nA) 10\nB) 11\nC) 12\nD) 36\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_mathematics test (cais/mmlu)",
+  "materia": "high_school_mathematics",
+  "indice_original": 224
+ },
+ {
+  "id": "mmlu-high_school_physics-0094",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: The Space Shuttle orbits 300 km above Earth’s surface; Earth’s radius is 6,400 km. What is the gravitational acceleration experienced by the Space Shuttle?\nA) Zero\nB) 4.9 m/s^2\nC) 9.8 m/s^2\nD) 8.9 m/s^2\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_physics test (cais/mmlu)",
+  "materia": "high_school_physics",
+  "indice_original": 94
+ },
+ {
+  "id": "mmlu-machine_learning-0089",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Statement 1| The BLEU metric uses precision, while the ROGUE metric uses recall. Statement 2| Hidden markov models were frequently used to model English sentences.\nA) True, True\nB) False, False\nC) True, False\nD) False, True\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "A",
+  "verificador": "exact",
+  "fuente": "MMLU machine_learning test (cais/mmlu)",
+  "materia": "machine_learning",
+  "indice_original": 89
+ },
+ {
+  "id": "mmlu-conceptual_physics-0075",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: All of the following are electromagnetic waves EXCEPT\nA) microwaves\nB) light waves\nC) X-rays\nD) None is outside the family; all are electromagnetic waves\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU conceptual_physics test (cais/mmlu)",
+  "materia": "conceptual_physics",
+  "indice_original": 75
+ },
+ {
+  "id": "mmlu-conceptual_physics-0125",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Sound travels in\nA) solids\nB) liquids\nC) gases\nD) All of these\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU conceptual_physics test (cais/mmlu)",
+  "materia": "conceptual_physics",
+  "indice_original": 125
+ },
+ {
+  "id": "mmlu-college_physics-0066",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: A rod measures 1.00 m in its rest system. How fast must an observer move parallel to the rod to measure its length to be 0.80 m?\nA) 0.50c\nB) 0.60c\nC) 0.70c\nD) 0.80c\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU college_physics test (cais/mmlu)",
+  "materia": "college_physics",
+  "indice_original": 66
+ },
+ {
+  "id": "mmlu-high_school_mathematics-0013",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Jane's quiz scores were 98, 97, 92, 85 and 93. What was her mean score?\nA) 92\nB) 93\nC) 94.5\nD) 95\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_mathematics test (cais/mmlu)",
+  "materia": "high_school_mathematics",
+  "indice_original": 13
+ },
+ {
+  "id": "mmlu-college_physics-0018",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: A meter stick with a speed of 0.8c moves past an observer. In the observer’s reference frame, how long does it take the stick to pass the observer ?\nA) 1.6 ns\nB) 2.5 ns\nC) 4.2 ns\nD) 6.9 ns\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU college_physics test (cais/mmlu)",
+  "materia": "college_physics",
+  "indice_original": 18
+ },
+ {
+  "id": "mmlu-high_school_chemistry-0196",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: You cannot prepare a buffer by\nA) mixing a solution of a weak base with a strong acid\nB) mixing a solution of a weak acid with a strong base\nC) mixing a solution of a strong base with a strong acid\nD) mixing a solution of a weak acid with its conjugate base\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_chemistry test (cais/mmlu)",
+  "materia": "high_school_chemistry",
+  "indice_original": 196
+ },
+ {
+  "id": "mmlu-college_chemistry-0084",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Which of the following procedures tend(s) to minimize the influence of random errors on measured results?\nI. Signal averaging\nII. Use of internal standards\nIII. Averaging the results from multiple samples\nA) I only\nB) II only\nC) III only\nD) I and III only\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU college_chemistry test (cais/mmlu)",
+  "materia": "college_chemistry",
+  "indice_original": 84
+ },
+ {
+  "id": "mmlu-abstract_algebra-0022",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Statement 1 | Any set of two vectors in R^2 is linearly independent. Statement 2 | If V = span(v1, ... , vk) and {v1, ... , vk} are linearly independent, then dim(V) = k.\nA) True, True\nB) False, False\nC) True, False\nD) False, True\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU abstract_algebra test (cais/mmlu)",
+  "materia": "abstract_algebra",
+  "indice_original": 22
+ },
+ {
+  "id": "mmlu-high_school_mathematics-0169",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Which of the following could NOT be the sides of an isosceles triangle?\nA) 2,2,3\nB) 2,2,4\nC) 4,12,12\nD) 5,5,5\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_mathematics test (cais/mmlu)",
+  "materia": "high_school_mathematics",
+  "indice_original": 169
+ },
+ {
+  "id": "mmlu-college_mathematics-0086",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Let M be a 5 x 5 real matrix. Exactly four of the following five conditions on M are equivalent to each other. Which of the five conditions is equivalent to NONE of the other four?\nA) For any two distinct column vectors u and v of M, the set {u, v} is linearly independent.\nB) The homogeneous system Mx = 0 has only the trivial solution.\nC) The system of equations Mx = b has a unique solution for each real 5 x 1 column vector b.\nD) The determinant of M is nonzero.\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "A",
+  "verificador": "exact",
+  "fuente": "MMLU college_mathematics test (cais/mmlu)",
+  "materia": "college_mathematics",
+  "indice_original": 86
+ },
+ {
+  "id": "mmlu-college_chemistry-0063",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Which of the following is (are) characteristic of mass spectrometry?\nI. Analyte molecules are converted to gaseous ions.\nII. The ions are separated according to their mass-to-charge ratio.\nIII. In addition to compound identification, mass spectra can be utilized to determine precise isotopic masses and isotopic ratios.\nA) II only\nB) I and II only\nC) I and III only\nD) I, II, and III\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU college_chemistry test (cais/mmlu)",
+  "materia": "college_chemistry",
+  "indice_original": 63
+ },
+ {
+  "id": "mmlu-high_school_chemistry-0073",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: What is the empirical formula of a compound that is 51.9% carbon, 4.86% hydrogen, and 43.2% bromine\nA) C7H5Br\nB) C6H4Br3\nC) C8H9Br\nD) C12H22Br\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_chemistry test (cais/mmlu)",
+  "materia": "high_school_chemistry",
+  "indice_original": 73
+ },
+ {
+  "id": "mmlu-college_chemistry-0001",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Infrared (IR) spectroscopy is useful for determining certain aspects of the structure of organic molecules because\nA) all molecular bonds absorb IR radiation\nB) IR peak intensities are related to molecular mass\nC) most organic functional groups absorb in a characteristic region of the IR spectrum\nD) each element absorbs at a characteristic wavelength\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU college_chemistry test (cais/mmlu)",
+  "materia": "college_chemistry",
+  "indice_original": 1
+ },
+ {
+  "id": "mmlu-conceptual_physics-0074",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: A torque is a force\nA) like any other force\nB) multiplied by a lever arm\nC) that is fictitious\nD) that accelerates things\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU conceptual_physics test (cais/mmlu)",
+  "materia": "conceptual_physics",
+  "indice_original": 74
+ },
+ {
+  "id": "mmlu-abstract_algebra-0020",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Statement 1 | For finite groups G and H, |G + H| = |G||H|. (G + H is the internal direct product.) Statement 2 | If r divides m and s divides n then Z_m + Z_n has a subgroup isomorphic to Z_r + Z_s.\nA) True, True\nB) False, False\nC) True, False\nD) False, True\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "A",
+  "verificador": "exact",
+  "fuente": "MMLU abstract_algebra test (cais/mmlu)",
+  "materia": "abstract_algebra",
+  "indice_original": 20
+ },
+ {
+  "id": "mmlu-high_school_mathematics-0052",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: How many unique numbers can be made from creating a fraction with $2,3,4,$ or $6$ in the numerator and $2,3,4,$ or $6$ in the denominator?\nA) 1\nB) 9\nC) 2\nD) 10\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_mathematics test (cais/mmlu)",
+  "materia": "high_school_mathematics",
+  "indice_original": 52
+ },
+ {
+  "id": "mmlu-college_chemistry-0029",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: The Henry’s law constant for CO2 dissolved in water at 25°C is 30.0 atm M^−1. The concentration of dissolved CO2 in a vessel pressurized with 2.0 atm of CO2 is\nA) 1.5 M\nB) 0.15 M\nC) 0.067 M\nD) 0.015 M\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU college_chemistry test (cais/mmlu)",
+  "materia": "college_chemistry",
+  "indice_original": 29
+ },
+ {
+  "id": "mmlu-college_chemistry-0055",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: In fluorescence spectroscopy, the quantum yield (Φ_f) is best defined as the\nA) rate of fluorescence emission\nB) number of photons emitted\nC) number of photons emitted, divided by the number of photons absorbed\nD) number of excitation photons impinging on the sample, divided by the number of photons absorbed\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU college_chemistry test (cais/mmlu)",
+  "materia": "college_chemistry",
+  "indice_original": 55
+ },
+ {
+  "id": "mmlu-college_chemistry-0059",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Of the following ionic substances, which has the greatest lattice enthalpy?\nA) MgO\nB) MgS\nC) NaF\nD) NaCl\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "A",
+  "verificador": "exact",
+  "fuente": "MMLU college_chemistry test (cais/mmlu)",
+  "materia": "college_chemistry",
+  "indice_original": 59
+ },
+ {
+  "id": "mmlu-college_chemistry-0085",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: A PO3- radical produces a pair of lines separated by 280 MHz with giso = 2.005. Calculate the expected resonant field positions of both lines in the X-band EPR spectrum (ν = 9.5 GHz).\nA) Bres for mI = -½ = 325.0 mT; Bres for mI = +½ = 335.0 mT\nB) Bres for mI = -½ = 123.5 mT; Bres for mI = +½ = 124.5 mT.\nC) Bres for mI = -½ = 333.5 mT; Bres for mI = +½ = 343.5 mT.\nD) Bres for mI = -½ = 0.218 mT; Bres for mI = +½ = 0.418 mT.\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU college_chemistry test (cais/mmlu)",
+  "materia": "college_chemistry",
+  "indice_original": 85
+ },
+ {
+  "id": "mmlu-college_physics-0061",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Electromagnetic radiation emitted from a nucleus is most likely to be in the form of\nA) gamma rays\nB) microwaves\nC) ultraviolet radiation\nD) visible light\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "A",
+  "verificador": "exact",
+  "fuente": "MMLU college_physics test (cais/mmlu)",
+  "materia": "college_physics",
+  "indice_original": 61
+ },
+ {
+  "id": "mmlu-high_school_physics-0057",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: A fluid of density ρ flows through a horizontal pipe with negligible viscosity. The flow is streamlined with constant flow rate. The diameter of the pipe at Point 1 is d and the flow speed is V. If the diameter of the pipe at Point 2 is d/3, then the pressure at Point 2 is\nA) less than the pressure at Point 1 by 4 ρv^2\nB) less than the pressure at Point 1 by 40 ρv^2\nC) more than the pressure at Point 1 by 4 ρv^2\nD) more than the pressure at Point 1 by 40 ρv^2\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_physics test (cais/mmlu)",
+  "materia": "high_school_physics",
+  "indice_original": 57
+ },
+ {
+  "id": "mmlu-high_school_physics-0019",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: In a certain region, the electric field varies with the radius away from origin by the equation Er = –6r^2 + 4r + 3, where r is given in meters and E in N/C. The potential difference between the origin and the point (3, 4) is\nA) –165 V\nB) –120 V\nC) 64 V\nD) 185 V\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_physics test (cais/mmlu)",
+  "materia": "high_school_physics",
+  "indice_original": 19
+ },
+ {
+  "id": "mmlu-abstract_algebra-0061",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Statement 1 | The set of 2 x 2 matrices with integer entries and nonzero determinant is a group under matrix multiplication. Statement 2 | The set of 2 x 2 matrices with integer entries and determinant 1 is a group under matrix multiplication.\nA) True, True\nB) False, False\nC) True, False\nD) False, True\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU abstract_algebra test (cais/mmlu)",
+  "materia": "abstract_algebra",
+  "indice_original": 61
+ },
+ {
+  "id": "mmlu-high_school_mathematics-0095",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: The coefficient of the (x – 8)2 term in the Taylor polynomial for y = x2/3 around x = 8 is\nA) -1/144\nB) -1/72\nC) 1/144\nD) 1/6\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "A",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_mathematics test (cais/mmlu)",
+  "materia": "high_school_mathematics",
+  "indice_original": 95
+ },
+ {
+  "id": "mmlu-college_chemistry-0071",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: The fact that the infrared absorption frequency of deuterium chloride (DCl) is shifted from that of hydrogen chloride (HCl) is due to the differences in their\nA) electron distribution\nB) dipole moment\nC) force constant\nD) reduced mass\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU college_chemistry test (cais/mmlu)",
+  "materia": "college_chemistry",
+  "indice_original": 71
+ },
+ {
+  "id": "mmlu-high_school_physics-0114",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: A table supports a wooden block placed on the tabletop. Which fundamental force of nature is responsible for this interaction, and why?\nA) The electric force, because the protons in the nuclei of the top atomic layer of the table repel the nuclei in the bottom atomic layer of the wood.\nB) The gravitational force, because by F = GMm/r^2, the force of the table on the wood at that close range is sufficient to balance the force of the Earth on the wood.\nC) The electric force, because the outer electrons in the top atomic layer of the table repel the outer electrons in the bottom atomic layer of the wood.\nD) The strong nuclear force, because the protons in the nuclei of the top atomic layer of the table repel the nuclei in the bottom atomic layer of the wood.\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_physics test (cais/mmlu)",
+  "materia": "high_school_physics",
+  "indice_original": 114
+ },
+ {
+  "id": "mmlu-college_mathematics-0000",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Let k be the number of real solutions of the equation e^x + x - 2 = 0 in the interval [0, 1], and let n be the number of real solutions that are not in [0, 1]. Which of the following is true?\nA) k = 0 and n = 1\nB) k = 1 and n = 0\nC) k = n = 1\nD) k > 1\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU college_mathematics test (cais/mmlu)",
+  "materia": "college_mathematics",
+  "indice_original": 0
+ },
+ {
+  "id": "mmlu-high_school_chemistry-0102",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Chlorine gas reacts most readily with\nA) toluene\nB) ethylene\nC) ethanoic acid\nD) ethane\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_chemistry test (cais/mmlu)",
+  "materia": "high_school_chemistry",
+  "indice_original": 102
+ },
+ {
+  "id": "mmlu-high_school_mathematics-0184",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: The sum $1^2 + 2^2 + 3^2 + 4^2 + \\cdots + n^2 = n(n+1)(2n+1) \\div 6$. What is the value of $21^2 + 22^2 + \\cdots + 40^2$?\nA) 41\nB) 22140\nC) 19270\nD) 2870\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_mathematics test (cais/mmlu)",
+  "materia": "high_school_mathematics",
+  "indice_original": 184
+ },
+ {
+  "id": "mmlu-high_school_chemistry-0142",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: A solution of sulfurous acid, H2SO3, is present in an aqueous solution. Which of the following represents the concentrations of three different ions in solution?\nA) [SO32-] > [HSO3-] > [H2SO3]\nB) [H2SO3] > [HSO3-] > [SO32-]\nC) [H2SO3] > [HSO3-] = [SO32-]\nD) [SO32-] = [HSO3-] > [H2SO3]\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_chemistry test (cais/mmlu)",
+  "materia": "high_school_chemistry",
+  "indice_original": 142
+ },
+ {
+  "id": "mmlu-high_school_physics-0102",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: A stone is thrown vertically upward with an initial speed of 5 m/s. What is the velocity of the stone 3 seconds later?\nA) 25 m/s, upward\nB) 25 m/s, downward\nC) 35 m/s, upward\nD) 35 m/s, downward\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_physics test (cais/mmlu)",
+  "materia": "high_school_physics",
+  "indice_original": 102
+ },
+ {
+  "id": "mmlu-conceptual_physics-0234",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: A simple and correct way to comprehend satellites orbiting Earth is to view them as\nA) balanced between gravitational and centripetal forces.\nB) beyond the main pull of Earth gravity.\nC) in mechanical equilibrium with a net force of zero.\nD) having sufficient tangential velocities to fall around rather than into Earth.\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU conceptual_physics test (cais/mmlu)",
+  "materia": "conceptual_physics",
+  "indice_original": 234
+ },
+ {
+  "id": "mmlu-machine_learning-0042",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Statement 1| Since the VC dimension for an SVM with a Radial Base Kernel is infinite, such an SVM must be worse than an SVM with polynomial kernel which has a finite VC dimension. Statement 2| A two layer neural network with linear activation functions is essentially a weighted combination of linear separators, trained on a given dataset; the boosting algorithm built on linear separators also finds a combination of linear separators, therefore these two algorithms will give the same result.\nA) True, True\nB) False, False\nC) True, False\nD) False, True\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU machine_learning test (cais/mmlu)",
+  "materia": "machine_learning",
+  "indice_original": 42
+ },
+ {
+  "id": "mmlu-abstract_algebra-0014",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Find the maximum possible order for an element of S_n for n = 10.\nA) 6\nB) 12\nC) 30\nD) 105\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU abstract_algebra test (cais/mmlu)",
+  "materia": "abstract_algebra",
+  "indice_original": 14
+ },
+ {
+  "id": "mmlu-high_school_mathematics-0090",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: John noticed that the angle formed by the minute hand and hour hand on a standard 12-hour clock was 110 degrees when he left home after 6 p.m.; it was also 110 degrees when he returned after 6 p.m. but before 7 p.m. that same night. If he left home for more than five minutes, for how many minutes was he away?\nA) 36\nB) 40\nC) 38\nD) 43\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_mathematics test (cais/mmlu)",
+  "materia": "high_school_mathematics",
+  "indice_original": 90
+ },
+ {
+  "id": "mmlu-high_school_mathematics-0231",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: The curve defined by x^3 + xy - y^2 = 10 has a vertical tangent line when x =\nA) 0 or –1/3\nB) 1.037\nC) 2.074\nD) 2.096\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_mathematics test (cais/mmlu)",
+  "materia": "high_school_mathematics",
+  "indice_original": 231
+ },
+ {
+  "id": "mmlu-formal_logic-0027",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Which of the given formulas of PL is the best symbolization of the following sentence?\nIf Beth rides her bike, she gets to work earlier.\nA) B ⊃ W\nB) W ⊃ B\nC) B ≡ W\nD) Both A and B\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "A",
+  "verificador": "exact",
+  "fuente": "MMLU formal_logic test (cais/mmlu)",
+  "materia": "formal_logic",
+  "indice_original": 27
+ },
+ {
+  "id": "mmlu-high_school_physics-0148",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Mercury orbits the sun in about one-fifth of an Earth year. If 1 AU is defined as the distance from the Earth to the sun, what is the approximate distance between Mercury and the sun?\nA) (1/25) AU\nB) (1/9) AU\nC) (1/5) AU\nD) (1/3) AU\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_physics test (cais/mmlu)",
+  "materia": "high_school_physics",
+  "indice_original": 148
+ },
+ {
+  "id": "mmlu-high_school_chemistry-0191",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: A certain reaction is nonspontaneous under standard conditions, but becomes spontaneous at higher temperatures. What conclusions may be drawn under standard conditions?\nA) ΔH < 0, ΔS < 0 and ΔG = 0\nB) ΔH > 0, ΔS < 0 and ΔG > 0\nC) ΔH < 0, ΔS < 0 and ΔG > 0\nD) ΔH > 0, ΔS > 0 and ΔG > 0\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_chemistry test (cais/mmlu)",
+  "materia": "high_school_chemistry",
+  "indice_original": 191
+ },
+ {
+  "id": "mmlu-high_school_mathematics-0221",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Five years ago, a computer that worked half as fast as a current computer cost twice as much money. The current computer's speed to price ratio is what percent of the older computer's speed to price ratio?\nA) 20\nB) 400\nC) 32\nD) \\frac{2}{5}\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_mathematics test (cais/mmlu)",
+  "materia": "high_school_mathematics",
+  "indice_original": 221
+ },
+ {
+  "id": "mmlu-high_school_physics-0032",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: If the force of gravity between the Moon and the Earth were to stop, which statement best describes the resulting motion of the moon?\nA) It would continue rotating on its axis, and it would revolve around the Earth as usual.\nB) It would continue rotating on its axis, but it would stop revolving around the Earth.\nC) It would stop rotating on its axis, but it would revolve around the Earth as usual.\nD) It would stop rotating on its axis, and it would stop revolving around the Earth.\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_physics test (cais/mmlu)",
+  "materia": "high_school_physics",
+  "indice_original": 32
+ },
+ {
+  "id": "mmlu-college_physics-0086",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Which of the following lasers utilizes transitions that involve the energy levels of free atoms?\nA) Diode laser\nB) Dye laser\nC) Free-electron laser\nD) Gas laser\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU college_physics test (cais/mmlu)",
+  "materia": "college_physics",
+  "indice_original": 86
+ },
+ {
+  "id": "mmlu-high_school_mathematics-0050",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: As punishment for bad behavior during recess, Mrs. Busywork asked her class to multiply 10 by $\\frac{1}{3}$ five times. John, however, notices that it is possible to multiply 10 by a single fraction and still get the same answer as the other students. What is this single fraction?\nA) \\frac{1}{27}\nB) \\frac{1}{68}\nC) \\frac{1}{3}\nD) \\frac{1}{243}\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "D",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_mathematics test (cais/mmlu)",
+  "materia": "high_school_mathematics",
+  "indice_original": 50
+ },
+ {
+  "id": "mmlu-college_chemistry-0067",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: 23Na has an NMR frequency of 198.52 MHz in a 750 MHz NMR spectrometer. What is its magnetogyric ratio?\nA) 101.1 x 10^7 T-1 s-1\nB) 26.75 x 10^7 T-1 s-1\nC) 7.081 x 10^7 T-1 s-1\nD) 0.9377 x 10^7 T-1 s-1\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU college_chemistry test (cais/mmlu)",
+  "materia": "college_chemistry",
+  "indice_original": 67
+ },
+ {
+  "id": "mmlu-college_chemistry-0098",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Predict the number of lines in the EPR spectrum of a solution of dimethylnitroxide (CH3)2NO• assuming the lines do not overlap.\nA) 21\nB) 3\nC) 7\nD) 24\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "B",
+  "verificador": "exact",
+  "fuente": "MMLU college_chemistry test (cais/mmlu)",
+  "materia": "college_chemistry",
+  "indice_original": 98
+ },
+ {
+  "id": "mmlu-high_school_mathematics-0024",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Carlos Montado was born on Saturday, November 9, 2002. On what day of the week will Carlos be 706 days old? (Spell out the entire day of the week.)\nA) Friday\nB) Thursday\nC) Wednesday\nD) Tuesday\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "A",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_mathematics test (cais/mmlu)",
+  "materia": "high_school_mathematics",
+  "indice_original": 24
+ },
+ {
+  "id": "mmlu-conceptual_physics-0056",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Which of these changes when light refracts in passing from one medium to another?\nA) Speed only\nB) Wavelength only\nC) Both speed and wavelength\nD) Neither of these\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU conceptual_physics test (cais/mmlu)",
+  "materia": "conceptual_physics",
+  "indice_original": 56
+ },
+ {
+  "id": "mmlu-high_school_mathematics-0070",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: How many positive 4-digit integers have only odd digits?\nA) 100\nB) 999\nC) 625\nD) 500\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_mathematics test (cais/mmlu)",
+  "materia": "high_school_mathematics",
+  "indice_original": 70
+ },
+ {
+  "id": "mmlu-high_school_physics-0001",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Which of these quantities decreases as the inverse square of distance for distances far from the objects producing the fields?\nA) the electric field produced by a finite-length charged rod\nB) the electric field produced by an infinitely long charged cylinder\nC) the electric field produced by an infinite plane of charge\nD) the magnetic field produced by an infinitely long, straight current-carrying wire\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "A",
+  "verificador": "exact",
+  "fuente": "MMLU high_school_physics test (cais/mmlu)",
+  "materia": "high_school_physics",
+  "indice_original": 1
+ },
+ {
+  "id": "mmlu-college_physics-0084",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: The emission spectrum of the doubly ionized lithium atom Li++ (Z = 3, A = 7) is identical to that of a hydrogen atom in which all the wavelengths are\nA) decreased by a factor of 9\nB) decreased by a factor of 49\nC) decreased by a factor of 81\nD) increased by a factor of 9\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "A",
+  "verificador": "exact",
+  "fuente": "MMLU college_physics test (cais/mmlu)",
+  "materia": "college_physics",
+  "indice_original": 84
+ },
+ {
+  "id": "mmlu-formal_logic-0120",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: Which of the given formulas of PL is the best symbolization of the following sentence?\nEither England's not importing beef is a necessary condition for France's subsidizing agriculture, or China promotes human rights if and only if South Africa doesn't supply diamonds.\nA) (F ⊃ ~E) ∨ (C ≡ ~S)\nB) (~E ⊃ F) ∨ (C ⊃ ~S)\nC) ~(F ⊃ E) ∨ (~S ⊃ C)\nD) (F ⊃ E) ∨ (C ≡ ~S)\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "A",
+  "verificador": "exact",
+  "fuente": "MMLU formal_logic test (cais/mmlu)",
+  "materia": "formal_logic",
+  "indice_original": 120
+ },
+ {
+  "id": "mmlu-conceptual_physics-0141",
+  "clase": "mmlu",
+  "enunciado": "Pregunta: When relatively slow-moving molecules condense from the air, the temperature of the remaining air tends to\nA) remain unchanged\nB) decrease\nC) increase\nD) spread out uniformly\nRespondé solo con la letra correcta (A, B, C o D).",
+  "esperado": "C",
+  "verificador": "exact",
+  "fuente": "MMLU conceptual_physics test (cais/mmlu)",
+  "materia": "conceptual_physics",
+  "indice_original": 141
+ }
+]

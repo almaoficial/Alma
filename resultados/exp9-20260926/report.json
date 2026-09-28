@@ -1,0 +1,272 @@
+{
+  "preregistro": {
+    "experimento": "ALMA-EXP9: memoria con olvido (decaimiento exponencial)",
+    "fecha": "2026-09-26T02:22:10",
+    "criterio_exito": {
+      "olvido_gana_total": true,
+      "olvido_gana_postflip": true
+    },
+    "diseno": {
+      "stream": "reordenado con flip brusco (orig [1,7,9,3,5,4,2,0,6,8]); bloques 0-4 pro-cot, 5-9 pro-single",
+      "oraculo": "firme EXP8 (media de 3 intentos), 0 llamadas nuevas",
+      "control": "probe continuo + prior warm uniforme (decay=1.0)",
+      "tratamiento": "probe continuo + prior warm con decaimiento 0.5^d",
+      "replay_thompson": "oráculo firme como pull (fuente única)",
+      "rng": "pareado por (bloque,q), seed 999"
+    },
+    "seed": 999,
+    "modo": "replay"
+  },
+  "regret_total": {
+    "control": 0.44,
+    "olvido": 0.43
+  },
+  "regret_pre_flip": {
+    "control": -0.115,
+    "olvido": -0.115
+  },
+  "regret_post_flip": {
+    "control": 0.555,
+    "olvido": 0.545
+  },
+  "diagnostico_control": [
+    {
+      "bloque_nuevo": 0,
+      "bloque_orig": "qa_multihop",
+      "prior_means": {
+        "single": 0.5,
+        "cot": 0.5
+      },
+      "inicial": "single",
+      "final": "cot",
+      "cambio": true
+    },
+    {
+      "bloque_nuevo": 1,
+      "bloque_orig": "calculo",
+      "prior_means": {
+        "single": 0.5926,
+        "cot": 0.6318
+      },
+      "inicial": "single",
+      "final": "cot",
+      "cambio": true
+    },
+    {
+      "bloque_nuevo": 2,
+      "bloque_orig": "logica",
+      "prior_means": {
+        "single": 0.5265,
+        "cot": 0.5876
+      },
+      "inicial": "single",
+      "final": "single",
+      "cambio": false
+    },
+    {
+      "bloque_nuevo": 3,
+      "bloque_orig": "conocimiento",
+      "prior_means": {
+        "single": 0.5779,
+        "cot": 0.6318
+      },
+      "inicial": "cot",
+      "final": "cot",
+      "cambio": false
+    },
+    {
+      "bloque_nuevo": 4,
+      "bloque_orig": "resumen",
+      "prior_means": {
+        "single": 0.5982,
+        "cot": 0.6483
+      },
+      "inicial": "single",
+      "final": "cot",
+      "cambio": true
+    },
+    {
+      "bloque_nuevo": 5,
+      "bloque_orig": "herramientas",
+      "prior_means": {
+        "single": 0.6147,
+        "cot": 0.6626
+      },
+      "inicial": "single",
+      "final": "single",
+      "cambio": false
+    },
+    {
+      "bloque_nuevo": 6,
+      "bloque_orig": "depuracion",
+      "prior_means": {
+        "single": 0.5779,
+        "cot": 0.6171
+      },
+      "inicial": "single",
+      "final": "single",
+      "cambio": false
+    },
+    {
+      "bloque_nuevo": 7,
+      "bloque_orig": "puzzles",
+      "prior_means": {
+        "single": 0.5989,
+        "cot": 0.6286
+      },
+      "inicial": "single",
+      "final": "single",
+      "cambio": false
+    },
+    {
+      "bloque_nuevo": 8,
+      "bloque_orig": "traduccion",
+      "prior_means": {
+        "single": 0.5678,
+        "cot": 0.5932
+      },
+      "inicial": "single",
+      "final": "single",
+      "cambio": false
+    },
+    {
+      "bloque_nuevo": 9,
+      "bloque_orig": "codigo",
+      "prior_means": {
+        "single": 0.5853,
+        "cot": 0.6073
+      },
+      "inicial": "single",
+      "final": "single",
+      "cambio": false
+    }
+  ],
+  "diagnostico_olvido": [
+    {
+      "bloque_nuevo": 0,
+      "bloque_orig": "qa_multihop",
+      "prior_means": {
+        "single": 0.5,
+        "cot": 0.5
+      },
+      "inicial": "single",
+      "final": "cot",
+      "cambio": true
+    },
+    {
+      "bloque_nuevo": 1,
+      "bloque_orig": "calculo",
+      "prior_means": {
+        "single": 0.5926,
+        "cot": 0.6318
+      },
+      "inicial": "single",
+      "final": "cot",
+      "cambio": true
+    },
+    {
+      "bloque_nuevo": 2,
+      "bloque_orig": "logica",
+      "prior_means": {
+        "single": 0.5044,
+        "cot": 0.5729
+      },
+      "inicial": "single",
+      "final": "single",
+      "cambio": false
+    },
+    {
+      "bloque_nuevo": 3,
+      "bloque_orig": "conocimiento",
+      "prior_means": {
+        "single": 0.6053,
+        "cot": 0.657
+      },
+      "inicial": "cot",
+      "final": "cot",
+      "cambio": false
+    },
+    {
+      "bloque_nuevo": 4,
+      "bloque_orig": "resumen",
+      "prior_means": {
+        "single": 0.6338,
+        "cot": 0.6788
+      },
+      "inicial": "single",
+      "final": "cot",
+      "cambio": true
+    },
+    {
+      "bloque_nuevo": 5,
+      "bloque_orig": "herramientas",
+      "prior_means": {
+        "single": 0.6581,
+        "cot": 0.7001
+      },
+      "inicial": "single",
+      "final": "single",
+      "cambio": false
+    },
+    {
+      "bloque_nuevo": 6,
+      "bloque_orig": "depuracion",
+      "prior_means": {
+        "single": 0.524,
+        "cot": 0.5421
+      },
+      "inicial": "single",
+      "final": "single",
+      "cambio": false
+    },
+    {
+      "bloque_nuevo": 7,
+      "bloque_orig": "puzzles",
+      "prior_means": {
+        "single": 0.6253,
+        "cot": 0.6206
+      },
+      "inicial": "single",
+      "final": "single",
+      "cambio": false
+    },
+    {
+      "bloque_nuevo": 8,
+      "bloque_orig": "traduccion",
+      "prior_means": {
+        "single": 0.4871,
+        "cot": 0.4823
+      },
+      "inicial": "single",
+      "final": "single",
+      "cambio": false
+    },
+    {
+      "bloque_nuevo": 9,
+      "bloque_orig": "codigo",
+      "prior_means": {
+        "single": 0.6063,
+        "cot": 0.6014
+      },
+      "inicial": "single",
+      "final": "single",
+      "cambio": false
+    }
+  ],
+  "costo_total_usd": 0.0,
+  "experiencias_nuevas": 0,
+  "veredicto": {
+    "pasa": true,
+    "criterio": {
+      "olvido_gana_total": true,
+      "olvido_gana_postflip": true
+    },
+    "motivos": [
+      "regret total: olvido=0.4300 vs control=0.4400 (diff=-0.0100)",
+      "regret post-flip (bloques 5-9): olvido=0.5450 vs control=0.5550 (diff=-0.0100)",
+      "regret pre-flip (bloques 0-4): olvido=-0.1150 vs control=-0.1150",
+      "cambios tras re-probe: control 3/10, olvido 3/10"
+    ]
+  },
+  "duracion_s": 0.2
+}

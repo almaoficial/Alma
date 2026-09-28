@@ -1,0 +1,545 @@
+{
+  "experimento": "ALMA-EXP58: RSO con proponente que analiza fallos (mock, US$0)",
+  "preregistro": "preregistro.md (mismo directorio)",
+  "n_items": 240,
+  "n_bloques": 24,
+  "espacio_mutacion": {
+    "umbral_base": [
+      1,
+      2,
+      3
+    ],
+    "umbral_divisor": [
+      2,
+      3,
+      4,
+      6
+    ],
+    "gate_margin": [
+      0.0,
+      0.05,
+      0.1
+    ],
+    "n0": [
+      1,
+      2,
+      4
+    ],
+    "decay": [
+      0.25,
+      0.5,
+      0.75
+    ]
+  },
+  "scaffold_inicial": {
+    "umbral_base": 2,
+    "umbral_divisor": 3,
+    "gate_margin": 0.0,
+    "n0": 2,
+    "decay": 0.5
+  },
+  "scaffold_final": {
+    "umbral_base": 1,
+    "umbral_divisor": 2,
+    "gate_margin": 0.0,
+    "n0": 2,
+    "decay": 0.5
+  },
+  "cambio_neto": {
+    "umbral_base": [
+      2,
+      1
+    ],
+    "umbral_divisor": [
+      3,
+      2
+    ]
+  },
+  "n_rondas": 24,
+  "train_replicas": [
+    0,
+    1,
+    2
+  ],
+  "heldout_replicas": [
+    3,
+    4
+  ],
+  "sanidad_bit_identica_exp51": true,
+  "n_keeps": 2,
+  "n_abstenciones": 10,
+  "reglas_usadas": {
+    "R2": 7,
+    "R1": 2,
+    "R3": 5
+  },
+  "trayectoria": [
+    {
+      "ronda": 1,
+      "regla": "R2",
+      "senales": {
+        "misfire_cost": 7.0,
+        "oportunidad": 26.0,
+        "probe_cost": 78.0,
+        "prior_bien": 14.0,
+        "prior_mal": 64.0
+      },
+      "propuesta": {
+        "dim": "umbral_base",
+        "de": 2,
+        "a": 1
+      },
+      "abstencion": false,
+      "metrica_antes": 85.6667,
+      "metrica_despues": 85.3333,
+      "keep": true
+    },
+    {
+      "ronda": 2,
+      "regla": "R1",
+      "senales": {
+        "misfire_cost": 43.0,
+        "oportunidad": 11.0,
+        "probe_cost": 38.0,
+        "prior_bien": 6.0,
+        "prior_mal": 32.0
+      },
+      "propuesta": {
+        "dim": "umbral_base",
+        "de": 1,
+        "a": 2
+      },
+      "abstencion": false,
+      "metrica_antes": 85.3333,
+      "metrica_despues": 85.6667,
+      "keep": false
+    },
+    {
+      "ronda": 3,
+      "regla": "R1",
+      "senales": {
+        "misfire_cost": 43.0,
+        "oportunidad": 11.0,
+        "probe_cost": 38.0,
+        "prior_bien": 6.0,
+        "prior_mal": 32.0
+      },
+      "propuesta": {
+        "dim": "umbral_divisor",
+        "de": 3,
+        "a": 2
+      },
+      "abstencion": false,
+      "metrica_antes": 85.3333,
+      "metrica_despues": 80.0,
+      "keep": true
+    },
+    {
+      "ronda": 4,
+      "regla": "R2",
+      "senales": {
+        "misfire_cost": 12.0,
+        "oportunidad": 14.0,
+        "probe_cost": 53.0,
+        "prior_bien": 8.0,
+        "prior_mal": 45.0
+      },
+      "propuesta": {
+        "dim": "umbral_divisor",
+        "de": 2,
+        "a": 3
+      },
+      "abstencion": false,
+      "metrica_antes": 80.0,
+      "metrica_despues": 85.3333,
+      "keep": false
+    },
+    {
+      "ronda": 5,
+      "regla": "R3",
+      "senales": {
+        "misfire_cost": 12.0,
+        "oportunidad": 14.0,
+        "probe_cost": 53.0,
+        "prior_bien": 8.0,
+        "prior_mal": 45.0
+      },
+      "propuesta": {
+        "dim": "n0",
+        "de": 2,
+        "a": 1
+      },
+      "abstencion": false,
+      "metrica_antes": 80.0,
+      "metrica_despues": 84.0,
+      "keep": false
+    },
+    {
+      "ronda": 6,
+      "regla": null,
+      "senales": {
+        "misfire_cost": 12.0,
+        "oportunidad": 14.0,
+        "probe_cost": 53.0,
+        "prior_bien": 8.0,
+        "prior_mal": 45.0
+      },
+      "propuesta": null,
+      "abstencion": true,
+      "metrica": 80.0,
+      "keep": false
+    },
+    {
+      "ronda": 7,
+      "regla": null,
+      "senales": {
+        "misfire_cost": 12.0,
+        "oportunidad": 14.0,
+        "probe_cost": 53.0,
+        "prior_bien": 8.0,
+        "prior_mal": 45.0
+      },
+      "propuesta": null,
+      "abstencion": true,
+      "metrica": 80.0,
+      "keep": false
+    },
+    {
+      "ronda": 8,
+      "regla": "R2",
+      "senales": {
+        "misfire_cost": 12.0,
+        "oportunidad": 14.0,
+        "probe_cost": 53.0,
+        "prior_bien": 8.0,
+        "prior_mal": 45.0
+      },
+      "propuesta": {
+        "dim": "umbral_divisor",
+        "de": 2,
+        "a": 3
+      },
+      "abstencion": false,
+      "metrica_antes": 80.0,
+      "metrica_despues": 85.3333,
+      "keep": false
+    },
+    {
+      "ronda": 9,
+      "regla": "R3",
+      "senales": {
+        "misfire_cost": 12.0,
+        "oportunidad": 14.0,
+        "probe_cost": 53.0,
+        "prior_bien": 8.0,
+        "prior_mal": 45.0
+      },
+      "propuesta": {
+        "dim": "n0",
+        "de": 2,
+        "a": 1
+      },
+      "abstencion": false,
+      "metrica_antes": 80.0,
+      "metrica_despues": 84.0,
+      "keep": false
+    },
+    {
+      "ronda": 10,
+      "regla": null,
+      "senales": {
+        "misfire_cost": 12.0,
+        "oportunidad": 14.0,
+        "probe_cost": 53.0,
+        "prior_bien": 8.0,
+        "prior_mal": 45.0
+      },
+      "propuesta": null,
+      "abstencion": true,
+      "metrica": 80.0,
+      "keep": false
+    },
+    {
+      "ronda": 11,
+      "regla": null,
+      "senales": {
+        "misfire_cost": 12.0,
+        "oportunidad": 14.0,
+        "probe_cost": 53.0,
+        "prior_bien": 8.0,
+        "prior_mal": 45.0
+      },
+      "propuesta": null,
+      "abstencion": true,
+      "metrica": 80.0,
+      "keep": false
+    },
+    {
+      "ronda": 12,
+      "regla": "R2",
+      "senales": {
+        "misfire_cost": 12.0,
+        "oportunidad": 14.0,
+        "probe_cost": 53.0,
+        "prior_bien": 8.0,
+        "prior_mal": 45.0
+      },
+      "propuesta": {
+        "dim": "umbral_divisor",
+        "de": 2,
+        "a": 3
+      },
+      "abstencion": false,
+      "metrica_antes": 80.0,
+      "metrica_despues": 85.3333,
+      "keep": false
+    },
+    {
+      "ronda": 13,
+      "regla": "R3",
+      "senales": {
+        "misfire_cost": 12.0,
+        "oportunidad": 14.0,
+        "probe_cost": 53.0,
+        "prior_bien": 8.0,
+        "prior_mal": 45.0
+      },
+      "propuesta": {
+        "dim": "n0",
+        "de": 2,
+        "a": 1
+      },
+      "abstencion": false,
+      "metrica_antes": 80.0,
+      "metrica_despues": 84.0,
+      "keep": false
+    },
+    {
+      "ronda": 14,
+      "regla": null,
+      "senales": {
+        "misfire_cost": 12.0,
+        "oportunidad": 14.0,
+        "probe_cost": 53.0,
+        "prior_bien": 8.0,
+        "prior_mal": 45.0
+      },
+      "propuesta": null,
+      "abstencion": true,
+      "metrica": 80.0,
+      "keep": false
+    },
+    {
+      "ronda": 15,
+      "regla": null,
+      "senales": {
+        "misfire_cost": 12.0,
+        "oportunidad": 14.0,
+        "probe_cost": 53.0,
+        "prior_bien": 8.0,
+        "prior_mal": 45.0
+      },
+      "propuesta": null,
+      "abstencion": true,
+      "metrica": 80.0,
+      "keep": false
+    },
+    {
+      "ronda": 16,
+      "regla": "R2",
+      "senales": {
+        "misfire_cost": 12.0,
+        "oportunidad": 14.0,
+        "probe_cost": 53.0,
+        "prior_bien": 8.0,
+        "prior_mal": 45.0
+      },
+      "propuesta": {
+        "dim": "umbral_divisor",
+        "de": 2,
+        "a": 3
+      },
+      "abstencion": false,
+      "metrica_antes": 80.0,
+      "metrica_despues": 85.3333,
+      "keep": false
+    },
+    {
+      "ronda": 17,
+      "regla": "R3",
+      "senales": {
+        "misfire_cost": 12.0,
+        "oportunidad": 14.0,
+        "probe_cost": 53.0,
+        "prior_bien": 8.0,
+        "prior_mal": 45.0
+      },
+      "propuesta": {
+        "dim": "n0",
+        "de": 2,
+        "a": 1
+      },
+      "abstencion": false,
+      "metrica_antes": 80.0,
+      "metrica_despues": 84.0,
+      "keep": false
+    },
+    {
+      "ronda": 18,
+      "regla": null,
+      "senales": {
+        "misfire_cost": 12.0,
+        "oportunidad": 14.0,
+        "probe_cost": 53.0,
+        "prior_bien": 8.0,
+        "prior_mal": 45.0
+      },
+      "propuesta": null,
+      "abstencion": true,
+      "metrica": 80.0,
+      "keep": false
+    },
+    {
+      "ronda": 19,
+      "regla": null,
+      "senales": {
+        "misfire_cost": 12.0,
+        "oportunidad": 14.0,
+        "probe_cost": 53.0,
+        "prior_bien": 8.0,
+        "prior_mal": 45.0
+      },
+      "propuesta": null,
+      "abstencion": true,
+      "metrica": 80.0,
+      "keep": false
+    },
+    {
+      "ronda": 20,
+      "regla": "R2",
+      "senales": {
+        "misfire_cost": 12.0,
+        "oportunidad": 14.0,
+        "probe_cost": 53.0,
+        "prior_bien": 8.0,
+        "prior_mal": 45.0
+      },
+      "propuesta": {
+        "dim": "umbral_divisor",
+        "de": 2,
+        "a": 3
+      },
+      "abstencion": false,
+      "metrica_antes": 80.0,
+      "metrica_despues": 85.3333,
+      "keep": false
+    },
+    {
+      "ronda": 21,
+      "regla": "R3",
+      "senales": {
+        "misfire_cost": 12.0,
+        "oportunidad": 14.0,
+        "probe_cost": 53.0,
+        "prior_bien": 8.0,
+        "prior_mal": 45.0
+      },
+      "propuesta": {
+        "dim": "n0",
+        "de": 2,
+        "a": 1
+      },
+      "abstencion": false,
+      "metrica_antes": 80.0,
+      "metrica_despues": 84.0,
+      "keep": false
+    },
+    {
+      "ronda": 22,
+      "regla": null,
+      "senales": {
+        "misfire_cost": 12.0,
+        "oportunidad": 14.0,
+        "probe_cost": 53.0,
+        "prior_bien": 8.0,
+        "prior_mal": 45.0
+      },
+      "propuesta": null,
+      "abstencion": true,
+      "metrica": 80.0,
+      "keep": false
+    },
+    {
+      "ronda": 23,
+      "regla": null,
+      "senales": {
+        "misfire_cost": 12.0,
+        "oportunidad": 14.0,
+        "probe_cost": 53.0,
+        "prior_bien": 8.0,
+        "prior_mal": 45.0
+      },
+      "propuesta": null,
+      "abstencion": true,
+      "metrica": 80.0,
+      "keep": false
+    },
+    {
+      "ronda": 24,
+      "regla": "R2",
+      "senales": {
+        "misfire_cost": 12.0,
+        "oportunidad": 14.0,
+        "probe_cost": 53.0,
+        "prior_bien": 8.0,
+        "prior_mal": 45.0
+      },
+      "propuesta": {
+        "dim": "umbral_divisor",
+        "de": 2,
+        "a": 3
+      },
+      "abstencion": false,
+      "metrica_antes": 80.0,
+      "metrica_despues": 85.3333,
+      "keep": false
+    }
+  ],
+  "train": {
+    "init_media": 85.6667,
+    "init_por_replica": [
+      78.0,
+      86.0,
+      93.0
+    ],
+    "evo_media": 80.0,
+    "evo_por_replica": [
+      67.0,
+      84.0,
+      89.0
+    ],
+    "mejora": 5.6667
+  },
+  "heldout": {
+    "init_media": 87.5,
+    "init_por_replica": [
+      95.0,
+      80.0
+    ],
+    "evo_media": 87.0,
+    "evo_por_replica": [
+      93.0,
+      81.0
+    ],
+    "mejora_vs_init": 0.5
+  },
+  "referencias": {
+    "exp56_evo": 83.0,
+    "init": 87.5,
+    "exp57b": 84.5
+  },
+  "criterio": "PASS ssi media_heldout(scaffold_EXP58) < 83.00 (scaffold evolucionado de EXP56, mismo held-out)",
+  "veredicto": "FAIL",
+  "costo_total_usd": 0.0,
+  "duracion_s": 0.6
+}

@@ -1,0 +1,28 @@
+{
+  "experimento": "ALMA-EXP63 pass^k (Yao τ-bench)",
+  "fecha": "2026-09-27",
+  "hipotesis": "el Thompson alimentado con consistencia pass^k (k=3) baja el regret vs la señal cruda",
+  "diseno": {
+    "control": "tratamiento EXP51 verbatim (passk k=None)",
+    "tratamiento": "idéntico salvo señal de aprendizaje pass^3",
+    "replicas": 5,
+    "rep_ids": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "scaffold": {
+      "n0": 4,
+      "umbral_base": 1,
+      "umbral_divisor": 3,
+      "decay": 0.5,
+      "gate_margin": 0.0
+    },
+    "contabilidad": "regret con sorteo único crudo, mismas seeds — comparación pareada honesta"
+  },
+  "criterio_veredicto": "PASS ssi efecto_medio < 0, donde efecto = reg_trat − reg_ctrl por réplica (con IC95). Si FAIL o no medible limpio, se conserva el objetivo anterior y se documenta.",
+  "secundario": "tasa de bloques consistentes (reg_bloque==0 en 3 seeds por réplica); reporta, no decide",
+  "timestamp": 1790548012.9172356
+}

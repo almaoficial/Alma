@@ -1,0 +1,62 @@
+{
+  "pasa_puerta": true,
+  "slices": {
+    "gsm8k": {
+      "n": 10,
+      "wins": {
+        "single": 0,
+        "cot": 0,
+        "reflexion": 0
+      },
+      "empates": 10,
+      "shares": {
+        "single": 0.0,
+        "cot": 0.0,
+        "reflexion": 0.0
+      },
+      "max_share": 0.0,
+      "pasa": true
+    },
+    "mmlu": {
+      "n": 10,
+      "wins": {
+        "single": 2,
+        "cot": 0,
+        "reflexion": 0
+      },
+      "empates": 8,
+      "shares": {
+        "single": 0.2,
+        "cot": 0.0,
+        "reflexion": 0.0
+      },
+      "max_share": 0.2,
+      "pasa": true
+    },
+    "mbpp": {
+      "n": 10,
+      "wins": {
+        "single": 1,
+        "cot": 0,
+        "reflexion": 0
+      },
+      "empates": 9,
+      "shares": {
+        "single": 0.1,
+        "cot": 0.0,
+        "reflexion": 0.0
+      },
+      "max_share": 0.1,
+      "pasa": true
+    }
+  },
+  "meta": {
+    "experimento": "ALMA-EXP67 piloto anti-colapso",
+    "pulls": 180,
+    "llamadas_api": 19,
+    "costo_total_usd": 0.0623,
+    "freno_usd": 0.1,
+    "duracion_s": 115.1,
+    "regla": "pasa si ningun brazo gana >80% de los problemas de cada slice (media de 2 intentos, gana el estrictamente mayor)"
+  }
+}

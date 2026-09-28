@@ -1,0 +1,614 @@
+{
+  "preregistro": "resultados/exp36-20260927/preregistro.json",
+  "pnl_total": {
+    "alma": 0.084578,
+    "fijas": {
+      "momentum": -0.185338,
+      "meanrev": 0.029538,
+      "buyhold": 0.085041,
+      "flat": 0.0
+    },
+    "mejor_fija": "buyhold"
+  },
+  "pnl_mitades": {
+    "alma_h1": -0.042132,
+    "alma_h2": 0.12671,
+    "fijas_h1": {
+      "momentum": -0.038108,
+      "meanrev": -0.037692,
+      "buyhold": -0.004808,
+      "flat": 0.0
+    },
+    "fijas_h2": {
+      "momentum": -0.14723,
+      "meanrev": 0.06723,
+      "buyhold": 0.089849,
+      "flat": 0.0
+    }
+  },
+  "diagnostico_bloques": [
+    {
+      "bloque": 0,
+      "prior_means": {
+        "momentum": 0.5,
+        "meanrev": 0.5,
+        "buyhold": 0.5,
+        "flat": 0.5
+      },
+      "inicial": "meanrev",
+      "final": "meanrev",
+      "cambio": false,
+      "pnl_bloque_alma": 0.010006,
+      "pnl_bloque_fijas": {
+        "momentum": -0.017238,
+        "meanrev": 0.011438,
+        "buyhold": 0.002681,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 1,
+      "prior_means": {
+        "momentum": 0.4926964513300005,
+        "meanrev": 0.5119840246254271,
+        "buyhold": 0.48924509322527454,
+        "flat": 0.5
+      },
+      "inicial": "meanrev",
+      "final": "meanrev",
+      "cambio": false,
+      "pnl_bloque_alma": 0.00095,
+      "pnl_bloque_fijas": {
+        "momentum": 0.00975,
+        "meanrev": -0.01375,
+        "buyhold": 0.011606,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 2,
+      "prior_means": {
+        "momentum": 0.5054833503335753,
+        "meanrev": 0.49931746060027127,
+        "buyhold": 0.4955690018118803,
+        "flat": 0.5
+      },
+      "inicial": "momentum",
+      "final": "momentum",
+      "cambio": false,
+      "pnl_bloque_alma": -0.033212,
+      "pnl_bloque_fijas": {
+        "momentum": -0.006681,
+        "meanrev": 0.001881,
+        "buyhold": -0.001345,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 3,
+      "prior_means": {
+        "momentum": 0.4882627686071037,
+        "meanrev": 0.49271855864125325,
+        "buyhold": 0.4912383770081249,
+        "flat": 0.5
+      },
+      "inicial": "flat",
+      "final": "flat",
+      "cambio": false,
+      "pnl_bloque_alma": -0.00583,
+      "pnl_bloque_fijas": {
+        "momentum": 0.009586,
+        "meanrev": -0.013986,
+        "buyhold": -0.020953,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 4,
+      "prior_means": {
+        "momentum": 0.4927318540663583,
+        "meanrev": 0.5001076854606897,
+        "buyhold": 0.48330802045343846,
+        "flat": 0.5
+      },
+      "inicial": "meanrev",
+      "final": "meanrev",
+      "cambio": false,
+      "pnl_bloque_alma": -0.008261,
+      "pnl_bloque_fijas": {
+        "momentum": -0.01333,
+        "meanrev": 0.00773,
+        "buyhold": 0.001542,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 5,
+      "prior_means": {
+        "momentum": 0.49736404565350517,
+        "meanrev": 0.5017413577429519,
+        "buyhold": 0.4820654236509464,
+        "flat": 0.5
+      },
+      "inicial": "meanrev",
+      "final": "meanrev",
+      "cambio": false,
+      "pnl_bloque_alma": 2e-05,
+      "pnl_bloque_fijas": {
+        "momentum": 0.023049,
+        "meanrev": -0.028649,
+        "buyhold": 0.04713,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 6,
+      "prior_means": {
+        "momentum": 0.4981299308876247,
+        "meanrev": 0.49049952825152165,
+        "buyhold": 0.5021020273333984,
+        "flat": 0.5
+      },
+      "inicial": "buyhold",
+      "final": "momentum",
+      "cambio": true,
+      "pnl_bloque_alma": 0.005817,
+      "pnl_bloque_fijas": {
+        "momentum": -0.035442,
+        "meanrev": 0.029442,
+        "buyhold": -0.019235,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 7,
+      "prior_means": {
+        "momentum": 0.4994077604742928,
+        "meanrev": 0.4959576179613788,
+        "buyhold": 0.49678513905817695,
+        "flat": 0.5
+      },
+      "inicial": "flat",
+      "final": "buyhold",
+      "cambio": true,
+      "pnl_bloque_alma": 0.003806,
+      "pnl_bloque_fijas": {
+        "momentum": -0.004467,
+        "meanrev": -0.000333,
+        "buyhold": 0.007487,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 8,
+      "prior_means": {
+        "momentum": 0.49970997194963884,
+        "meanrev": 0.49699172060894864,
+        "buyhold": 0.5043074284859741,
+        "flat": 0.5
+      },
+      "inicial": "buyhold",
+      "final": "buyhold",
+      "cambio": false,
+      "pnl_bloque_alma": -0.008821,
+      "pnl_bloque_fijas": {
+        "momentum": -0.012497,
+        "meanrev": 0.006497,
+        "buyhold": -0.004159,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 9,
+      "prior_means": {
+        "momentum": 0.49690652073238883,
+        "meanrev": 0.5008039926443651,
+        "buyhold": 0.4964386063930091,
+        "flat": 0.5
+      },
+      "inicial": "meanrev",
+      "final": "meanrev",
+      "cambio": false,
+      "pnl_bloque_alma": -0.002955,
+      "pnl_bloque_fijas": {
+        "momentum": 0.01197,
+        "meanrev": -0.01637,
+        "buyhold": -0.007012,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 10,
+      "prior_means": {
+        "momentum": 0.5015471434299958,
+        "meanrev": 0.49458575220197176,
+        "buyhold": 0.4979292801916221,
+        "flat": 0.5
+      },
+      "inicial": "momentum",
+      "final": "momentum",
+      "cambio": false,
+      "pnl_bloque_alma": 0.000413,
+      "pnl_bloque_fijas": {
+        "momentum": -0.011262,
+        "meanrev": 0.006862,
+        "buyhold": -0.008522,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 11,
+      "prior_means": {
+        "momentum": 0.4987183640275096,
+        "meanrev": 0.49591217245806873,
+        "buyhold": 0.5008568297051323,
+        "flat": 0.5
+      },
+      "inicial": "buyhold",
+      "final": "buyhold",
+      "cambio": false,
+      "pnl_bloque_alma": 0.004581,
+      "pnl_bloque_fijas": {
+        "momentum": -0.023206,
+        "meanrev": 0.018806,
+        "buyhold": 0.003437,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 12,
+      "prior_means": {
+        "momentum": 0.4972029748906204,
+        "meanrev": 0.4982163770349397,
+        "buyhold": 0.5043387592809867,
+        "flat": 0.5
+      },
+      "inicial": "momentum",
+      "final": "momentum",
+      "cambio": false,
+      "pnl_bloque_alma": 0.006177,
+      "pnl_bloque_fijas": {
+        "momentum": 0.010315,
+        "meanrev": -0.014715,
+        "buyhold": -0.018578,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 13,
+      "prior_means": {
+        "momentum": 0.5044963275328747,
+        "meanrev": 0.496382450068107,
+        "buyhold": 0.49034381383477077,
+        "flat": 0.5
+      },
+      "inicial": "momentum",
+      "final": "momentum",
+      "cambio": false,
+      "pnl_bloque_alma": -0.012368,
+      "pnl_bloque_fijas": {
+        "momentum": 0.024438,
+        "meanrev": -0.029638,
+        "buyhold": 0.003199,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 14,
+      "prior_means": {
+        "momentum": 0.5059514999704628,
+        "meanrev": 0.4986683754196468,
+        "buyhold": 0.48487884845055673,
+        "flat": 0.5
+      },
+      "inicial": "momentum",
+      "final": "momentum",
+      "cambio": false,
+      "pnl_bloque_alma": -0.004394,
+      "pnl_bloque_fijas": {
+        "momentum": -0.001153,
+        "meanrev": -0.004847,
+        "buyhold": -0.004027,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 15,
+      "prior_means": {
+        "momentum": 0.5038517077929909,
+        "meanrev": 0.4948643492666015,
+        "buyhold": 0.48971693765652347,
+        "flat": 0.5
+      },
+      "inicial": "momentum",
+      "final": "momentum",
+      "cambio": false,
+      "pnl_bloque_alma": -0.001001,
+      "pnl_bloque_fijas": {
+        "momentum": -0.00658,
+        "meanrev": 0.00058,
+        "buyhold": 0.001382,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 16,
+      "prior_means": {
+        "momentum": 0.5006704886826938,
+        "meanrev": 0.4979326702611909,
+        "buyhold": 0.49347511631862123,
+        "flat": 0.5
+      },
+      "inicial": "momentum",
+      "final": "momentum",
+      "cambio": false,
+      "pnl_bloque_alma": 0.002883,
+      "pnl_bloque_fijas": {
+        "momentum": -0.005731,
+        "meanrev": 0.000131,
+        "buyhold": 0.021028,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 17,
+      "prior_means": {
+        "momentum": 0.49756136318365496,
+        "meanrev": 0.504034067274826,
+        "buyhold": 0.5014136188212932,
+        "flat": 0.5
+      },
+      "inicial": "meanrev",
+      "final": "meanrev",
+      "cambio": false,
+      "pnl_bloque_alma": 0.011738,
+      "pnl_bloque_fijas": {
+        "momentum": -0.008733,
+        "meanrev": 0.003533,
+        "buyhold": -0.025642,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 18,
+      "prior_means": {
+        "momentum": 0.5033544532240162,
+        "meanrev": 0.5085531334233124,
+        "buyhold": 0.4902815303742238,
+        "flat": 0.5
+      },
+      "inicial": "meanrev",
+      "final": "meanrev",
+      "cambio": false,
+      "pnl_bloque_alma": 0.016661,
+      "pnl_bloque_fijas": {
+        "momentum": -0.036735,
+        "meanrev": 0.029535,
+        "buyhold": -0.016729,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 19,
+      "prior_means": {
+        "momentum": 0.4805191856218779,
+        "meanrev": 0.5156320500831892,
+        "buyhold": 0.4826295394478578,
+        "flat": 0.5
+      },
+      "inicial": "buyhold",
+      "final": "meanrev",
+      "cambio": true,
+      "pnl_bloque_alma": 0.023547,
+      "pnl_bloque_fijas": {
+        "momentum": -0.014994,
+        "meanrev": 0.009394,
+        "buyhold": 0.012867,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 20,
+      "prior_means": {
+        "momentum": 0.4859771538558191,
+        "meanrev": 0.5165884012764612,
+        "buyhold": 0.4979248827721613,
+        "flat": 0.5
+      },
+      "inicial": "meanrev",
+      "final": "meanrev",
+      "cambio": false,
+      "pnl_bloque_alma": 0.00096,
+      "pnl_bloque_fijas": {
+        "momentum": -0.004826,
+        "meanrev": -0.000374,
+        "buyhold": 0.056117,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 21,
+      "prior_means": {
+        "momentum": 0.49641999281609117,
+        "meanrev": 0.5013947980477069,
+        "buyhold": 0.5098485363558697,
+        "flat": 0.5
+      },
+      "inicial": "meanrev",
+      "final": "buyhold",
+      "cambio": true,
+      "pnl_bloque_alma": 0.013053,
+      "pnl_bloque_fijas": {
+        "momentum": -0.020452,
+        "meanrev": 0.015652,
+        "buyhold": 0.005626,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 22,
+      "prior_means": {
+        "momentum": 0.4913781345527499,
+        "meanrev": 0.510738565239334,
+        "buyhold": 0.5037468200824602,
+        "flat": 0.5
+      },
+      "inicial": "momentum",
+      "final": "meanrev",
+      "cambio": true,
+      "pnl_bloque_alma": -0.006482,
+      "pnl_bloque_fijas": {
+        "momentum": 0.003661,
+        "meanrev": -0.008461,
+        "buyhold": -0.003702,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 23,
+      "prior_means": {
+        "momentum": 0.4962563823505586,
+        "meanrev": 0.49880367043396,
+        "buyhold": 0.49690349070192696,
+        "flat": 0.5
+      },
+      "inicial": "flat",
+      "final": "flat",
+      "cambio": false,
+      "pnl_bloque_alma": 0.048886,
+      "pnl_bloque_fijas": {
+        "momentum": 0.018062,
+        "meanrev": -0.022862,
+        "buyhold": 0.057585,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 24,
+      "prior_means": {
+        "momentum": 0.5028015768915232,
+        "meanrev": 0.49502675491224546,
+        "buyhold": 0.5216997354356215,
+        "flat": 0.5
+      },
+      "inicial": "buyhold",
+      "final": "buyhold",
+      "cambio": false,
+      "pnl_bloque_alma": 0.009479,
+      "pnl_bloque_fijas": {
+        "momentum": -0.012696,
+        "meanrev": 0.007896,
+        "buyhold": 0.008005,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 25,
+      "prior_means": {
+        "momentum": 0.5006804704684582,
+        "meanrev": 0.4991569930286429,
+        "buyhold": 0.5168420157152995,
+        "flat": 0.5
+      },
+      "inicial": "buyhold",
+      "final": "momentum",
+      "cambio": true,
+      "pnl_bloque_alma": -0.017765,
+      "pnl_bloque_fijas": {
+        "momentum": -0.007076,
+        "meanrev": 0.002276,
+        "buyhold": -0.026278,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 26,
+      "prior_means": {
+        "momentum": 0.492335641387753,
+        "meanrev": 0.49784282899204724,
+        "buyhold": 0.5012976370736538,
+        "flat": 0.5
+      },
+      "inicial": "meanrev",
+      "final": "buyhold",
+      "cambio": true,
+      "pnl_bloque_alma": 0.019171,
+      "pnl_bloque_fijas": {
+        "momentum": -0.036688,
+        "meanrev": 0.030288,
+        "buyhold": -0.002465,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 27,
+      "prior_means": {
+        "momentum": 0.48608812717109545,
+        "meanrev": 0.5100709265534007,
+        "buyhold": 0.5056448309507928,
+        "flat": 0.5
+      },
+      "inicial": "meanrev",
+      "final": "meanrev",
+      "cambio": false,
+      "pnl_bloque_alma": 0.007086,
+      "pnl_bloque_fijas": {
+        "momentum": 0.003115,
+        "meanrev": -0.007515,
+        "buyhold": -0.003737,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 28,
+      "prior_means": {
+        "momentum": 0.4955739277124022,
+        "meanrev": 0.5051405365423483,
+        "buyhold": 0.5042255309555349,
+        "flat": 0.5
+      },
+      "inicial": "meanrev",
+      "final": "meanrev",
+      "cambio": false,
+      "pnl_bloque_alma": 0.006686,
+      "pnl_bloque_fijas": {
+        "momentum": -0.011757,
+        "meanrev": 0.006157,
+        "buyhold": 0.004321,
+        "flat": 0.0
+      }
+    },
+    {
+      "bloque": 29,
+      "prior_means": {
+        "momentum": 0.4943462669933807,
+        "meanrev": 0.5056253591380797,
+        "buyhold": 0.5056451983513763,
+        "flat": 0.5
+      },
+      "inicial": "buyhold",
+      "final": "buyhold",
+      "cambio": false,
+      "pnl_bloque_alma": -0.006251,
+      "pnl_bloque_fijas": {
+        "momentum": -0.00774,
+        "meanrev": 0.00294,
+        "buyhold": 0.003411,
+        "flat": 0.0
+      }
+    }
+  ],
+  "costo_total_usd": 0.0,
+  "veredicto": {
+    "pasa": false,
+    "criterio": "pnl_total(alma) > pnl_total(mejor_fija)",
+    "motivos": [
+      "P&L total: ALMA=+8.4578% vs mejor fija (buyhold)=+8.5041% (diff=-0.0463%)",
+      "P&L fijas: momentum=-18.534%, meanrev=+2.954%, buyhold=+8.504%, flat=+0.000%",
+      "1ra mitad: ALMA=-4.213% | fijas: momentum=-3.811%, meanrev=-3.769%, buyhold=-0.481%, flat=+0.000%",
+      "2da mitad: ALMA=+12.671% | fijas: momentum=-14.723%, meanrev=+6.723%, buyhold=+8.985%, flat=+0.000%",
+      "cambios tras re-probe: 7/30 bloques"
+    ]
+  },
+  "duracion_s": 0.0
+}

@@ -1,0 +1,176 @@
+{
+  "experimento": "ALMA-EXP64: ablación del scaffold estilo Cherny",
+  "preregistro": "preregistro.md (mismo directorio, previo a la corrida)",
+  "scaffold_control": {
+    "n0": 4,
+    "umbral_base": 1,
+    "umbral_divisor": 3,
+    "decay": 0.5,
+    "gate_margin": 0.0
+  },
+  "replicas": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "sanidad_bit_identica": true,
+  "sanidad_determinismo": true,
+  "control_reg_por_replica": [
+    71.0,
+    83.0,
+    90.0,
+    84.0,
+    81.0
+  ],
+  "control_reg_medio": 81.8,
+  "tratamientos": {
+    "a_control": {},
+    "b_sin_prior_cond": {
+      "sin_prior_cond": true
+    },
+    "c_sin_skip": {
+      "sin_skip": true
+    },
+    "d_sin_gate": {
+      "sin_gate": true
+    },
+    "e_sin_probe": {
+      "sin_probe": true
+    },
+    "f_minimo_total": {
+      "sin_probe": true,
+      "prior_uniforme": true
+    }
+  },
+  "analisis": {
+    "b_sin_prior_cond": {
+      "reg_por_replica": [
+        71.0,
+        83.0,
+        102.0,
+        85.0,
+        85.0
+      ],
+      "diffs_vs_control": [
+        0.0,
+        0.0,
+        12.0,
+        1.0,
+        4.0
+      ],
+      "efecto_medio": 3.4,
+      "ic95": [
+        -2.906,
+        9.706
+      ],
+      "ic95_sin_cero": false,
+      "replicas_peor": 3,
+      "load_bearing": false,
+      "nociva": false
+    },
+    "c_sin_skip": {
+      "reg_por_replica": [
+        86.0,
+        83.0,
+        89.0,
+        95.0,
+        86.0
+      ],
+      "diffs_vs_control": [
+        15.0,
+        0.0,
+        -1.0,
+        11.0,
+        5.0
+      ],
+      "efecto_medio": 6.0,
+      "ic95": [
+        -2.601,
+        14.601
+      ],
+      "ic95_sin_cero": false,
+      "replicas_peor": 3,
+      "load_bearing": false,
+      "nociva": false
+    },
+    "d_sin_gate": {
+      "reg_por_replica": [
+        72.0,
+        82.0,
+        94.0,
+        86.0,
+        82.0
+      ],
+      "diffs_vs_control": [
+        1.0,
+        -1.0,
+        4.0,
+        2.0,
+        1.0
+      ],
+      "efecto_medio": 1.4,
+      "ic95": [
+        -0.855,
+        3.655
+      ],
+      "ic95_sin_cero": false,
+      "replicas_peor": 4,
+      "load_bearing": false,
+      "nociva": false
+    },
+    "e_sin_probe": {
+      "reg_por_replica": [
+        90.0,
+        92.0,
+        94.0,
+        95.0,
+        87.0
+      ],
+      "diffs_vs_control": [
+        19.0,
+        9.0,
+        4.0,
+        11.0,
+        6.0
+      ],
+      "efecto_medio": 9.8,
+      "ic95": [
+        2.593,
+        17.007
+      ],
+      "ic95_sin_cero": true,
+      "replicas_peor": 5,
+      "load_bearing": true,
+      "nociva": false
+    },
+    "f_minimo_total": {
+      "reg_por_replica": [
+        102.0,
+        124.0,
+        116.0,
+        112.0,
+        112.0
+      ],
+      "diffs_vs_control": [
+        31.0,
+        41.0,
+        26.0,
+        28.0,
+        31.0
+      ],
+      "efecto_medio": 31.4,
+      "ic95": [
+        24.236,
+        38.564
+      ],
+      "ic95_sin_cero": true,
+      "replicas_peor": 5,
+      "load_bearing": true,
+      "nociva": false
+    }
+  },
+  "costo_total_usd": 0.0,
+  "duracion_s": 0.8
+}

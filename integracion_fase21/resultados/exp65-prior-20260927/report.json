@@ -1,0 +1,318 @@
+{
+  "experimento": "ALMA-EXP65: RSO sobre el prior con memoria",
+  "preregistro": "preregistro.md (mismo directorio)",
+  "n_rondas": 24,
+  "prop_seed": 65,
+  "espacio": {
+    "n0": [
+      2,
+      4,
+      6,
+      8
+    ],
+    "decay": [
+      0.3,
+      0.5,
+      0.7,
+      0.9,
+      1.0
+    ],
+    "cond": [
+      "completa",
+      "gruesa",
+      "ninguna"
+    ]
+  },
+  "genoma_inicial": {
+    "n0": 4,
+    "decay": 0.5,
+    "cond": "completa"
+  },
+  "genoma_final": {
+    "n0": 4,
+    "decay": 0.5,
+    "cond": "completa"
+  },
+  "cambio_neto": {},
+  "n_keeps": 0,
+  "trayectoria": [
+    {
+      "ronda": 1,
+      "dim": "decay",
+      "de": 0.5,
+      "a": 0.9,
+      "delta_in": 0.0,
+      "delta_ho": -3.0,
+      "keep": false,
+      "motivo": "regresión: delta_in=0.0000, delta_ho=-3.0000"
+    },
+    {
+      "ronda": 2,
+      "dim": "decay",
+      "de": 0.5,
+      "a": 0.7,
+      "delta_in": -0.3333,
+      "delta_ho": -0.5,
+      "keep": false,
+      "motivo": "regresión: delta_in=-0.3333, delta_ho=-0.5000"
+    },
+    {
+      "ronda": 3,
+      "dim": "decay",
+      "de": 0.5,
+      "a": 1.0,
+      "delta_in": -0.6667,
+      "delta_ho": -1.0,
+      "keep": false,
+      "motivo": "regresión: delta_in=-0.6667, delta_ho=-1.0000"
+    },
+    {
+      "ronda": 4,
+      "dim": "n0",
+      "de": 4,
+      "a": 6,
+      "delta_in": 0.0,
+      "delta_ho": -3.5,
+      "keep": false,
+      "motivo": "regresión: delta_in=0.0000, delta_ho=-3.5000"
+    },
+    {
+      "ronda": 5,
+      "dim": "n0",
+      "de": 4,
+      "a": 6,
+      "delta_in": 0.0,
+      "delta_ho": -3.5,
+      "keep": false,
+      "motivo": "regresión: delta_in=0.0000, delta_ho=-3.5000"
+    },
+    {
+      "ronda": 6,
+      "dim": "n0",
+      "de": 4,
+      "a": 6,
+      "delta_in": 0.0,
+      "delta_ho": -3.5,
+      "keep": false,
+      "motivo": "regresión: delta_in=0.0000, delta_ho=-3.5000"
+    },
+    {
+      "ronda": 7,
+      "dim": "cond",
+      "de": "completa",
+      "a": "gruesa",
+      "delta_in": -3.6667,
+      "delta_ho": -2.5,
+      "keep": false,
+      "motivo": "regresión: delta_in=-3.6667, delta_ho=-2.5000"
+    },
+    {
+      "ronda": 8,
+      "dim": "n0",
+      "de": 4,
+      "a": 6,
+      "delta_in": 0.0,
+      "delta_ho": -3.5,
+      "keep": false,
+      "motivo": "regresión: delta_in=0.0000, delta_ho=-3.5000"
+    },
+    {
+      "ronda": 9,
+      "dim": "decay",
+      "de": 0.5,
+      "a": 0.7,
+      "delta_in": -0.3333,
+      "delta_ho": -0.5,
+      "keep": false,
+      "motivo": "regresión: delta_in=-0.3333, delta_ho=-0.5000"
+    },
+    {
+      "ronda": 10,
+      "dim": "n0",
+      "de": 4,
+      "a": 6,
+      "delta_in": 0.0,
+      "delta_ho": -3.5,
+      "keep": false,
+      "motivo": "regresión: delta_in=0.0000, delta_ho=-3.5000"
+    },
+    {
+      "ronda": 11,
+      "dim": "n0",
+      "de": 4,
+      "a": 8,
+      "delta_in": -2.0,
+      "delta_ho": -5.0,
+      "keep": false,
+      "motivo": "regresión: delta_in=-2.0000, delta_ho=-5.0000"
+    },
+    {
+      "ronda": 12,
+      "dim": "cond",
+      "de": "completa",
+      "a": "ninguna",
+      "delta_in": -4.0,
+      "delta_ho": -2.5,
+      "keep": false,
+      "motivo": "regresión: delta_in=-4.0000, delta_ho=-2.5000"
+    },
+    {
+      "ronda": 13,
+      "dim": "cond",
+      "de": "completa",
+      "a": "gruesa",
+      "delta_in": -3.6667,
+      "delta_ho": -2.5,
+      "keep": false,
+      "motivo": "regresión: delta_in=-3.6667, delta_ho=-2.5000"
+    },
+    {
+      "ronda": 14,
+      "dim": "n0",
+      "de": 4,
+      "a": 8,
+      "delta_in": -2.0,
+      "delta_ho": -5.0,
+      "keep": false,
+      "motivo": "regresión: delta_in=-2.0000, delta_ho=-5.0000"
+    },
+    {
+      "ronda": 15,
+      "dim": "cond",
+      "de": "completa",
+      "a": "gruesa",
+      "delta_in": -3.6667,
+      "delta_ho": -2.5,
+      "keep": false,
+      "motivo": "regresión: delta_in=-3.6667, delta_ho=-2.5000"
+    },
+    {
+      "ronda": 16,
+      "dim": "cond",
+      "de": "completa",
+      "a": "ninguna",
+      "delta_in": -4.0,
+      "delta_ho": -2.5,
+      "keep": false,
+      "motivo": "regresión: delta_in=-4.0000, delta_ho=-2.5000"
+    },
+    {
+      "ronda": 17,
+      "dim": "decay",
+      "de": 0.5,
+      "a": 0.9,
+      "delta_in": 0.0,
+      "delta_ho": -3.0,
+      "keep": false,
+      "motivo": "regresión: delta_in=0.0000, delta_ho=-3.0000"
+    },
+    {
+      "ronda": 18,
+      "dim": "n0",
+      "de": 4,
+      "a": 2,
+      "delta_in": -4.0,
+      "delta_ho": -1.0,
+      "keep": false,
+      "motivo": "regresión: delta_in=-4.0000, delta_ho=-1.0000"
+    },
+    {
+      "ronda": 19,
+      "dim": "n0",
+      "de": 4,
+      "a": 2,
+      "delta_in": -4.0,
+      "delta_ho": -1.0,
+      "keep": false,
+      "motivo": "regresión: delta_in=-4.0000, delta_ho=-1.0000"
+    },
+    {
+      "ronda": 20,
+      "dim": "decay",
+      "de": 0.5,
+      "a": 1.0,
+      "delta_in": -0.6667,
+      "delta_ho": -1.0,
+      "keep": false,
+      "motivo": "regresión: delta_in=-0.6667, delta_ho=-1.0000"
+    },
+    {
+      "ronda": 21,
+      "dim": "decay",
+      "de": 0.5,
+      "a": 0.3,
+      "delta_in": 0.3333,
+      "delta_ho": -1.0,
+      "keep": false,
+      "motivo": "regresión: delta_in=0.3333, delta_ho=-1.0000"
+    },
+    {
+      "ronda": 22,
+      "dim": "n0",
+      "de": 4,
+      "a": 2,
+      "delta_in": -4.0,
+      "delta_ho": -1.0,
+      "keep": false,
+      "motivo": "regresión: delta_in=-4.0000, delta_ho=-1.0000"
+    },
+    {
+      "ronda": 23,
+      "dim": "cond",
+      "de": "completa",
+      "a": "ninguna",
+      "delta_in": -4.0,
+      "delta_ho": -2.5,
+      "keep": false,
+      "motivo": "regresión: delta_in=-4.0000, delta_ho=-2.5000"
+    },
+    {
+      "ronda": 24,
+      "dim": "decay",
+      "de": 0.5,
+      "a": 0.9,
+      "delta_in": 0.0,
+      "delta_ho": -3.0,
+      "keep": false,
+      "motivo": "regresión: delta_in=0.0000, delta_ho=-3.0000"
+    }
+  ],
+  "held_in": [
+    0,
+    1,
+    2
+  ],
+  "held_out": [
+    3,
+    4
+  ],
+  "regs_init_5": [
+    71.0,
+    83.0,
+    90.0,
+    84.0,
+    81.0
+  ],
+  "regs_fin_5": [
+    71.0,
+    83.0,
+    90.0,
+    84.0,
+    81.0
+  ],
+  "efecto_por_replica": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "efecto_medio": 0.0,
+  "ic95": [
+    0.0,
+    0.0
+  ],
+  "criterio": "PASS ssi efecto_medio < 0 e IC95 sin cruzar 0",
+  "veredicto": "FAIL",
+  "duracion_s": 1.3
+}

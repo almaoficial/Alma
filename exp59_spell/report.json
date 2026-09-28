@@ -1,0 +1,80 @@
+{
+  "experimento": "ALMA-EXP59: SPELL multi-rol en el probe (mock, US$0)",
+  "preregistro": "preregistro.md (mismo directorio)",
+  "scaffold_control": {
+    "umbral_base": 1,
+    "umbral_divisor": 3,
+    "gate_margin": 0.0,
+    "n0": 4,
+    "decay": 0.5
+  },
+  "sanidad_bit_identica": true,
+  "replicas": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "por_replica": [
+    {
+      "rep": 0,
+      "reg_ctrl": 71.0,
+      "reg_trat": 79.0,
+      "efecto": 8.0,
+      "reg_mejor_fija": 84.0
+    },
+    {
+      "rep": 1,
+      "reg_ctrl": 83.0,
+      "reg_trat": 90.0,
+      "efecto": 7.0,
+      "reg_mejor_fija": 89.0
+    },
+    {
+      "rep": 2,
+      "reg_ctrl": 90.0,
+      "reg_trat": 98.0,
+      "efecto": 8.0,
+      "reg_mejor_fija": 88.0
+    },
+    {
+      "rep": 3,
+      "reg_ctrl": 84.0,
+      "reg_trat": 83.0,
+      "efecto": -1.0,
+      "reg_mejor_fija": 80.0
+    },
+    {
+      "rep": 4,
+      "reg_ctrl": 81.0,
+      "reg_trat": 88.0,
+      "efecto": 7.0,
+      "reg_mejor_fija": 80.0
+    }
+  ],
+  "efecto_medio": 5.8,
+  "reg_ctrl_medio": 81.8,
+  "reg_trat_medio": 87.6,
+  "reg_mejor_fija_media": 84.2,
+  "verifier": {
+    "bloques_con_probe": 46,
+    "tasa_cambio": 0.0652,
+    "cambios": 3,
+    "cambios_nogate": 3,
+    "acierto_verifier": 0.3333,
+    "aciertos": 1,
+    "empates": 2,
+    "n_cambios_nogate": 3,
+    "baseline_q1": {
+      "nogate": 32,
+      "q1_mejor_en_q2": 8,
+      "q1_peor_en_q2": 11,
+      "empates": 13
+    }
+  },
+  "criterio": "PASS ssi media(reg_trat - reg_ctrl) < 0",
+  "veredicto": "FAIL",
+  "costo_total_usd": 0.0,
+  "duracion_s": 0.4
+}

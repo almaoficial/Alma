@@ -1,0 +1,56 @@
+{
+  "experimento": "ALMA-EXP43: refutacion pre-registrada del PASS de EXP42 (contabilidad honesta del probe)",
+  "fecha": "2026-09-27T18:19:20",
+  "motivacion": "EXP42 PASS tecnico (+23.16% media_w) refutado post-hoc: el PASS vivia en la asignacion retroactiva de las 5h de probe (artefacto heredado de EXP36).",
+  "unico_cambio": "horas de probe (q=0,1,2 y q=12,13) puntuadas con flat en lugar del brazo elegido con esos mismos datos; el probe solo mide (bandit + rep), no puntua. Logica de eleccion y sorteos Thompson identicos.",
+  "diseno_pareado": "namespace de semilla IDENTICO al de EXP42 ('exp42-{w}-r{r}'): misma trayectoria del bandit, mismos sorteos, mismos brazos elegidos. La diferencia honesto-vs-retroactivo por (ventana, replica) es efecto-contable puro.",
+  "validacion_interna": "se re-corre la version retroactiva con el mismo NS; debe reproducir los numeros oficiales de EXP42 (report.json) con tolerancia 1e-9, si no -> NO CONFIABLE. Ademas, el honesto debe replicar la tabla post-hoc del veredicto EXP42 (tol. redondeo).",
+  "ventanas": [
+    {
+      "id": "W1",
+      "asset": "BTC",
+      "desde": "2026-08-28",
+      "hasta": "2026-09-27"
+    },
+    {
+      "id": "W3",
+      "asset": "BTC",
+      "desde": "2026-01-15",
+      "hasta": "2026-02-14"
+    },
+    {
+      "id": "W4",
+      "asset": "ETH",
+      "desde": "2026-08-28",
+      "hasta": "2026-09-27"
+    },
+    {
+      "id": "W5",
+      "asset": "ETH",
+      "desde": "2026-04-01",
+      "hasta": "2026-05-01"
+    },
+    {
+      "id": "W6",
+      "asset": "SOL",
+      "desde": "2026-08-28",
+      "hasta": "2026-09-27"
+    }
+  ],
+  "replicas_por_ventana": 4,
+  "criterio": {
+    "hipotesis_a_refutar": "regla36 con probe honesto le gana a buyhold",
+    "efecto": "media_replicas(P&L_regla36_honesto - P&L_buyhold) por ventana",
+    "pass_hipotesis": "media_w(efecto) > 0 y (media - 1*desvio_muestral) > -0.02",
+    "resultado_esperado": "FAIL (refutacion confirmada)"
+  },
+  "modo": "mock, replay puro, US$0",
+  "enmienda_post_ejecucion": {
+    "fecha": "2026-09-27T18:19:31",
+    "campo": "validacion_interna.tolerancia",
+    "de": "1e-9",
+    "a": "1e-6",
+    "motivo": "los valores oficiales de EXP42 estan almacenados redondeados a 6 decimales (error maximo de redondeo 5e-7); 1e-9 es mas estricto que la precision de los datos. La diferencia observada en la primera corrida (4.50e-07) esta dentro del redondeo.",
+    "independencia_del_resultado": "el cambio no altera ningun numero ni el test de hipotesis (FAIL en ambos casos); solo corrige el umbral de la validacion de implementacion. Declarado, no silencioso."
+  }
+}

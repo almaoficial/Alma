@@ -1,0 +1,846 @@
+{
+  "experimento": "ALMA-EXP27",
+  "seeds": [
+    2721,
+    2722,
+    2723,
+    2724,
+    2725,
+    2726,
+    2727,
+    2728
+  ],
+  "por_seed": [
+    {
+      "seed": 2721,
+      "episodios": {
+        "EP1": {
+          "vecino_fingerprint": "C0",
+          "shortlist_fingerprint": [
+            "cot",
+            "single",
+            "plan"
+          ],
+          "shortlist_mapless": [
+            "cot",
+            "single",
+            "reflexion"
+          ],
+          "a_fingerprint": {
+            "regret": -1.0,
+            "candidatas": [
+              "cot",
+              "single",
+              "plan"
+            ],
+            "ganador_probe": "cot",
+            "gap": 0.375,
+            "compromiso": "duro",
+            "acierto_probe": true
+          },
+          "b_mapless": {
+            "regret": 0.0,
+            "candidatas": [
+              "cot",
+              "single",
+              "reflexion"
+            ],
+            "ganador_probe": "cot",
+            "gap": 0.25,
+            "compromiso": "duro",
+            "acierto_probe": true
+          },
+          "c_vecino": {
+            "brazo": "cot",
+            "regret": 0.0
+          },
+          "d_cero": {
+            "regret": 7.0
+          }
+        },
+        "EP2": {
+          "vecino_fingerprint": "C1",
+          "shortlist_fingerprint": [
+            "single",
+            "debate",
+            "plan"
+          ],
+          "shortlist_mapless": [
+            "cot",
+            "single",
+            "reflexion"
+          ],
+          "a_fingerprint": {
+            "regret": 14.0,
+            "candidatas": [
+              "single",
+              "debate",
+              "plan"
+            ],
+            "ganador_probe": "single",
+            "gap": 0.25,
+            "compromiso": "duro",
+            "acierto_probe": false
+          },
+          "b_mapless": {
+            "regret": 10.0,
+            "candidatas": [
+              "cot",
+              "single",
+              "reflexion"
+            ],
+            "ganador_probe": "single",
+            "gap": 0.25,
+            "compromiso": "duro",
+            "acierto_probe": false
+          },
+          "c_vecino": {
+            "brazo": "single",
+            "regret": 17.0
+          },
+          "d_cero": {
+            "regret": 15.0
+          }
+        }
+      },
+      "totales": {
+        "a_fingerprint": 13.0,
+        "b_mapless": 10.0,
+        "c_vecino": 17.0,
+        "d_cero": 22.0,
+        "aciertos_probe_a": "1/2",
+        "aciertos_probe_b": "1/2"
+      }
+    },
+    {
+      "seed": 2722,
+      "episodios": {
+        "EP1": {
+          "vecino_fingerprint": "C0",
+          "shortlist_fingerprint": [
+            "cot",
+            "single",
+            "plan"
+          ],
+          "shortlist_mapless": [
+            "cot",
+            "single",
+            "reflexion"
+          ],
+          "a_fingerprint": {
+            "regret": 3.2,
+            "candidatas": [
+              "cot",
+              "single",
+              "plan"
+            ],
+            "ganador_probe": "cot",
+            "gap": 0.125,
+            "compromiso": "adaptativo",
+            "acierto_probe": true
+          },
+          "b_mapless": {
+            "regret": 13.2,
+            "candidatas": [
+              "cot",
+              "single",
+              "reflexion"
+            ],
+            "ganador_probe": "cot",
+            "gap": 0.0,
+            "compromiso": "adaptativo",
+            "acierto_probe": true
+          },
+          "c_vecino": {
+            "brazo": "cot",
+            "regret": 4.0
+          },
+          "d_cero": {
+            "regret": 4.0
+          }
+        },
+        "EP2": {
+          "vecino_fingerprint": "C1",
+          "shortlist_fingerprint": [
+            "single",
+            "debate",
+            "plan"
+          ],
+          "shortlist_mapless": [
+            "cot",
+            "single",
+            "reflexion"
+          ],
+          "a_fingerprint": {
+            "regret": 28.2,
+            "candidatas": [
+              "single",
+              "debate",
+              "plan"
+            ],
+            "ganador_probe": "single",
+            "gap": 0.125,
+            "compromiso": "adaptativo",
+            "acierto_probe": false
+          },
+          "b_mapless": {
+            "regret": 4.2,
+            "candidatas": [
+              "cot",
+              "single",
+              "reflexion"
+            ],
+            "ganador_probe": "cot",
+            "gap": 0.125,
+            "compromiso": "adaptativo",
+            "acierto_probe": true
+          },
+          "c_vecino": {
+            "brazo": "single",
+            "regret": 12.0
+          },
+          "d_cero": {
+            "regret": 7.0
+          }
+        }
+      },
+      "totales": {
+        "a_fingerprint": 31.4,
+        "b_mapless": 17.4,
+        "c_vecino": 16.0,
+        "d_cero": 11.0,
+        "aciertos_probe_a": "1/2",
+        "aciertos_probe_b": "2/2"
+      }
+    },
+    {
+      "seed": 2723,
+      "episodios": {
+        "EP1": {
+          "vecino_fingerprint": "C0",
+          "shortlist_fingerprint": [
+            "cot",
+            "single",
+            "plan"
+          ],
+          "shortlist_mapless": [
+            "cot",
+            "single",
+            "reflexion"
+          ],
+          "a_fingerprint": {
+            "regret": 3.2,
+            "candidatas": [
+              "cot",
+              "single",
+              "plan"
+            ],
+            "ganador_probe": "cot",
+            "gap": 0.125,
+            "compromiso": "adaptativo",
+            "acierto_probe": true
+          },
+          "b_mapless": {
+            "regret": -1.8,
+            "candidatas": [
+              "cot",
+              "single",
+              "reflexion"
+            ],
+            "ganador_probe": "cot",
+            "gap": 0.125,
+            "compromiso": "adaptativo",
+            "acierto_probe": true
+          },
+          "c_vecino": {
+            "brazo": "cot",
+            "regret": 0.0
+          },
+          "d_cero": {
+            "regret": 7.0
+          }
+        },
+        "EP2": {
+          "vecino_fingerprint": "C1",
+          "shortlist_fingerprint": [
+            "single",
+            "debate",
+            "plan"
+          ],
+          "shortlist_mapless": [
+            "cot",
+            "single",
+            "reflexion"
+          ],
+          "a_fingerprint": {
+            "regret": 29.2,
+            "candidatas": [
+              "single",
+              "debate",
+              "plan"
+            ],
+            "ganador_probe": "single",
+            "gap": 0.0,
+            "compromiso": "adaptativo",
+            "acierto_probe": false
+          },
+          "b_mapless": {
+            "regret": 5.2,
+            "candidatas": [
+              "cot",
+              "single",
+              "reflexion"
+            ],
+            "ganador_probe": "cot",
+            "gap": 0.125,
+            "compromiso": "adaptativo",
+            "acierto_probe": true
+          },
+          "c_vecino": {
+            "brazo": "single",
+            "regret": 22.0
+          },
+          "d_cero": {
+            "regret": 13.0
+          }
+        }
+      },
+      "totales": {
+        "a_fingerprint": 32.4,
+        "b_mapless": 3.4,
+        "c_vecino": 22.0,
+        "d_cero": 20.0,
+        "aciertos_probe_a": "1/2",
+        "aciertos_probe_b": "2/2"
+      }
+    },
+    {
+      "seed": 2724,
+      "episodios": {
+        "EP1": {
+          "vecino_fingerprint": "C0",
+          "shortlist_fingerprint": [
+            "cot",
+            "single",
+            "plan"
+          ],
+          "shortlist_mapless": [
+            "cot",
+            "single",
+            "reflexion"
+          ],
+          "a_fingerprint": {
+            "regret": 6.0,
+            "candidatas": [
+              "cot",
+              "single",
+              "plan"
+            ],
+            "ganador_probe": "cot",
+            "gap": 0.375,
+            "compromiso": "duro",
+            "acierto_probe": true
+          },
+          "b_mapless": {
+            "regret": -3.8,
+            "candidatas": [
+              "cot",
+              "single",
+              "reflexion"
+            ],
+            "ganador_probe": "cot",
+            "gap": 0.125,
+            "compromiso": "adaptativo",
+            "acierto_probe": true
+          },
+          "c_vecino": {
+            "brazo": "cot",
+            "regret": -1.0
+          },
+          "d_cero": {
+            "regret": 12.0
+          }
+        },
+        "EP2": {
+          "vecino_fingerprint": "C1",
+          "shortlist_fingerprint": [
+            "single",
+            "debate",
+            "plan"
+          ],
+          "shortlist_mapless": [
+            "cot",
+            "single",
+            "reflexion"
+          ],
+          "a_fingerprint": {
+            "regret": 20.2,
+            "candidatas": [
+              "single",
+              "debate",
+              "plan"
+            ],
+            "ganador_probe": "single",
+            "gap": 0.125,
+            "compromiso": "adaptativo",
+            "acierto_probe": false
+          },
+          "b_mapless": {
+            "regret": 4.2,
+            "candidatas": [
+              "cot",
+              "single",
+              "reflexion"
+            ],
+            "ganador_probe": "cot",
+            "gap": 0.125,
+            "compromiso": "adaptativo",
+            "acierto_probe": true
+          },
+          "c_vecino": {
+            "brazo": "single",
+            "regret": 18.0
+          },
+          "d_cero": {
+            "regret": -0.0
+          }
+        }
+      },
+      "totales": {
+        "a_fingerprint": 26.2,
+        "b_mapless": 0.4,
+        "c_vecino": 17.0,
+        "d_cero": 12.0,
+        "aciertos_probe_a": "1/2",
+        "aciertos_probe_b": "2/2"
+      }
+    },
+    {
+      "seed": 2725,
+      "episodios": {
+        "EP1": {
+          "vecino_fingerprint": "C0",
+          "shortlist_fingerprint": [
+            "cot",
+            "single",
+            "plan"
+          ],
+          "shortlist_mapless": [
+            "cot",
+            "single",
+            "reflexion"
+          ],
+          "a_fingerprint": {
+            "regret": 0.2,
+            "candidatas": [
+              "cot",
+              "single",
+              "plan"
+            ],
+            "ganador_probe": "cot",
+            "gap": 0.125,
+            "compromiso": "adaptativo",
+            "acierto_probe": true
+          },
+          "b_mapless": {
+            "regret": 4.2,
+            "candidatas": [
+              "cot",
+              "single",
+              "reflexion"
+            ],
+            "ganador_probe": "cot",
+            "gap": 0.125,
+            "compromiso": "adaptativo",
+            "acierto_probe": true
+          },
+          "c_vecino": {
+            "brazo": "cot",
+            "regret": 1.0
+          },
+          "d_cero": {
+            "regret": 14.0
+          }
+        },
+        "EP2": {
+          "vecino_fingerprint": "C1",
+          "shortlist_fingerprint": [
+            "single",
+            "debate",
+            "plan"
+          ],
+          "shortlist_mapless": [
+            "cot",
+            "single",
+            "reflexion"
+          ],
+          "a_fingerprint": {
+            "regret": 15.0,
+            "candidatas": [
+              "single",
+              "debate",
+              "plan"
+            ],
+            "ganador_probe": "single",
+            "gap": 0.25,
+            "compromiso": "duro",
+            "acierto_probe": false
+          },
+          "b_mapless": {
+            "regret": 14.0,
+            "candidatas": [
+              "cot",
+              "single",
+              "reflexion"
+            ],
+            "ganador_probe": "single",
+            "gap": 0.25,
+            "compromiso": "duro",
+            "acierto_probe": false
+          },
+          "c_vecino": {
+            "brazo": "single",
+            "regret": 9.0
+          },
+          "d_cero": {
+            "regret": 9.0
+          }
+        }
+      },
+      "totales": {
+        "a_fingerprint": 15.2,
+        "b_mapless": 18.2,
+        "c_vecino": 10.0,
+        "d_cero": 23.0,
+        "aciertos_probe_a": "1/2",
+        "aciertos_probe_b": "1/2"
+      }
+    },
+    {
+      "seed": 2726,
+      "episodios": {
+        "EP1": {
+          "vecino_fingerprint": "C0",
+          "shortlist_fingerprint": [
+            "cot",
+            "single",
+            "plan"
+          ],
+          "shortlist_mapless": [
+            "cot",
+            "single",
+            "reflexion"
+          ],
+          "a_fingerprint": {
+            "regret": 8.2,
+            "candidatas": [
+              "cot",
+              "single",
+              "plan"
+            ],
+            "ganador_probe": "cot",
+            "gap": 0.125,
+            "compromiso": "adaptativo",
+            "acierto_probe": true
+          },
+          "b_mapless": {
+            "regret": 6.2,
+            "candidatas": [
+              "cot",
+              "single",
+              "reflexion"
+            ],
+            "ganador_probe": "cot",
+            "gap": 0.125,
+            "compromiso": "adaptativo",
+            "acierto_probe": true
+          },
+          "c_vecino": {
+            "brazo": "cot",
+            "regret": 2.0
+          },
+          "d_cero": {
+            "regret": -0.0
+          }
+        },
+        "EP2": {
+          "vecino_fingerprint": "C1",
+          "shortlist_fingerprint": [
+            "single",
+            "debate",
+            "plan"
+          ],
+          "shortlist_mapless": [
+            "cot",
+            "single",
+            "reflexion"
+          ],
+          "a_fingerprint": {
+            "regret": 23.2,
+            "candidatas": [
+              "single",
+              "debate",
+              "plan"
+            ],
+            "ganador_probe": "single",
+            "gap": 0.125,
+            "compromiso": "adaptativo",
+            "acierto_probe": false
+          },
+          "b_mapless": {
+            "regret": 9.2,
+            "candidatas": [
+              "cot",
+              "single",
+              "reflexion"
+            ],
+            "ganador_probe": "cot",
+            "gap": 0.0,
+            "compromiso": "adaptativo",
+            "acierto_probe": true
+          },
+          "c_vecino": {
+            "brazo": "single",
+            "regret": 14.0
+          },
+          "d_cero": {
+            "regret": 7.0
+          }
+        }
+      },
+      "totales": {
+        "a_fingerprint": 31.4,
+        "b_mapless": 15.4,
+        "c_vecino": 16.0,
+        "d_cero": 7.0,
+        "aciertos_probe_a": "1/2",
+        "aciertos_probe_b": "2/2"
+      }
+    },
+    {
+      "seed": 2727,
+      "episodios": {
+        "EP1": {
+          "vecino_fingerprint": "C0",
+          "shortlist_fingerprint": [
+            "cot",
+            "single",
+            "plan"
+          ],
+          "shortlist_mapless": [
+            "cot",
+            "single",
+            "reflexion"
+          ],
+          "a_fingerprint": {
+            "regret": 4.2,
+            "candidatas": [
+              "cot",
+              "single",
+              "plan"
+            ],
+            "ganador_probe": "cot",
+            "gap": 0.125,
+            "compromiso": "adaptativo",
+            "acierto_probe": true
+          },
+          "b_mapless": {
+            "regret": 10.2,
+            "candidatas": [
+              "cot",
+              "single",
+              "reflexion"
+            ],
+            "ganador_probe": "cot",
+            "gap": 0.0,
+            "compromiso": "adaptativo",
+            "acierto_probe": true
+          },
+          "c_vecino": {
+            "brazo": "cot",
+            "regret": -1.0
+          },
+          "d_cero": {
+            "regret": 10.0
+          }
+        },
+        "EP2": {
+          "vecino_fingerprint": "C1",
+          "shortlist_fingerprint": [
+            "single",
+            "debate",
+            "plan"
+          ],
+          "shortlist_mapless": [
+            "cot",
+            "single",
+            "reflexion"
+          ],
+          "a_fingerprint": {
+            "regret": 19.2,
+            "candidatas": [
+              "single",
+              "debate",
+              "plan"
+            ],
+            "ganador_probe": "single",
+            "gap": 0.0,
+            "compromiso": "adaptativo",
+            "acierto_probe": false
+          },
+          "b_mapless": {
+            "regret": 16.2,
+            "candidatas": [
+              "cot",
+              "single",
+              "reflexion"
+            ],
+            "ganador_probe": "cot",
+            "gap": 0.0,
+            "compromiso": "adaptativo",
+            "acierto_probe": true
+          },
+          "c_vecino": {
+            "brazo": "single",
+            "regret": 20.0
+          },
+          "d_cero": {
+            "regret": 5.0
+          }
+        }
+      },
+      "totales": {
+        "a_fingerprint": 23.4,
+        "b_mapless": 26.4,
+        "c_vecino": 19.0,
+        "d_cero": 15.0,
+        "aciertos_probe_a": "1/2",
+        "aciertos_probe_b": "2/2"
+      }
+    },
+    {
+      "seed": 2728,
+      "episodios": {
+        "EP1": {
+          "vecino_fingerprint": "C0",
+          "shortlist_fingerprint": [
+            "cot",
+            "single",
+            "plan"
+          ],
+          "shortlist_mapless": [
+            "cot",
+            "single",
+            "reflexion"
+          ],
+          "a_fingerprint": {
+            "regret": 14.2,
+            "candidatas": [
+              "cot",
+              "single",
+              "plan"
+            ],
+            "ganador_probe": "cot",
+            "gap": 0.0,
+            "compromiso": "adaptativo",
+            "acierto_probe": true
+          },
+          "b_mapless": {
+            "regret": 7.2,
+            "candidatas": [
+              "cot",
+              "single",
+              "reflexion"
+            ],
+            "ganador_probe": "cot",
+            "gap": 0.125,
+            "compromiso": "adaptativo",
+            "acierto_probe": true
+          },
+          "c_vecino": {
+            "brazo": "cot",
+            "regret": 5.0
+          },
+          "d_cero": {
+            "regret": 5.0
+          }
+        },
+        "EP2": {
+          "vecino_fingerprint": "C1",
+          "shortlist_fingerprint": [
+            "single",
+            "debate",
+            "plan"
+          ],
+          "shortlist_mapless": [
+            "cot",
+            "single",
+            "reflexion"
+          ],
+          "a_fingerprint": {
+            "regret": 24.2,
+            "candidatas": [
+              "single",
+              "debate",
+              "plan"
+            ],
+            "ganador_probe": "single",
+            "gap": 0.0,
+            "compromiso": "adaptativo",
+            "acierto_probe": false
+          },
+          "b_mapless": {
+            "regret": 8.2,
+            "candidatas": [
+              "cot",
+              "single",
+              "reflexion"
+            ],
+            "ganador_probe": "cot",
+            "gap": 0.0,
+            "compromiso": "adaptativo",
+            "acierto_probe": true
+          },
+          "c_vecino": {
+            "brazo": "single",
+            "regret": 10.0
+          },
+          "d_cero": {
+            "regret": 2.0
+          }
+        }
+      },
+      "totales": {
+        "a_fingerprint": 38.4,
+        "b_mapless": 15.4,
+        "c_vecino": 15.0,
+        "d_cero": 7.0,
+        "aciertos_probe_a": "1/2",
+        "aciertos_probe_b": "2/2"
+      }
+    }
+  ],
+  "medias_regret": {
+    "a_fingerprint_probe_v2": 26.425,
+    "b_mapless_probe_v2": 13.325,
+    "c_vecino_manual": 16.5,
+    "d_desde_cero_diag": 14.625
+  },
+  "diffs_b_menos_a": [
+    -3.0,
+    -14.0,
+    -29.0,
+    -25.8,
+    3.0,
+    -16.0,
+    3.0,
+    -23.0
+  ],
+  "criterio": "media regret(b) < media regret(a) → PASS (el mapa es peso muerto)",
+  "veredicto": "NO CONFIABLE",
+  "pasa": false,
+  "acierto_probe_global": {
+    "a_fingerprint": "8/16",
+    "b_mapless": "14/16"
+  }
+}

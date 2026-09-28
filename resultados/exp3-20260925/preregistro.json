@@ -1,0 +1,27 @@
+{
+  "experimento": "ALMA-EXP3: probe transfer vs blind borrow",
+  "fecha": "2026-09-25T20:23:54",
+  "criterio_exito": {
+    "reward_ratio_min": 0.9,
+    "cost_ratio_max": 1.25,
+    "min_clases_supera_global": 4
+  },
+  "diseno": {
+    "n_probe": 3,
+    "probe_archs": [
+      "single",
+      "cot"
+    ],
+    "margen_probe": 0.05,
+    "justificacion_probe": "prior empírico: oráculo siempre en {single, cot} en 10 clases EXP1+EXP2; margen pro-barato: no pagar razonamiento caro por ventajas ruidosas en 3 muestras",
+    "fase_c_omitida": "EXP3 evalúa transferencia, no H2"
+  },
+  "versiones": {
+    "alma": "0.1.0",
+    "registry": "1.0.0",
+    "evaluator": "eval-v1",
+    "taxonomia": "tax-v2-exp2"
+  },
+  "seed": 456,
+  "modo": "api"
+}

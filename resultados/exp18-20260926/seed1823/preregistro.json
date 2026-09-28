@@ -1,0 +1,125 @@
+{
+  "experimento": "ALMA-EXP12: el flip real (mejor brazo alterna por bloque)",
+  "fecha": "2026-09-27T10:53:04",
+  "criterio_exito": {
+    "alma_gana_a_mejor_fija": true
+  },
+  "diseno": {
+    "problemas": "72 sintéticos (6 clases x 12) + 24 GSM8K frescos + 24 MMLU frescos (0 reutilizados del oráculo de EXP11); selección seed 1212 en data_exp12/seleccion.json",
+    "stream": "10 bloques x 12, clase-puros; ordenados tras el oráculo (greedy determinista) para alternar el mejor brazo",
+    "oraculo": "3 brazos x 2 intentos por problema (fases 12A-oracle-r1/r2)",
+    "politica": "probe q=0,1,2 + re-probe q=10,11 (3 brazos) + Thompson resto; prior warm con olvido 0.5^d; regla: default single, cambio si mejor alt. supera por > 0.05",
+    "comparacion": "mejor brazo fijo entre los 3 (replay del oráculo)",
+    "rng": "pareado por (bloque,q), seed 1212",
+    "freno_costo": "si proyección tras oráculo > US$1,00: detener (exit 2)"
+  },
+  "orden_bloques": [
+    {
+      "bloque": "calculo",
+      "mejor_oraculo": "cot",
+      "margen": 0.115,
+      "medias": {
+        "single": 0.45,
+        "cot": 0.565,
+        "reflexion": 0.425
+      }
+    },
+    {
+      "bloque": "codigo",
+      "mejor_oraculo": "single",
+      "margen": 0.01,
+      "medias": {
+        "single": 0.95,
+        "cot": 0.94,
+        "reflexion": 0.8
+      }
+    },
+    {
+      "bloque": "qa_multihop",
+      "mejor_oraculo": "cot",
+      "margen": 0.115,
+      "medias": {
+        "single": 0.6375,
+        "cot": 0.7525,
+        "reflexion": 0.5813
+      }
+    },
+    {
+      "bloque": "herramientas",
+      "mejor_oraculo": "single",
+      "margen": 0.0725,
+      "medias": {
+        "single": 0.325,
+        "cot": 0.2525,
+        "reflexion": 0.1125
+      }
+    },
+    {
+      "bloque": "logica",
+      "mejor_oraculo": "cot",
+      "margen": 0.115,
+      "medias": {
+        "single": 0.825,
+        "cot": 0.94,
+        "reflexion": 0.8
+      }
+    },
+    {
+      "bloque": "puzzles",
+      "mejor_oraculo": "single",
+      "margen": 0.01,
+      "medias": {
+        "single": 0.2,
+        "cot": 0.19,
+        "reflexion": 0.05
+      }
+    },
+    {
+      "bloque": "gsm8k-a",
+      "mejor_oraculo": "cot",
+      "margen": 0.1712,
+      "medias": {
+        "single": 0.325,
+        "cot": 0.69,
+        "reflexion": 0.5188
+      }
+    },
+    {
+      "bloque": "mmlu-a",
+      "mejor_oraculo": "single",
+      "margen": 0.0413,
+      "medias": {
+        "single": 0.7,
+        "cot": 0.6587,
+        "reflexion": 0.55
+      }
+    },
+    {
+      "bloque": "gsm8k-b",
+      "mejor_oraculo": "cot",
+      "margen": 0.1087,
+      "medias": {
+        "single": 0.2,
+        "cot": 0.5962,
+        "reflexion": 0.4875
+      }
+    },
+    {
+      "bloque": "mmlu-b",
+      "mejor_oraculo": "cot",
+      "margen": 0.0212,
+      "medias": {
+        "single": 0.7313,
+        "cot": 0.7525,
+        "reflexion": 0.6125
+      }
+    }
+  ],
+  "alternancias": "8/9",
+  "brazos_en_juego": [
+    "cot",
+    "single"
+  ],
+  "seed": 1823,
+  "modo": "api"
+}

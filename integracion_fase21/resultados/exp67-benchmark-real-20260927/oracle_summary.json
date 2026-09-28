@@ -1,0 +1,41 @@
+{
+  "fase": "oraculo",
+  "meta": {
+    "experimento": "ALMA-EXP67 oraculo (ground truth)",
+    "problemas": 180,
+    "pulls": 1080,
+    "llamadas_api": 1080,
+    "costo_total_usd": 0.3609,
+    "freno_usd": 0.55,
+    "duracion_s": 3822.0
+  },
+  "slices": {
+    "gsm8k": {
+      "n_problemas": 60,
+      "n_pulls": 360,
+      "media_reward": {
+        "single": 0.6333,
+        "cot": 0.9667,
+        "reflexion": 0.95
+      }
+    },
+    "mmlu": {
+      "n_problemas": 60,
+      "n_pulls": 360,
+      "media_reward": {
+        "single": 0.9167,
+        "cot": 0.8,
+        "reflexion": 0.8
+      }
+    },
+    "mbpp": {
+      "n_problemas": 60,
+      "n_pulls": 360,
+      "media_reward": {
+        "single": 0.1083,
+        "cot": 0.0583,
+        "reflexion": 0.05
+      }
+    }
+  }
+}

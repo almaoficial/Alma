@@ -1,0 +1,55 @@
+{
+  "experimento": "ALMA-EXP54: TTRL — adaptación online intra-bloque (mock, US$0)",
+  "fase": "mock",
+  "fecha": "2026-09-27T19:57:03",
+  "hipotesis": "En los bloques con probe, gastar los items 3,4,5 en rollouts de consenso round-robin entre los dos brazos con mayor media del bandit post-probe y jugar greedy el ganador del consenso en los items Thompson restantes reduce el regret frente al Thompson post-probe de EXP51, porque el consenso compra identificación barata a mitad de bloque.",
+  "nota_refutacion": "Riesgo doble: (1) 3 rollouts son ruidosos (~2/10 de ruido por bloque) y pueden coronar al brazo equivocado; (2) el commit greedy abandona la exploración de Thompson y amplifica el error en 2-4 items si el consenso se equivoca. Si el efecto >= 0, la adaptación intra-bloque no compra nada en este mundo.",
+  "condicion_alcance": "En mundos sin recurrencia (feed real: rotación 8/8 en EXP44) las skills nunca alcanzan soporte fuerte (>=2 victorias pareadas): el mecanismo de salto de probe solo opera donde hay recurrencia. No generalizar a streams sin recurrencia.",
+  "stream": {
+    "fuente": "IDÉNTICO al de EXP47/48/49/50/51/53 (misma función run_experiment47.construir_stream, bit-idéntico): 240 items, 24 bloques x 10, 3 regímenes x 8 recurrencias.",
+    "n_items": 240,
+    "bloques": 24,
+    "tam_bloque": 10,
+    "regimenes": [
+      "dinero",
+      "tech",
+      "deportes",
+      "deportes",
+      "tech",
+      "deportes",
+      "tech",
+      "tech",
+      "deportes",
+      "dinero",
+      "dinero",
+      "dinero",
+      "deportes",
+      "dinero",
+      "deportes",
+      "dinero",
+      "deportes",
+      "dinero",
+      "tech",
+      "tech",
+      "deportes",
+      "tech",
+      "dinero",
+      "tech"
+    ],
+    "oraculo": "tasas mock calibradas por categoría (data_exp44/tasas.json)",
+    "sesgo_seleccion": "Stream CONSTRUIDO (no es el feed crudo): las categorías se sortean con las frecuencias empíricas del feed real de Muse (22-27/9/2026), pero la secuencia de regímenes está diseñada (3 regímenes x 8 recurrencias). Es el mundo mínimo donde una skill PUEDE ayudar: sin recurrencia, el mecanismo es intestable por definición (lección EXP44: rotación 8/8 mata cualquier aprendizaje). EXTENSIÓN ESTRICTA de EXP46: los bloques 0-11 son bit-idénticos a EXP46 (mismo orden, misma secuencia de sorteo con random.Random(45), mismo namespace de RNG del oráculo); los bloques 12-23 agregan 4 recurrencias más por régimen."
+  },
+  "politicas": {
+    "control": "La política de EXP51 VERBATIM (run_experiment51.correr_replica_probe_barato, importada sin copiar).",
+    "ttrl": "COPIA VERBATIM del control, salvo UN moving part en bloques CON probe: (1) candidatos = top-2 brazos por media del bandit post-probe (desempate: menor índice); (2) consenso round-robin c1,c2,c1 en los items 3,4,5 (reemplaza al Thompson del control; cada jugada observa solo el brazo jugado; sorteos pareados); (3) voto: ganador = media estrictamente mayor, empate -> sin ganador; (4) commit: greedy del ganador en los Thompson restantes (gate: 6,7,8,9; sin gate: 8,9; el re-probe Q2 6,7 sin gate es idéntico al control); sin ganador -> Thompson idéntico al control. probe_obs, Q1, Q2, gate y skip idénticos al control por construcción."
+  },
+  "rng": "namespaces del oráculo idénticos a EXP45-53 ('exp45-r{rep}-b{b}-q{q}-{a}'). Fallback a Thompson usa el namespace '-sel' por (b,q) igual que el control. Pareado por réplica.",
+  "criterio": {
+    "efecto": "regret(ttrl) - regret(control-EXP51) sobre 24 bloques, media sobre réplicas (pareadas, RNG común)",
+    "pasa_1": "media(efecto) < 0  [misma vara de refutación]",
+    "pass": "pasa_1",
+    "diagnostico_auxiliar": "tasa de commit (bloques con ganador / bloques con probe); accuracy del ganador del consenso vs mejor brazo ex-post en items de commit; efecto sin la mejor réplica; distancia de ambas políticas a la mejor fija; reproducibilidad bit-idéntica del control vs tratamiento de EXP51 (columna reg_trat_bloques)."
+  },
+  "replicas": 5,
+  "modo": "mock, US$0"
+}

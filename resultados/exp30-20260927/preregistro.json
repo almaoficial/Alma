@@ -1,0 +1,11 @@
+{
+  "experimento": "ALMA-EXP30",
+  "fecha": "2026-09-27",
+  "pregunta": "¿El umbral de ruido 0.15 del probe (parámetro vivo en producción) es una elección robusta o un filo de navaja?",
+  "contexto": "Los gaps reales medidos se amontonan en 0.14, justo debajo del umbral 0.15. Casi todo probe cae en 'adaptativo'. Si el umbral está mal calibrado, o bien nunca nos comprometemos cuando deberíamos, o nos comprometemos con ruido.",
+  "hipotesis": "0.15 es robusto: su regret medio a través de gaps verdaderos está dentro del 15% del mejor umbral.",
+  "diseno": "100% mock, US$0. 2 brazos (A mejor con p=0.7, B con p=0.7-g). Probe: 8 pulls por brazo (Bernoulli). Si gap_medido > t → compromiso con el ganador medido; si no → Thompson adaptativo por 40 pulls (el probe cuenta como historia). Gaps verdaderos g en {0.03,0.06,0.10,0.14,0.18,0.25,0.40}; umbrales t en {0.05,0.10,0.15,0.20,0.30}. 8 seeds × 200 episodios por celda. Métrica: regret medio vs oráculo por (g,t).",
+  "criterio": "PASS si el regret medio de t=0.15 a través de gaps está dentro del 15% del mejor umbral. Se reporta además el umbral minimax (menor peor-caso).",
+  "regla_confiabilidad": "si el ranking de umbrales se invierte entre seeds (0.15 entre los mejores en algunas y entre los peores en otras) → NO CONFIABLE.",
+  "costo": "US$0 (mock)"
+}

@@ -1,0 +1,81 @@
+{
+  "experimento": "ALMA-EXP16: replicación multi-seed de ALMA v2 — ¿son confiables los veredictos de una sola seed?",
+  "fecha": "2026-09-26T16:00:57",
+  "criterio_exito": {
+    "rango_max_confiable": 1.0,
+    "interpretacion": "rango(max-min) del regret entre seeds > 1.0 => veredictos de una sola seed NO confiables; < 1.0 => se sostienen"
+  },
+  "diseno": {
+    "oraculo": "COPIADO de EXP12 (3 brazos x 2 intentos, 720 mediciones, fases 16A-*); sin medir de nuevo",
+    "stream": "10 bloques x 12 idéntico a EXP12 (verificado), flip real 8/9 alternancias",
+    "politica": "réplica exacta de ALMA v2 de EXP13 (probe q=0,1,2 + re-probe q=10,11; Thompson; prior warm con olvido 0.5^d; fix1: default = prior-best warm, cambio si alternativo supera por > 0.05; fix2: poda de brazos muertos). Fases propias por seed: 16B-s{seed}-probe/full (pulls frescos por réplica).",
+    "seeds": [
+      1616,
+      1717,
+      1818,
+      1919
+    ],
+    "comparacion": "mejor brazo fijo entre los 3 (replay del oráculo)",
+    "rng": "pareado por (seed,bloque,q)",
+    "freno_costo": "si proyección > US$1,00: detener (exit 2)"
+  },
+  "orden_bloques": [
+    {
+      "bloque": "calculo",
+      "mejor_oraculo": "cot",
+      "margen": 0.115
+    },
+    {
+      "bloque": "codigo",
+      "mejor_oraculo": "single",
+      "margen": 0.01
+    },
+    {
+      "bloque": "qa_multihop",
+      "mejor_oraculo": "cot",
+      "margen": 0.115
+    },
+    {
+      "bloque": "herramientas",
+      "mejor_oraculo": "single",
+      "margen": 0.0413
+    },
+    {
+      "bloque": "logica",
+      "mejor_oraculo": "cot",
+      "margen": 0.115
+    },
+    {
+      "bloque": "puzzles",
+      "mejor_oraculo": "single",
+      "margen": 0.01
+    },
+    {
+      "bloque": "gsm8k-a",
+      "mejor_oraculo": "cot",
+      "margen": 0.1087
+    },
+    {
+      "bloque": "mmlu-a",
+      "mejor_oraculo": "single",
+      "margen": 0.01
+    },
+    {
+      "bloque": "gsm8k-b",
+      "mejor_oraculo": "cot",
+      "margen": 0.1712
+    },
+    {
+      "bloque": "mmlu-b",
+      "mejor_oraculo": "cot",
+      "margen": 0.0525
+    }
+  ],
+  "seed": [
+    1616,
+    1717,
+    1818,
+    1919
+  ],
+  "modo": "mock"
+}

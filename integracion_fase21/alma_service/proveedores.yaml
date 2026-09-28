@@ -1,0 +1,133 @@
+# Registry de proveedores del router ALMA (fase 2.x)
+#
+# Qué es: el único lugar donde el router mira para decidir qué proveedor usar.
+# Cada entry describe UN proveedor con metadata MEDIDA (nunca secretos: las
+# keys viven en el vault y el router solo ve IDs y estadísticas).
+#
+# Formato elegido: YAML (no JSON) porque permite comentarios con la
+# procedencia de cada número — la trazabilidad es parte del diseño.
+#
+# Cómo se recarga con nuevas mediciones: ver NOTA.md.
+# NOTA: registro.py reescribe este archivo al persistir cambios de estado;
+# la procedencia por campaña vive en el campo `fuente` (dato, no comentario)
+# y se preserva. Los comentarios de este encabezado se regeneran.
+
+proveedores:
+  - id: deepseek
+    connector: custom.deepseek
+    modelos: [deepseek-flash]
+    hosts_permitidos: [api.deepseek.com]
+    ping_url: https://api.deepseek.com/models
+    credencial_entry: access_token
+    habilitado: true
+    estado:
+      disponibilidad: disponible
+      motivo: null
+      fecha: null
+    ultima_medicion: "2026-09-27"
+    # Oráculo EXP67 (noche 27/9): 1080 pulls, 180 problemas frescos
+    # (60/slice: gsm8k, mmlu, mbpp), deepseek-flash, esfuerzo none/high/max.
+    # Fuente: resultados/exp67-benchmark-real-20260927/oracle_pulls.jsonl
+    # y oracle_summary.json. Costo total medido: US$0,3609.
+    mediciones:
+      - campana: exp67-oraculo
+        fecha: "2026-09-27"
+        fuente: "EXP67 oráculo: 1080 pulls, 180 problemas frescos (60/slice), deepseek-flash, costo total US$0,3609"
+        celdas:
+          gsm8k/single:     {n: 120, reward_medio: 0.6333, costo_medio_usd: 0.0000142}
+          gsm8k/cot:        {n: 120, reward_medio: 0.9667, costo_medio_usd: 0.0002122}
+          gsm8k/reflexion:  {n: 120, reward_medio: 0.9500, costo_medio_usd: 0.0004129}
+          mmlu/single:      {n: 120, reward_medio: 0.9167, costo_medio_usd: 0.0000243}
+          mmlu/cot:        {n: 120, reward_medio: 0.8000, costo_medio_usd: 0.0002848}
+          mmlu/reflexion:  {n: 120, reward_medio: 0.8000, costo_medio_usd: 0.0005273}
+          mbpp/single:     {n: 120, reward_medio: 0.1083, costo_medio_usd: 0.0000377}
+          mbpp/cot:        {n: 120, reward_medio: 0.0583, costo_medio_usd: 0.0004848}
+          mbpp/reflexion:  {n: 120, reward_medio: 0.0500, costo_medio_usd: 0.0010094}
+
+  - id: openai
+    connector: custom.openai
+    modelos: [gpt-4o-mini]
+    hosts_permitidos: [api.openai.com]
+    ping_url: https://api.openai.com/v1/models
+    credencial_entry: access_token
+    habilitado: true
+    estado:
+      disponibilidad: disponible
+      motivo: null
+      fecha: null
+    ultima_medicion: "2026-09-27"
+    # Piloto EXP69 (noche 27/9): 180 pulls, 30 problemas (10/slice),
+    # gpt-4o-mini, brazos por prompting (sin dial de esfuerzo en este
+    # proveedor — asimetría documentada en el pre-registro del EXP69).
+    # Precios lista verificados 27/9: 0.15/0.60 USD por 1M tokens (in/out).
+    # Fuente: resultados/exp69-router-proveedores-20260927/openai_pulls.jsonl
+    # y openai_summary.json. Costo total medido: US$0,0276.
+    # CAVEAT: n=20 por celda (piloto) — confianza menor que el oráculo
+    # DeepSeek (n=120). No usar estos números como verdad final.
+    mediciones:
+      - campana: exp69-piloto
+        fecha: "2026-09-27"
+        fuente: "EXP69 piloto: 180 pulls, 30 problemas (10/slice), gpt-4o-mini, precios 0.15/0.60 USD por 1M (in/out), costo total US$0,0276. n=20/celda: confianza menor que oráculo DeepSeek"
+        celdas:
+          gsm8k/single:     {n: 20, reward_medio: 0.3000, costo_medio_usd: 0.0000177}
+          gsm8k/cot:        {n: 20, reward_medio: 1.0000, costo_medio_usd: 0.0001827}
+          gsm8k/reflexion:  {n: 20, reward_medio: 1.0000, costo_medio_usd: 0.0002336}
+          mmlu/single:      {n: 20, reward_medio: 0.6000, costo_medio_usd: 0.0000278}
+          mmlu/cot:        {n: 20, reward_medio: 0.5000, costo_medio_usd: 0.0002119}
+          mmlu/reflexion:  {n: 20, reward_medio: 0.7000, costo_medio_usd: 0.0002506}
+          mbpp/single:     {n: 20, reward_medio: 0.0000, costo_medio_usd: 0.0000387}
+          mbpp/cot:        {n: 20, reward_medio: 0.0000, costo_medio_usd: 0.0001808}
+          mbpp/reflexion:  {n: 20, reward_medio: 0.0000, costo_medio_usd: 0.0002365}
+
+  - id: anthropic
+    connector: custom.anthropic
+    modelos: [claude-haiku-4-5-20251001]
+    hosts_permitidos: [api.anthropic.com]
+    ping_url: https://api.anthropic.com/v1/models
+    credencial_entry: access_token
+    habilitado: true
+    estado:
+      disponibilidad: disponible
+      motivo: null
+      fecha: null
+    ultima_medicion: "2026-09-28"
+    # Piloto EXP70 (madrugada 28/9): 63 pulls en 24 problemas
+    # del subset pilot (8 gsm8k / 8 mmlu / 8 mbpp... mbpp parcial
+    # n=5), claude-haiku-4-5-20251001, brazos por prompting
+    # (single/cot/reflexion, max_tokens 256/1024/2048).
+    # Precios lista verificados 28/9: 1/5 USD por 1M (in/out).
+    # Fuente: resultados/exp70-claude-pilot-20260928/.
+    # CAVEAT: n=8/5 por celda (piloto) — confianza menor que oraculo.
+    mediciones:
+      - campana: exp70-piloto
+        fecha: "2026-09-28"
+        fuente: "EXP70 piloto: 63 pulls, 24 problemas del subset pilot (disjuntos del stream del oraculo), claude-haiku-4-5-20251001, precios 1/5 USD por 1M (in/out), costo total US$0.1028. n=8/5 por celda: confianza menor que oraculo"
+        celdas:
+          gsm8k/single: {n: 8, reward_medio: 0.3750, costo_medio_usd: 0.000178}
+          gsm8k/cot:    {n: 8, reward_medio: 1.0000, costo_medio_usd: 0.001475}
+          gsm8k/reflexion: {n: 8, reward_medio: 1.0000, costo_medio_usd: 0.002150}
+          mmlu/single:  {n: 8, reward_medio: 1.0000, costo_medio_usd: 0.000245}
+          mmlu/cot:     {n: 8, reward_medio: 1.0000, costo_medio_usd: 0.002055}
+          mmlu/reflexion: {n: 8, reward_medio: 1.0000, costo_medio_usd: 0.002794}
+          mbpp/single:  {n: 5, reward_medio: 0.0000, costo_medio_usd: 0.000637}
+          mbpp/cot:     {n: 5, reward_medio: 0.0000, costo_medio_usd: 0.002331}
+          mbpp/reflexion: {n: 5, reward_medio: 0.0000, costo_medio_usd: 0.003356}
+    # EXP67-Claude-Full (madrugada 28/9): replica del oraculo EXP67
+    # (790 pulls, seccion stream del manifiesto — mismos 180
+    # problemas que el oraculo DeepSeek),
+    # claude-haiku-4-5-20251001, 3 brazos x 2 intentos.
+    # Fuente: resultados/exp67-claude-full-20260928/.
+    # CAVEAT: MEDICION PARCIAL (790/1080 pulls): n por celda desigual.
+      - campana: exp67-claude-full
+        fecha: "2026-09-28"
+        fuente: "EXP67-Claude-Full (PARCIAL): 790 pulls, 180 problemas del stream (mismos que oraculo DeepSeek), claude-haiku-4-5-20251001, costo total US$1.3865. MEDICION PARCIAL (790/1080 pulls): n por celda desigual."
+        celdas:
+          gsm8k/single: {n: 104, reward_medio: 0.6154, costo_medio_usd: 0.000150}
+          gsm8k/cot:    {n: 104, reward_medio: 0.9808, costo_medio_usd: 0.001335}
+          gsm8k/reflexion: {n: 102, reward_medio: 0.9706, costo_medio_usd: 0.002224}
+          mmlu/single:  {n: 80, reward_medio: 0.8500, costo_medio_usd: 0.000298}
+          mmlu/cot:     {n: 80, reward_medio: 0.9000, costo_medio_usd: 0.002281}
+          mmlu/reflexion: {n: 80, reward_medio: 0.9000, costo_medio_usd: 0.002995}
+          mbpp/single:  {n: 80, reward_medio: 0.0750, costo_medio_usd: 0.000756}
+          mbpp/cot:     {n: 80, reward_medio: 0.1000, costo_medio_usd: 0.002454}
+          mbpp/reflexion: {n: 80, reward_medio: 0.1125, costo_medio_usd: 0.003783}

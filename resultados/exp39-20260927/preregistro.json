@@ -1,0 +1,20 @@
+{
+  "experimento": "ALMA-EXP39: common random numbers para las tres reglas",
+  "fecha": "2026-09-27T17:59:48",
+  "motivacion": "EXP38: el camino aleatorio de Thompson (+-7pts) domina al efecto-regla (+-1-2); la serie 36/37/38 mezclo ambos por namespaces de semilla distintos.",
+  "diseno": {
+    "reglas": {
+      "regla36": "EXP36 original (desempate a favorito del prior)",
+      "regla37": "EXP37 (penal por cambio + desempate a flat)",
+      "regla38": "EXP38 (desempate a flat, umbral calibrado k=1)"
+    },
+    "common_random_numbers": "dentro de cada replica, las tres reglas usan el mismo namespace de semilla de Thompson 'exp39-r{replica}-{b}-{h}'; el probe/spy es determinista, asi que la diferencia intra-replica es efecto-regla puro",
+    "replicas": 6,
+    "stream": "identico a EXP36/37/38: Kraken XBTUSD 1h, 720 velas, 719 retornos"
+  },
+  "criterio": {
+    "efecto": "P&L_regla(replica) - P&L_buyhold",
+    "pass": "alguna regla con media(efecto) > 0 y media(efecto) - 1*desvio(efecto) > -0.01"
+  },
+  "modo": "mock, replay puro, US$0"
+}

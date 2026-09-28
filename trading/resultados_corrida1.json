@@ -1,0 +1,50 @@
+{
+  "parametros_congelados": {
+    "ventana_probe": 63,
+    "umbral_evi": 5.0,
+    "umbral_cd": 2.0
+  },
+  "in_sample": [
+    "2015-01-02",
+    "2020-12-31"
+  ],
+  "out_sample": [
+    "2021-01-01",
+    "2026-09-25"
+  ],
+  "metricas_out_sample": {
+    "alma": {
+      "retorno_neto": -0.6622456370218219,
+      "sharpe": -0.25315262343101436,
+      "max_drawdown": 4.512689767869892,
+      "dias": 1439
+    },
+    "fijo_hold": {
+      "retorno_neto": 0.9669139638746336,
+      "sharpe": 0.7943750197789193,
+      "max_drawdown": 0.3512089722739973,
+      "dias": 1439
+    },
+    "fijo_momentum": {
+      "retorno_neto": -0.1399408039088561,
+      "sharpe": 0.11673860374676648,
+      "max_drawdown": 1.2549735866990082,
+      "dias": 1439
+    },
+    "fijo_reversion": {
+      "retorno_neto": 1.8135752386927448,
+      "sharpe": 0.6343077629456828,
+      "max_drawdown": 1.382120508921766,
+      "dias": 1439
+    },
+    "fijo_cash": {
+      "retorno_neto": 0.0,
+      "sharpe": 0.0,
+      "max_drawdown": 0.0,
+      "dias": 1439
+    }
+  },
+  "criterio": "ret(ALMA)>ret(hold) y maxDD(ALMA)<=1.2*maxDD(hold); cond1=False, cond2=False",
+  "veredicto": "FAIL",
+  "n_decisiones_alma": 136
+}

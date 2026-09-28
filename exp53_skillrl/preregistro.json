@@ -1,0 +1,17 @@
+{
+  "experimento": "ALMA-EXP53: banco de skills versionado con scoring (idea oriental SkillRL) vs diario plano (mock, US$0)",
+  "serie": "ideas orientales (nueva; no reapertura de EXP45-52)",
+  "fase": "mock",
+  "fecha": "2026-09-27T19:53:35",
+  "preregistro_canonico": "exp53_skillrl/preregistro.md",
+  "hipotesis": "Un banco de skills versionado con scoring (win-rate con decaimiento por firma, retrieval de mejor score, evolución del campeón, deprecación) reduce el regret frente al prior plano de EXP51: media sobre réplicas pareadas de regret(skill-bank) - regret(control) < 0.",
+  "moving_part": "SOLO la representación de la memoria: diario plano -> SkillBank (versionado, scoring con decaimiento D=0.5, retrieval mejor score, evolución, deprecación score<0.25). Prior de Thompson concentrado en el campeón (N0=2); resto uniforme. Soporte del skip y gate Q1: reglas idénticas al control.",
+  "nota_refutacion": "Riesgo: la concentración olvida brazos no-campeones (prior más frágil si el campeón está stale); la evolución por victorias ruidosas puede migrar al brazo equivocado.",
+  "criterio": {
+    "efecto": "regret(skill-bank) - regret(control-EXP51), media sobre réplicas pareadas",
+    "pass": "media(efecto) < 0"
+  },
+  "reproducibilidad_control": "reg_control_bloques por réplica debe ser bit-idéntico al TRATAMIENTO de EXP51 (la política probe-barato, que es el control de EXP53): resultados/exp51-20260927/report.json -> reg_trat_bloques ([78.0, 86.0, 93.0, 95.0, 80.0]); si no, no válido.",
+  "rng": "namespaces idénticos al control ('exp45-...'); oráculo bit-idéntico; Thompson diverge legítimamente por priors distintos.",
+  "modo": "mock, US$0"
+}

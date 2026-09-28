@@ -1,0 +1,19 @@
+{
+  "experimento": "ALMA-EXP37: desempate a flat + costo de exploración",
+  "fecha": "2026-09-27T17:57:31",
+  "cambios_vs_exp36": {
+    "a": "desempate del probe hacia 'flat' si brecha < UMBRAL_SENAL",
+    "b": "CAMBIO_PENAL=0.01 a todo brazo != brazo anterior; sin brecha clara -> bloque completo en flat (sin Thompson)"
+  },
+  "umbrales": {
+    "UMBRAL_SENAL": 0.02,
+    "CAMBIO_PENAL": 0.01
+  },
+  "criterio_principal": "pnl_total(alma37) > pnl_total(mejor_fija)",
+  "criterio_secundario": {
+    "recorta_sangrado": "pnl_h1_37 > -0.04213 (EXP36)",
+    "no_pierde_tendencia": "pnl_h2_37 >= 0.12671 - 0.02"
+  },
+  "stream": "idéntico a EXP36: Kraken XBTUSD 1h, 720 velas, 719 retornos",
+  "modo": "mock, replay puro, US$0"
+}

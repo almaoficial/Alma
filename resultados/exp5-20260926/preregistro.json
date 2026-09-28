@@ -1,0 +1,28 @@
+{
+  "experimento": "ALMA-EXP5: mundo no estacionario (drift)",
+  "fecha": "2026-09-26T00:28:58",
+  "criterio_exito": {
+    "gana_a_mejor_fija": true,
+    "gana_a_thompson_global": true,
+    "min_bloques_gana_vs_fija": 6
+  },
+  "diseno": {
+    "stream": "10 clases x 12 problemas, bloques alternados (seed 999)",
+    "oraculo": "por problema, mejor de {single, cot} (fase 5A)",
+    "politicas": [
+      "fija-single",
+      "fija-cot",
+      "thompson-global",
+      "alma-full"
+    ],
+    "alma-full": "bandit por clase + warm-start repertorio hacia adelante (n0=2) + probe 3 problemas (margen 0.05)",
+    "rng": "pareado por posición de stream entre políticas"
+  },
+  "versiones": {
+    "alma": "0.1.0",
+    "registry": "1.0.0",
+    "evaluator": "eval-v1"
+  },
+  "seed": 999,
+  "modo": "api"
+}

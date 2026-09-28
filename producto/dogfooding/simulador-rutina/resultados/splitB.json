@@ -1,0 +1,112 @@
+{
+  "split": "B",
+  "seeds": {
+    "world": 202,
+    "loop": 2001,
+    "tglobal": 2002
+  },
+  "n_dias": 120,
+  "ventana_eval": [
+    61,
+    120
+  ],
+  "politicas": {
+    "alma_full": {
+      "energia_eval": {
+        "n": 60,
+        "media": 6.526944033055033,
+        "sd": 1.2996927804529954
+      },
+      "reward_eval": {
+        "n": 60,
+        "media": 0.6748734247931693,
+        "sd": 0.16682026744575587
+      },
+      "cumplimiento_eval": 0.8166666666666667,
+      "tasa_probe_eval": 0.5833333333333334,
+      "mapa_fija": null,
+      "skip_days_total": 0,
+      "probe_days_total": 72
+    },
+    "mejor_fija": {
+      "energia_eval": {
+        "n": 60,
+        "media": 6.793465693862254,
+        "sd": 1.4406520654614228
+      },
+      "reward_eval": {
+        "n": 60,
+        "media": 0.7006028873003974,
+        "sd": 0.1473790498599153
+      },
+      "cumplimiento_eval": 0.8333333333333334,
+      "tasa_probe_eval": 0.0,
+      "mapa_fija": {
+        "libre": "playa",
+        "turno": "descanso"
+      }
+    },
+    "thompson_global": {
+      "energia_eval": {
+        "n": 60,
+        "media": 6.148404621544148,
+        "sd": 1.4269885943356495
+      },
+      "reward_eval": {
+        "n": 60,
+        "media": 0.6404314705645449,
+        "sd": 0.16651981227731763
+      },
+      "cumplimiento_eval": 0.8,
+      "tasa_probe_eval": 0.5333333333333333,
+      "mapa_fija": null
+    }
+  },
+  "delta_loop_vs_fija": {
+    "delta": -0.2665216608072214,
+    "ic95": [
+      -0.7605826761029295,
+      0.2199915297797217
+    ],
+    "pass": false
+  },
+  "delta_loop_vs_tglobal": {
+    "delta": 0.3785394115108849,
+    "ic95": [
+      -0.1002024314641572,
+      0.8693139911138443
+    ]
+  },
+  "bloques": [
+    {
+      "start": 1,
+      "len": 21,
+      "p_turno": 0.8
+    },
+    {
+      "start": 22,
+      "len": 18,
+      "p_turno": 0.5
+    },
+    {
+      "start": 40,
+      "len": 25,
+      "p_turno": 0.35
+    },
+    {
+      "start": 65,
+      "len": 25,
+      "p_turno": 0.35
+    },
+    {
+      "start": 90,
+      "len": 18,
+      "p_turno": 0.8
+    },
+    {
+      "start": 108,
+      "len": 20,
+      "p_turno": 0.35
+    }
+  ]
+}

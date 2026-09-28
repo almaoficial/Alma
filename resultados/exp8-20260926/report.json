@@ -1,0 +1,68 @@
+{
+  "preregistro": {
+    "experimento": "ALMA-EXP8: oráculo de 3 intentos (enderezar la vara)",
+    "fecha": "2026-09-26T02:01:53",
+    "criterio_exito": {
+      "exp5_mantiene_pass": true,
+      "exp6_mantiene_fail": true,
+      "exp7_mantiene_pass": true
+    },
+    "diseno": {
+      "oraculo": "3 intentos por (problema, brazo): 5A-oracle + 8A-oracle-r2 + 8A-oracle-r3; vara = max sobre brazos del promedio de 3",
+      "politicas": "replay de datos guardados, 0 llamadas nuevas",
+      "stream": "reutilizado de EXP5: 10 clases x 12, seed 999"
+    },
+    "seed": 999,
+    "modo": "api"
+  },
+  "vara": {
+    "intentos_por_celda": 3,
+    "celdas_con_variacion": 4,
+    "dispersion_media_entre_intentos": 0.3536
+  },
+  "re_evaluacion": {
+    "exp5": {
+      "veredicto_original": "PASS",
+      "veredicto_nuevo": "PASS",
+      "regret": {
+        "alma-full": 2.15,
+        "fija-single": 5.42,
+        "fija-cot": 2.87,
+        "thompson-global": 2.24
+      },
+      "bloques_ganados_vs_mejor_fija": 9
+    },
+    "exp6": {
+      "veredicto_original": "FAIL",
+      "veredicto_nuevo": "FAIL",
+      "regret": {
+        "exp6-probe5": 4.36,
+        "exp6-control": 2.15
+      }
+    },
+    "exp7": {
+      "veredicto_original": "PASS",
+      "veredicto_nuevo": "PASS",
+      "regret": {
+        "exp7-continuo": -0.88,
+        "exp7-control": 2.15
+      }
+    }
+  },
+  "costo_total_usd": 0.0311,
+  "experiencias_nuevas": 480,
+  "veredicto": {
+    "pasa": true,
+    "criterio": {
+      "exp5_mantiene_pass": true,
+      "exp6_mantiene_fail": true,
+      "exp7_mantiene_pass": true
+    },
+    "motivos": [
+      "EXP5: PASS → PASS (alma-full 2.15 vs mejor fija 2.87)",
+      "EXP6: FAIL → FAIL (probe5 4.36 vs control 2.15)",
+      "EXP7: PASS → PASS (continuo -0.88 vs control 2.15)"
+    ]
+  },
+  "duracion_s": 756.4
+}

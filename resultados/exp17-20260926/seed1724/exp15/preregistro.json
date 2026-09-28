@@ -1,0 +1,72 @@
+{
+  "experimento": "ALMA-EXP15: test de equifinalidad — epsilon-greedy tonto vs ALMA v2 completo",
+  "fecha": "2026-09-26T20:21:17",
+  "criterio_exito": {
+    "eps_empata_a_v2": true,
+    "epsilon": 0.1,
+    "margen_equivalencia": 0.5
+  },
+  "diseno": {
+    "oraculo": "COPIADO de EXP12 (3 brazos x 2 intentos, 720 mediciones, fases 15A-*); sin medir de nuevo",
+    "stream": "10 bloques x 12 idéntico a EXP12 (verificado), flip real 8/9 alternancias, brazos en juego: cot/single",
+    "politica_control": "réplica exacta de ALMA v2 de EXP13 (probe q=0,1,2 + re-probe q=10,11; Thompson; prior warm con olvido 0.5^d; fix1: default = prior-best warm, cambio si alternativo supera por > 0.05; fix2: poda de brazos muertos)",
+    "politica_eps": "epsilon-greedy POR CLASE (epsilon=0.1): por problema, con prob 0.9 el brazo con mejor media empírica de esa clase (init 0.5), con prob 0.1 un brazo al azar. Sin probe, sin Thompson, sin re-probe, sin olvido, sin transferencia entre clases. Clave de clase = nombre del bloque.",
+    "comparacion": "mejor brazo fijo entre los 3 (replay del oráculo)",
+    "rng": "pareado por (politica,bloque,q), seed 1724",
+    "freno_costo": "si proyección > US$1,00: detener (exit 2)"
+  },
+  "orden_bloques": [
+    {
+      "bloque": "calculo",
+      "mejor_oraculo": "cot",
+      "margen": 0.115
+    },
+    {
+      "bloque": "codigo",
+      "mejor_oraculo": "single",
+      "margen": 0.01
+    },
+    {
+      "bloque": "qa_multihop",
+      "mejor_oraculo": "cot",
+      "margen": 0.115
+    },
+    {
+      "bloque": "herramientas",
+      "mejor_oraculo": "single",
+      "margen": 0.0413
+    },
+    {
+      "bloque": "logica",
+      "mejor_oraculo": "cot",
+      "margen": 0.115
+    },
+    {
+      "bloque": "puzzles",
+      "mejor_oraculo": "single",
+      "margen": 0.01
+    },
+    {
+      "bloque": "gsm8k-a",
+      "mejor_oraculo": "cot",
+      "margen": 0.1087
+    },
+    {
+      "bloque": "mmlu-a",
+      "mejor_oraculo": "single",
+      "margen": 0.01
+    },
+    {
+      "bloque": "gsm8k-b",
+      "mejor_oraculo": "cot",
+      "margen": 0.1712
+    },
+    {
+      "bloque": "mmlu-b",
+      "mejor_oraculo": "cot",
+      "margen": 0.0525
+    }
+  ],
+  "seed": 1724,
+  "modo": "mock"
+}

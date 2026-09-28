@@ -1,0 +1,61 @@
+{
+  "preregistro": {
+    "experimento": "ALMA-EXP6: calibrar el probe (3 vs 5)",
+    "fecha": "2026-09-26T00:41:26",
+    "criterio_exito": {
+      "gana_a_control": true
+    },
+    "diseno": {
+      "stream": "reutilizado de EXP5: 10 clases x 12, seed 999",
+      "oraculo": "reutilizado de EXP5 (fase 5A-oracle), 0 llamadas",
+      "control": "alma-full EXP5 probe=3 (replay, 0 llamadas)",
+      "tratamiento": "alma-full probe=5, margen 0.05, fases 6B",
+      "rng": "pareado por posición (seed 999), mismos draws que EXP5"
+    },
+    "seed": 999,
+    "modo": "api"
+  },
+  "regret_total": {
+    "control_probe3": 1.91,
+    "probe5": 4.12
+  },
+  "acierto_probe_por_bloque": {
+    "control": [
+      1,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      1,
+      0
+    ],
+    "probe5": [
+      1,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      1,
+      0
+    ]
+  },
+  "costo_total_usd": 0.0116,
+  "experiencias_nuevas": 170,
+  "veredicto": {
+    "pasa": false,
+    "criterio": {
+      "gana_a_control": true
+    },
+    "motivos": [
+      "regret probe5=4.1200 vs control probe3=1.9100 (diff=+2.2100)",
+      "acierto del probe por bloque: probe5 7/10 vs control 7/10"
+    ]
+  },
+  "duracion_s": 266.1
+}

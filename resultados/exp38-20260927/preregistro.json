@@ -1,0 +1,19 @@
+{
+  "experimento": "ALMA-EXP38: (a) solo, umbral calibrado contra el ruido del probe",
+  "fecha": "2026-09-27T17:58:18",
+  "cambio_vs_exp36": {
+    "a": "desempate del probe hacia 'flat' si brecha no clara",
+    "b": "ELIMINADO: sin penal por cambio; estructura de bloque = EXP36 (probe -> Thompson -> re-probe -> Thompson)",
+    "calibracion": "brecha clara iff gap > K_SENAL x se_gap; se_gap estimado de las propias observaciones del probe de esta decisión; K_SENAL=1.0 pre-registrado"
+  },
+  "umbrales": {
+    "K_SENAL": 1.0
+  },
+  "criterio_principal": "pnl_total(alma38) > pnl_total(mejor_fija)",
+  "criterio_secundario": {
+    "recorta_sangrado": "pnl_h1_38 > -0.04213 (EXP36)",
+    "retiene_tendencia": "pnl_h2_38 >= 0.08 (EXP36: +0.12671)"
+  },
+  "stream": "idéntico a EXP36/37: Kraken XBTUSD 1h, 720 velas, 719 retornos",
+  "modo": "mock, replay puro, US$0"
+}

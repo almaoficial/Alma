@@ -1,0 +1,13 @@
+[
+  {"_nota": "Rutina reportada por el usuario. true/false = se sabe; null = no se reportó (no cuenta como incumplimiento: solo se evalúa lo que se sabe)."},
+  {"fecha": "2026-09-24",
+   "despertar_8": true, "playa": true, "meditacion": true,
+   "flexiones": true, "ingles": true, "gym": true, "bici": null,
+   "futbol": false,
+   "notas": "meditó 10 min en playa, 20 flexiones, podcast 20 min; primer día de gym (rutina de Agustín); inglés ~30 min; gastó US$9.95"},
+  {"fecha": "2026-09-25",
+   "despertar_8": true, "playa": true, "meditacion": true,
+   "flexiones": true, "ingles": true, "gym": false, "bici": null,
+   "futbol": false,
+   "notas": "despertó 8:00, playa + meditación, podcast 20 min 'Cómo entrenar a tu cerebro'; 40 flexiones; inglés ~20 min; dijo que hoy NO va al gym"}
+]

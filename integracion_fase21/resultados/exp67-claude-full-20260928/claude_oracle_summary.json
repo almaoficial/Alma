@@ -1,0 +1,89 @@
+{
+  "experimento": "ALMA EXP67-Claude-Full: replica del oraculo EXP67",
+  "proveedor": "anthropic",
+  "modelo": "claude-haiku-4-5-20251001",
+  "precios_usd_por_1M": {
+    "input": 1,
+    "output": 5
+  },
+  "precios_fuente": "https://docs.anthropic.com/en/docs/about-claude/pricing (verificado 2026-09-28)",
+  "fase": "exp67-claude-oraculo",
+  "diseno": {
+    "problemas": 180,
+    "brazos": [
+      "single",
+      "cot",
+      "reflexion"
+    ],
+    "intentos": 2,
+    "nota": "seccion stream del manifiesto EXP67, mismos problemas que el oraculo DeepSeek"
+  },
+  "medicion": "PARCIAL",
+  "nota_cierre": "resumen generado offline desde los pulls en disco: el freno duro corto la corrida antes de los 1080 pulls; sin veredicto comparativo (misma regla que EXP70)",
+  "pulls": 790,
+  "llamadas_api": 790,
+  "truncadas": null,
+  "costo_total_usd": 1.3865,
+  "freno_usd": 1.3972,
+  "por_configuracion": {
+    "gsm8k/cot": {
+      "n": 104,
+      "reward_medio": 0.9808,
+      "costo_medio_usd": 0.001335,
+      "reward_por_usd": 734.89
+    },
+    "gsm8k/reflexion": {
+      "n": 102,
+      "reward_medio": 0.9706,
+      "costo_medio_usd": 0.002224,
+      "reward_por_usd": 436.45
+    },
+    "gsm8k/single": {
+      "n": 104,
+      "reward_medio": 0.6154,
+      "costo_medio_usd": 0.00015,
+      "reward_por_usd": 4115.49
+    },
+    "mbpp/cot": {
+      "n": 80,
+      "reward_medio": 0.1,
+      "costo_medio_usd": 0.002454,
+      "reward_por_usd": 40.75
+    },
+    "mbpp/reflexion": {
+      "n": 80,
+      "reward_medio": 0.1125,
+      "costo_medio_usd": 0.003783,
+      "reward_por_usd": 29.74
+    },
+    "mbpp/single": {
+      "n": 80,
+      "reward_medio": 0.075,
+      "costo_medio_usd": 0.000756,
+      "reward_por_usd": 99.14
+    },
+    "mmlu/cot": {
+      "n": 80,
+      "reward_medio": 0.9,
+      "costo_medio_usd": 0.002281,
+      "reward_por_usd": 394.65
+    },
+    "mmlu/reflexion": {
+      "n": 80,
+      "reward_medio": 0.9,
+      "costo_medio_usd": 0.002995,
+      "reward_por_usd": 300.5
+    },
+    "mmlu/single": {
+      "n": 80,
+      "reward_medio": 0.85,
+      "costo_medio_usd": 0.000298,
+      "reward_por_usd": 2848.64
+    }
+  },
+  "global": {
+    "reward_medio": 0.6329,
+    "costo_medio_usd": 0.001755,
+    "reward_por_usd": 360.61
+  }
+}

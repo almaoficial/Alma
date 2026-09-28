@@ -1,0 +1,58 @@
+{
+  "experimento": "ALMA-EXP52: atacar la interaccion gate<->soporte (mock, US$0)",
+  "fase": "mock",
+  "fecha": "2026-09-27T19:16:53",
+  "hipotesis": "En EXP51 el gate adaptativo abarato el probe en bloques no saltados (-24 en 5 replicas), pero los bloques con gate dejan probe_obs con 3 items en vez de 5, y esa evidencia ruidosa alimenta la cuenta de victorias del soporte: el tratamiento salta MAS (18 vs 14) y los skips extra misfirean (5/18 vs 2/14), devolviendo +16. Si los bloques con gate NO aportan victorias al soporte (solo los probes completos de 5 items cuentan para K y wins), se corta el canal colateral sin debilitar el gate: el ahorro del probe se conserva y los skips vuelven a dispararse solo con evidencia full-information. Resultado esperado: media sobre replicas pareadas de regret(soporte-puro) - regret(probe-barato) < 0, con menos skips y menor tasa de misfires que el control.",
+  "variante_elegida": "(a) soporte solo de probes completos. Descartada (b) exigir margen minimo en Q1: ataca el gate mismo (lo que funciona) en vez de la interaccion, y un margen sobre medias de 3 items es a su vez ruidoso.",
+  "nota_refutacion": "Riesgos que matarian la hipotesis: (1) al excluir bloques con gate, K cae y el umbral endurecido se vuelve mas dificil de alcanzar: el tratamiento podria saltar MUCHO menos y perder el ahorro del skip donde el control lo captura; (2) si la evidencia de 3 items era en realidad informativa, excluirla empobrece el soporte y los misfires no bajan; (3) si el efecto neto no mejora de forma material vs el -1,60 de EXP51, la interaccion no era la restriccion vinculante y el hueco ~2 puntos a la mejor fija es estructural del mundo (ruido 2/10 por bloque) -> la linea se cierra por la regla pre-registrada.",
+  "chequeo_sanidad_corregido": "Leccion de EXP51 (honestidad incomoda #1): NO se pre-registra que el costo Q1 total sea bit-identico entre politicas. Lo bit-identico por construccion son los sorteos del oraculo por (rep,b,q,a) cuando el probe ocurre. Los totales de Q1 pueden divergir porque los caminos de skip divergen (efecto downstream genuino). Sanidad verificable: el control reproduce bit-identico al tratamiento de EXP51.",
+  "condicion_alcance": "En mundos sin recurrencia (feed real: rotación 8/8 en EXP44) las skills nunca alcanzan soporte fuerte (>=2 victorias pareadas): el mecanismo de salto de probe solo opera donde hay recurrencia. No generalizar a streams sin recurrencia.",
+  "stream": {
+    "fuente": "IDENTICO al de EXP47/48/49/50/51 (misma funcion run_experiment47.construir_stream, bit-identico): 240 items, 24 bloques x 10, 3 regimenes x 8 recurrencias, seeds 45/47, namespace de RNG del oraculo 'exp45-...'.",
+    "n_items": 240,
+    "bloques": 24,
+    "tam_bloque": 10,
+    "regimenes": [
+      "dinero",
+      "tech",
+      "deportes",
+      "deportes",
+      "tech",
+      "deportes",
+      "tech",
+      "tech",
+      "deportes",
+      "dinero",
+      "dinero",
+      "dinero",
+      "deportes",
+      "dinero",
+      "deportes",
+      "dinero",
+      "deportes",
+      "dinero",
+      "tech",
+      "tech",
+      "deportes",
+      "tech",
+      "dinero",
+      "tech"
+    ],
+    "oraculo": "tasas mock calibradas por categoria (data_exp44/tasas.json)",
+    "sesgo_seleccion": "Stream CONSTRUIDO (no es el feed crudo): las categorías se sortean con las frecuencias empíricas del feed real de Muse (22-27/9/2026), pero la secuencia de regímenes está diseñada (3 regímenes x 8 recurrencias). Es el mundo mínimo donde una skill PUEDE ayudar: sin recurrencia, el mecanismo es intestable por definición (lección EXP44: rotación 8/8 mata cualquier aprendizaje). EXTENSIÓN ESTRICTA de EXP46: los bloques 0-11 son bit-idénticos a EXP46 (mismo orden, misma secuencia de sorteo con random.Random(45), mismo namespace de RNG del oráculo); los bloques 12-23 agregan 4 recurrencias más por régimen."
+  },
+  "politicas": {
+    "control": "El probe-barato de EXP51 VERBATIM (misma funcion run_experiment51.correr_replica_probe_barato, importada sin copiar): gate adaptativo que salta Q2 si Q1 decide a favor del brazo de la skill; los bloques con gate aportan probe_obs de 3 items al soporte endurecido.",
+    "soporte-puro": "COPIA VERBATIM del control, salvo UN moving part: la decision de skip usa soporte_solo_completos: los bloques donde el gate disparo (probe_obs de 3 items) no aportan ni a K ni a wins. Solo probes completos (Q1+Q2, 5 items) cuentan. El gate, el bandit, los seeds y el orden de sorteos son identicos."
+  },
+  "rng": "namespace del oraculo identico a EXP45-51 ('exp45-r{rep}-b{b}-q{q}-{a}'). Pareado por replica; las jugadas extra de Thompson en items 6,7 usan namespace '-sel' propio por (b,q): no interfieren con ningun sorteo del control.",
+  "criterio": {
+    "efecto": "regret(soporte-puro) - regret(probe-barato) sobre 24 bloques, media sobre replicas (pareadas, RNG comun)",
+    "pasa_1": "media(efecto) < 0  [misma vara de refutacion que toda la linea]",
+    "pass": "pasa_1",
+    "regla_cierre_linea": "La linea de skills CONTINUA solo si se cumplen AMBAS: (i) efecto medio < -2.0 (mejora material vs el -1,60 de EXP51) Y (ii) d_trat = reg_trat_medio - reg_mejor_fija_medio < 1.8. Si alguna no se cumple, la linea se CIERRA con dictamen explicito: el techo ~2 puntos es estructural del mundo (ruido 2/10 por bloque), no del mecanismo. El cierre se aplica aunque pasa_1 sea PASS.",
+    "diagnostico_auxiliar": "skips y misfires de ambas politicas (el moving part debe bajar ambos vs el control); tasa de disparo del gate; reproducibilidad bit-identica del control vs EXP51; efecto sin la mejor replica; distancia de ambas politicas a la mejor fija."
+  },
+  "replicas": 5,
+  "modo": "mock, US$0"
+}

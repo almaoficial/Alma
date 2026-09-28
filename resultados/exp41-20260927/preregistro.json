@@ -1,0 +1,65 @@
+{
+  "experimento": "ALMA-EXP41: calibrar el test de régimen fuera de muestra",
+  "fecha": "2026-09-27T18:04:04",
+  "motivacion": "EXP40 FAIL: Hurst 72h / umbral 0.55 sin calibrar dio 48,3% de acierto. El umbral se pre-registró sin calibrar (pecado declarado). EXP41 lo calibra en un período distinto.",
+  "calibracion": {
+    "periodo": "Coinbase BTC-USD 1h (público), 2026-07-29 17:00 UTC -> 2026-08-28 16:00 UTC, 720 velas (data_exp41/btc_h1_calib.json). DISTINTO al stream de test. Nota: fuente distinta a la de test (Kraken XBTUSD); ambos son BTC/USD spot horario.",
+    "rejilla": {
+      "ventanas_W": [
+        24,
+        72,
+        168
+      ],
+      "subventanas_RS_por_W": {
+        "24": [
+          4,
+          6,
+          8
+        ],
+        "72": [
+          8,
+          12,
+          18,
+          24,
+          36
+        ],
+        "168": [
+          12,
+          18,
+          24,
+          36,
+          48,
+          60
+        ]
+      },
+      "umbrales_T": [
+        0.5,
+        0.52,
+        0.54,
+        0.56,
+        0.58,
+        0.6,
+        0.62,
+        0.64,
+        0.66,
+        0.68,
+        0.7
+      ]
+    },
+    "verdad_expost": "|retorno del bloque| > 0.02 (igual que EXP40)",
+    "metrica": "precisión balanceada = (recall_tendencia + recall_lateral)/2 en bloques 1..29",
+    "recall_clase_vacia": "1.0 si n_true_c == 0",
+    "desempate": "mayor bal.acc; luego menor W; luego menor T",
+    "sin_lookahead": "ventana trailing usa solo closes <= inicio del bloque"
+  },
+  "test": {
+    "stream": "idéntico a EXP36-40: Kraken XBTUSD 1h, 720 velas, 719 retornos (data_exp36/btc_h1.json)",
+    "politica": "idéntica a EXP40 con (W*, T*) congelados: tendencia -> momentum todo el bloque; lateral -> flat todo el bloque; bloque 0 -> lateral; costo 1bp por cambio de posición"
+  },
+  "criterios": {
+    "(a)_clasificador": "acierto en test (bloques 1..29) > 0.55",
+    "(b)_pnl": "P&L(EXP41) > P&L(buyhold)",
+    "pass": "(a) y (b). Si (a) falla: el Hurst no tiene señal explotable a esta escala -> cambiar de familia de test. Si (a) pasa y (b) falla: discrimina pero el mapeo no paga."
+  },
+  "modo": "mock, replay puro, US$0"
+}

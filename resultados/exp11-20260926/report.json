@@ -1,0 +1,180 @@
+{
+  "preregistro": {
+    "criterio_exito": {
+      "alma_gana_a_mejor_fija": true
+    },
+    "diseno": {
+      "comparacion": "mejor brazo fijo entre los 3 (replay del oráculo)",
+      "freno_costo": "si proyección tras oráculo > US$1,00: detener (exit 2)",
+      "oraculo": "3 brazos x 2 intentos por problema (fases 11A-oracle-r1/r2)",
+      "politica": "probe q=0,1,2 + re-probe q=10,11 (3 brazos) + Thompson resto; prior warm con olvido 0.5^d; regla: default single, cambio si mejor alt. supera por > 0.05",
+      "problemas": "100 GSM8K test + 100 MMLU test (10 materias duras); selección seed 999 en data_exp11/seleccion.json",
+      "rng": "pareado por (bloque,q), seed 999",
+      "stream": "10 bloques x 20; bloques 0-4 GSM8K, 5-9 MMLU (flip de distribución a la mitad)"
+    },
+    "experimento": "ALMA-EXP11: motor en benchmarks reales (GSM8K + MMLU)",
+    "fecha": "2026-09-26T03:05:00",
+    "modo": "api",
+    "seed": 999
+  },
+  "regret_total": {
+    "alma": 9.315,
+    "fija_single": 68.94,
+    "fija_cot": 6.815,
+    "fija_reflexion": 41.19
+  },
+  "verdad_bloque": [
+    "cot",
+    "cot",
+    "cot",
+    "cot",
+    "cot",
+    "cot",
+    "cot",
+    "cot",
+    "cot",
+    "cot"
+  ],
+  "diagnostico_bloques": [
+    {
+      "bloque": 0,
+      "clase": "gsm8k",
+      "prior_means": {
+        "single": 0.5,
+        "cot": 0.5,
+        "reflexion": 0.5
+      },
+      "inicial": "cot",
+      "final": "cot",
+      "cambio": false
+    },
+    {
+      "bloque": 1,
+      "clase": "gsm8k",
+      "prior_means": {
+        "single": 0.35,
+        "cot": 0.5687,
+        "reflexion": 0.4781
+      },
+      "inicial": "cot",
+      "final": "cot",
+      "cambio": false
+    },
+    {
+      "bloque": 2,
+      "clase": "gsm8k",
+      "prior_means": {
+        "single": 0.35,
+        "cot": 0.5758,
+        "reflexion": 0.4702
+      },
+      "inicial": "cot",
+      "final": "cot",
+      "cambio": false
+    },
+    {
+      "bloque": 3,
+      "clase": "gsm8k",
+      "prior_means": {
+        "single": 0.3547,
+        "cot": 0.5855,
+        "reflexion": 0.488
+      },
+      "inicial": "cot",
+      "final": "cot",
+      "cambio": false
+    },
+    {
+      "bloque": 4,
+      "clase": "gsm8k",
+      "prior_means": {
+        "single": 0.3743,
+        "cot": 0.6311,
+        "reflexion": 0.53
+      },
+      "inicial": "cot",
+      "final": "cot",
+      "cambio": false
+    },
+    {
+      "bloque": 5,
+      "clase": "mmlu",
+      "prior_means": {
+        "single": 0.3747,
+        "cot": 0.6576,
+        "reflexion": 0.5413
+      },
+      "inicial": "single",
+      "final": "single",
+      "cambio": false
+    },
+    {
+      "bloque": 6,
+      "clase": "mmlu",
+      "prior_means": {
+        "single": 0.5184,
+        "cot": 0.6488,
+        "reflexion": 0.5456
+      },
+      "inicial": "cot",
+      "final": "cot",
+      "cambio": false
+    },
+    {
+      "bloque": 7,
+      "clase": "mmlu",
+      "prior_means": {
+        "single": 0.5455,
+        "cot": 0.6468,
+        "reflexion": 0.552
+      },
+      "inicial": "single",
+      "final": "cot",
+      "cambio": true
+    },
+    {
+      "bloque": 8,
+      "clase": "mmlu",
+      "prior_means": {
+        "single": 0.5533,
+        "cot": 0.6493,
+        "reflexion": 0.5654
+      },
+      "inicial": "single",
+      "final": "cot",
+      "cambio": true
+    },
+    {
+      "bloque": 9,
+      "clase": "mmlu",
+      "prior_means": {
+        "single": 0.5696,
+        "cot": 0.6521,
+        "reflexion": 0.5835
+      },
+      "inicial": "cot",
+      "final": "cot",
+      "cambio": false
+    }
+  ],
+  "costo_total_usd": 0.2217,
+  "proyeccion_usd": 0.2363,
+  "detenido_por_costo": false,
+  "experiencias_nuevas": 1500,
+  "store_chain_ok": true,
+  "veredicto": {
+    "pasa": false,
+    "criterio": {
+      "alma_gana_a_mejor_fija": true
+    },
+    "motivos": [
+      "regret alma=9.3150 vs mejor fija (cot)=6.8150 (diff=+2.5000)",
+      "regret fijas: single=68.94, cot=6.82, reflexion=41.19",
+      "verdad por bloque: ['cot', 'cot', 'cot', 'cot', 'cot', 'cot', 'cot', 'cot', 'cot', 'cot']",
+      "decisión final por bloque: ['cot', 'cot', 'cot', 'cot', 'cot', 'single', 'cot', 'cot', 'cot', 'cot']",
+      "cambios tras re-probe: 2/10",
+      "brazos usados en Thompson: {'cot': 111, 'reflexion': 25, 'single': 14}"
+    ]
+  },
+  "duracion_s": 4147.7
+}
