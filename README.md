@@ -49,6 +49,16 @@ Declared: 6 · Confirmed: 3 · False successes caught: 3
 
 The run *reported* success. The evidence disagreed in 3 of 6 claims. That gap is the whole point.
 
+## Verify it yourself
+
+The demo above runs anywhere. The governance suites are standalone scripts (no pytest, no network, no keys):
+
+```bash
+for f in test_*.py; do python3 "$f"; done
+```
+
+Verified from a fresh clone on 2026-10-16: **22 of 43 suites pass standalone.** The rest import the historical experiment runners (`run_experiment47/49/56`) and the original `alma` package, which are not yet part of this export. That gap is stated here rather than hidden — closing it is export work, not science. The audits cited above (8/8, 35/35, 28/30) were run against the full local system and their records live in `experimentos/` and `preregistros/`.
+
 ## How it works — the five pieces
 
 1. **Cheap evaluator first.** Generate–prune–then–rank, applied as governance: the cheap judge filters, the expensive one decides.
@@ -77,7 +87,7 @@ This project did not start as engineering. It started the way almost every 2025 
 
 ## Honest state
 
-What this repository proves: the instruments work and are measured (tests green; audits 8/8 and 35/35).
+What this repository proves: the instruments work and are measured (audits 8/8 and 35/35; test-suite status in "Verify it yourself" above).
 
 What it does **not** prove yet — stated here because it is the point: **the meta-loop has zero adoptions with a measured improvement above its noise floor.** The Darwin-Gödel Machine publishes SWE-bench 20% → 50%; ALMA, so far, publishes that its laboratory does not lie to itself. The next frontier is exactly one event: a single adoption with a measured delta. When it happens, it will be in this repository, with its pre-registration and its measurement.
 
@@ -142,7 +152,7 @@ Este proyecto no nació como ingeniería. Nació como casi todas las ideas con I
 
 ## Estado honesto
 
-Lo que este repositorio prueba: los instrumentos funcionan y están medidos (tests en verde; auditorías 8/8 y 35/35).
+Lo que este repositorio prueba: los instrumentos funcionan y están medidos (auditorías 8/8 y 35/35; el estado verificado de los tests está en «Verify it yourself», arriba: 22 de 43 suites corren desde un clon limpio, el resto importa los runners históricos de experimentos que aún no forman parte de esta exportación).
 
 Lo que todavía **no** prueba, y lo digo en el README porque es el punto: **el meta-loop suma cero adopciones con mejora medida por encima del piso de ruido.** La Darwin-Gödel Machine publica SWE-bench 20% → 50%; ALMA, por ahora, publica que su laboratorio no se miente. La próxima frontera es una sola: una adopción con delta medido. Cuando ocurra, va a estar en este repositorio, con su pre-registro y su medición.
 
