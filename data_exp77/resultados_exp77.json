@@ -1,0 +1,257 @@
+{
+  "experimento": "exp77_auditoria_handoff_skills",
+  "fecha": "2026-10-01",
+  "regla": "delta_down>0 & delta_ref>=0",
+  "rubrica": "traductor-exp77-v1",
+  "nota_honesta": "veredictos CONDICIONALES a la rúbrica traductor-exp77-v1; q es exacto; deltas exactos dada la rúbrica. Auditoría de lectura: cero adopciones, cero modificaciones.",
+  "inventario_n": 7,
+  "hallazgos": [
+    {
+      "ruta": "resultados/fase1-puerta/rep0/skills/firmas/aritmetica/SKILL.md",
+      "sha256": "9f2844aef3c9",
+      "nombre_skill": "aritmetica",
+      "q_interfaz": 0.8,
+      "rubrica": "traductor-exp77-v1",
+      "predicados": [
+        "TECNICA",
+        "PRESCRIBE",
+        "RESTRINGE"
+      ],
+      "ayuda": 0.6,
+      "rigidez": 0.5,
+      "delta_down": 0.2978,
+      "delta_ref": 0.3064,
+      "aceptada_por_puerta": true,
+      "motivo": "handoff mejora: Δ_down=0.2978, Δ_ref=0.3064",
+      "clasificacion": "pasa",
+      "sensibilidad": {
+        "grilla": {
+          "ayuda+0.4_rigidez+0.3": "pasa",
+          "ayuda+0.4_rigidez+0.5": "pasa",
+          "ayuda+0.4_rigidez+0.7": "pasa",
+          "ayuda+0.6_rigidez+0.3": "pasa",
+          "ayuda+0.6_rigidez+0.5": "pasa",
+          "ayuda+0.6_rigidez+0.7": "pasa",
+          "ayuda+0.8_rigidez+0.3": "pasa",
+          "ayuda+0.8_rigidez+0.5": "pasa",
+          "ayuda+0.8_rigidez+0.7": "pasa"
+        },
+        "base": "pasa",
+        "estables": 9,
+        "total": 9
+      },
+      "adoptada_via_fn": false
+    },
+    {
+      "ruta": "resultados/fase1-puerta/rep0/skills/firmas/razonamiento/SKILL.md",
+      "sha256": "eda63d5813ae",
+      "nombre_skill": "razonamiento",
+      "q_interfaz": 0.8,
+      "rubrica": "traductor-exp77-v1",
+      "predicados": [
+        "GENERICO",
+        "PRESCRIBE",
+        "RESTRINGE"
+      ],
+      "ayuda": 0.3,
+      "rigidez": 0.5,
+      "delta_down": 0.1429,
+      "delta_ref": 0.1764,
+      "aceptada_por_puerta": true,
+      "motivo": "handoff mejora: Δ_down=0.1429, Δ_ref=0.1764",
+      "clasificacion": "pasa",
+      "sensibilidad": {
+        "grilla": {
+          "ayuda+0.1_rigidez+0.3": "pasa",
+          "ayuda+0.1_rigidez+0.5": "resta",
+          "ayuda+0.1_rigidez+0.7": "resta",
+          "ayuda+0.3_rigidez+0.3": "pasa",
+          "ayuda+0.3_rigidez+0.5": "pasa",
+          "ayuda+0.3_rigidez+0.7": "pasa",
+          "ayuda+0.5_rigidez+0.3": "pasa",
+          "ayuda+0.5_rigidez+0.5": "pasa",
+          "ayuda+0.5_rigidez+0.7": "pasa"
+        },
+        "base": "pasa",
+        "estables": 7,
+        "total": 9
+      },
+      "adoptada_via_fn": false
+    },
+    {
+      "ruta": "resultados/fase1-puerta/rep1/skills/firmas/aritmetica/SKILL.md",
+      "sha256": "3347c232bb96",
+      "nombre_skill": "aritmetica",
+      "q_interfaz": 0.8,
+      "rubrica": "traductor-exp77-v1",
+      "predicados": [
+        "PROCEDIMIENTO",
+        "PRESCRIBE",
+        "RESTRINGE"
+      ],
+      "ayuda": 0.7,
+      "rigidez": 0.5,
+      "delta_down": 0.3188,
+      "delta_ref": 0.3359,
+      "aceptada_por_puerta": true,
+      "motivo": "handoff mejora: Δ_down=0.3188, Δ_ref=0.3359",
+      "clasificacion": "pasa",
+      "sensibilidad": {
+        "grilla": {
+          "ayuda+0.5_rigidez+0.3": "pasa",
+          "ayuda+0.5_rigidez+0.5": "pasa",
+          "ayuda+0.5_rigidez+0.7": "pasa",
+          "ayuda+0.7_rigidez+0.3": "pasa",
+          "ayuda+0.7_rigidez+0.5": "pasa",
+          "ayuda+0.7_rigidez+0.7": "pasa",
+          "ayuda+0.9_rigidez+0.3": "pasa",
+          "ayuda+0.9_rigidez+0.5": "pasa",
+          "ayuda+0.9_rigidez+0.7": "pasa"
+        },
+        "base": "pasa",
+        "estables": 9,
+        "total": 9
+      },
+      "adoptada_via_fn": false
+    },
+    {
+      "ruta": "resultados/fase1-puerta/rep1/skills/firmas/razonamiento/SKILL.md",
+      "sha256": "ed73f8efc769",
+      "nombre_skill": "razonamiento",
+      "q_interfaz": 0.8,
+      "rubrica": "traductor-exp77-v1",
+      "predicados": [
+        "PROCEDIMIENTO",
+        "PRESCRIBE",
+        "RESTRINGE"
+      ],
+      "ayuda": 0.7,
+      "rigidez": 0.5,
+      "delta_down": 0.3188,
+      "delta_ref": 0.3359,
+      "aceptada_por_puerta": true,
+      "motivo": "handoff mejora: Δ_down=0.3188, Δ_ref=0.3359",
+      "clasificacion": "pasa",
+      "sensibilidad": {
+        "grilla": {
+          "ayuda+0.5_rigidez+0.3": "pasa",
+          "ayuda+0.5_rigidez+0.5": "pasa",
+          "ayuda+0.5_rigidez+0.7": "pasa",
+          "ayuda+0.7_rigidez+0.3": "pasa",
+          "ayuda+0.7_rigidez+0.5": "pasa",
+          "ayuda+0.7_rigidez+0.7": "pasa",
+          "ayuda+0.9_rigidez+0.3": "pasa",
+          "ayuda+0.9_rigidez+0.5": "pasa",
+          "ayuda+0.9_rigidez+0.7": "pasa"
+        },
+        "base": "pasa",
+        "estables": 9,
+        "total": 9
+      },
+      "adoptada_via_fn": false
+    },
+    {
+      "ruta": "resultados/fase1-puerta/rep2/skills/firmas/aritmetica/SKILL.md",
+      "sha256": "8e7fc59053a0",
+      "nombre_skill": "aritmetica",
+      "q_interfaz": 0.8,
+      "rubrica": "traductor-exp77-v1",
+      "predicados": [
+        "PROCEDIMIENTO",
+        "PRESCRIBE",
+        "RESTRINGE"
+      ],
+      "ayuda": 0.7,
+      "rigidez": 0.5,
+      "delta_down": 0.3188,
+      "delta_ref": 0.3359,
+      "aceptada_por_puerta": true,
+      "motivo": "handoff mejora: Δ_down=0.3188, Δ_ref=0.3359",
+      "clasificacion": "pasa",
+      "sensibilidad": {
+        "grilla": {
+          "ayuda+0.5_rigidez+0.3": "pasa",
+          "ayuda+0.5_rigidez+0.5": "pasa",
+          "ayuda+0.5_rigidez+0.7": "pasa",
+          "ayuda+0.7_rigidez+0.3": "pasa",
+          "ayuda+0.7_rigidez+0.5": "pasa",
+          "ayuda+0.7_rigidez+0.7": "pasa",
+          "ayuda+0.9_rigidez+0.3": "pasa",
+          "ayuda+0.9_rigidez+0.5": "pasa",
+          "ayuda+0.9_rigidez+0.7": "pasa"
+        },
+        "base": "pasa",
+        "estables": 9,
+        "total": 9
+      },
+      "adoptada_via_fn": false
+    },
+    {
+      "ruta": "resultados/fase1-puerta/rep2/skills/firmas/razonamiento/SKILL.md",
+      "sha256": "172eb7f8b15a",
+      "nombre_skill": "razonamiento",
+      "q_interfaz": 0.8,
+      "rubrica": "traductor-exp77-v1",
+      "predicados": [
+        "GENERICO",
+        "PRESCRIBE",
+        "RESTRINGE"
+      ],
+      "ayuda": 0.3,
+      "rigidez": 0.5,
+      "delta_down": 0.1429,
+      "delta_ref": 0.1764,
+      "aceptada_por_puerta": true,
+      "motivo": "handoff mejora: Δ_down=0.1429, Δ_ref=0.1764",
+      "clasificacion": "pasa",
+      "sensibilidad": {
+        "grilla": {
+          "ayuda+0.1_rigidez+0.3": "pasa",
+          "ayuda+0.1_rigidez+0.5": "resta",
+          "ayuda+0.1_rigidez+0.7": "resta",
+          "ayuda+0.3_rigidez+0.3": "pasa",
+          "ayuda+0.3_rigidez+0.5": "pasa",
+          "ayuda+0.3_rigidez+0.7": "pasa",
+          "ayuda+0.5_rigidez+0.3": "pasa",
+          "ayuda+0.5_rigidez+0.5": "pasa",
+          "ayuda+0.5_rigidez+0.7": "pasa"
+        },
+        "base": "pasa",
+        "estables": 7,
+        "total": 9
+      },
+      "adoptada_via_fn": false
+    },
+    {
+      "ruta": "skills/ejemplo/hola-mundo/SKILL.md",
+      "sha256": "f22add7bf3a9",
+      "nombre_skill": "hola-mundo",
+      "q_interfaz": 0.8,
+      "rubrica": "traductor-exp77-v1",
+      "predicados": [
+        "INSTRUCCION_CONCRETA"
+      ],
+      "ayuda": 0.7,
+      "rigidez": 0.0,
+      "delta_down": 0.3725,
+      "delta_ref": 0.3896,
+      "aceptada_por_puerta": true,
+      "motivo": "handoff mejora: Δ_down=0.3725, Δ_ref=0.3896",
+      "clasificacion": "pasa",
+      "sensibilidad": {
+        "grilla": {
+          "ayuda+0.5_rigidez+0.0": "pasa",
+          "ayuda+0.5_rigidez+0.2": "pasa",
+          "ayuda+0.7_rigidez+0.0": "pasa",
+          "ayuda+0.7_rigidez+0.2": "pasa",
+          "ayuda+0.9_rigidez+0.0": "pasa",
+          "ayuda+0.9_rigidez+0.2": "pasa"
+        },
+        "base": "pasa",
+        "estables": 6,
+        "total": 6
+      },
+      "adoptada_via_fn": false
+    }
+  ]
+}

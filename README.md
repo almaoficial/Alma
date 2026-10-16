@@ -62,13 +62,13 @@ The run *reported* success. The evidence disagreed in 3 of 6 claims. That gap is
 
 ## Verify it yourself
 
-The demo above runs anywhere. The governance suites are standalone scripts (no pytest, no network, no keys):
+The demo above runs anywhere. The governance suites are standalone scripts (no pytest, no network, no keys). Run them all with the included runner — each suite in its own subprocess, with a JSON summary:
 
 ```bash
-for f in test_*.py; do python3 "$f"; done
+python3 scripts/run_test_suites.py
 ```
 
-Verified from a fresh clone on 2026-10-16: **22 of 43 suites pass standalone.** The rest import the historical experiment runners (`run_experiment47/49/56`) and the original `alma` package, which are not yet part of this export. That gap is stated here rather than hidden — closing it is export work, not science. The audits cited above (8/8, 35/35, 28/30) were run against the full local system and their records live in `experimentos/` and `preregistros/`.
+Verified from a fresh clone on 2026-10-16: **36 of 43 suites pass standalone.** The export now includes the historical experiment runners (`run_experiment47/49/51/56`, `run_exp77`), the original `alma` package and the live `servicio/` tree, so every suite at least starts and 36 finish green. The remaining 7 exercise the frozen EXP44 world behind those runners (and the Benchmark/MetaLoop built on it) and need `data_exp44/feed_units.json`, which is **deliberately not published**: most of its 94 units are fictional, but 7 embed the author's real personal and financial data (a real address, real payment beneficiaries, a real account balance). Those 7 suites pass against the original local data — verified the same day — and ship so the code can be read, with the data withheld. One runner caveat: the runner flags `test_exp77_auditoria` as FAIL because the program under test prints a `FAIL -` line while demonstrating its own fail-closed path; run standalone, that suite exits 0 with 24/24 checks green. The audits cited above (8/8, 35/35, 28/30) were run against the full local system and their records live in `experimentos/` and `preregistros/`.
 
 ## How it works — the five pieces
 
@@ -105,6 +105,10 @@ What it does **not** prove yet — stated here because it is the point: **the me
 ## Structure
 
 - `alma_service/` — the system: meta-loop (`metaloop.py`), gate (`gate.py`), cheap evaluator and judge, verifier, skill handoff, trust manifest, drift detector, budgeted spending caps.
+- `alma/` — the original prototype package (selector, backends, evaluator, registry) that the historical runners and the live service import.
+- `servicio/` — the live phase-2 service tree (`server.py`, motor, memory store) that several suites exercise end to end.
+- `run_experiment*.py`, `run_exp77.py` — the historical experiment runners the governance suites replicate against.
+- `scripts/` — `run_test_suites.py`, the suite runner used for the count above.
 - `demo/` — the 2-minute verifier demo above, with its sample run.
 - `test_*.py` — the governance suites: auto-adoption, noise floor, human brake, manifest and loader, EXP76–81 audits.
 - `docs/` — real system design, phases 0–2, v2 spec, full project report, prior-art dossier.
@@ -174,13 +178,17 @@ Cada número de este README, con su método, su n y su fecha — y su límite de
 
 ## Estado honesto
 
-Lo que este repositorio prueba: los instrumentos funcionan y están medidos (auditorías 8/8 y 35/35; el estado verificado de los tests está en «Verify it yourself», arriba: 22 de 43 suites corren desde un clon limpio, el resto importa los runners históricos de experimentos que aún no forman parte de esta exportación).
+Lo que este repositorio prueba: los instrumentos funcionan y están medidos (auditorías 8/8 y 35/35; el estado verificado de los tests está en «Verify it yourself», arriba: 36 de 43 suites corren desde un clon limpio; las 7 restantes necesitan el mundo congelado de EXP44, cuyo archivo de datos no se publica porque mezcla unidades ficticias con datos personales y financieros reales del autor).
 
 Lo que todavía **no** prueba, y lo digo en el README porque es el punto: **el meta-loop suma cero adopciones con mejora medida por encima del piso de ruido.** La Darwin-Gödel Machine publica SWE-bench 20% → 50%; ALMA, por ahora, publica que su laboratorio no se miente. La próxima frontera es una sola: una adopción con delta medido. Cuando ocurra, va a estar en este repositorio, con su pre-registro y su medición.
 
 ## Estructura
 
 - `alma_service/` — el sistema: meta-loop (`metaloop.py`), puerta (`gate.py`), evaluador y juez baratos, verificador, handoff de skills, manifiesto de confianza, detector de deriva, presupuesto con topes.
+- `alma/` — el paquete original del prototipo (selector, backends, evaluador, registro) que importan los runners históricos y el servicio en vivo.
+- `servicio/` — el árbol del servicio fase 2 en vivo (`server.py`, motor, memoria) que varias suites ejercitan de punta a punta.
+- `run_experiment*.py`, `run_exp77.py` — los runners históricos de experimentos contra los que replican las suites de gobernanza.
+- `scripts/` — `run_test_suites.py`, el runner de suites con el que se verificó el conteo de arriba.
 - `demo/` — la demo de 2 minutos del verificador, con su corrida de ejemplo.
 - `test_*.py` — las suites de gobernanza: auto-adopción, piso de ruido, freno humano, manifiesto y loader, auditorías EXP76–81.
 - `docs/` — diseño del sistema real, fases 0–2, spec v2, informe completo del proyecto y dossier de prior art.
