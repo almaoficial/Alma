@@ -22,8 +22,11 @@ rechazado; lo que cae en banda (0 < max ≤ 0.53) queda asentado con flag
 
 Caveat documentado (del informe): el split held-out participa en la
 puerta, así que hay presión de selección sobre el gate a lo largo de
-rondas. El informe independiente lo da benchmark.py (mundo congelado);
-un tercer split ciego queda como trabajo futuro.
+rondas. El informe independiente lo da benchmark.py (mundo congelado).
+El tercer split ciego no es trabajo futuro: se implementa en la capa
+E3 (alma_service/puerta_e3.py, exigido siempre desde metaloop.py)
+desde el 28/9/2026. Esta puerta sigue siendo de dos splits; la capa
+E3 solo la endurece.
 """
 
 REGLA = "delta_in>=0 & delta_ho>=0 & max(delta_in,delta_ho)>0"
