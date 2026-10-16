@@ -95,10 +95,15 @@ def asegurar_clave():
     os.makedirs(d, exist_ok=True)
     sk_path, pk_path = _ruta_sk(), _ruta_pk()
     if os.path.exists(sk_path) and os.path.exists(pk_path):
+        # Las claves son binario crudo de 32 bytes, sin delimitadores:
+        # NUNCA .strip() — un byte extremo puede ser whitespace válido
+        # (0x09-0x0D, 0x20) y stripearlo acorta la clave, lo que hacía
+        # regenerar un par distinto al que firmó (falla intermitente
+        # ~9% según el par sorteado; diagnóstico 16/10/2026).
         with open(sk_path, "rb") as f:
-            sk = f.read().strip()
+            sk = f.read()
         with open(pk_path, "rb") as f:
-            pk = f.read().strip()
+            pk = f.read()
         if len(sk) == 32 and len(pk) == 32:
             return sk, pk
     sk, pk = _ed25519.generar_clave()
@@ -183,7 +188,7 @@ def _claves_autores():
     for fn in sorted(os.listdir(d)):
         if fn.endswith(".pub"):
             with open(os.path.join(d, fn), "rb") as f:
-                pk = f.read().strip()
+                pk = f.read()  # binario crudo: sin .strip() (ver arriba)
             if len(pk) == 32:
                 out[fn[:-4]] = pk
     return out
