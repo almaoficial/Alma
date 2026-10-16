@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run root-level ALMA test scripts without treating printed failures as PASS.
+"""Run root-level ALMA test scripts, classifying each suite by its exit code.
 
 Usage:
     python scripts/run_test_suites.py
@@ -18,23 +18,21 @@ import sys
 import time
 from pathlib import Path
 
-FAIL_MARKERS = (
-    re.compile(r"^\s*FAIL\s*[-:]", re.IGNORECASE),
-    re.compile(r"^\s*FAILED\b", re.IGNORECASE),
-)
-
-
 def classify(returncode: int, output: str) -> tuple[str, str]:
+    # BLOCKED: la suite ni siquiera pudo ejecutar (import/archivo ausente).
     lines = output.splitlines()
     for line in lines:
         if "ModuleNotFoundError" in line or re.search(r"\bImportError\b", line):
             return "BLOCKED", "Falta un módulo/import requerido."
-    for line in lines:
-        if any(pattern.search(line) for pattern in FAIL_MARKERS):
-            return "FAIL", f"Falló una comprobación impresa: {line.strip()}"
+    # PASS/FAIL se decide SOLO por el código de salida, no por el texto
+    # impreso: una suite puede imprimir líneas «FAIL» a propósito como parte
+    # de su propia demostración (p. ej. test_exp77_auditoria ejercita el
+    # camino fail-closed del auditor y muestra los rechazos que produce).
+    # Escanear el texto marcaba esa suite como FAIL aunque terminara con
+    # código 0 y todos sus checks en verde.
     if returncode != 0:
         return "FAIL", f"El proceso terminó con código {returncode}."
-    return "PASS", "Código de salida 0 y sin marcadores explícitos de fallo."
+    return "PASS", "Código de salida 0."
 
 
 def main() -> int:
