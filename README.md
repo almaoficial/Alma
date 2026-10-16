@@ -5,6 +5,8 @@ A self-improving agent system under measured governance: a cheap evaluator as fi
 
 By **Alejandro Nahuel Salusso** — Miami Beach, FL. Building since September 2026; the idea dates to July 2025. *(Versión en español más abajo.)*
 
+*Name note: this ALMA — in development since July 2025 — is unrelated to the academic framework "ALMA: Automated meta-Learning of Memory designs for Agentic systems" (Xiong, Hu & Clune, arXiv:2602.07755, February 2026). Same acronym, different projects.*
+
 ---
 
 ## What works today (measured, not promised)
@@ -17,6 +19,15 @@ Generating is nearly free; human verification costs ~46× generation (measured 2
 
 **3. An adoption gate with a measured noise floor.**
 Every self-modification is evaluated on two independent splits against a frozen validator. Auto-adoption requires a positive effect on both **and** an effect larger than the system's own measured noise floor: `max(Δ_in, Δ_ho) > δ`, with **δ = 0.53**. Anything inside the band (0, 0.53] is not adopted — it waits for a human. Without a floor, a self-improving system chases noise and calls it progress.
+
+## How each number was measured
+
+Every headline number above, with its method, its n, its date — and its stated limit.
+
+- **Noise floor δ = 0.53.** Calibrated on 2026-09-30 (experiment EXP-piso-ruido): block bootstrap (B = 2000, z = 2.0) over repeated validator runs of an *unchanged* system, measuring how much "improvement" pure measurement fluctuation produces on its own. Result: 0.5331, rounded to 0.53 and wired into `alma_service/gate.py` as `PISO_RUIDO_DELTA = 0.53`. Pre-registration: [`preregistros/metaloop_preregistro_piso_ruido_puerta.json`](preregistros/metaloop_preregistro_piso_ruido_puerta.json) (all pre-registrations live in [`preregistros/`](preregistros/)).
+- **Verifier audit 35/35.** Run on 2026-10-11 over the window 2026-09-27 → 2026-10-10, at US$0 cost. Method: every declared success was confronted against the actual files and logs — 13 daily-routine runs, 8 English-practice runs (7 confirmed directly in the scorecard table, plus 1 first flagged as missing and resolved during the same audit as a timezone labeling issue), 13 study runs, 1 evaluator run. 35 declared, 35 confirmed, 0 false passes. What this audit does **not** measure: honest reports are not system improvement — the scorecard itself says so; improvement is the meta-loop's instrument (next bullet). The audit now runs monthly.
+- **Cheap evaluator 28/30.** One 30-case battery; three candidate judges scored on the *same* 30 cases: heuristic 17/30 · free model 0/30 · Mistral Nemo 28/30 (0.933) at under US$0.001 per run. The battery was used to **select** the judge — not to train or tune it. Declared limitation: there is **no independent holdout set yet**; a held-out replication is stated future work, not a result.
+- **Meta-loop adoptions: 0.** As of this writing, the number of self-modifications adopted with a measured improvement above δ is zero. That is the honest state this repository is organized around — see "Honest state" below, where it is stated next to the measurements.
 
 ## Run the demo (2 minutes)
 
@@ -114,6 +125,8 @@ What it does **not** prove yet — stated here because it is the point: **the me
 
 Por **Alejandro Nahuel Salusso** — Miami Beach. En construcción desde septiembre de 2026; la idea nació en julio de 2025.
 
+*Nota sobre el nombre: este ALMA — en desarrollo desde julio de 2025 — no tiene relación con el framework académico «ALMA: Automated meta-Learning of Memory designs for Agentic systems» (Xiong, Hu & Clune, arXiv:2602.07755, febrero de 2026). Misma sigla, proyectos distintos.*
+
 ## La tesis
 
 > El hombre controla a la IA y el resultado siempre termina dependiendo del hombre: por eso mi lugar no es el modelo, es construir el instrumento que evalúa barato qué configuración de inteligencia necesita cada problema.
@@ -149,6 +162,15 @@ Este proyecto no nació como ingeniería. Nació como casi todas las ideas con I
 3. **El humano en el núcleo, fuera del alcance del loop.** El meta-loop auto-adopta mejoras medidas y avisa cada evolución. Pero no puede tocar dos cosas: los **topes de gasto** y su **obligación de avisar**. Si pudiera silenciar los avisos, el «avísame» no valdría nada.
 4. **Pre-registro antes de cada experimento.** Qué se espera, qué contaría como raro y qué resultado cambiaría el veredicto — escrito *antes* de correr. Sin pre-registro, cualquier resultado se narra como éxito. (Ver `preregistros/`.)
 5. **Verificador de «fallas que parecen éxitos».** La falla cara de un agente no es la que explota: es la que *dice* que hizo algo y no lo hizo. El verificador confronta lo declarado contra lo real, corrida por corrida, y el ledger de afirmaciones audita lo que el sistema afirma sobre su dueño.
+
+## Cómo se midió cada número
+
+Cada número de este README, con su método, su n y su fecha — y su límite declarado.
+
+- **Piso de ruido δ = 0,53.** Calibrado el 30/9/2026 (experimento EXP-piso-ruido): bootstrap por bloques (B = 2000, z = 2,0) sobre corridas repetidas del validador con el sistema **sin cambios**, midiendo cuánta «mejora» produce la pura fluctuación de medición. Resultado: 0,5331, redondeado a 0,53 y cableado en `alma_service/gate.py` como `PISO_RUIDO_DELTA = 0.53`. Pre-registro: `preregistros/metaloop_preregistro_piso_ruido_puerta.json` (todos los pre-registros viven en `preregistros/`).
+- **Auditoría del verificador 35/35.** Corrida del 11/10/2026 sobre la ventana 27/9–10/10/2026, costo US$0. Método: cada éxito declarado se confrontó contra los archivos y registros reales — 13 corridas de rutina diaria, 8 de inglés (7 confirmadas directo en la tabla del scorecard, más 1 marcada primero como faltante y resuelta en la misma auditoría como un problema de etiqueta de zona horaria), 13 de estudios, 1 del evaluador. 35 declarados, 35 confirmados, 0 falsos éxitos. Lo que esta auditoría **no** mide: reportes honestos no son mejora del sistema — el propio scorecard lo declara; la mejora la mide el instrumento del meta-loop (punto siguiente). La auditoría corre ahora una vez por mes.
+- **Evaluador barato 28/30.** Una batería de 30 casos; tres jueces candidatos puntuados sobre **los mismos** 30 casos: heurística 17/30 · modelo gratuito 0/30 · Mistral Nemo 28/30 (0,933) por menos de US$0,001 por corrida. La batería se usó para **seleccionar** el juez, no para entrenarlo ni ajustarlo. Limitación declarada: **todavía no hay un set holdout independiente**; replicarlo con holdout es trabajo futuro declarado, no un resultado.
+- **Adopciones del meta-loop: 0.** Al día de hoy, las auto-modificaciones adoptadas con mejora medida por encima de δ son cero. Es el estado honesto alrededor del cual se organiza este repositorio — ver «Estado honesto», donde está declarado junto a las mediciones.
 
 ## Estado honesto
 
