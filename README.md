@@ -68,6 +68,8 @@ The demo above runs anywhere. The governance suites are standalone scripts (no p
 python3 scripts/run_test_suites.py
 ```
 
+These suites also run in CI: GitHub Actions (`.github/workflows/tests.yml`) executes the same runner on every push and pull request.
+
 Verified from a fresh clone on 2026-10-16: **36 of 43 suites pass standalone.** The export now includes the historical experiment runners (`run_experiment47/49/51/56`, `run_exp77`), the original `alma` package and the live `servicio/` tree, so every suite at least starts and 36 finish green. The remaining 7 exercise the frozen EXP44 world behind those runners (and the Benchmark/MetaLoop built on it) and need `data_exp44/feed_units.json`, which is **deliberately not published**: most of its 94 units are fictional, but 7 embed the author's real personal and financial data (a real address, real payment beneficiaries, a real account balance). Those 7 suites pass against the original local data — verified the same day — and ship so the code can be read, with the data withheld. One runner caveat: the runner flags `test_exp77_auditoria` as FAIL because the program under test prints a `FAIL -` line while demonstrating its own fail-closed path; run standalone, that suite exits 0 with 24/24 checks green. The audits cited above (8/8, 35/35, 28/30) were run against the full local system and their records live in `experimentos/` and `preregistros/`.
 
 ## How it works — the five pieces
