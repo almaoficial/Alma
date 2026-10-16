@@ -1,10 +1,108 @@
+# ALMA — how agents learn to fail less
+
+**Your agents report success they didn't achieve. ALMA is the instrument that checks.**
+A self-improving agent system under measured governance: a cheap evaluator as first filter, an adoption gate that rejects anything that doesn't beat measured noise, a verifier that confronts what agents *declare* against what *actually happened* — and a human the loop cannot overrule.
+
+By **Alejandro Nahuel Salusso** — Miami Beach, FL. Building since September 2026; the idea dates to July 2025. *(Versión en español más abajo.)*
+
+---
+
+## What works today (measured, not promised)
+
+**1. A verifier for "failures that look like successes."**
+The expensive failure of an agent is not the one that crashes — it's the one that *says* it did the work and didn't. The verifier audits declared outcomes against real evidence, run by run. First full audit of ALMA itself: **35 declared successes, 35 confirmed, 0 false passes.**
+
+**2. A cheap evaluator as the first verification filter.**
+Generating is nearly free; human verification costs ~46× generation (measured 2026 at real rates). A calibrated low-cost judge prunes almost everything bad for almost nothing, so expensive judgment is spent on 10 candidates, not 1,000. Measured on a 30-case battery: heuristic 17/30 · a free model 0/30 (reported as-is) · **Mistral Nemo 28/30 (0.933) at under US$0.001 per run** — now wired in as the default judge. Its honest frontier: it catches *form*, not fine factual error.
+
+**3. An adoption gate with a measured noise floor.**
+Every self-modification is evaluated on two independent splits against a frozen validator. Auto-adoption requires a positive effect on both **and** an effect larger than the system's own measured noise floor: `max(Δ_in, Δ_ho) > δ`, with **δ = 0.53**. Anything inside the band (0, 0.53] is not adopted — it waits for a human. Without a floor, a self-improving system chases noise and calls it progress.
+
+## Run the demo (2 minutes)
+
+A miniature of the verifier, self-contained — no dependencies, no API keys, no network:
+
+```bash
+python3 demo/verify_demo.py
+```
+
+An agent declared six outcomes at the end of a run. The script trusts none of them and checks the evidence. Real output:
+
+```
+ALMA verifier — declared vs. actual
+==============================================================
+[VERIFIED      ] #1 Wrote the summary report to report.md
+               evidence: report.md exists, 118 bytes
+[FALSE SUCCESS ] #2 All 30 battery tests passed
+               evidence: declared 30 PASS, log actually contains 19
+[VERIFIED      ] #3 Exported 12 result rows to results.csv
+               evidence: declared 12 rows, file actually has 12
+[FALSE SUCCESS ] #4 Sent the confirmation email
+               evidence: email_receipt.txt DOES NOT exist
+[FALSE SUCCESS ] #5 Downloaded the dataset (dataset.json)
+               evidence: dataset.json exists, 0 bytes
+[VERIFIED      ] #6 Final metrics computed in metrics.json
+               evidence: key 'accuracy' present in metrics.json
+==============================================================
+Declared: 6 · Confirmed: 3 · False successes caught: 3
+```
+
+The run *reported* success. The evidence disagreed in 3 of 6 claims. That gap is the whole point.
+
+## How it works — the five pieces
+
+1. **Cheap evaluator first.** Generate–prune–then–rank, applied as governance: the cheap judge filters, the expensive one decides.
+2. **Two-split gate with a noise floor.** Described above: no adoption below measured noise, ever — "better, never worse" is enforced by measurement, not intention.
+3. **The human stays outside the loop's reach.** The meta-loop auto-adopts measured improvements and reports every evolution — but it cannot touch two things: the **spending caps** and its **duty to notify**. If it could silence its own reports, the reports would be worthless.
+4. **Pre-registration before every experiment.** What is expected, what would count as strange, and what result would change the verdict — written *before* running. Without it, any outcome can be narrated as success. (See `preregistros/`.)
+5. **The claims ledger.** Every assertion the system makes about its owner carries a source and a date, and gets audited. First ledger audit: 8/8 confirmed.
+
+## The arc (dated, checkable)
+
+This project did not start as engineering. It started the way almost every 2025 AI idea started: magical thinking. It stays in this README because the distance between that origin and this repository *is* the thesis.
+
+| Date | Milestone |
+|---|---|
+| 18 Jul 2025 | First image of the «Yo Soy ALMA» NFT collection — ALMA was an "economic activation system", "Reactor Turing" mode, income goals via Zelle and crypto |
+| 19 Jul 2025 | Origin conversation with ChatGPT: "Launch ALMA TOTAL system – one-click activation" |
+| 27 Jul 2025 | This GitHub account (almaoficial) is created |
+| 22 Sep 2025 | The mature definition, still in ChatGPT: **"ALMA learns from ALMA"** — self-improving architecture with an Experience → evaluation → learn about the system → modify the architecture → new experience cycle, and a formal hypothesis A(t+1) = F(P(t), S(t), R(t), E(t), M(t)) |
+| 23 Sep 2026 | Decision to actually build it. Prior-art study first (refutation before enthusiasm): no production agent redesigned its own architecture |
+| 25–27 Sep 2026 | EXP1–9 pre-registered: 5 PASS / 4 FAIL. The loop validates in fine margins. Phases 0–2 built with tests |
+| 1 Oct 2026 | EXP76 PASS — skill handoff gate (clear interface Δ +0.3636 adopted; rigid −0.4145 rejected). EXP77: audit 7/7, no bloat |
+| 8–9 Oct 2026 | Cheap evaluator measured on 30 cases (numbers above); wired in as default judge |
+| 10 Oct 2026 | The claims ledger is born: every assertion carries source and date |
+| 11 Oct 2026 | First ledger audit: **8/8 confirmed**. "Failures that look like successes" verifier operational: 35 declared, 35 confirmed, **0 failures**. **Noise floor δ = 0.53 wired into the auto-adoption gate** |
+| 12 Oct 2026 | Skill-drift detector pre-registered. This repository |
+
+## Honest state
+
+What this repository proves: the instruments work and are measured (tests green; audits 8/8 and 35/35).
+
+What it does **not** prove yet — stated here because it is the point: **the meta-loop has zero adoptions with a measured improvement above its noise floor.** The Darwin-Gödel Machine publishes SWE-bench 20% → 50%; ALMA, so far, publishes that its laboratory does not lie to itself. The next frontier is exactly one event: a single adoption with a measured delta. When it happens, it will be in this repository, with its pre-registration and its measurement.
+
+## Structure
+
+- `alma_service/` — the system: meta-loop (`metaloop.py`), gate (`gate.py`), cheap evaluator and judge, verifier, skill handoff, trust manifest, drift detector, budgeted spending caps.
+- `demo/` — the 2-minute verifier demo above, with its sample run.
+- `test_*.py` — the governance suites: auto-adoption, noise floor, human brake, manifest and loader, EXP76–81 audits.
+- `docs/` — real system design, phases 0–2, v2 spec, full project report, prior-art dossier.
+- `preregistros/` — the meta-loop's pre-registrations in JSON (EXP76, EXP77, crossover, noise floor).
+- `experimentos/` — key runs (EXP71, EXP76, EXP77) and the meta-loop ledger with its hash chain.
+
+## License
+
+© 2026 Alejandro Nahuel Salusso (ALMA Labs LLC, in formation). All rights reserved — see `LICENSE`. The code is published to be read, studied and verified; that is its function.
+
+---
+
+# Versión en español
+
 # ALMA — aprender cómo los agentes se equivocan menos
 
 **Un sistema que se mejora a sí mismo bajo gobernanza medida: evaluador barato, puerta que rechaza lo que no mejora, y un humano en el núcleo.**
 
 Por **Alejandro Nahuel Salusso** — Miami Beach. En construcción desde septiembre de 2026; la idea nació en julio de 2025.
-
----
 
 ## La tesis
 
@@ -51,6 +149,7 @@ Lo que todavía **no** prueba, y lo digo en el README porque es el punto: **el m
 ## Estructura
 
 - `alma_service/` — el sistema: meta-loop (`metaloop.py`), puerta (`gate.py`), evaluador y juez baratos, verificador, handoff de skills, manifiesto de confianza, detector de deriva, presupuesto con topes.
+- `demo/` — la demo de 2 minutos del verificador, con su corrida de ejemplo.
 - `test_*.py` — las suites de gobernanza: auto-adopción, piso de ruido, freno humano, manifiesto y loader, auditorías EXP76–81.
 - `docs/` — diseño del sistema real, fases 0–2, spec v2, informe completo del proyecto y dossier de prior art.
 - `preregistros/` — los pre-registros del meta-loop en JSON (EXP76, EXP77, crossover, piso de ruido).
