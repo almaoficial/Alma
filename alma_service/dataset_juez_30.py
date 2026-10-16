@@ -1,0 +1,96 @@
+"""Dataset de 30 salidas etiquetadas para medir al juez (EXP-JUEZ-001).
+
+Labels = juicio del autor, declarado, no verdad revelada. Diseñado para
+discriminar: el juez heurístico debería fallar en "fluido-pero-equivocado"
+y "fuera-de-tema" (los aprueba); el juez con modelo debería atraparlos.
+
+Tipos: buena (True) / evasiva / bucle / fluido-malo / fuera-de-tema /
+       degenerada (todas False salvo buena).
+"""
+
+PARES = [
+    # -- buenas (True): 10 -------------------------------------------------
+    {"pregunta": "¿Cuál es la capital de Francia?",
+     "salida": "La capital de Francia es París.", "label": True, "tipo": "buena"},
+    {"pregunta": "¿Cuánto es 15 × 4?",
+     "salida": "15 × 4 = 60.", "label": True, "tipo": "buena"},
+    {"pregunta": "Nombrá dos planetas del sistema solar.",
+     "salida": "Marte y Júpiter son dos planetas del sistema solar.",
+     "label": True, "tipo": "buena"},
+    {"pregunta": "¿En qué año llegó el hombre a la Luna?",
+     "salida": "En 1969, con la misión Apolo 11.", "label": True, "tipo": "buena"},
+    {"pregunta": "Traducí 'hello' al español.",
+     "salida": "'Hello' se traduce como 'hola'.", "label": True, "tipo": "buena"},
+    {"pregunta": "¿Qué es la fotosíntesis?",
+     "salida": "Es el proceso por el cual las plantas convierten luz solar, agua y CO2 en glucosa y oxígeno.",
+     "label": True, "tipo": "buena"},
+    {"pregunta": "Dame un sinónimo de 'rápido'.",
+     "salida": "Un sinónimo de 'rápido' es 'veloz'.", "label": True, "tipo": "buena"},
+    {"pregunta": "¿Cuántos días tiene un año bisiesto?",
+     "salida": "Un año bisiesto tiene 366 días.", "label": True, "tipo": "buena"},
+    {"pregunta": "¿Quién escribió 'Cien años de soledad'?",
+     "salida": "Gabriel García Márquez.", "label": True, "tipo": "buena"},
+    {"pregunta": "¿Qué significa 'ledger' en contabilidad?",
+     "salida": "Es el libro mayor donde se registran los movimientos contables.",
+     "label": True, "tipo": "buena"},
+    # -- evasivas (False): 5 -----------------------------------------------
+    {"pregunta": "¿Cuál es la capital de Francia?",
+     "salida": "No sé la respuesta a esa pregunta, lo siento.",
+     "label": False, "tipo": "evasiva"},
+    {"pregunta": "¿Cuánto es 15 × 4?",
+     "salida": "Como modelo de lenguaje, no puedo hacer cálculos matemáticos.",
+     "label": False, "tipo": "evasiva"},
+    {"pregunta": "¿En qué año llegó el hombre a la Luna?",
+     "salida": "No estoy seguro, disculpa, no tengo información sobre eso.",
+     "label": False, "tipo": "evasiva"},
+    {"pregunta": "Traducí 'hello' al español.",
+     "salida": "No puedo ayudarte con traducciones.", "label": False, "tipo": "evasiva"},
+    {"pregunta": "¿Qué es la fotosíntesis?",
+     "salida": "Como IA, no tengo conocimientos de biología.",
+     "label": False, "tipo": "evasiva"},
+    # -- bucles (False): 3 ---------------------------------------------------
+    {"pregunta": "Nombrá dos planetas del sistema solar.",
+     "salida": "Los planetas del sistema solar son muchos y variados. " * 3,
+     "label": False, "tipo": "bucle"},
+    {"pregunta": "¿Qué significa 'ledger' en contabilidad?",
+     "salida": "El registro contable es fundamental para las empresas modernas. " * 3,
+     "label": False, "tipo": "bucle"},
+    {"pregunta": "Dame un sinónimo de 'rápido'.",
+     "salida": "La velocidad es una cualidad muy valorada en el deporte. " * 3,
+     "label": False, "tipo": "bucle"},
+    # -- fluido-pero-equivocado (False): 7 ------------------------------------
+    {"pregunta": "¿Cuál es la capital de Francia?",
+     "salida": "La capital de Francia es Lyon, su ciudad más importante.",
+     "label": False, "tipo": "fluido-malo"},
+    {"pregunta": "¿Cuánto es 15 × 4?",
+     "salida": "15 × 4 = 70, un cálculo directo.", "label": False, "tipo": "fluido-malo"},
+    {"pregunta": "¿En qué año llegó el hombre a la Luna?",
+     "salida": "El hombre llegó a la Luna en 1975 con la misión Apolo 18.",
+     "label": False, "tipo": "fluido-malo"},
+    {"pregunta": "¿Quién escribió 'Cien años de soledad'?",
+     "salida": "'Cien años de soledad' fue escrita por Mario Vargas Llosa.",
+     "label": False, "tipo": "fluido-malo"},
+    {"pregunta": "¿Cuántos días tiene un año bisiesto?",
+     "salida": "Un año bisiesto tiene 365 días, igual que uno común.",
+     "label": False, "tipo": "fluido-malo"},
+    {"pregunta": "¿Qué es la fotosíntesis?",
+     "salida": "Es el proceso por el cual los animales convierten oxígeno en energía durante la noche.",
+     "label": False, "tipo": "fluido-malo"},
+    {"pregunta": "Traducí 'hello' al español.",
+     "salida": "'Hello' se traduce como 'adiós'.", "label": False, "tipo": "fluido-malo"},
+    # -- fuera-de-tema (False): 3 ----------------------------------------------
+    {"pregunta": "¿Cuál es la capital de Francia?",
+     "salida": "La receta de la tortilla española lleva huevos, papas y cebolla.",
+     "label": False, "tipo": "fuera-de-tema"},
+    {"pregunta": "¿Cuánto es 15 × 4?",
+     "salida": "El clima en Miami hoy está soleado con 28 grados.",
+     "label": False, "tipo": "fuera-de-tema"},
+    {"pregunta": "¿Qué es la fotosíntesis?",
+     "salida": "Mi color favorito es el azul porque me recuerda al mar.",
+     "label": False, "tipo": "fuera-de-tema"},
+    # -- degeneradas (False): 2 — las atrapa lo determinista ----------------------
+    {"pregunta": "¿Cuál es la capital de Francia?",
+     "salida": "   ", "label": False, "tipo": "degenerada"},
+    {"pregunta": "Dame un sinónimo de 'rápido'.",
+     "salida": "x", "label": False, "tipo": "degenerada"},
+]

@@ -1,0 +1,258 @@
+{
+ "modelo": "mistralai/mistral-nemo",
+ "filas": [
+  {
+   "i": 0,
+   "tipo": "buena",
+   "label": true,
+   "heur": true,
+   "llm": true,
+   "abstencion": false
+  },
+  {
+   "i": 1,
+   "tipo": "buena",
+   "label": true,
+   "heur": true,
+   "llm": true,
+   "abstencion": false
+  },
+  {
+   "i": 2,
+   "tipo": "buena",
+   "label": true,
+   "heur": true,
+   "llm": true,
+   "abstencion": false
+  },
+  {
+   "i": 3,
+   "tipo": "buena",
+   "label": true,
+   "heur": true,
+   "llm": true,
+   "abstencion": false
+  },
+  {
+   "i": 4,
+   "tipo": "buena",
+   "label": true,
+   "heur": true,
+   "llm": true,
+   "abstencion": false
+  },
+  {
+   "i": 5,
+   "tipo": "buena",
+   "label": true,
+   "heur": true,
+   "llm": true,
+   "abstencion": false
+  },
+  {
+   "i": 6,
+   "tipo": "buena",
+   "label": true,
+   "heur": true,
+   "llm": true,
+   "abstencion": false
+  },
+  {
+   "i": 7,
+   "tipo": "buena",
+   "label": true,
+   "heur": true,
+   "llm": true,
+   "abstencion": false
+  },
+  {
+   "i": 8,
+   "tipo": "buena",
+   "label": true,
+   "heur": true,
+   "llm": true,
+   "abstencion": false
+  },
+  {
+   "i": 9,
+   "tipo": "buena",
+   "label": true,
+   "heur": true,
+   "llm": true,
+   "abstencion": false
+  },
+  {
+   "i": 10,
+   "tipo": "evasiva",
+   "label": false,
+   "heur": false,
+   "llm": false,
+   "abstencion": false
+  },
+  {
+   "i": 11,
+   "tipo": "evasiva",
+   "label": false,
+   "heur": false,
+   "llm": false,
+   "abstencion": false
+  },
+  {
+   "i": 12,
+   "tipo": "evasiva",
+   "label": false,
+   "heur": false,
+   "llm": false,
+   "abstencion": false
+  },
+  {
+   "i": 13,
+   "tipo": "evasiva",
+   "label": false,
+   "heur": false,
+   "llm": false,
+   "abstencion": false
+  },
+  {
+   "i": 14,
+   "tipo": "evasiva",
+   "label": false,
+   "heur": true,
+   "llm": false,
+   "abstencion": false
+  },
+  {
+   "i": 15,
+   "tipo": "bucle",
+   "label": false,
+   "heur": false,
+   "llm": false,
+   "abstencion": false
+  },
+  {
+   "i": 16,
+   "tipo": "bucle",
+   "label": false,
+   "heur": false,
+   "llm": false,
+   "abstencion": false
+  },
+  {
+   "i": 17,
+   "tipo": "bucle",
+   "label": false,
+   "heur": false,
+   "llm": false,
+   "abstencion": false
+  },
+  {
+   "i": 18,
+   "tipo": "fluido-malo",
+   "label": false,
+   "heur": true,
+   "llm": false,
+   "abstencion": false
+  },
+  {
+   "i": 19,
+   "tipo": "fluido-malo",
+   "label": false,
+   "heur": true,
+   "llm": true,
+   "abstencion": false
+  },
+  {
+   "i": 20,
+   "tipo": "fluido-malo",
+   "label": false,
+   "heur": true,
+   "llm": false,
+   "abstencion": false
+  },
+  {
+   "i": 21,
+   "tipo": "fluido-malo",
+   "label": false,
+   "heur": true,
+   "llm": true,
+   "abstencion": false
+  },
+  {
+   "i": 22,
+   "tipo": "fluido-malo",
+   "label": false,
+   "heur": true,
+   "llm": false,
+   "abstencion": false
+  },
+  {
+   "i": 23,
+   "tipo": "fluido-malo",
+   "label": false,
+   "heur": true,
+   "llm": false,
+   "abstencion": false
+  },
+  {
+   "i": 24,
+   "tipo": "fluido-malo",
+   "label": false,
+   "heur": true,
+   "llm": false,
+   "abstencion": false
+  },
+  {
+   "i": 25,
+   "tipo": "fuera-de-tema",
+   "label": false,
+   "heur": true,
+   "llm": false,
+   "abstencion": false
+  },
+  {
+   "i": 26,
+   "tipo": "fuera-de-tema",
+   "label": false,
+   "heur": true,
+   "llm": false,
+   "abstencion": false
+  },
+  {
+   "i": 27,
+   "tipo": "fuera-de-tema",
+   "label": false,
+   "heur": true,
+   "llm": false,
+   "abstencion": false
+  },
+  {
+   "i": 28,
+   "tipo": "degenerada",
+   "label": false,
+   "heur": true,
+   "llm": false,
+   "abstencion": false
+  },
+  {
+   "i": 29,
+   "tipo": "degenerada",
+   "label": false,
+   "heur": true,
+   "llm": false,
+   "abstencion": false
+  }
+ ],
+ "pipeline_heur": {
+  "n": 30,
+  "acuerdo": 0.6,
+  "falsos_rechazos": 0,
+  "tasa_falso_rechazo": 0.0
+ },
+ "pipeline_llm": {
+  "n": 30,
+  "acuerdo": 0.9333,
+  "falsos_rechazos": 0,
+  "tasa_falso_rechazo": 0.0
+ },
+ "costo_usd": 0.0
+}

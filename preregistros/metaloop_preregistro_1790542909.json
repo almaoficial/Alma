@@ -1,0 +1,16 @@
+{
+  "experimento": "metaloop_rso",
+  "seed": 42,
+  "rondas": 2,
+  "scaffold_partida": {
+    "decay": 0.5,
+    "gate_margin": 0.0,
+    "n0": 4,
+    "umbral_base": 1,
+    "umbral_divisor": 3
+  },
+  "heldout_partida": 82.5,
+  "criterio_adopcion": "held-out del candidato < held-out del scaffold vigente (estricto)",
+  "validador": "congelado (e47/e56, splits [0,1,2]/[3,4])",
+  "timestamp": 1790542909.245916
+}
