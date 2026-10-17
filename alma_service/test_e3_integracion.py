@@ -35,7 +35,8 @@ def check(nombre, cond, detalle=""):
 
 # -- (a) defaults de configuración ----------------------------------------
 def t_config():
-    check("E3_REPS reservado [500,501]", E3.E3_REPS == [500, 501],
+    check("E3_REPS reservado [22000..22023] (ciclo L1; antes "
+          "[500,501])", E3.E3_REPS == list(range(22000, 22024)),
           repr(E3.E3_REPS))
     check("MARGEN_MIN_DEFAULT == 5.0 (conservador, documentado)",
           E3.MARGEN_MIN_DEFAULT == 5.0, repr(E3.MARGEN_MIN_DEFAULT))

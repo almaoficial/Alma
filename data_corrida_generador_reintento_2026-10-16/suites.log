@@ -1,0 +1,51 @@
+ALMA test runner — 46 suites — /home/hatch/workspace/alma-prototype
+==============================================================================
+[PASS   ] test_archivo.py (0.088s) — Código de salida 0.
+[PASS   ] test_exp76_handoff.py (0.114s) — Código de salida 0.
+[PASS   ] test_exp77_auditoria.py (0.165s) — Código de salida 0.
+[PASS   ] test_exp78_forge.py (0.653s) — Código de salida 0.
+[PASS   ] test_exp79_cableado.py (0.274s) — Código de salida 0.
+[PASS   ] test_exp80_agentskills.py (0.137s) — Código de salida 0.
+[PASS   ] test_exp81_ecc_formato.py (0.104s) — Código de salida 0.
+[PASS   ] test_exp82_descripciones.py (0.141s) — Código de salida 0.
+[PASS   ] test_fase0_curator.py (0.074s) — Código de salida 0.
+[PASS   ] test_fase0_harness.py (0.084s) — Código de salida 0.
+[PASS   ] test_fase0_memoria.py (0.075s) — Código de salida 0.
+[PASS   ] test_fase0_recurrencia.py (0.035s) — Código de salida 0.
+[PASS   ] test_fase0_resolver.py (0.338s) — Código de salida 0.
+[PASS   ] test_fase0_skills.py (0.07s) — Código de salida 0.
+[PASS   ] test_fase1_motor.py (0.172s) — Código de salida 0.
+[PASS   ] test_fase1_proveedor.py (0.226s) — Código de salida 0.
+[PASS   ] test_fase21_ablacion.py (0.214s) — Código de salida 0.
+[PASS   ] test_fase21_aci.py (0.052s) — Código de salida 0.
+[PASS   ] test_fase21_admision.py (0.127s) — Código de salida 0.
+[PASS   ] test_fase21_confianza.py (0.061s) — Código de salida 0.
+[PASS   ] test_fase21_debilidades.py (0.032s) — Código de salida 0.
+[PASS   ] test_fase21_gate.py (0.03s) — Código de salida 0.
+[PASS   ] test_fase21_politicas.py (0.059s) — Código de salida 0.
+[PASS   ] test_fase21_procedencia.py (0.081s) — Código de salida 0.
+[PASS   ] test_fase21_redteam_fixes.py (0.093s) — Código de salida 0.
+[PASS   ] test_fase21_rutina.py (1.252s) — Código de salida 0.
+[PASS   ] test_fase21_verificacion.py (0.028s) — Código de salida 0.
+[PASS   ] test_fase21_versiones.py (0.057s) — Código de salida 0.
+[PASS   ] test_fase22_trazas.py (0.179s) — Código de salida 0.
+[PASS   ] test_fase23_freno_humano.py (0.1s) — Código de salida 0.
+[PASS   ] test_fase24_detector.py (0.3s) — Código de salida 0.
+[PASS   ] test_fase25_drift.py (0.067s) — Código de salida 0.
+[PASS   ] test_fase25_drift_vivo.py (1.331s) — Código de salida 0.
+[PASS   ] test_fase26_disparo.py (2.895s) — Código de salida 0.
+[PASS   ] test_fase2_benchmark.py (0.409s) — Código de salida 0.
+[PASS   ] test_fase2_curator_optin.py (0.05s) — Código de salida 0.
+[PASS   ] test_fase2_metaloop.py (1.557s) — Código de salida 0.
+[PASS   ] test_fase2_presupuesto.py (0.054s) — Código de salida 0.
+[PASS   ] test_fase2_revision.py (1.06s) — Código de salida 0.
+[PASS   ] test_generador_candidatos.py (0.288s) — Código de salida 0.
+[PASS   ] test_gobernanza_auto_adopcion.py (0.169s) — Código de salida 0.
+[PASS   ] test_gobernanza_freno_rollback.py (0.088s) — Código de salida 0.
+[PASS   ] test_manifiesto.py (3.688s) — Código de salida 0.
+[PASS   ] test_manifiesto_loader.py (2.487s) — Código de salida 0.
+[PASS   ] test_metaloop_freno.py (0.574s) — Código de salida 0.
+[PASS   ] test_piso_ruido_puerta.py (0.037s) — Código de salida 0.
+==============================================================================
+Total: 46 | PASS: 46 | FAIL: 0 | BLOCKED: 0
+JSON: /home/hatch/workspace/alma-prototype/data_corrida_generador_reintento_2026-10-16/test-results-reintento.json

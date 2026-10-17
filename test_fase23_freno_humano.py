@@ -21,7 +21,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from alma_service.promotor import (
     Promotor, APROBADORES, ESTADO_ESPERA, ESTADO_APROBADA,
     ESTADO_RECHAZADA)
-from alma_service.metaloop import MetaLoop
+from alma_service.metaloop import MetaLoop, TRAIN_REPS
 from alma_service.presupuesto import PresupuestoFase2
 from alma_service.scaffold import DEFAULT_SCAFFOLD
 from alma_service.trazas import EventLog
@@ -149,9 +149,12 @@ def main():
     orig_evaluar = MetaLoop._evaluar
 
     def fake_pass(scaffold, replicas, cache):
-        es_train = tuple(replicas) == (0, 1, 2)
+        # Panel cableado (recableado 16/10/2026, recalibración δ v3):
+        # train = TRAIN_REPS del metaloop. Δ = 6 en ambos splits, sobre
+        # el piso nuevo de auto-adopción (5,4781 totales).
+        es_train = tuple(replicas) == tuple(TRAIN_REPS)
         v = (90.0 if es_train else 95.0) if scaffold == vigente0 else (
-            85.0 if es_train else 90.0)
+            84.0 if es_train else 89.0)
         return (v, [v] * len(replicas))
 
     MetaLoop._evaluar = staticmethod(fake_pass)
@@ -191,7 +194,7 @@ def main():
     vigente4 = ml4.scaffold_vigente()
 
     def fake_fail(scaffold, replicas, cache):
-        es_train = tuple(replicas) == (0, 1, 2)
+        es_train = tuple(replicas) == tuple(TRAIN_REPS)
         v = (90.0 if es_train else 95.0) if scaffold == vigente4 else (
             95.0 if es_train else 96.0)  # regresión en ambos
         return (v, [v] * len(replicas))

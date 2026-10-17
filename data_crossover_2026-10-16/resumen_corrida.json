@@ -1,0 +1,946 @@
+{
+  "veredicto": "SEÑAL PARCIAL",
+  "tanda": "tanda_crossover_1792193957.json",
+  "preregistro_corrida": "/home/hatch/workspace/alma-prototype/metaloop_preregistro_1792193964.json",
+  "media_train_base": 85.2222,
+  "mediciones": [
+    {
+      "indice": 1,
+      "padres": [
+        0,
+        5
+      ],
+      "padres_ids": [
+        "P0",
+        "P5"
+      ],
+      "config": {
+        "decay": 0.5,
+        "gate_margin": 0.05,
+        "n0": 2,
+        "umbral_base": 1,
+        "umbral_divisor": 3
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "gate_margin",
+          "n0",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "decay",
+          "umbral_divisor"
+        ],
+        "de_b": [
+          "gate_margin",
+          "n0"
+        ]
+      },
+      "origen_operador": "crossover",
+      "media_train": 85.7778,
+      "delta_train": -0.5556
+    },
+    {
+      "indice": 2,
+      "padres": [
+        1,
+        5
+      ],
+      "padres_ids": [
+        "P1",
+        "P5"
+      ],
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.05,
+        "n0": 1,
+        "umbral_base": 1,
+        "umbral_divisor": 2
+      },
+      "herencia": {
+        "en_disputa": [
+          "n0",
+          "umbral_base",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "n0",
+          "umbral_divisor"
+        ],
+        "de_b": [
+          "umbral_base"
+        ]
+      },
+      "origen_operador": "crossover",
+      "media_train": 87.8889,
+      "delta_train": -2.6667
+    },
+    {
+      "indice": 3,
+      "padres": [
+        2,
+        5
+      ],
+      "padres_ids": [
+        "P2",
+        "P5"
+      ],
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.05,
+        "n0": 2,
+        "umbral_base": 3,
+        "umbral_divisor": 4
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "gate_margin",
+          "umbral_base"
+        ],
+        "de_a": [
+          "umbral_base"
+        ],
+        "de_b": [
+          "decay",
+          "gate_margin"
+        ]
+      },
+      "origen_operador": "crossover",
+      "media_train": 88.7778,
+      "delta_train": -3.5556
+    },
+    {
+      "indice": 4,
+      "padres": [
+        3,
+        5
+      ],
+      "padres_ids": [
+        "P3",
+        "P5"
+      ],
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.05,
+        "n0": 2,
+        "umbral_base": 1,
+        "umbral_divisor": 6
+      },
+      "herencia": {
+        "en_disputa": [
+          "n0",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "umbral_divisor"
+        ],
+        "de_b": [
+          "n0"
+        ]
+      },
+      "origen_operador": "crossover",
+      "media_train": 84.5556,
+      "delta_train": 0.6667
+    },
+    {
+      "indice": 5,
+      "padres": [
+        4,
+        5
+      ],
+      "padres_ids": [
+        "P4",
+        "P5"
+      ],
+      "config": {
+        "decay": 0.5,
+        "gate_margin": 0.1,
+        "n0": 2,
+        "umbral_base": 2,
+        "umbral_divisor": 4
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "gate_margin",
+          "n0",
+          "umbral_base",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "decay",
+          "gate_margin",
+          "umbral_base"
+        ],
+        "de_b": [
+          "n0",
+          "umbral_divisor"
+        ]
+      },
+      "origen_operador": "crossover",
+      "media_train": 88.2222,
+      "delta_train": -3.0
+    },
+    {
+      "indice": 6,
+      "padres": [
+        5,
+        6
+      ],
+      "padres_ids": [
+        "P5",
+        "P6"
+      ],
+      "config": {
+        "decay": 0.25,
+        "gate_margin": 0.0,
+        "n0": 2,
+        "umbral_base": 2,
+        "umbral_divisor": 4
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "gate_margin",
+          "n0",
+          "umbral_base",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "n0",
+          "umbral_divisor"
+        ],
+        "de_b": [
+          "decay",
+          "gate_margin",
+          "umbral_base"
+        ]
+      },
+      "origen_operador": "crossover",
+      "media_train": 87.6111,
+      "delta_train": -2.3889
+    },
+    {
+      "indice": 7,
+      "padres": [
+        5,
+        7
+      ],
+      "padres_ids": [
+        "P5",
+        "P7"
+      ],
+      "config": {
+        "decay": 0.5,
+        "gate_margin": 0.05,
+        "n0": 1,
+        "umbral_base": 1,
+        "umbral_divisor": 4
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "n0",
+          "umbral_base",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "umbral_base",
+          "umbral_divisor"
+        ],
+        "de_b": [
+          "decay",
+          "n0"
+        ]
+      },
+      "origen_operador": "crossover",
+      "media_train": 84.5,
+      "delta_train": 0.7222
+    },
+    {
+      "indice": 8,
+      "padres": [
+        5,
+        8
+      ],
+      "padres_ids": [
+        "P5",
+        "P8"
+      ],
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.05,
+        "n0": 2,
+        "umbral_base": 1,
+        "umbral_divisor": 3
+      },
+      "herencia": {
+        "en_disputa": [
+          "gate_margin",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "gate_margin"
+        ],
+        "de_b": [
+          "umbral_divisor"
+        ]
+      },
+      "origen_operador": "crossover",
+      "media_train": 85.8333,
+      "delta_train": -0.6111
+    },
+    {
+      "indice": 9,
+      "padres": [
+        5,
+        9
+      ],
+      "padres_ids": [
+        "P5",
+        "P9"
+      ],
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.05,
+        "n0": 1,
+        "umbral_base": 1,
+        "umbral_divisor": 6
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "n0",
+          "umbral_base",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "decay",
+          "umbral_base"
+        ],
+        "de_b": [
+          "n0",
+          "umbral_divisor"
+        ]
+      },
+      "origen_operador": "crossover",
+      "media_train": 83.7778,
+      "delta_train": 1.4444
+    },
+    {
+      "indice": 10,
+      "padres": [
+        5,
+        10
+      ],
+      "padres_ids": [
+        "P5",
+        "P10"
+      ],
+      "config": {
+        "decay": 0.25,
+        "gate_margin": 0.0,
+        "n0": 2,
+        "umbral_base": 1,
+        "umbral_divisor": 4
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "gate_margin",
+          "n0",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "n0",
+          "umbral_divisor"
+        ],
+        "de_b": [
+          "decay",
+          "gate_margin"
+        ]
+      },
+      "origen_operador": "crossover",
+      "media_train": 85.1667,
+      "delta_train": 0.0556
+    },
+    {
+      "indice": 11,
+      "padres": [
+        0,
+        3
+      ],
+      "padres_ids": [
+        "P0",
+        "P3"
+      ],
+      "config": {
+        "decay": 0.5,
+        "gate_margin": 0.0,
+        "n0": 4,
+        "umbral_base": 1,
+        "umbral_divisor": 6
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "gate_margin",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "decay",
+          "gate_margin"
+        ],
+        "de_b": [
+          "umbral_divisor"
+        ]
+      },
+      "origen_operador": "crossover",
+      "media_train": 85.2778,
+      "delta_train": -0.0556
+    },
+    {
+      "indice": 12,
+      "padres": [
+        1,
+        3
+      ],
+      "padres_ids": [
+        "P1",
+        "P3"
+      ],
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.05,
+        "n0": 4,
+        "umbral_base": 1,
+        "umbral_divisor": 2
+      },
+      "herencia": {
+        "en_disputa": [
+          "n0",
+          "umbral_base",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "umbral_divisor"
+        ],
+        "de_b": [
+          "n0",
+          "umbral_base"
+        ]
+      },
+      "origen_operador": "crossover",
+      "media_train": 88.5,
+      "delta_train": -3.2778
+    },
+    {
+      "indice": 13,
+      "padres": [
+        2,
+        3
+      ],
+      "padres_ids": [
+        "P2",
+        "P3"
+      ],
+      "config": {
+        "decay": 0.25,
+        "gate_margin": 0.05,
+        "n0": 2,
+        "umbral_base": 1,
+        "umbral_divisor": 6
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "gate_margin",
+          "n0",
+          "umbral_base",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "decay",
+          "n0"
+        ],
+        "de_b": [
+          "gate_margin",
+          "umbral_base",
+          "umbral_divisor"
+        ]
+      },
+      "origen_operador": "crossover",
+      "media_train": 84.6111,
+      "delta_train": 0.6111
+    },
+    {
+      "indice": 14,
+      "padres": [
+        3,
+        4
+      ],
+      "padres_ids": [
+        "P3",
+        "P4"
+      ],
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.05,
+        "n0": 4,
+        "umbral_base": 2,
+        "umbral_divisor": 3
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "gate_margin",
+          "n0",
+          "umbral_base",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "decay",
+          "gate_margin",
+          "n0"
+        ],
+        "de_b": [
+          "umbral_base",
+          "umbral_divisor"
+        ]
+      },
+      "origen_operador": "crossover",
+      "media_train": 88.9444,
+      "delta_train": -3.7222
+    },
+    {
+      "indice": 15,
+      "padres": [
+        3,
+        6
+      ],
+      "padres_ids": [
+        "P3",
+        "P6"
+      ],
+      "config": {
+        "decay": 0.25,
+        "gate_margin": 0.05,
+        "n0": 4,
+        "umbral_base": 1,
+        "umbral_divisor": 6
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "gate_margin",
+          "umbral_base"
+        ],
+        "de_a": [
+          "gate_margin",
+          "umbral_base"
+        ],
+        "de_b": [
+          "decay"
+        ]
+      },
+      "origen_operador": "crossover",
+      "media_train": 85.2778,
+      "delta_train": -0.0556
+    },
+    {
+      "indice": 16,
+      "padres": [
+        3,
+        7
+      ],
+      "padres_ids": [
+        "P3",
+        "P7"
+      ],
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.05,
+        "n0": 4,
+        "umbral_base": 3,
+        "umbral_divisor": 2
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "n0",
+          "umbral_base",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "decay",
+          "n0"
+        ],
+        "de_b": [
+          "umbral_base",
+          "umbral_divisor"
+        ]
+      },
+      "origen_operador": "crossover",
+      "media_train": 88.3333,
+      "delta_train": -3.1111
+    },
+    {
+      "indice": 17,
+      "padres": [
+        3,
+        8
+      ],
+      "padres_ids": [
+        "P3",
+        "P8"
+      ],
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.1,
+        "n0": 2,
+        "umbral_base": 1,
+        "umbral_divisor": 6
+      },
+      "herencia": {
+        "en_disputa": [
+          "gate_margin",
+          "n0",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "umbral_divisor"
+        ],
+        "de_b": [
+          "gate_margin",
+          "n0"
+        ]
+      },
+      "origen_operador": "crossover",
+      "media_train": 84.5556,
+      "delta_train": 0.6667
+    },
+    {
+      "indice": 18,
+      "padres": [
+        3,
+        9
+      ],
+      "padres_ids": [
+        "P3",
+        "P9"
+      ],
+      "config": {
+        "decay": 0.5,
+        "gate_margin": 0.05,
+        "n0": 4,
+        "umbral_base": 1,
+        "umbral_divisor": 6
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "n0",
+          "umbral_base"
+        ],
+        "de_a": [
+          "n0",
+          "umbral_base"
+        ],
+        "de_b": [
+          "decay"
+        ]
+      },
+      "origen_operador": "crossover",
+      "media_train": 85.2778,
+      "delta_train": -0.0556
+    },
+    {
+      "indice": 19,
+      "padres": [
+        3,
+        10
+      ],
+      "padres_ids": [
+        "P3",
+        "P10"
+      ],
+      "config": {
+        "decay": 0.25,
+        "gate_margin": 0.0,
+        "n0": 4,
+        "umbral_base": 1,
+        "umbral_divisor": 6
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "gate_margin",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "umbral_divisor"
+        ],
+        "de_b": [
+          "decay",
+          "gate_margin"
+        ]
+      },
+      "origen_operador": "crossover",
+      "media_train": 85.2778,
+      "delta_train": -0.0556
+    },
+    {
+      "indice": 20,
+      "padres": [
+        3,
+        11
+      ],
+      "padres_ids": [
+        "P3",
+        "P11"
+      ],
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.05,
+        "n0": 4,
+        "umbral_base": 2,
+        "umbral_divisor": 6
+      },
+      "herencia": {
+        "en_disputa": [
+          "n0",
+          "umbral_base"
+        ],
+        "de_a": [
+          "n0"
+        ],
+        "de_b": [
+          "umbral_base"
+        ]
+      },
+      "origen_operador": "crossover",
+      "media_train": 87.3333,
+      "delta_train": -2.1111
+    },
+    {
+      "indice": 21,
+      "padres": [
+        0,
+        8
+      ],
+      "padres_ids": [
+        "P0",
+        "P8"
+      ],
+      "config": {
+        "decay": 0.5,
+        "gate_margin": 0.1,
+        "n0": 2,
+        "umbral_base": 1,
+        "umbral_divisor": 3
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "gate_margin",
+          "n0"
+        ],
+        "de_a": [
+          "decay"
+        ],
+        "de_b": [
+          "gate_margin",
+          "n0"
+        ]
+      },
+      "origen_operador": "crossover",
+      "media_train": 85.7778,
+      "delta_train": -0.5556
+    },
+    {
+      "indice": 22,
+      "padres": [
+        1,
+        8
+      ],
+      "padres_ids": [
+        "P1",
+        "P8"
+      ],
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.05,
+        "n0": 2,
+        "umbral_base": 2,
+        "umbral_divisor": 2
+      },
+      "herencia": {
+        "en_disputa": [
+          "gate_margin",
+          "n0",
+          "umbral_base",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "gate_margin",
+          "umbral_base",
+          "umbral_divisor"
+        ],
+        "de_b": [
+          "n0"
+        ]
+      },
+      "origen_operador": "crossover",
+      "media_train": 88.7222,
+      "delta_train": -3.5
+    },
+    {
+      "indice": 23,
+      "padres": [
+        2,
+        8
+      ],
+      "padres_ids": [
+        "P2",
+        "P8"
+      ],
+      "config": {
+        "decay": 0.25,
+        "gate_margin": 0.1,
+        "n0": 2,
+        "umbral_base": 1,
+        "umbral_divisor": 3
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "umbral_base",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "decay"
+        ],
+        "de_b": [
+          "umbral_base",
+          "umbral_divisor"
+        ]
+      },
+      "origen_operador": "crossover",
+      "media_train": 85.8333,
+      "delta_train": -0.6111
+    },
+    {
+      "indice": 24,
+      "padres": [
+        4,
+        8
+      ],
+      "padres_ids": [
+        "P4",
+        "P8"
+      ],
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.1,
+        "n0": 2,
+        "umbral_base": 2,
+        "umbral_divisor": 3
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "n0",
+          "umbral_base"
+        ],
+        "de_a": [
+          "umbral_base"
+        ],
+        "de_b": [
+          "decay",
+          "n0"
+        ]
+      },
+      "origen_operador": "crossover",
+      "media_train": 88.2222,
+      "delta_train": -3.0
+    }
+  ],
+  "finalista": {
+    "indice": 9,
+    "padres": [
+      5,
+      9
+    ],
+    "padres_ids": [
+      "P5",
+      "P9"
+    ],
+    "config": {
+      "decay": 0.75,
+      "gate_margin": 0.05,
+      "n0": 1,
+      "umbral_base": 1,
+      "umbral_divisor": 6
+    },
+    "herencia": {
+      "en_disputa": [
+        "decay",
+        "n0",
+        "umbral_base",
+        "umbral_divisor"
+      ],
+      "de_a": [
+        "decay",
+        "umbral_base"
+      ],
+      "de_b": [
+        "n0",
+        "umbral_divisor"
+      ]
+    },
+    "origen_operador": "crossover",
+    "media_train": 83.7778,
+    "delta_train": 1.4444
+  },
+  "puerta": {
+    "aceptado": false,
+    "motivo": "regresión: delta_in=1.4444, delta_ho=-3.0833",
+    "delta_in": 1.4444,
+    "delta_ho": -3.0833,
+    "regla": "delta_in>=0 & delta_ho>=0 & max(delta_in,delta_ho)>0"
+  },
+  "e3": {
+    "aceptado": false,
+    "e3_exigido": false,
+    "e3_evaluado": false,
+    "delta_in": 1.4444,
+    "delta_ho": -3.0833,
+    "delta_e3": null,
+    "motivo": "dos splits rechazan: regresión: delta_in=1.4444, delta_ho=-3.0833 (E3 no evaluado)"
+  },
+  "auto_adopcion": {
+    "auto_ok": false,
+    "motivo": "dos splits rechazan: regresión: delta_in=1.4444, delta_ho=-3.0833 (E3 no evaluado)",
+    "requiere_si": false,
+    "adopcion_id": null
+  },
+  "confirmacion": null,
+  "freno_antes": {
+    "racha_planas": 2,
+    "freno_activo": false,
+    "racha_max": 3
+  },
+  "freno_despues": {
+    "racha_planas": 3,
+    "freno_activo": true
+  },
+  "scaffold_vigente": {
+    "decay": 0.5,
+    "gate_margin": 0.0,
+    "n0": 4,
+    "umbral_base": 1,
+    "umbral_divisor": 3
+  }
+}

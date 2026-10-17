@@ -1,0 +1,32 @@
+EVIDENCIA DE BLOQUEO DE PLATAFORMA — REINTENTO de la corrida del
+generador, 16/10/2026 (segundo intento del día, mismo pre-registro +
+adenda; precedente El Probador 002b: fecha nueva, mismo protocolo).
+Modelo designado por la regla de reemplazo (verificación de
+catálogo de hoy, snapshot en catalogo_snapshot.json de esta
+carpeta): xingchen-agi/xing4.0-29b-a4b:free — el primario
+inclusionai/ling-3.1-flash:free sigue sin figurar en el tier
+gratuito y no hay ningún deepseek/*:free; la regla se agotó en su
+paso (3), igual que en el intento anterior (~40 min antes, tres
+429 documentados en data_corrida_generador_2026-10-16/).
+Ruta: or_chat.py (skill openrouter), la existente del sistema.
+
+Intento 1 — generación real de la tanda (~22:37 UTC):
+  python3 correr_generador.py --generar --modelo "xingchen-agi/xing4.0-29b-a4b:free"
+  -> RuntimeError: or_chat falló (stderr vacío; or_chat reporta el
+     error como JSON en stdout y sale con código 1). Sin tanda
+     escrita, sin candidatos, sin evaluación. Log: generar.log.
+
+Sonda 1 — inmediata (~22:38 UTC), prompt mínimo (sonda1.txt):
+  or_chat --model xingchen-agi/xing4.0-29b-a4b:free --max-tokens 50
+  -> {"error": "HTTPError: HTTP Error 429: Too Many Requests"} EXIT=1
+
+Sonda 2 — espaciada (+4 min, 22:42 UTC), prompt mínimo (sonda2.txt):
+  -> {"error": "HTTPError: HTTP Error 429: Too Many Requests"} EXIT=1
+
+Tres 429 consecutivos sobre el modelo designado, con el mismo
+protocolo de sondas del intento anterior: la plataforma impide
+generar. Veredicto según pre-registro §7 (bloqueo de plataforma) y
+la adenda: CORRIDA NO REALIZADA por segunda vez en el día. No se
+sustituyó el modelo por fuera de la regla (la regla ya estaba
+agotada en su paso 3; cambiar de modelo tras el 429 sería
+improvisar otra ruta) y no se pagó ninguna ruta.

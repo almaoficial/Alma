@@ -1,0 +1,31 @@
+{
+  "experimento": "metaloop_crossover",
+  "seed": 20261016,
+  "tanda": "tanda_crossover_1792193957.json",
+  "n_hijos": 24,
+  "criterio_parada": "tanda congelada completa, medición independiente contra la base",
+  "scaffold_partida": {
+    "decay": 0.5,
+    "gate_margin": 0.0,
+    "n0": 4,
+    "umbral_base": 1,
+    "umbral_divisor": 3
+  },
+  "heldout_partida": 80.66666666666667,
+  "criterio_adopcion": "finalista único: puerta de dos splits + E3 siempre exigido + piso de ruido 5,4781 (camino normal)",
+  "puerta_e3": {
+    "habilitado": true,
+    "margen_min": 5.0,
+    "e3_reps": [
+      500,
+      501
+    ],
+    "superficie_metaloop": "parametro",
+    "regla_e3": "min(d_in,d_ho,d_e3)>=0 & max(d_in,d_ho,d_e3)>0",
+    "datos": "stream mock held-out reservado para auditorías (réplicas 500-501, provisionales)",
+    "politica": "Endurecimiento 28/9 (decisión del usuario): E3 SIEMPRE exigido en el path vivo cuando los dos splits aceptan (forzar_e3=True); el E3 veta ante regresión, nunca relaja la puerta"
+  },
+  "validador": "congelado (e47/e56), panel 18/12 + E3 [500,501]",
+  "preregistro_experimento": "preregistro-crossover-2026-10-16.md",
+  "timestamp": 1792193964.787912
+}

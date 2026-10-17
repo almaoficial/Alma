@@ -1,0 +1,159 @@
+{
+  "fecha": "2026-10-16",
+  "preregistro": "/home/hatch/workspace/alma-prototype/preregistro-recalibracion-delta-v2-2026-10-16.md",
+  "B": 5000,
+  "z": 2.0,
+  "seed": 12345,
+  "escala_delta": "media por bloque (totales / 24)",
+  "paso0": {
+    "identicas_10_de_10": true,
+    "max_diferencia_absoluta": 0.0,
+    "reg_pol_base": {
+      "0": 71.0,
+      "1": 83.0,
+      "2": 90.0,
+      "3": 84.0,
+      "4": 81.0
+    },
+    "duracion_evaluacion_completa_s": 0.0893,
+    "duracion_paso0_s": 0.893,
+    "duracion_protocolo_estimada_s": 11.43,
+    "umbral_1h_superado": false
+  },
+  "pool": {
+    "ids": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026,
+      2027,
+      2028,
+      2029
+    ],
+    "reg_pol": {
+      "2000": 87.0,
+      "2001": 83.0,
+      "2002": 82.0,
+      "2003": 78.0,
+      "2004": 80.0,
+      "2005": 86.0,
+      "2006": 84.0,
+      "2007": 72.0,
+      "2008": 85.0,
+      "2009": 90.0,
+      "2010": 75.0,
+      "2011": 82.0,
+      "2012": 71.0,
+      "2013": 89.0,
+      "2014": 72.0,
+      "2015": 78.0,
+      "2016": 73.0,
+      "2017": 89.0,
+      "2018": 88.0,
+      "2019": 89.0,
+      "2020": 72.0,
+      "2021": 70.0,
+      "2022": 90.0,
+      "2023": 86.0,
+      "2024": 85.0,
+      "2025": 88.0,
+      "2026": 78.0,
+      "2027": 80.0,
+      "2028": 93.0,
+      "2029": 65.0
+    },
+    "duracion_s": 0.544,
+    "virginidad": "verificada antes de correr: 0 apariciones como réplica en metaloop_ledger.jsonl, metaloop_archivo.jsonl y 256 archivos de resultados archivados (data_exp*, exp*, resultados/, ledgers)"
+  },
+  "paso1": {
+    "varianza_entre_bloques_dentro_de_replica_pool": {
+      "media": 2.5992753623188403,
+      "sd_bloques_tipica": 1.612226833394991
+    },
+    "varianza_entre_replicas_del_reg_pol": {
+      "pool_fresco_30": {
+        "varianza": 54.29885057471265,
+        "sd": 7.368775378223484,
+        "media": 81.33333333333333
+      },
+      "panel_historico_5_referencia": {
+        "varianza": 47.699999999999996,
+        "sd": 6.906518659932803,
+        "media": 81.8
+      }
+    },
+    "varianza_medicion_repetida": 0.0,
+    "varianza_medicion_repetida_nota": "Paso 0: 10/10 idénticas, max_dif = 0 (H2 verificada)",
+    "varianza_juez_en_el_camino_del_delta": 0.0,
+    "varianza_juez_nota": "0 por construcción: no hay LLM en el camino del Δ (§10.1); se declara, no se estima",
+    "sigma_hat": 7.3688,
+    "sigma_usado": 9.04,
+    "regla_sigma": "σ_usado = max(σ̂, 9,04) (§4.4)",
+    "clausula_regimen": {
+      "umbral": 11.3,
+      "sigma_hat_supera_umbral": false
+    }
+  },
+  "paso2_control_A": {
+    "delta_A_escala_delta": 0.532,
+    "sd_s": 0.266,
+    "sd_d_in": 0.2918,
+    "sd_d_ho": 0.347,
+    "duracion_s": 0.694,
+    "reproduce_0.5331": true,
+    "desvio_vs_0.5331": 0.0011
+  },
+  "paso3a_empirico_3_2": {
+    "delta_totales": 10.9644,
+    "delta_escala_delta": 0.4569,
+    "sd_s_totales": 5.4822,
+    "sd_d_in_totales": 5.9434,
+    "sd_d_ho_totales": 7.3846,
+    "duracion_s": 0.16,
+    "mecanica_sorteo": "rng.choice(30, size=10, replace=False); P=idx[0:5] (train 0:3, ho 3:5), Q=idx[5:10] (train 5:8, ho 8:10); default_rng(12345) — mecánica de la v1, pool de 30 (§6 Paso 3)"
+  },
+  "paso3b_parametrico_3_2": {
+    "sd_d_in_totales": 7.4776,
+    "sd_d_ho_totales": 9.008,
+    "sd_in_teorico_totales": 7.3811,
+    "sd_ho_teorico_totales": 9.04,
+    "sd_s_totales": 6.7093,
+    "delta_totales": 13.4186,
+    "delta_escala_delta": 0.5591,
+    "mecanica": "default_rng(12345) fresco; Δ_in = normal(0, σ√(2/n_in), 5000), luego Δ_ho = normal(0, σ√(2/n_ho), 5000); s = max; δ = 2·sd(s) ddof=1; escala δ = totales / 24"
+  },
+  "paso3_validacion_H4": {
+    "empirico_escala_delta": 0.4569,
+    "parametrico_escala_delta": 0.5591,
+    "diferencia_absoluta": 0.1022,
+    "tolerancia": 0.1,
+    "valida": false,
+    "parametrico_vs_v1_0.5623": 0.0032,
+    "empirico_vs_v1_0.5623": 0.1054
+  },
+  "estado": "RARO_H4_NO_VALIDA",
+  "duracion_total_s": 2.297
+}

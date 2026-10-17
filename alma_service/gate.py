@@ -20,24 +20,73 @@ rechazado; lo que cae en banda (0 < max ≤ 0.53) queda asentado con flag
 "bajo piso de ruido" y requiere el «sí» explícito del operador
 (mecanismo manual existente). Ver decidir_auto_adopcion().
 
+Recableado del piso (16/10/2026, recalibración de δ v3 — pre-registro
+preregistro-recalibracion-delta-v3-2026-10-16.md, adopción primaria
+§8; resultados en resultados-recalibracion-delta-v3-2026-10-16.md,
+commit b834e3d): el piso vigente es 5,4781 en TOTALES (puntos de
+regret total por réplica: la escala en que _evaluar/PuertaDosSplits
+producen los Δ que esta capa compara), equivalente a δ = 0,2283 en
+escala δ (media por bloque = totales ÷ 24). Par congelado:
+(0,2283 escala δ ; 5,4781 totales); el valor cableado es el de la
+escala de la comparación. El 0.53 anterior era el δ de EXP-piso-ruido
+(0,5331, escala δ, panel 3/2) cableado tal cual contra Δ en totales —
+la mezcla de escalas que la recalibración v1 diagnosticó. El panel de
+la puerta pasó a 18/12 en metaloop.py (train [400..417], held-out
+[600..611]; E3 intacto).
+
+Recableado del piso (16/10/2026, ciclo L1 — pre-registro
+preregistro-L1-panel-grande-2026-10-16.md, commit fa7cb8f;
+recalibración asentada en el ledger, evento
+recalibracion_delta_L1): el piso vigente es 2,7391 en TOTALES,
+equivalente a δ = 0,1141 en escala δ. Par congelado:
+(0,1141 escala δ ; 2,7391 totales), medido a panel 72/48 con
+σ_usado = 9,04 (diseño P, B=5000, z=2,0; σ̂_pool de 60 réplicas
+[23000..23059] = 8,5384; validación en la especificación de la
+v3, dif 0,0100 ≤ ±0,10; control A 0,5320). El panel de la puerta
+pasó a 72/48 en metaloop.py (train [20000..20071], held-out
+[21000..21047]) y el E3 a 24 réplicas [22000..22023] en
+puerta_e3.py (decisión declarada §3 del pre-registro L1: el E3
+de 2 réplicas era casi decorativo como veto). El par de la v3
+(0,2283 ; 5,4781) y el panel 18/12 quedan superados.
+
 Caveat documentado (del informe): el split held-out participa en la
 puerta, así que hay presión de selección sobre el gate a lo largo de
-rondas. El informe independiente lo da benchmark.py (mundo congelado).
-El tercer split ciego no es trabajo futuro: se implementa en la capa
-E3 (alma_service/puerta_e3.py, exigido siempre desde metaloop.py)
-desde el 28/9/2026. Esta puerta sigue siendo de dos splits; la capa
-E3 solo la endurece.
+rondas. El informe independiente lo da benchmark.py (mundo congelado);
+un tercer split ciego queda como trabajo futuro.
 """
 
 REGLA = "delta_in>=0 & delta_ho>=0 & max(delta_in,delta_ho)>0"
 
-# Piso de ruido δ calibrado en EXP-piso-ruido (30/9/2026, método RRSI
-# adaptado: bootstrap B=2000 sobre bloques, z=2.0 → δ=0.5331, redondeado
-# a 0.53). SOLO observabilidad: la puerta NO lo usa como criterio.
-# Sirve para decidir con datos si algún día la puerta empieza a aceptar
-# mejoras marginales. Ver ~/workspace/research_notes/estudio-rrsi-20260930/report.md
-# y ~/workspace/alma-prototype/data_exppisorruido/PRE-REGISTRO.md.
-PISO_RUIDO_DELTA = 0.53
+# Piso de ruido de la AUTO-ADOPCIÓN, expresado en la escala de la
+# comparación: TOTALES (puntos de regret total por réplica). Los Δ que
+# produce la ruta de evaluación (metaloop._evaluar = media de reg_pol
+# entre réplicas; PuertaDosSplits resta esas medias) viven en totales,
+# así que el valor cableado es el miembro en totales del par
+# congelado, no el de escala δ.
+#
+# Valor vigente (recableado 16/10/2026, ciclo L1): 2,7391 totales
+# ≡ δ = 0,1141 en escala δ (media por bloque, totales ÷ 24). Par
+# congelado por la recalibración del ciclo L1 (pre-registro
+# preregistro-L1-panel-grande-2026-10-16.md §5–§6; evento
+# recalibracion_delta_L1 del ledger), medido a panel 72/48 con
+# σ_usado = 9,04 (diseño P, B=5000, z=2,0; σ̂_pool de 60 réplicas
+# [23000..23059] = 8,5384, validación dif 0,0100). Nota de redondeo
+# del par: 0,1141 × 24 = 2,7384 ≠ 2,7391 — el par asentado
+# (0,1141 ; 2,7391) es el que manda (el miembro en totales es el
+# δ_P(72/48) computado por el diseño P).
+#
+# Valor anterior (recableado 16/10/2026, recalibración v3):
+# 5,4781 totales ≡ δ = 0,2283, panel 18/12 — superado por L1.
+#
+# Historia: el valor anterior (0.53) era el δ de EXP-piso-ruido
+# (30/9/2026, bootstrap B=2000 sobre bloques, z=2.0 → δ=0,5331 en
+# escala δ, panel 3/2) cableado sin convertir contra Δ en totales —
+# la mezcla de escalas diagnosticada por la recalibración v1
+# (resultados-recalibracion-delta-2026-10-16.md). Ver también
+# ~/workspace/research_notes/estudio-rrsi-20260930/report.md y
+# data_exppisorruido/PRE-REGISTRO.md. Cualquier cambio posterior de
+# este número o del panel exige otro pre-registro (§8).
+PISO_RUIDO_DELTA = 2.7391
 
 
 def aceptar(delta_in, delta_ho):
@@ -61,7 +110,7 @@ def aceptar(delta_in, delta_ho):
 # piso de ruido medido para adoptarse sola. La puerta pura (aceptar)
 # sigue intacta: decide elegibilidad, no adopción.
 REGLA_AUTO_ADOPCION = ("delta_in>=0 & delta_ho>=0 & "
-                       "max(delta_in,delta_ho)>0.53")
+                       "max(delta_in,delta_ho)>2.7391")
 
 
 def decidir_auto_adopcion(delta_in, delta_ho):

@@ -1,0 +1,147 @@
+{
+  "experimento": "metaloop_rso",
+  "seed": 92479,
+  "rondas": 11,
+  "criterio_parada": {
+    "tipo": "rondas_fijas",
+    "n": 11
+  },
+  "scaffold_partida": {
+    "decay": 0.5,
+    "gate_margin": 0.0,
+    "n0": 4,
+    "umbral_base": 1,
+    "umbral_divisor": 3
+  },
+  "heldout_partida": 80.66666666666667,
+  "criterio_adopcion": "puerta de dos splits: Δ_in ≥ 0 ∧ Δ_ho ≥ 0 ∧ max(Δ_in,Δ_ho) > 0 (Self-Harness §3.4) + E3: tercer split ciego siempre exigido, veta ante regresión (endurecimiento 28/9)",
+  "puerta_e3": {
+    "habilitado": true,
+    "margen_min": 5.0,
+    "e3_reps": [
+      500,
+      501
+    ],
+    "superficie_metaloop": "parametro",
+    "regla_e3": "min(d_in,d_ho,d_e3)>=0 & max(d_in,d_ho,d_e3)>0",
+    "datos": "stream mock held-out reservado para auditorías (réplicas 500-501, provisionales)",
+    "politica": "Endurecimiento 28/9 (decisión del usuario): E3 SIEMPRE exigido en el path vivo cuando los dos splits aceptan (forzar_e3=True); el E3 veta ante regresión, nunca relaja la puerta"
+  },
+  "validador": "congelado (e47/e56, splits [0,1,2]/[3,4])",
+  "evidencia_debilidades": {
+    "tipo": "paquete_evidencia",
+    "clusters": [
+      {
+        "firma": [
+          "decay",
+          "sube",
+          "revert"
+        ],
+        "n": 3,
+        "fraccion": 0.2727
+      },
+      {
+        "firma": [
+          "umbral_base",
+          "sube",
+          "revert"
+        ],
+        "n": 2,
+        "fraccion": 0.1818
+      },
+      {
+        "firma": [
+          "gate_margin",
+          "sube",
+          "revert"
+        ],
+        "n": 2,
+        "fraccion": 0.1818
+      }
+    ],
+    "total_firmas": 11,
+    "advertencia": "descriptivo, no prescriptivo: los clusters auditan contexto, no dirigen mutaciones"
+  },
+  "contexto_disparo": {},
+  "timestamp": 1792192480.2179153,
+  "proponente": "generador_candidatos",
+  "tanda_candidatos": [
+    {
+      "decay": 0.75,
+      "gate_margin": 0.05,
+      "n0": 1,
+      "umbral_base": 2,
+      "umbral_divisor": 2
+    },
+    {
+      "decay": 0.25,
+      "gate_margin": 0.1,
+      "n0": 2,
+      "umbral_base": 3,
+      "umbral_divisor": 4
+    },
+    {
+      "decay": 0.75,
+      "gate_margin": 0.05,
+      "n0": 4,
+      "umbral_base": 1,
+      "umbral_divisor": 6
+    },
+    {
+      "decay": 0.5,
+      "gate_margin": 0.1,
+      "n0": 1,
+      "umbral_base": 2,
+      "umbral_divisor": 3
+    },
+    {
+      "decay": 0.75,
+      "gate_margin": 0.05,
+      "n0": 2,
+      "umbral_base": 1,
+      "umbral_divisor": 4
+    },
+    {
+      "decay": 0.25,
+      "gate_margin": 0.0,
+      "n0": 4,
+      "umbral_base": 2,
+      "umbral_divisor": 6
+    },
+    {
+      "decay": 0.5,
+      "gate_margin": 0.05,
+      "n0": 1,
+      "umbral_base": 3,
+      "umbral_divisor": 2
+    },
+    {
+      "decay": 0.75,
+      "gate_margin": 0.1,
+      "n0": 2,
+      "umbral_base": 1,
+      "umbral_divisor": 3
+    },
+    {
+      "decay": 0.5,
+      "gate_margin": 0.05,
+      "n0": 1,
+      "umbral_base": 2,
+      "umbral_divisor": 6
+    },
+    {
+      "decay": 0.25,
+      "gate_margin": 0.0,
+      "n0": 4,
+      "umbral_base": 1,
+      "umbral_divisor": 2
+    },
+    {
+      "decay": 0.75,
+      "gate_margin": 0.05,
+      "n0": 2,
+      "umbral_base": 2,
+      "umbral_divisor": 6
+    }
+  ]
+}

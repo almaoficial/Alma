@@ -1,0 +1,3 @@
+corrida: {'aceptado': True, 'fase': 'en_curso'}
+scaffold vigente: {'decay': 0.5, 'gate_margin': 0.0, 'n0': 4, 'umbral_base': 1, 'umbral_divisor': 3}
+freno: {'racha_planas': 2, 'freno_activo': False, 'racha_max': 3}

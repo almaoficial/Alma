@@ -1,0 +1,1908 @@
+{
+  "tipo": "tanda_crossover",
+  "timestamp": 1792193957.152874,
+  "semilla": 20261016,
+  "preregistro": "preregistro-crossover-2026-10-16.md",
+  "poblacion": [
+    {
+      "id": "P0",
+      "config": {
+        "decay": 0.5,
+        "gate_margin": 0.0,
+        "n0": 4,
+        "umbral_base": 1,
+        "umbral_divisor": 3
+      },
+      "delta_train_registrado": 0.0
+    },
+    {
+      "id": "P1",
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.05,
+        "n0": 1,
+        "umbral_base": 2,
+        "umbral_divisor": 2
+      },
+      "delta_train_registrado": -4.3333
+    },
+    {
+      "id": "P2",
+      "config": {
+        "decay": 0.25,
+        "gate_margin": 0.1,
+        "n0": 2,
+        "umbral_base": 3,
+        "umbral_divisor": 4
+      },
+      "delta_train_registrado": -3.7222
+    },
+    {
+      "id": "P3",
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.05,
+        "n0": 4,
+        "umbral_base": 1,
+        "umbral_divisor": 6
+      },
+      "delta_train_registrado": -0.4444
+    },
+    {
+      "id": "P4",
+      "config": {
+        "decay": 0.5,
+        "gate_margin": 0.1,
+        "n0": 1,
+        "umbral_base": 2,
+        "umbral_divisor": 3
+      },
+      "delta_train_registrado": -3.8889
+    },
+    {
+      "id": "P5",
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.05,
+        "n0": 2,
+        "umbral_base": 1,
+        "umbral_divisor": 4
+      },
+      "delta_train_registrado": 0.0556
+    },
+    {
+      "id": "P6",
+      "config": {
+        "decay": 0.25,
+        "gate_margin": 0.0,
+        "n0": 4,
+        "umbral_base": 2,
+        "umbral_divisor": 6
+      },
+      "delta_train_registrado": -1.3333
+    },
+    {
+      "id": "P7",
+      "config": {
+        "decay": 0.5,
+        "gate_margin": 0.05,
+        "n0": 1,
+        "umbral_base": 3,
+        "umbral_divisor": 2
+      },
+      "delta_train_registrado": -5.0556
+    },
+    {
+      "id": "P8",
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.1,
+        "n0": 2,
+        "umbral_base": 1,
+        "umbral_divisor": 3
+      },
+      "delta_train_registrado": -0.6667
+    },
+    {
+      "id": "P9",
+      "config": {
+        "decay": 0.5,
+        "gate_margin": 0.05,
+        "n0": 1,
+        "umbral_base": 2,
+        "umbral_divisor": 6
+      },
+      "delta_train_registrado": -1.6111
+    },
+    {
+      "id": "P10",
+      "config": {
+        "decay": 0.25,
+        "gate_margin": 0.0,
+        "n0": 4,
+        "umbral_base": 1,
+        "umbral_divisor": 2
+      },
+      "delta_train_registrado": -2.9444
+    },
+    {
+      "id": "P11",
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.05,
+        "n0": 2,
+        "umbral_base": 2,
+        "umbral_divisor": 6
+      },
+      "delta_train_registrado": -1.2222
+    }
+  ],
+  "n_excluidos": 36,
+  "n_objetivo": 24,
+  "n_validos": 24,
+  "pares_total": 66,
+  "pares_procesados": 25,
+  "pares_no_procesados": [
+    [
+      6,
+      8
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      8,
+      10
+    ],
+    [
+      8,
+      11
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      0,
+      7
+    ],
+    [
+      0,
+      9
+    ],
+    [
+      0,
+      10
+    ],
+    [
+      0,
+      11
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      1,
+      7
+    ],
+    [
+      1,
+      9
+    ],
+    [
+      1,
+      10
+    ],
+    [
+      1,
+      11
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      2,
+      9
+    ],
+    [
+      2,
+      10
+    ],
+    [
+      2,
+      11
+    ],
+    [
+      4,
+      6
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      4,
+      9
+    ],
+    [
+      4,
+      10
+    ],
+    [
+      4,
+      11
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      6,
+      9
+    ],
+    [
+      6,
+      10
+    ],
+    [
+      6,
+      11
+    ],
+    [
+      7,
+      9
+    ],
+    [
+      7,
+      10
+    ],
+    [
+      7,
+      11
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      9,
+      11
+    ],
+    [
+      10,
+      11
+    ]
+  ],
+  "hijos": [
+    {
+      "indice": 1,
+      "padres": [
+        0,
+        5
+      ],
+      "padres_ids": [
+        "P0",
+        "P5"
+      ],
+      "config": {
+        "decay": 0.5,
+        "gate_margin": 0.05,
+        "n0": 2,
+        "umbral_base": 1,
+        "umbral_divisor": 3
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "gate_margin",
+          "n0",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "decay",
+          "umbral_divisor"
+        ],
+        "de_b": [
+          "gate_margin",
+          "n0"
+        ]
+      },
+      "roll": 1,
+      "origen_operador": "crossover"
+    },
+    {
+      "indice": 2,
+      "padres": [
+        1,
+        5
+      ],
+      "padres_ids": [
+        "P1",
+        "P5"
+      ],
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.05,
+        "n0": 1,
+        "umbral_base": 1,
+        "umbral_divisor": 2
+      },
+      "herencia": {
+        "en_disputa": [
+          "n0",
+          "umbral_base",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "n0",
+          "umbral_divisor"
+        ],
+        "de_b": [
+          "umbral_base"
+        ]
+      },
+      "roll": 3,
+      "origen_operador": "crossover"
+    },
+    {
+      "indice": 3,
+      "padres": [
+        2,
+        5
+      ],
+      "padres_ids": [
+        "P2",
+        "P5"
+      ],
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.05,
+        "n0": 2,
+        "umbral_base": 3,
+        "umbral_divisor": 4
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "gate_margin",
+          "umbral_base"
+        ],
+        "de_a": [
+          "umbral_base"
+        ],
+        "de_b": [
+          "decay",
+          "gate_margin"
+        ]
+      },
+      "roll": 1,
+      "origen_operador": "crossover"
+    },
+    {
+      "indice": 4,
+      "padres": [
+        3,
+        5
+      ],
+      "padres_ids": [
+        "P3",
+        "P5"
+      ],
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.05,
+        "n0": 2,
+        "umbral_base": 1,
+        "umbral_divisor": 6
+      },
+      "herencia": {
+        "en_disputa": [
+          "n0",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "umbral_divisor"
+        ],
+        "de_b": [
+          "n0"
+        ]
+      },
+      "roll": 6,
+      "origen_operador": "crossover"
+    },
+    {
+      "indice": 5,
+      "padres": [
+        4,
+        5
+      ],
+      "padres_ids": [
+        "P4",
+        "P5"
+      ],
+      "config": {
+        "decay": 0.5,
+        "gate_margin": 0.1,
+        "n0": 2,
+        "umbral_base": 2,
+        "umbral_divisor": 4
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "gate_margin",
+          "n0",
+          "umbral_base",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "decay",
+          "gate_margin",
+          "umbral_base"
+        ],
+        "de_b": [
+          "n0",
+          "umbral_divisor"
+        ]
+      },
+      "roll": 1,
+      "origen_operador": "crossover"
+    },
+    {
+      "indice": 6,
+      "padres": [
+        5,
+        6
+      ],
+      "padres_ids": [
+        "P5",
+        "P6"
+      ],
+      "config": {
+        "decay": 0.25,
+        "gate_margin": 0.0,
+        "n0": 2,
+        "umbral_base": 2,
+        "umbral_divisor": 4
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "gate_margin",
+          "n0",
+          "umbral_base",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "n0",
+          "umbral_divisor"
+        ],
+        "de_b": [
+          "decay",
+          "gate_margin",
+          "umbral_base"
+        ]
+      },
+      "roll": 1,
+      "origen_operador": "crossover"
+    },
+    {
+      "indice": 7,
+      "padres": [
+        5,
+        7
+      ],
+      "padres_ids": [
+        "P5",
+        "P7"
+      ],
+      "config": {
+        "decay": 0.5,
+        "gate_margin": 0.05,
+        "n0": 1,
+        "umbral_base": 1,
+        "umbral_divisor": 4
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "n0",
+          "umbral_base",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "umbral_base",
+          "umbral_divisor"
+        ],
+        "de_b": [
+          "decay",
+          "n0"
+        ]
+      },
+      "roll": 2,
+      "origen_operador": "crossover"
+    },
+    {
+      "indice": 8,
+      "padres": [
+        5,
+        8
+      ],
+      "padres_ids": [
+        "P5",
+        "P8"
+      ],
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.05,
+        "n0": 2,
+        "umbral_base": 1,
+        "umbral_divisor": 3
+      },
+      "herencia": {
+        "en_disputa": [
+          "gate_margin",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "gate_margin"
+        ],
+        "de_b": [
+          "umbral_divisor"
+        ]
+      },
+      "roll": 1,
+      "origen_operador": "crossover"
+    },
+    {
+      "indice": 9,
+      "padres": [
+        5,
+        9
+      ],
+      "padres_ids": [
+        "P5",
+        "P9"
+      ],
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.05,
+        "n0": 1,
+        "umbral_base": 1,
+        "umbral_divisor": 6
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "n0",
+          "umbral_base",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "decay",
+          "umbral_base"
+        ],
+        "de_b": [
+          "n0",
+          "umbral_divisor"
+        ]
+      },
+      "roll": 1,
+      "origen_operador": "crossover"
+    },
+    {
+      "indice": 10,
+      "padres": [
+        5,
+        10
+      ],
+      "padres_ids": [
+        "P5",
+        "P10"
+      ],
+      "config": {
+        "decay": 0.25,
+        "gate_margin": 0.0,
+        "n0": 2,
+        "umbral_base": 1,
+        "umbral_divisor": 4
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "gate_margin",
+          "n0",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "n0",
+          "umbral_divisor"
+        ],
+        "de_b": [
+          "decay",
+          "gate_margin"
+        ]
+      },
+      "roll": 1,
+      "origen_operador": "crossover"
+    },
+    {
+      "indice": 11,
+      "padres": [
+        0,
+        3
+      ],
+      "padres_ids": [
+        "P0",
+        "P3"
+      ],
+      "config": {
+        "decay": 0.5,
+        "gate_margin": 0.0,
+        "n0": 4,
+        "umbral_base": 1,
+        "umbral_divisor": 6
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "gate_margin",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "decay",
+          "gate_margin"
+        ],
+        "de_b": [
+          "umbral_divisor"
+        ]
+      },
+      "roll": 1,
+      "origen_operador": "crossover"
+    },
+    {
+      "indice": 12,
+      "padres": [
+        1,
+        3
+      ],
+      "padres_ids": [
+        "P1",
+        "P3"
+      ],
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.05,
+        "n0": 4,
+        "umbral_base": 1,
+        "umbral_divisor": 2
+      },
+      "herencia": {
+        "en_disputa": [
+          "n0",
+          "umbral_base",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "umbral_divisor"
+        ],
+        "de_b": [
+          "n0",
+          "umbral_base"
+        ]
+      },
+      "roll": 1,
+      "origen_operador": "crossover"
+    },
+    {
+      "indice": 13,
+      "padres": [
+        2,
+        3
+      ],
+      "padres_ids": [
+        "P2",
+        "P3"
+      ],
+      "config": {
+        "decay": 0.25,
+        "gate_margin": 0.05,
+        "n0": 2,
+        "umbral_base": 1,
+        "umbral_divisor": 6
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "gate_margin",
+          "n0",
+          "umbral_base",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "decay",
+          "n0"
+        ],
+        "de_b": [
+          "gate_margin",
+          "umbral_base",
+          "umbral_divisor"
+        ]
+      },
+      "roll": 1,
+      "origen_operador": "crossover"
+    },
+    {
+      "indice": 14,
+      "padres": [
+        3,
+        4
+      ],
+      "padres_ids": [
+        "P3",
+        "P4"
+      ],
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.05,
+        "n0": 4,
+        "umbral_base": 2,
+        "umbral_divisor": 3
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "gate_margin",
+          "n0",
+          "umbral_base",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "decay",
+          "gate_margin",
+          "n0"
+        ],
+        "de_b": [
+          "umbral_base",
+          "umbral_divisor"
+        ]
+      },
+      "roll": 1,
+      "origen_operador": "crossover"
+    },
+    {
+      "indice": 15,
+      "padres": [
+        3,
+        6
+      ],
+      "padres_ids": [
+        "P3",
+        "P6"
+      ],
+      "config": {
+        "decay": 0.25,
+        "gate_margin": 0.05,
+        "n0": 4,
+        "umbral_base": 1,
+        "umbral_divisor": 6
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "gate_margin",
+          "umbral_base"
+        ],
+        "de_a": [
+          "gate_margin",
+          "umbral_base"
+        ],
+        "de_b": [
+          "decay"
+        ]
+      },
+      "roll": 2,
+      "origen_operador": "crossover"
+    },
+    {
+      "indice": 16,
+      "padres": [
+        3,
+        7
+      ],
+      "padres_ids": [
+        "P3",
+        "P7"
+      ],
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.05,
+        "n0": 4,
+        "umbral_base": 3,
+        "umbral_divisor": 2
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "n0",
+          "umbral_base",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "decay",
+          "n0"
+        ],
+        "de_b": [
+          "umbral_base",
+          "umbral_divisor"
+        ]
+      },
+      "roll": 1,
+      "origen_operador": "crossover"
+    },
+    {
+      "indice": 17,
+      "padres": [
+        3,
+        8
+      ],
+      "padres_ids": [
+        "P3",
+        "P8"
+      ],
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.1,
+        "n0": 2,
+        "umbral_base": 1,
+        "umbral_divisor": 6
+      },
+      "herencia": {
+        "en_disputa": [
+          "gate_margin",
+          "n0",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "umbral_divisor"
+        ],
+        "de_b": [
+          "gate_margin",
+          "n0"
+        ]
+      },
+      "roll": 2,
+      "origen_operador": "crossover"
+    },
+    {
+      "indice": 18,
+      "padres": [
+        3,
+        9
+      ],
+      "padres_ids": [
+        "P3",
+        "P9"
+      ],
+      "config": {
+        "decay": 0.5,
+        "gate_margin": 0.05,
+        "n0": 4,
+        "umbral_base": 1,
+        "umbral_divisor": 6
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "n0",
+          "umbral_base"
+        ],
+        "de_a": [
+          "n0",
+          "umbral_base"
+        ],
+        "de_b": [
+          "decay"
+        ]
+      },
+      "roll": 1,
+      "origen_operador": "crossover"
+    },
+    {
+      "indice": 19,
+      "padres": [
+        3,
+        10
+      ],
+      "padres_ids": [
+        "P3",
+        "P10"
+      ],
+      "config": {
+        "decay": 0.25,
+        "gate_margin": 0.0,
+        "n0": 4,
+        "umbral_base": 1,
+        "umbral_divisor": 6
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "gate_margin",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "umbral_divisor"
+        ],
+        "de_b": [
+          "decay",
+          "gate_margin"
+        ]
+      },
+      "roll": 2,
+      "origen_operador": "crossover"
+    },
+    {
+      "indice": 20,
+      "padres": [
+        3,
+        11
+      ],
+      "padres_ids": [
+        "P3",
+        "P11"
+      ],
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.05,
+        "n0": 4,
+        "umbral_base": 2,
+        "umbral_divisor": 6
+      },
+      "herencia": {
+        "en_disputa": [
+          "n0",
+          "umbral_base"
+        ],
+        "de_a": [
+          "n0"
+        ],
+        "de_b": [
+          "umbral_base"
+        ]
+      },
+      "roll": 2,
+      "origen_operador": "crossover"
+    },
+    {
+      "indice": 21,
+      "padres": [
+        0,
+        8
+      ],
+      "padres_ids": [
+        "P0",
+        "P8"
+      ],
+      "config": {
+        "decay": 0.5,
+        "gate_margin": 0.1,
+        "n0": 2,
+        "umbral_base": 1,
+        "umbral_divisor": 3
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "gate_margin",
+          "n0"
+        ],
+        "de_a": [
+          "decay"
+        ],
+        "de_b": [
+          "gate_margin",
+          "n0"
+        ]
+      },
+      "roll": 1,
+      "origen_operador": "crossover"
+    },
+    {
+      "indice": 22,
+      "padres": [
+        1,
+        8
+      ],
+      "padres_ids": [
+        "P1",
+        "P8"
+      ],
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.05,
+        "n0": 2,
+        "umbral_base": 2,
+        "umbral_divisor": 2
+      },
+      "herencia": {
+        "en_disputa": [
+          "gate_margin",
+          "n0",
+          "umbral_base",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "gate_margin",
+          "umbral_base",
+          "umbral_divisor"
+        ],
+        "de_b": [
+          "n0"
+        ]
+      },
+      "roll": 1,
+      "origen_operador": "crossover"
+    },
+    {
+      "indice": 23,
+      "padres": [
+        2,
+        8
+      ],
+      "padres_ids": [
+        "P2",
+        "P8"
+      ],
+      "config": {
+        "decay": 0.25,
+        "gate_margin": 0.1,
+        "n0": 2,
+        "umbral_base": 1,
+        "umbral_divisor": 3
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "umbral_base",
+          "umbral_divisor"
+        ],
+        "de_a": [
+          "decay"
+        ],
+        "de_b": [
+          "umbral_base",
+          "umbral_divisor"
+        ]
+      },
+      "roll": 1,
+      "origen_operador": "crossover"
+    },
+    {
+      "indice": 24,
+      "padres": [
+        4,
+        8
+      ],
+      "padres_ids": [
+        "P4",
+        "P8"
+      ],
+      "config": {
+        "decay": 0.75,
+        "gate_margin": 0.1,
+        "n0": 2,
+        "umbral_base": 2,
+        "umbral_divisor": 3
+      },
+      "herencia": {
+        "en_disputa": [
+          "decay",
+          "n0",
+          "umbral_base"
+        ],
+        "de_a": [
+          "umbral_base"
+        ],
+        "de_b": [
+          "decay",
+          "n0"
+        ]
+      },
+      "roll": 1,
+      "origen_operador": "crossover"
+    }
+  ],
+  "registro_pares": [
+    {
+      "par": [
+        0,
+        5
+      ],
+      "resultado": "hijo_aceptado",
+      "hijo_indice": 1,
+      "rolls": [
+        {
+          "roll": 1,
+          "config": {
+            "decay": 0.5,
+            "gate_margin": 0.05,
+            "n0": 2,
+            "umbral_base": 1,
+            "umbral_divisor": 3
+          },
+          "motivo": null
+        }
+      ]
+    },
+    {
+      "par": [
+        1,
+        5
+      ],
+      "resultado": "hijo_aceptado",
+      "hijo_indice": 2,
+      "rolls": [
+        {
+          "roll": 1,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 2,
+            "umbral_base": 1,
+            "umbral_divisor": 4
+          },
+          "motivo": "no_hereda_de_ambos"
+        },
+        {
+          "roll": 2,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 2,
+            "umbral_base": 1,
+            "umbral_divisor": 4
+          },
+          "motivo": "no_hereda_de_ambos"
+        },
+        {
+          "roll": 3,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 1,
+            "umbral_base": 1,
+            "umbral_divisor": 2
+          },
+          "motivo": null
+        }
+      ]
+    },
+    {
+      "par": [
+        2,
+        5
+      ],
+      "resultado": "hijo_aceptado",
+      "hijo_indice": 3,
+      "rolls": [
+        {
+          "roll": 1,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 2,
+            "umbral_base": 3,
+            "umbral_divisor": 4
+          },
+          "motivo": null
+        }
+      ]
+    },
+    {
+      "par": [
+        3,
+        5
+      ],
+      "resultado": "hijo_aceptado",
+      "hijo_indice": 4,
+      "rolls": [
+        {
+          "roll": 1,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 4,
+            "umbral_base": 1,
+            "umbral_divisor": 6
+          },
+          "motivo": "no_hereda_de_ambos"
+        },
+        {
+          "roll": 2,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 2,
+            "umbral_base": 1,
+            "umbral_divisor": 4
+          },
+          "motivo": "no_hereda_de_ambos"
+        },
+        {
+          "roll": 3,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 2,
+            "umbral_base": 1,
+            "umbral_divisor": 4
+          },
+          "motivo": "no_hereda_de_ambos"
+        },
+        {
+          "roll": 4,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 4,
+            "umbral_base": 1,
+            "umbral_divisor": 6
+          },
+          "motivo": "no_hereda_de_ambos"
+        },
+        {
+          "roll": 5,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 2,
+            "umbral_base": 1,
+            "umbral_divisor": 4
+          },
+          "motivo": "no_hereda_de_ambos"
+        },
+        {
+          "roll": 6,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 2,
+            "umbral_base": 1,
+            "umbral_divisor": 6
+          },
+          "motivo": null
+        }
+      ]
+    },
+    {
+      "par": [
+        4,
+        5
+      ],
+      "resultado": "hijo_aceptado",
+      "hijo_indice": 5,
+      "rolls": [
+        {
+          "roll": 1,
+          "config": {
+            "decay": 0.5,
+            "gate_margin": 0.1,
+            "n0": 2,
+            "umbral_base": 2,
+            "umbral_divisor": 4
+          },
+          "motivo": null
+        }
+      ]
+    },
+    {
+      "par": [
+        5,
+        6
+      ],
+      "resultado": "hijo_aceptado",
+      "hijo_indice": 6,
+      "rolls": [
+        {
+          "roll": 1,
+          "config": {
+            "decay": 0.25,
+            "gate_margin": 0.0,
+            "n0": 2,
+            "umbral_base": 2,
+            "umbral_divisor": 4
+          },
+          "motivo": null
+        }
+      ]
+    },
+    {
+      "par": [
+        5,
+        7
+      ],
+      "resultado": "hijo_aceptado",
+      "hijo_indice": 7,
+      "rolls": [
+        {
+          "roll": 1,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 2,
+            "umbral_base": 1,
+            "umbral_divisor": 4
+          },
+          "motivo": "no_hereda_de_ambos"
+        },
+        {
+          "roll": 2,
+          "config": {
+            "decay": 0.5,
+            "gate_margin": 0.05,
+            "n0": 1,
+            "umbral_base": 1,
+            "umbral_divisor": 4
+          },
+          "motivo": null
+        }
+      ]
+    },
+    {
+      "par": [
+        5,
+        8
+      ],
+      "resultado": "hijo_aceptado",
+      "hijo_indice": 8,
+      "rolls": [
+        {
+          "roll": 1,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 2,
+            "umbral_base": 1,
+            "umbral_divisor": 3
+          },
+          "motivo": null
+        }
+      ]
+    },
+    {
+      "par": [
+        5,
+        9
+      ],
+      "resultado": "hijo_aceptado",
+      "hijo_indice": 9,
+      "rolls": [
+        {
+          "roll": 1,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 1,
+            "umbral_base": 1,
+            "umbral_divisor": 6
+          },
+          "motivo": null
+        }
+      ]
+    },
+    {
+      "par": [
+        5,
+        10
+      ],
+      "resultado": "hijo_aceptado",
+      "hijo_indice": 10,
+      "rolls": [
+        {
+          "roll": 1,
+          "config": {
+            "decay": 0.25,
+            "gate_margin": 0.0,
+            "n0": 2,
+            "umbral_base": 1,
+            "umbral_divisor": 4
+          },
+          "motivo": null
+        }
+      ]
+    },
+    {
+      "par": [
+        5,
+        11
+      ],
+      "resultado": "par_saltado_sin_hijo_valido",
+      "rolls": [
+        {
+          "roll": 1,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 2,
+            "umbral_base": 2,
+            "umbral_divisor": 6
+          },
+          "motivo": "no_hereda_de_ambos"
+        },
+        {
+          "roll": 2,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 2,
+            "umbral_base": 1,
+            "umbral_divisor": 4
+          },
+          "motivo": "no_hereda_de_ambos"
+        },
+        {
+          "roll": 3,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 2,
+            "umbral_base": 1,
+            "umbral_divisor": 4
+          },
+          "motivo": "no_hereda_de_ambos"
+        },
+        {
+          "roll": 4,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 2,
+            "umbral_base": 2,
+            "umbral_divisor": 6
+          },
+          "motivo": "no_hereda_de_ambos"
+        },
+        {
+          "roll": 5,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 2,
+            "umbral_base": 1,
+            "umbral_divisor": 4
+          },
+          "motivo": "no_hereda_de_ambos"
+        },
+        {
+          "roll": 6,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 2,
+            "umbral_base": 2,
+            "umbral_divisor": 6
+          },
+          "motivo": "no_hereda_de_ambos"
+        },
+        {
+          "roll": 7,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 2,
+            "umbral_base": 1,
+            "umbral_divisor": 6
+          },
+          "motivo": "duplicado_en_tanda"
+        },
+        {
+          "roll": 8,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 2,
+            "umbral_base": 1,
+            "umbral_divisor": 4
+          },
+          "motivo": "no_hereda_de_ambos"
+        },
+        {
+          "roll": 9,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 2,
+            "umbral_base": 1,
+            "umbral_divisor": 6
+          },
+          "motivo": "duplicado_en_tanda"
+        },
+        {
+          "roll": 10,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 2,
+            "umbral_base": 2,
+            "umbral_divisor": 6
+          },
+          "motivo": "no_hereda_de_ambos"
+        }
+      ]
+    },
+    {
+      "par": [
+        0,
+        3
+      ],
+      "resultado": "hijo_aceptado",
+      "hijo_indice": 11,
+      "rolls": [
+        {
+          "roll": 1,
+          "config": {
+            "decay": 0.5,
+            "gate_margin": 0.0,
+            "n0": 4,
+            "umbral_base": 1,
+            "umbral_divisor": 6
+          },
+          "motivo": null
+        }
+      ]
+    },
+    {
+      "par": [
+        1,
+        3
+      ],
+      "resultado": "hijo_aceptado",
+      "hijo_indice": 12,
+      "rolls": [
+        {
+          "roll": 1,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 4,
+            "umbral_base": 1,
+            "umbral_divisor": 2
+          },
+          "motivo": null
+        }
+      ]
+    },
+    {
+      "par": [
+        2,
+        3
+      ],
+      "resultado": "hijo_aceptado",
+      "hijo_indice": 13,
+      "rolls": [
+        {
+          "roll": 1,
+          "config": {
+            "decay": 0.25,
+            "gate_margin": 0.05,
+            "n0": 2,
+            "umbral_base": 1,
+            "umbral_divisor": 6
+          },
+          "motivo": null
+        }
+      ]
+    },
+    {
+      "par": [
+        3,
+        4
+      ],
+      "resultado": "hijo_aceptado",
+      "hijo_indice": 14,
+      "rolls": [
+        {
+          "roll": 1,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 4,
+            "umbral_base": 2,
+            "umbral_divisor": 3
+          },
+          "motivo": null
+        }
+      ]
+    },
+    {
+      "par": [
+        3,
+        6
+      ],
+      "resultado": "hijo_aceptado",
+      "hijo_indice": 15,
+      "rolls": [
+        {
+          "roll": 1,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 4,
+            "umbral_base": 1,
+            "umbral_divisor": 6
+          },
+          "motivo": "no_hereda_de_ambos"
+        },
+        {
+          "roll": 2,
+          "config": {
+            "decay": 0.25,
+            "gate_margin": 0.05,
+            "n0": 4,
+            "umbral_base": 1,
+            "umbral_divisor": 6
+          },
+          "motivo": null
+        }
+      ]
+    },
+    {
+      "par": [
+        3,
+        7
+      ],
+      "resultado": "hijo_aceptado",
+      "hijo_indice": 16,
+      "rolls": [
+        {
+          "roll": 1,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 4,
+            "umbral_base": 3,
+            "umbral_divisor": 2
+          },
+          "motivo": null
+        }
+      ]
+    },
+    {
+      "par": [
+        3,
+        8
+      ],
+      "resultado": "hijo_aceptado",
+      "hijo_indice": 17,
+      "rolls": [
+        {
+          "roll": 1,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 4,
+            "umbral_base": 1,
+            "umbral_divisor": 6
+          },
+          "motivo": "no_hereda_de_ambos"
+        },
+        {
+          "roll": 2,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.1,
+            "n0": 2,
+            "umbral_base": 1,
+            "umbral_divisor": 6
+          },
+          "motivo": null
+        }
+      ]
+    },
+    {
+      "par": [
+        3,
+        9
+      ],
+      "resultado": "hijo_aceptado",
+      "hijo_indice": 18,
+      "rolls": [
+        {
+          "roll": 1,
+          "config": {
+            "decay": 0.5,
+            "gate_margin": 0.05,
+            "n0": 4,
+            "umbral_base": 1,
+            "umbral_divisor": 6
+          },
+          "motivo": null
+        }
+      ]
+    },
+    {
+      "par": [
+        3,
+        10
+      ],
+      "resultado": "hijo_aceptado",
+      "hijo_indice": 19,
+      "rolls": [
+        {
+          "roll": 1,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 4,
+            "umbral_base": 1,
+            "umbral_divisor": 2
+          },
+          "motivo": "duplicado_en_tanda"
+        },
+        {
+          "roll": 2,
+          "config": {
+            "decay": 0.25,
+            "gate_margin": 0.0,
+            "n0": 4,
+            "umbral_base": 1,
+            "umbral_divisor": 6
+          },
+          "motivo": null
+        }
+      ]
+    },
+    {
+      "par": [
+        3,
+        11
+      ],
+      "resultado": "hijo_aceptado",
+      "hijo_indice": 20,
+      "rolls": [
+        {
+          "roll": 1,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 2,
+            "umbral_base": 1,
+            "umbral_divisor": 6
+          },
+          "motivo": "duplicado_en_tanda"
+        },
+        {
+          "roll": 2,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 4,
+            "umbral_base": 2,
+            "umbral_divisor": 6
+          },
+          "motivo": null
+        }
+      ]
+    },
+    {
+      "par": [
+        0,
+        8
+      ],
+      "resultado": "hijo_aceptado",
+      "hijo_indice": 21,
+      "rolls": [
+        {
+          "roll": 1,
+          "config": {
+            "decay": 0.5,
+            "gate_margin": 0.1,
+            "n0": 2,
+            "umbral_base": 1,
+            "umbral_divisor": 3
+          },
+          "motivo": null
+        }
+      ]
+    },
+    {
+      "par": [
+        1,
+        8
+      ],
+      "resultado": "hijo_aceptado",
+      "hijo_indice": 22,
+      "rolls": [
+        {
+          "roll": 1,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.05,
+            "n0": 2,
+            "umbral_base": 2,
+            "umbral_divisor": 2
+          },
+          "motivo": null
+        }
+      ]
+    },
+    {
+      "par": [
+        2,
+        8
+      ],
+      "resultado": "hijo_aceptado",
+      "hijo_indice": 23,
+      "rolls": [
+        {
+          "roll": 1,
+          "config": {
+            "decay": 0.25,
+            "gate_margin": 0.1,
+            "n0": 2,
+            "umbral_base": 1,
+            "umbral_divisor": 3
+          },
+          "motivo": null
+        }
+      ]
+    },
+    {
+      "par": [
+        4,
+        8
+      ],
+      "resultado": "hijo_aceptado",
+      "hijo_indice": 24,
+      "rolls": [
+        {
+          "roll": 1,
+          "config": {
+            "decay": 0.75,
+            "gate_margin": 0.1,
+            "n0": 2,
+            "umbral_base": 2,
+            "umbral_divisor": 3
+          },
+          "motivo": null
+        }
+      ]
+    }
+  ]
+}

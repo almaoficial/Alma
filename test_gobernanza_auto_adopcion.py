@@ -20,7 +20,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from alma_service.promotor import (
     Promotor, NucleoProtegidoError, NUCLEO_PROTEGIDO,
     CLAVES_NUCLEO_EXACTAS, DIMENSIONES_PROTEGIDAS)
-from alma_service.metaloop import MetaLoop
+from alma_service.metaloop import MetaLoop, TRAIN_REPS
 from alma_service.presupuesto import PresupuestoFase2, BUCKET_METALOOP
 from alma_service.scaffold import DEFAULT_SCAFFOLD
 from alma_service.trazas import EventLog
@@ -259,12 +259,15 @@ def main():
     orig_evaluar = MetaLoop._evaluar
 
     def fake_mejora(scaffold, replicas, cache):
-        es_train = tuple(replicas) == (0, 1, 2)
+        # Panel cableado (recableado 16/10/2026, recalibración δ v3):
+        # train = TRAIN_REPS del metaloop; Δ = 6 supera el piso nuevo
+        # de auto-adopción (5,4781 totales).
+        es_train = tuple(replicas) == tuple(TRAIN_REPS)
         if scaffold == vigente10:
-            return ((90.0, [90.0] * 3) if es_train
-                    else (95.0, [95.0] * 2))
-        return ((85.0, [85.0] * 3) if es_train
-                else (90.0, [90.0] * 2))  # Δ_in=5, Δ_ho=5
+            return ((90.0, [90.0] * len(replicas)) if es_train
+                    else (95.0, [95.0] * len(replicas)))
+        return ((84.0, [84.0] * len(replicas)) if es_train
+                else (89.0, [89.0] * len(replicas)))  # Δ_in=6, Δ_ho=6
 
     MetaLoop._evaluar = staticmethod(fake_mejora)
     try:
@@ -291,12 +294,12 @@ def main():
     vigente11 = ml11.scaffold_vigente()
 
     def fake_lateral(scaffold, replicas, cache):
-        es_train = tuple(replicas) == (0, 1, 2)
+        es_train = tuple(replicas) == tuple(TRAIN_REPS)
         if scaffold == vigente11:
-            return ((90.0, [90.0] * 3) if es_train
-                    else (95.0, [95.0] * 2))
-        return ((85.0, [85.0] * 3) if es_train
-                else (95.0, [95.0] * 2))  # Δ_in=5, Δ_ho=0
+            return ((90.0, [90.0] * len(replicas)) if es_train
+                    else (95.0, [95.0] * len(replicas)))
+        return ((84.0, [84.0] * len(replicas)) if es_train
+                else (95.0, [95.0] * len(replicas)))  # Δ_in=6, Δ_ho=0
 
     MetaLoop._evaluar = staticmethod(fake_lateral)
     try:

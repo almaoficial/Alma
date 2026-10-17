@@ -1,0 +1,978 @@
+{
+ "ciclo": 1,
+ "validador_sha256": "a52fe837798da4786473b7d0cfbb0d08efb1933f469bc8cc33d6d24308c5b627",
+ "planes_v1_sha256": "d31dc8becf33e488c36bd425d4b9048eeaf620bc00a45ee70a07701a738210a9",
+ "v1": {
+  "n": 60,
+  "media": 0.9972222222222222,
+  "sd_muestral": 0.021516574145596757,
+  "min": 0.8333333333333334,
+  "max": 1.0,
+  "checks": {
+   "C1": {
+    "n": 60,
+    "tasa": 0.9833333333333333
+   },
+   "C2": {
+    "n": 60,
+    "tasa": 1.0
+   },
+   "C3": {
+    "n": 20,
+    "tasa": 1.0
+   },
+   "C4": {
+    "n": 52,
+    "tasa": 1.0
+   },
+   "C5": {
+    "n": 60,
+    "tasa": 1.0
+   },
+   "C6": {
+    "n": 40,
+    "tasa": 1.0
+   },
+   "C7": {
+    "n": 60,
+    "tasa": 1.0
+   }
+  },
+  "por_dia": {
+   "2026-10-02": {
+    "n": 4,
+    "media": 1.0
+   },
+   "2026-10-03": {
+    "n": 4,
+    "media": 1.0
+   },
+   "2026-10-04": {
+    "n": 4,
+    "media": 1.0
+   },
+   "2026-10-05": {
+    "n": 4,
+    "media": 1.0
+   },
+   "2026-10-06": {
+    "n": 4,
+    "media": 1.0
+   },
+   "2026-10-07": {
+    "n": 4,
+    "media": 1.0
+   },
+   "2026-10-08": {
+    "n": 4,
+    "media": 1.0
+   },
+   "2026-10-09": {
+    "n": 4,
+    "media": 1.0
+   },
+   "2026-10-10": {
+    "n": 4,
+    "media": 1.0
+   },
+   "2026-10-11": {
+    "n": 4,
+    "media": 1.0
+   },
+   "2026-10-12": {
+    "n": 4,
+    "media": 0.9583333333333334
+   },
+   "2026-10-13": {
+    "n": 4,
+    "media": 1.0
+   },
+   "2026-10-14": {
+    "n": 4,
+    "media": 1.0
+   },
+   "2026-10-15": {
+    "n": 4,
+    "media": 1.0
+   },
+   "2026-10-16": {
+    "n": 4,
+    "media": 1.0
+   }
+  }
+ },
+ "v0_referencia": {
+  "n": 60,
+  "media": 0.9827777777777779,
+  "sd_muestral": 0.052253066180829796
+ },
+ "comparacion": {
+  "delta_media": 0.014444444444444371,
+  "se_dif_papel": 0.009540061015350265,
+  "se_ambas_sd": 0.007295370550631341,
+  "delta_congelado": 0.1,
+  "techo_posible": 0.01722222222222214,
+  "veredicto": "SEÑAL PARCIAL"
+ },
+ "checks_comparados": {
+  "C1": {
+   "v0": {
+    "n": 60,
+    "tasa": 1.0
+   },
+   "v1": {
+    "n": 60,
+    "tasa": 0.9833333333333333
+   },
+   "dif": -0.01666666666666672
+  },
+  "C2": {
+   "v0": {
+    "n": 60,
+    "tasa": 1.0
+   },
+   "v1": {
+    "n": 60,
+    "tasa": 1.0
+   },
+   "dif": 0.0
+  },
+  "C3": {
+   "v0": {
+    "n": 20,
+    "tasa": 1.0
+   },
+   "v1": {
+    "n": 20,
+    "tasa": 1.0
+   },
+   "dif": 0.0
+  },
+  "C4": {
+   "v0": {
+    "n": 52,
+    "tasa": 0.9038461538461539
+   },
+   "v1": {
+    "n": 52,
+    "tasa": 1.0
+   },
+   "dif": 0.09615384615384615
+  },
+  "C5": {
+   "v0": {
+    "n": 60,
+    "tasa": 1.0
+   },
+   "v1": {
+    "n": 60,
+    "tasa": 1.0
+   },
+   "dif": 0.0
+  },
+  "C6": {
+   "v0": {
+    "n": 40,
+    "tasa": 0.975
+   },
+   "v1": {
+    "n": 40,
+    "tasa": 1.0
+   },
+   "dif": 0.025000000000000022
+  },
+  "C7": {
+   "v0": {
+    "n": 60,
+    "tasa": 1.0
+   },
+   "v1": {
+    "n": 60,
+    "tasa": 1.0
+   },
+   "dif": 0.0
+  }
+ },
+ "filas_v1": [
+  {
+   "fecha": "2026-10-02",
+   "rep": 1,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-05",
+   "rep": 1,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-08",
+   "rep": 1,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": null,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-11",
+   "rep": 1,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": null,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-14",
+   "rep": 1,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": true,
+   "C4": true,
+   "C5": true,
+   "C6": null,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-03",
+   "rep": 1,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-06",
+   "rep": 1,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": true,
+   "C4": true,
+   "C5": true,
+   "C6": null,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-09",
+   "rep": 1,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-12",
+   "rep": 1,
+   "variante": "v1",
+   "C1": false,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 0.8333333333333334
+  },
+  {
+   "fecha": "2026-10-15",
+   "rep": 1,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-04",
+   "rep": 1,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": true,
+   "C4": null,
+   "C5": true,
+   "C6": null,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-07",
+   "rep": 1,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-10",
+   "rep": 1,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-13",
+   "rep": 1,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": true,
+   "C4": true,
+   "C5": true,
+   "C6": null,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-16",
+   "rep": 1,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": true,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-16",
+   "rep": 2,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": true,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-13",
+   "rep": 2,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": true,
+   "C4": true,
+   "C5": true,
+   "C6": null,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-10",
+   "rep": 2,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-07",
+   "rep": 2,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-04",
+   "rep": 2,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": true,
+   "C4": null,
+   "C5": true,
+   "C6": null,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-15",
+   "rep": 2,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-12",
+   "rep": 2,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-09",
+   "rep": 2,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-06",
+   "rep": 2,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": true,
+   "C4": true,
+   "C5": true,
+   "C6": null,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-03",
+   "rep": 2,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-14",
+   "rep": 2,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": true,
+   "C4": true,
+   "C5": true,
+   "C6": null,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-11",
+   "rep": 2,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": null,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-08",
+   "rep": 2,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": null,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-05",
+   "rep": 2,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-02",
+   "rep": 2,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-09",
+   "rep": 3,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-02",
+   "rep": 3,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-15",
+   "rep": 3,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-06",
+   "rep": 3,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": true,
+   "C4": true,
+   "C5": true,
+   "C6": null,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-12",
+   "rep": 3,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-04",
+   "rep": 3,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": true,
+   "C4": null,
+   "C5": true,
+   "C6": null,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-16",
+   "rep": 3,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": true,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-08",
+   "rep": 3,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": null,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-13",
+   "rep": 3,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": true,
+   "C4": true,
+   "C5": true,
+   "C6": null,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-05",
+   "rep": 3,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-10",
+   "rep": 3,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-03",
+   "rep": 3,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-14",
+   "rep": 3,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": true,
+   "C4": true,
+   "C5": true,
+   "C6": null,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-07",
+   "rep": 3,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-11",
+   "rep": 3,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": null,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-07",
+   "rep": 4,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-14",
+   "rep": 4,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": true,
+   "C4": true,
+   "C5": true,
+   "C6": null,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-04",
+   "rep": 4,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": true,
+   "C4": null,
+   "C5": true,
+   "C6": null,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-11",
+   "rep": 4,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": null,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-05",
+   "rep": 4,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-15",
+   "rep": 4,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-09",
+   "rep": 4,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-02",
+   "rep": 4,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-13",
+   "rep": 4,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": true,
+   "C4": true,
+   "C5": true,
+   "C6": null,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-08",
+   "rep": 4,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": null,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-16",
+   "rep": 4,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": true,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-06",
+   "rep": 4,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": true,
+   "C4": true,
+   "C5": true,
+   "C6": null,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-12",
+   "rep": 4,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-03",
+   "rep": 4,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  },
+  {
+   "fecha": "2026-10-10",
+   "rep": 4,
+   "variante": "v1",
+   "C1": true,
+   "C2": true,
+   "C3": null,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7": true,
+   "puntaje": 1.0
+  }
+ ]
+}

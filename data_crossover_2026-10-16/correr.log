@@ -1,0 +1,29 @@
+hijos medidos: 24 (media train base: 85.2222)
+  hijo  1   P0xP5 Δ_train -0.5556
+  hijo  2   P1xP5 Δ_train -2.6667
+  hijo  3   P2xP5 Δ_train -3.5556
+  hijo  4   P3xP5 Δ_train +0.6667
+  hijo  5   P4xP5 Δ_train -3.0000
+  hijo  6   P5xP6 Δ_train -2.3889
+  hijo  7   P5xP7 Δ_train +0.7222
+  hijo  8   P5xP8 Δ_train -0.6111
+  hijo  9   P5xP9 Δ_train +1.4444
+  hijo 10  P5xP10 Δ_train +0.0556
+  hijo 11   P0xP3 Δ_train -0.0556
+  hijo 12   P1xP3 Δ_train -3.2778
+  hijo 13   P2xP3 Δ_train +0.6111
+  hijo 14   P3xP4 Δ_train -3.7222
+  hijo 15   P3xP6 Δ_train -0.0556
+  hijo 16   P3xP7 Δ_train -3.1111
+  hijo 17   P3xP8 Δ_train +0.6667
+  hijo 18   P3xP9 Δ_train -0.0556
+  hijo 19  P3xP10 Δ_train -0.0556
+  hijo 20  P3xP11 Δ_train -2.1111
+  hijo 21   P0xP8 Δ_train -0.5556
+  hijo 22   P1xP8 Δ_train -3.5000
+  hijo 23   P2xP8 Δ_train -0.6111
+  hijo 24   P4xP8 Δ_train -3.0000
+finalista: hijo 9 (P5xP9) Δ_train +1.4444 -> puerta: Δ_in +1.4444 Δ_ho -3.0833 Δ_e3 None | dos splits rechazan: regresión: delta_in=1.4444, delta_ho=-3.0833 (E3 no evaluado)
+VEREDICTO (§8): SEÑAL PARCIAL
+freno: 2/3 -> 3/3 (activo: True)
+scaffold vigente: {'decay': 0.5, 'gate_margin': 0.0, 'n0': 4, 'umbral_base': 1, 'umbral_divisor': 3}

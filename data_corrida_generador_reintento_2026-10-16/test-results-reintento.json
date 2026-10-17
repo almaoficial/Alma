@@ -1,0 +1,380 @@
+{
+  "tests_dir": "/home/hatch/workspace/alma-prototype",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "total": 46,
+  "counts": {
+    "PASS": 46,
+    "FAIL": 0,
+    "BLOCKED": 0
+  },
+  "results": [
+    {
+      "suite": "test_archivo.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.088,
+      "returncode": 0,
+      "output_tail": "PASS - crea el archivo si no existe\nPASS - guardar retorna ts y archivo_id\nPASS - no muta el registro de entrada\nPASS - la rechazada también se archiva\nPASS - listar devuelve las 2 en orden\nPASS - deltas intactos\nPASS - JSONL: 2 líneas parseables\nPASS - resumen: total 2, 1 adoptada, 1 rechazada\nPASS - ids monotónicos entre instancias\nPASS - gate.py intacto: REGLA sin cambios\nPASS - nombre default\n\n11/11 PASS\n\n"
+    },
+    {
+      "suite": "test_exp76_handoff.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.114,
+      "returncode": 0,
+      "output_tail": "PASS - regla declarada\nPASS - puerta expone la regla\nPASS - mejora downstream -> acepta\nPASS - igual (Δ=0) -> rechaza\nPASS - peor que nada -> rechaza\nPASS - regresión en referencia -> rechaza\nPASS - sin ref: no-regresión asumida y documentada\nPASS - interfaz: nombre\nPASS - interfaz: firma\nPASS - interfaz: sin cuerpo\nPASS - claridad determinista\nPASS - interfaz clara > rígida\nPASS - determinista con misma seed\nPASS - baseline pareado usa mismas semillas\nPASS - detalle por implementador (3)\nPASS - interna distinta -> scores idénticos\nPASS - caso buena: puerta decide lo esperado\nPASS - caso mala: puerta decide lo esperado\nPASS - caso lateral: puerta decide lo esperado\nPASS - caso brillante_mala_if: puerta decide lo esperado\nPASS - lateral: Δ_down == 0.0000 exacto\nPASS - buena: puerta acepta\nPASS - buena: auto-adoptada por el camino gobernado\nPASS - buena: notificación encolada\nPASS - buena: evidencia trae audit_handoff\nPASS - mala: puerta rechaza\nPASS - mala: adoptar_fn ni se invoca\nPASS - mala: motivo 'peor que nada' con números\nPASS - mala: ni llega al promotor (cero registros)\nPASS - audit record trae tipo/regla/deltas\nPASS - sin adoptar_fn: veredicto sin commit\n\n31/31 checks en verde\n\n"
+    },
+    {
+      "suite": "test_exp77_auditoria.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.165,
+      "returncode": 0,
+      "output_tail": "PASS - traductor determinista (misma entrada, misma salida)\nPASS - aritmetica rep0: TECNICA+PRESCRIBE+RESTRINGE\nPASS - razonamiento rep0: GENERICO+PRESCRIBE+RESTRINGE\nPASS - aritmetica rep1: PROCEDIMIENTO+PRESCRIBE+RESTRINGE\nPASS - hola-mundo: solo INSTRUCCION_CONCRETA, rigidez 0\nPASS - ayuda y rigidez siempre en [0,1]\nPASS - q=0.8 en las 7 (interfaz prolija y uniforme)\nPASS - inventario trae las 7 rutas esperadas\nPASS - hashes sha256 presentes y únicos por contenido\nPASS - puerta acepta aritmetica rep0 (Δ_down>0)\nPASS - spy registra la aceptación sin adoptar\nPASS - skill mala (ayuda 0.1, rigidez 0.9): rechazada 'peor que nada'\nPASS - el spy NO se invoca en rechazo (solo en aceptación)\nPASS - clasificar: aceptada->pasa\nPASS - clasificar: Δ_down<0->resta\nPASS - clasificar: Δ_down=0->bloat\nPASS - pre-registro exp77 existe y nombra el experimento\nFAIL - sin pre-registro no corre (falta /home/hatch/workspace/alma-prototype/no_existe_prereg77.json)\nPASS - fail-closed sin pre-registro (SystemExit 2)\nPASS - reporte JSON con 7 hallazgos y nota honesta\nPASS - hallazgo trae q, predicados, deltas, veredicto y sensibilidad\nPASS - ningún hallazgo con adopción real\nPASS - INFORME.md existe\nPASS - regla de handoff intacta\nPASS - evaluar_skill_para_adopcion acepta adoptar_fn=None\n\n24/24 checks en verde\n\n"
+    },
+    {
+      "suite": "test_exp78_forge.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.653,
+      "returncode": 0,
+      "output_tail": "PASS - p1: traza válida pasa validar_trace\nPASS - p1: falta campo -> error\nPASS - p1: origen inválido -> error\nPASS - p1: veredicto inválido -> error\nPASS - p1: costo negativo -> error\nPASS - p1: nueva_traza malformada levanta (fail-closed)\nPASS - p1: fixture mala es rechazada\nPASS - p1: desde_handoff -> traza válida\nPASS - p1: desde_handoff refleja el rechazo\nPASS - p1: fixture buena es aceptada\nPASS - p1: desde_handoff refleja la aceptación\nPASS - p1: desde_adopcion -> traza válida\nPASS - p1: TraceLog roundtrip\nPASS - p1: TraceLog filtra por origen\nPASS - p1: TraceLog rechaza traza inválida\nPASS - p1: estado reporta conteos\nPASS - p2: archivar aceptación levanta (fail-closed)\nPASS - p2: fixture mala2 rechazada\nPASS - p2: 2 fallos archivados\nPASS - p2: semillas distintas registradas\nPASS - p2: candidata buena bate los fallos\nPASS - p2: candidata peor que un fallo no pasa\nPASS - p2: candidata que bate los fallos pasa\nPASS - p2: evaluar_en_historial corre en las N semillas\nPASS - p2: candidata buena sobrevive al historial\nPASS - p2: candidata mala no sobrevive al historial\nPASS - p2: estado reporta casos y semillas\nPASS - p3: torneo corre y reporta por candidata\nPASS - p3: clon del campeón empata (mejora 0)\nPASS - p3: tweak queda registrado con mejora numérica\nPASS - p3: historial persiste\nPASS - p3: campeon_actual None si nadie ganó\nPASS - p3: campeon_actual detecta a la ganadora\nPASS - p3: estado reporta enfrentamientos\nPASS - p4: asentar_con_linaje versiona\nPASS - p4: linaje legible con split/Δ/regla\nPASS - p4: cadena de hash intacta tras lineage\nPASS - p4: lineage incompleto corta sin escribir\nPASS - p4: fix() clásico sigue funcionando\nPASS - p4: linaje_desde_handoff extrae del record\nPASS - p4: lineage del handoff se asienta\nPASS - p-int: pipeline completo consistente\n\n42/42 checks en verde\n\n"
+    },
+    {
+      "suite": "test_exp79_cableado.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.274,
+      "returncode": 0,
+      "output_tail": "PASS - w1: veredicto intacto (rechazo)\nPASS - w1: traza emitida\nPASS - w1: traza unificada del rechazo\nPASS - w1: fallo archivado en biblioteca\nPASS - w1: sin lineage en rechazo\nPASS - w2: aceptada y adoptada via fn\nPASS - w2: traza unificada de la aceptación\nPASS - w2: rechazo no archiva (biblioteca vacía)\nPASS - w2: lineage asentado con split del handoff\nPASS - w2: cadena del DAG verifica\nPASS - w3: veredicto intacto aunque falle la traza\nPASS - w3: error registrado, resto del cableado sigue\nPASS - w4: sin módulos el wrapper es la puerta pelada\nPASS - t1: sin campeón no corre\nPASS - t2: sin candidatas no corre\nPASS - t3: torneo corre campeón vs staging\nPASS - t3: traza unificada del torneo\nPASS - t3: historial del torneo registra el enfrentamiento\nPASS - e1: endpoint /fase2/torneo/semanal en server.py\n\n19/19 PASS\n\n"
+    },
+    {
+      "suite": "test_exp80_agentskills.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.137,
+      "returncode": 0,
+      "output_tail": "PASS - spec válida pasa\nPASS - license aceptada\nPASS - compatibility aceptada\nPASS - metadata es dict\nPASS - escalar coerceado a str\nPASS - rechaza: mayúsculas en name\nPASS - rechaza: name > 64 chars\nPASS - rechaza: name != dirname\nPASS - rechaza: doble guion\nPASS - rechaza: guion final\nPASS - rechaza: guion inicial\nPASS - rechaza: description > 1024\nPASS - rechaza: sin description\nPASS - rechaza: sin name\nPASS - rechaza: compatibility > 500\nPASS - rechaza: metadata no-dict\nPASS - rechaza: allowed-tools tipo raro\nPASS - rechaza name vacío\nPASS - metadata anidado es dict\nPASS - lista anidada preservada\nPASS - cuerpo intacto\nPASS - falla sin ---\nPASS - falla frontmatter vacío\nPASS - falla frontmatter no-dict\nPASS - falla YAML inválido\nPASS - carga spec válida\nPASS - license en objeto\nPASS - metadata en objeto\nPASS - references/ listado\nPASS - referencias/ listado (legacy)\nPASS - scripts passthrough listado\nPASS - assets passthrough listado\nPASS - solo references/ ok\nPASS - cargar falla si name != dirname\nPASS - exporta SKILL.md\nPASS - exportado re-valida\nPASS - metadata trae version/author (la declarada en frontmatter manda)\nPASS - lineage en metadata\nPASS - estado NO exportado\nPASS - referencias/ -> references/\nPASS - scripts/ passthrough copiado\nPASS - exporta sin lineage\nPASS - export falla con name inválido (no escribe)\nPASS - migración agrega license\nPASS - fila vieja legible tras migrar\nPASS - fila vieja metadata default {}\nPASS - license guardada\nPASS - metadata guardada\nPASS - schema v2 en filas nuevas\nPASS - upsert actualiza license\nPASS - roundtrip name\nPASS - roundtrip description\nPASS - roundtrip metadata version (se preserva la declarada)\nPASS - roundtrip references renombrada\nPASS - cargar_skill legacy intacto\n\n55/55 checks en verde\n\n"
+    },
+    {
+      "suite": "test_exp81_ecc_formato.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.104,
+      "returncode": 0,
+      "output_tail": "PASS - loader trae las 5 secciones\nPASS - when_to_use parseado\nPASS - when_not_to_use parseado\nPASS - cuerpo intacto (texto completo)\nPASS - emite las 5 secciones\nPASS - orden canónico\nPASS - exportado re-valida\nPASS - explícita manda sobre la detectada\nPASS - sin duplicados\nPASS - export->load->export estable (texto idéntico)\nPASS - secciones iguales tras roundtrip\nPASS - punto fijo en el tercer ciclo\nPASS - encabezado desconocido no crea sección\nPASS - contenido desconocido preservado verbatim\nPASS - roundtrip estable con sección desconocida\nPASS - título con mayúsculas raras se reconoce\nPASS - intro separada\nPASS - carga sin intro\nPASS - roundtrip estable sin intro\nPASS - sin secciones -> dict vacío\nPASS - cuerpo intacto\nPASS - export verbatim sin secciones\nPASS - cargar_skill legacy intacto\nPASS - 30 palabras no dispara warning\nPASS - 31 palabras dispara warning\nPASS - finding tiene seccion/severidad/mensaje\nPASS - spec acepta 40 palabras (<1024 chars)\nPASS - pero check_skill_format avisa\nPASS - falta When NOT to Use -> warning\nPASS - con When NOT to Use -> sin warning\nPASS - path y texto dan lo mismo\nPASS - skill ECC completa -> sin findings\nPASS - falla sin frontmatter\nPASS - falla sin description\nPASS - falla con tipo no-str\nPASS - origin preservado en metadata\nPASS - origin sobrevive al export\nPASS - export con ': ' en description re-parsea\nPASS - description sobrevive round-trip con ': '\n\n39/39 checks en verde\n\n"
+    },
+    {
+      "suite": "test_exp82_descripciones.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.141,
+      "returncode": 0,
+      "output_tail": "PASS - pre-registro existe\nPASS - pre-registro: costo US$0\nPASS - pre-registro: 3 tools\nPASS - regla es la de EXP76\nPASS - juez_barato: descripción vieja == docstring real (AST)\nPASS - juez_barato: interfaz trae la descripción nueva exacta\nPASS - juez_barato: interfaz sin interna\nPASS - juez_barato: q_vieja recomputada == declarada\nPASS - juez_barato: q_nueva recomputada == declarada\nPASS - juez_barato: q_nueva > q_vieja\nPASS - juez_barato: determinista con mismas semillas\nPASS - juez_barato: baseline idéntico entre brazos\nPASS - juez_barato: interna distinta -> scores idénticos\nPASS - juez_barato: puerta decide la rama esperada\nPASS - juez_barato: Δ_down>0 y Δ_ref>=0 al adoptar\nPASS - juez_barato: Δ no empeora (Δ_down>=0)\nPASS - juez_barato: audit record tool/handoff\nPASS - presupuesto: descripción vieja == docstring real (AST)\nPASS - presupuesto: interfaz trae la descripción nueva exacta\nPASS - presupuesto: interfaz sin interna\nPASS - presupuesto: q_vieja recomputada == declarada\nPASS - presupuesto: q_nueva recomputada == declarada\nPASS - presupuesto: q_nueva > q_vieja\nPASS - presupuesto: determinista con mismas semillas\nPASS - presupuesto: baseline idéntico entre brazos\nPASS - presupuesto: interna distinta -> scores idénticos\nPASS - presupuesto: puerta decide la rama esperada\nPASS - presupuesto: Δ_down>0 y Δ_ref>=0 al adoptar\nPASS - presupuesto: Δ no empeora (Δ_down>=0)\nPASS - presupuesto: audit record tool/handoff\nPASS - trazas: descripción vieja == docstring real (AST)\nPASS - trazas: interfaz trae la descripción nueva exacta\nPASS - trazas: interfaz sin interna\nPASS - trazas: q_vieja recomputada == declarada\nPASS - trazas: q_nueva recomputada == declarada\nPASS - trazas: q_nueva > q_vieja\nPASS - trazas: determinista con mismas semillas\nPASS - trazas: baseline idéntico entre brazos\nPASS - trazas: interna distinta -> scores idénticos\nPASS - trazas: puerta decide la rama esperada\nPASS - trazas: Δ_down>0 y Δ_ref>=0 al adoptar\nPASS - trazas: Δ no empeora (Δ_down>=0)\nPASS - trazas: audit record tool/handoff\n\n43/43 checks en verde\n\n"
+    },
+    {
+      "suite": "test_fase0_curator.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.074,
+      "returncode": 0,
+      "output_tail": "PASS - una transición active→stale\nPASS - el índice refleja el cambio\nPASS - la recién usada queda active\nPASS - ledger verificable\nPASS - transición stale→archived\nPASS - archivar no borra del índice\nPASS - ledger intacto tras 2 barridos\nPASS - Curator no toca skills externas\nPASS - las externas siguen active\nPASS - segundo barrido no duplica\nPASS - ledger con 1 evento\nPASS - hash encadenado\n\n"
+    },
+    {
+      "suite": "test_fase0_harness.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.084,
+      "returncode": 0,
+      "output_tail": "PASS - el pre-registro existe antes de las réplicas\nPASS - report.json escrito\nPASS - veredicto.md escrito\nPASS - pre-registro con hipótesis y criterio\nPASS - veredicto PASS con media < 0 y bit asumido\nPASS - veredicto FAIL con media > 0\nPASS - FAIL si los bloques no son bit-idénticos\nPASS - nombre de la puerta\nPASS - 5 réplicas\nPASS - control verbatim EXP49\nPASS - tratamiento es el servicio\nPASS - criterio exige bit-identidad\nPASS - criterio exige media < 0\nPASS - notas registran el scaffold validado\n\n"
+    },
+    {
+      "suite": "test_fase0_memoria.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.075,
+      "returncode": 0,
+      "output_tail": "PASS - recupera 2 experiencias\nPASS - la nueva pesa más (0.5^1 > 0.5^2)\nPASS - recompensas intactas\nPASS - archiva hasta el tope (5 de 10)\nPASS - verify_chain intacto tras evicción\nPASS - recupera solo las activas\nPASS - las archivadas siguen en el ledger\nPASS - evicción idempotente\n\n"
+    },
+    {
+      "suite": "test_fase0_recurrencia.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.035,
+      "returncode": 0,
+      "output_tail": "PASS - recurrencia alta ≈ 1.0\nPASS - modo skills\nPASS - recurrencia ≈ 0.0\nPASS - modo adaptativo (no invierte en skills)\nPASS - sin datos → tasa 0\nPASS - sin datos → adaptativo\nPASS - borde 0.30 → skills\nPASS - ventana olvida lo viejo\nPASS - ventana 0 inválida\n\n"
+    },
+    {
+      "suite": "test_fase0_resolver.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.338,
+      "returncode": 0,
+      "output_tail": "PASS - soporte fuerte → salta\nPASS - sin skill → no salta\nPASS - Q1 estricto a favor → gate\nPASS - Q1 no estricto (empate) → sin gate\nPASS - sin skill → sin gate\n  réplica 0: bit-idéntica servicio=True control=True\n  réplica 1: bit-idéntica servicio=True control=True\n  réplica 2: bit-idéntica servicio=True control=True\n  réplica 3: bit-idéntica servicio=True control=True\n  réplica 4: bit-idéntica servicio=True control=True\nPASS - bit-identidad total vs runner EXP56 con scaffold validado (5 réplicas)\n\n"
+    },
+    {
+      "suite": "test_fase0_skills.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.07,
+      "returncode": 0,
+      "output_tail": "PASS - frontmatter parsea name\nPASS - frontmatter parsea created_by\nPASS - cuerpo no vacío\nPASS - falla sin frontmatter\nPASS - parser no exige campos (es schema-agnóstico)\nPASS - cargar_skill falla sin name\nPASS - carga skill válida\nPASS - lista 1 skill\nPASS - fila liviana: sin cuerpo\nPASS - cuerpo bajo demanda\nPASS - tokens índice acotados\nPASS - corta con PresupuestoExcedido\nPASS - no se registra al cortar\nPASS - use_count suma\nPASS - antigüedad >= 0\nPASS - habilidad por (categoria, name)\n\n"
+    },
+    {
+      "suite": "test_fase1_motor.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.172,
+      "returncode": 0,
+      "output_tail": "PASS - 4 bloques corridos\nPASS - detector en modo skills (hay recurrencia)\nPASS - experiencias registradas\nPASS - skills generadas para las 2 firmas\nPASS - aritmética→single, razonamiento→cot\nPASS - regret total < 6*4 (mejor que azar)\nPASS - costo medido > 0\nPASS - cadena de hash intacta\nPASS - skills usadas por el resolver\nPASS - feedback registrado\nPASS - sin skills no se genera ninguna\nPASS - loop adaptativo corre igual\n\n12/12 checks en verde\n\n"
+    },
+    {
+      "suite": "test_fase1_proveedor.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.226,
+      "returncode": 0,
+      "output_tail": "PASS - presupuesto corta antes de exceder\nPASS - gasto registrado no supera el tope\nPASS - genera skill con evidencia suficiente\nPASS - proveedor.existe tras generar\nPASS - skill cargable con cuerpo\nPASS - recomienda el brazo ganador\nPASS - brazo() = argmax con decaimiento\nPASS - omite generar sin evidencia (no gasta)\nPASS - v1 generada\nPASS - refina ante contradicción\nPASS - versión 2\nPASS - recomendación actualizada\nPASS - no refina sin contradicción\nPASS - wins pareados correctos\nPASS - umbral endurecido 1+floor(3/3)=2\nPASS - soporte fuerte con 3/3\nPASS - soporte fuerte con 1/2 wins (umbral validado=1)\nPASS - inyecta el cuerpo de la skill en system\nPASS - nulo nunca tiene skills\nPASS - nulo sin brazo\nPASS - nulo sin soporte\n\n21/21 checks en verde\n\n"
+    },
+    {
+      "suite": "test_fase21_ablacion.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.214,
+      "returncode": 0,
+      "output_tail": "PASS evitacion registrada si fallo repetido\nPASS sin evitacion si no hubo repeticion\nPASS abla solo la vieja sin evidencia\nPASS motivo en el ledger\nPASS estados finales correctos\nPASS correr_ciclo retorna lista\nPASS umbral=2 gracia=30\n\n7/7 checks en verde\n\n"
+    },
+    {
+      "suite": "test_fase21_aci.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.052,
+      "returncode": 0,
+      "output_tail": "PASS resumir deja lo corto intacto\nPASS resumir recorta con marca\nPASS edicion valida escribe\nPASS edicion invalida no toca el original\nPASS excepcion en validador reporta sin romper\nPASS resultado con forma\nPASS sin_resultados nunca es silencio\nPASS curar conserva solo el primer error\nPASS curar colapsa obs viejas\nPASS curar deja intacto lo corto\n\n10/10 checks en verde\n\n"
+    },
+    {
+      "suite": "test_fase21_admision.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.127,
+      "returncode": 0,
+      "output_tail": "PASS - proponer crea caso en etapa propuesta\nPASS - evidencia mueve de etapa\nPASS - decidir True → staging (gate humano)\nPASS - validar ok con SKILL.md válido\nPASS - commit admite la skill\nPASS - SKILL.md escrito en disco\nPASS - registrada en el índice\nPASS - nace PROVISIONAL (trust no se hereda ni se otorga)\nPASS - abre versión CAPTURED en el DAG\nPASS - ledger audita las etapas\nPASS - commit saca de pendientes\nPASS - decidir False → rechazada*\nPASS - rechazada no avanza a validación\nPASS - rechazada no escribe SKILL.md\nPASS - SKILL.md inválido → validacion_fallida*\nPASS - validación fallida no hace commit\nPASS - no se puede decidir sin evidencia\nPASS - pendientes lista etapas no terminales\n\n18/18 checks en verde\n\n"
+    },
+    {
+      "suite": "test_fase21_confianza.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.061,
+      "returncode": 0,
+      "output_tail": "PASS - nace provisional\nPASS - desconocida default provisional\nPASS - auto-reporte x3 NO promueve\nPASS - auto-reporte cuenta como telemetría\nPASS - fuente 'auto' rechazada\nPASS - aún provisional antes del umbral verificado\nPASS - trusted al llegar al umbral verificado\nPASS - métricas: tasa e IC presentes\nPASS - sin usos: tasa e IC son None\nPASS - Wilson(1/2) es intervalo válido\nPASS - uso sin veredicto no cambia exitos ni verificados\nPASS - fallo no atribuible no degrada\nPASS - fallo atribuible degrada a provisional\nPASS - degradación reversible: re-gana trusted con verificados\nPASS - degradaciones contadas\nPASS - externa nace provisional en cuarentena\nPASS - resumen cuenta por estado\n\n17/17 checks en verde\n\n"
+    },
+    {
+      "suite": "test_fase21_debilidades.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.032,
+      "returncode": 0,
+      "output_tail": "PASS - firma_meta sube\nPASS - firma_meta baja\nPASS - firma_meta no numérica\nPASS - firma_feedback fallo\nPASS - firma_feedback ok\nPASS - firma_feedback sin reward no inventa\nPASS - clusters ordenados por soporte\nPASS - minimo_soporte filtra singletons\nPASS - fracción consistente\nPASS - paquete trae advertencia no prescriptiva\nPASS - paquete no contiene instrucciones de edición\nPASS - minero vacío: sin clusters\n\n12/12 checks en verde\n\n"
+    },
+    {
+      "suite": "test_fase21_gate.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.03,
+      "returncode": 0,
+      "output_tail": "PASS - acepta: mejora solo en held-out\nPASS - acepta: mejora solo en train\nPASS - acepta: mejora en ambos\nPASS - rechaza: regresión en train aunque held-out mejore mucho\nPASS - rechaza: regresión en held-out aunque train mejore\nPASS - rechaza: deltas cero\nPASS - decidir acepta (d_in=1.0, d_ho=0.5)\nPASS - decidir rechaza regresión en train\nPASS - audit record trae tipo/regla/veredicto\nPASS - audit de ronda admite delta_ho=None\n\n10/10 checks en verde\n\n"
+    },
+    {
+      "suite": "test_fase21_politicas.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.059,
+      "returncode": 0,
+      "output_tail": "PASS default-deny: comando_shell no listado\nPASS allowlist: ruta dentro de skills\nPASS deniega escape con ..\nPASS deniega argumento no listado\nPASS deniega sin argumento requerido\nPASS narrowing inmediato\nPASS expansion pendiente sigue denegada\nPASS expansion aprobada permite\nPASS expansion aprobada respeta regex\nPASS ledger registra narrowing+expansion\nPASS carga rechaza herramienta no listada\nPASS carga permite herramienta listada\nPASS politicas.py no importa LLM\nPASS SIN_CUBRIR documentado\n\n14/14 checks en verde\n\n"
+    },
+    {
+      "suite": "test_fase21_procedencia.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.081,
+      "returncode": 0,
+      "output_tail": "PASS tercero nace en cuarentena\nPASS propio no en cuarentena\nPASS origen_de correcto\nPASS cuarentena excluida del prior\nPASS cuarentena excluida del detalle\nPASS graduar saca de cuarentena\nPASS graduada alimenta el prior\nPASS eviccion prioriza cuarentena\nPASS legado sin registro no en cuarentena\nPASS origen invalido rechazado\nPASS skill importada en cuarentena\nPASS habilitadas filtra cuarentena\nPASS skill graduada habilitada\n\n13/13 checks en verde\n\n"
+    },
+    {
+      "suite": "test_fase21_redteam_fixes.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.093,
+      "returncode": 0,
+      "output_tail": "PASS - A2: write propio registra procedencia 'propio'\nPASS - A2: origen desconocido nace en cuarentena (fail-closed)\nPASS - A2: ingesta masiva nace en cuarentena\nPASS - A2: orígenes internos no van a cuarentena\nPASS - A2: experiencia envenenada excluida del prior\nPASS - A2: revision.aprobar registra procedencia propia\nPASS - A1: detecta exfiltración (URL + envío de datos)\nPASS - A1: detecta auto-promoción a trusted\nPASS - A1: detecta intento de deshabilitar el gate\nPASS - A1: cuerpo benigno pasa limpio\nPASS - A1: el frontmatter no se escanea\nPASS - A1: admisión frena la skill hostil\nPASS - A5b: 3× auto-reporte NO promueve (ataque A5b bloqueado)\nPASS - A5b: fuente fuera de la allowlist rechazada\nPASS - A5b: 3× certificación independiente SÍ promueve\nPASS - A4b: symlink a afuera denegado\nPASS - A4b: ruta normal dentro sigue permitida\nPASS - A4b: ../ sigue denegado\nPASS - A4b: ruta absoluta fuera denegada\nPASS - A3b: aprobador arbitrario rechazado\nPASS - A3b: 'humano' aprueba\nPASS - A3b: default de la allowlist\nPASS - A3b: allowlist configurable\n\n23/23 checks en verde\n\n"
+    },
+    {
+      "suite": "test_fase21_rutina.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 1.252,
+      "returncode": 0,
+      "output_tail": "PASS minero in-memory tiene la firma fantasma\nPASS corrida termina\nPASS contexto in-memory no cruza corridas\nPASS pre-registro escrito\nPASS criterio de parada en pre-registro\nPASS ledger tiene corrida_finalizada\n\n6/6 checks en verde\n\n"
+    },
+    {
+      "suite": "test_fase21_verificacion.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.028,
+      "returncode": 0,
+      "output_tail": "PASS criterio invalido rechazado\nPASS criterio valido declarado\nPASS rondas_fijas para en N\nPASS sin_mejora para tras K planas\nPASS umbral_mejora para al umbral\nPASS trail con mejora por paso\nPASS on_paso corre por iteracion\n\n7/7 checks en verde\n\n"
+    },
+    {
+      "suite": "test_fase21_versiones.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.057,
+      "returncode": 0,
+      "output_tail": "PASS - captured v1 sin padre\nPASS - fix v2 misma skill\nPASS - derived con link al padre\nPASS - hijas lista la derivada\nPASS - el padre conserva su historial\nPASS - historial ordenado por versión\nPASS - cadena de hashes válida\nPASS - tipo inválido rechazado\nPASS - DERIVED sin padre rechazado\nPASS - CAPTURED con padre rechazado\n\n10/10 checks en verde\n\n"
+    },
+    {
+      "suite": "test_fase22_trazas.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.179,
+      "returncode": 0,
+      "output_tail": "PASS - asentar_decision retorna id\nPASS - decisiones round-trip: 1 evento\nPASS - contrato §4.1 completo\nPASS - filtro por firma_regimen\nPASS - sin reward: no la ve el minero\nPASS - actualizar_reward ok\nPASS - con reward medido: visible\nPASS - actualizar_reward inexistente\nPASS - ciclo round-trip: 2 eventos\nPASS - filtro por tipo\nPASS - ciclo tipo inexistente\nPASS - firma_decision fallo\nPASS - firma_decision ok\nPASS - firma_decision sin reward no inventa\nPASS - minar_decisiones: cluster dominante\nPASS - minar_decisiones: sin reward no entra\nPASS - paquete descriptivo, no prescriptivo\nPASS - paquete_debilidades end-to-end\nPASS - estado del log\nPASS - rotar borra lo viejo de ambas tablas\nPASS - rotar no toca lo nuevo\nPASS - resolver responde igual con trazas\nPASS - resolver asentó 1 decisión\nPASS - traza con firma, brazo, latencia y versión\nPASS - backend efectivo registrado\nPASS - feedback ok\nPASS - feedback completa el reward en la traza\nPASS - sin trazas: resolver igual\nPASS - sin trazas: feedback no rompe\nPASS - emisores de ciclo escriben al log\nPASS - actores correctos\nPASS - schema_version sellada en _meta\nPASS - resumen: solo grupos con soporte\nPASS - resumen: promedios correctos\nPASS - resumen con soporte 1 trae los 3 grupos\nPASS - estado expone schema_version\n\n36/36 checks en verde\n\n"
+    },
+    {
+      "suite": "test_fase23_freno_humano.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.1,
+      "returncode": 0,
+      "output_tail": "PASS - allowlist = ('humano',)\nPASS - proponer acepta\nPASS - pendiente visible\nPASS - diff muestra qué cambia\nPASS - deltas justifican la promoción\nPASS - evidencia con lineage\nPASS - inspeccionar trae scaffold completo\nPASS - staging no toca producción\nPASS - segundo pendiente rechazado\nPASS - aprobador 'loop' rechazado\nPASS - sigue en espera tras intento inválido\nPASS - aprobada por humano\nPASS - commit ejecutado con lineage\nPASS - estado aprobada\nPASS - ya no hay pendiente\nPASS - no se aprueba dos veces\nPASS - rechazo sin motivo exige motivo\nPASS - rechazada con motivo\nPASS - rechazo no toca producción\nPASS - archivada con motivo\nPASS - historial conserva la rechazada\nPASS - event_log propagado al promotor\nPASS - corrida aceptada\nPASS - mejora medida -> auto-adopción (sin esperar al humano)\nPASS - sin staging pendiente\nPASS - notificación encolada para el usuario\nPASS - camino manual sigue existiendo\nPASS - el humano aprueba -> commit\nPASS - event log: auto_adopcion asentada\nPASS - event log: aprobación manual con actor humano\nPASS - FAIL de la puerta no crea staging\nPASS - FAIL no toca el scaffold\nPASS - FAIL no adopta ni encola aviso\n\n33/33 checks en verde\n\n"
+    },
+    {
+      "suite": "test_fase24_detector.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.3,
+      "returncode": 0,
+      "output_tail": "PASS - sin disparo: regret idéntico con/sin detector\nPASS - sin disparo: costo idéntico con/sin detector\nPASS - sin disparo: el detector sigue explorando\nPASS - K/J congelados del pre-registro\nPASS - engancha tras K bloques unánimes\nPASS - compromete el brazo unánime\nPASS - bloque 3 corre encogido\nPASS - bloque 3 sin spot (1er encogido)\nPASS - bloque 3: los 6 ítems con el comprometido\nPASS - bloque 3: sin probe ni thompson\nPASS - bloque 5 es spot-check\nPASS - spot-check: Q1+Q2 miden los 3 brazos\nPASS - spot-check: el resto solo el comprometido\nPASS - sin falsa salida: sigue encogido\nPASS - racha en 2 tras dos probes\nPASS - skip no extiende ni reinicia la racha\nPASS - tras el skip sigue explorando\nPASS - la racha continúa y engancha\nPASS - dos unánimes → racha 2\nPASS - empate → racha reiniciada\nPASS - empate no engancha\nPASS - bloque completo pese al detector roto\nPASS - detector desactivado para la sesión\nPASS - sin marca de encogido\nPASS - bloque siguiente normal\nPASS - transición encoge asentada\n\n26/26 checks en verde\n\n"
+    },
+    {
+      "suite": "test_fase25_drift.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.067,
+      "returncode": 0,
+      "output_tail": "PASS - determinismo: misma señal\nPASS - determinismo: mismo historial\nPASS - determinismo: misma ventana\nPASS - mundo estable: no dispara\nPASS - mundo estable: 0 contradicciones\nPASS - mundo estable: accion None\nPASS - flip: dispara con M=2 contradicciones\nPASS - flip: senial detalla baseline y conteo\nPASS - flip: accion re_probe\nPASS - flip: bloque_drift registrado\nPASS - 1 contradicción aislada: no dispara\nPASS - 1 contradicción contada\nPASS - contradicciones no consecutivas: dispara\nPASS - empates: ventana vacía\nPASS - empate + 1 contradicción: no dispara\nPASS - contradicción vieja sale de la ventana\nPASS - 1 contradicción nueva: no dispara\nPASS - 2da contradicción nueva: dispara\nPASS - disparó\nPASS - enclavado pese a calma posterior\nPASS - disparó\nPASS - re-anclaje: señal liberada\nPASS - re-anclaje: ventana limpia\nPASS - re-anclaje: nuevo baseline\nPASS - post re-anclaje: estable no dispara\nPASS - registrar sin baseline: RuntimeError\nPASS - baseline con None: ValueError\nPASS - params inválidos {'ventana': 0}: ValueError\nPASS - params inválidos {'contradicciones': 0}: ValueError\nPASS - params inválidos {'ventana': 3, 'contradicciones': 4}: ValueError\nPASS - medias: copia defensiva\nPASS - historial: anclaje + drift\nPASS - historial drift: campos de auditoría\nPASS - retorno: True solo al disparar\nPASS - defaults = constantes del módulo\n\n35/35 checks en verde\n\n"
+    },
+    {
+      "suite": "test_fase25_drift_vivo.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 1.331,
+      "returncode": 0,
+      "output_tail": "PASS - escaneo activo\nPASS - 2 veredictos nuevos leídos\nPASS - baseline anclada con el primero\nPASS - sin drift en mundo estable\nPASS - sin probe: no ancla\nPASS - sin probe: no hay drift\nPASS - sin probe: 0 veredictos\nPASS - empates: no alimentan\nPASS - empates: no disparan\nPASS - empates: ventana vacía\nPASS - flip: dispara\nPASS - flip: senial con accion re_probe\nPASS - ledger: evento drift registrado\nPASS - ledger: anclaje inicial registrado\nPASS - ciclo: drift_detectado asentado\nPASS - escaneo repetido no duplica\nPASS - disparó\nPASS - enclavado pese a calma\nPASS - re-anclaje ok\nPASS - re-anclaje libera la señal\nPASS - re-anclaje al último veredicto\nPASS - ledger: anclaje de re-anclaje\nPASS - trazas rotas: escanear no levanta\nPASS - trazas rotas: queda desactivado\nPASS - trazas rotas: anclar tampoco levanta\nPASS - /salud responde\nPASS - /drift/estado activo sin baseline\nPASS - /drift/escanear ancla\nPASS - /drift/estado expone el drift\nPASS - /drift/estado trae la cola del ledger\nPASS - ledger en disco con drift\nPASS - /fase2/estado trae fase25\nPASS - /drift/anclar libera\nPASS - tras anclar: sin drift\nPASS - /resolver intacto\nPASS - el servicio sigue en pie\nPASS - kill switch: /drift/estado informa desactivado\nPASS - kill switch: fase25 informa desactivado\nPASS - kill switch: /salud intacto\n\n39/39 checks en verde\n\n[http] GET /salud -> 200\n[http] GET /drift/estado -> 200\n[http] POST /drift/escanear -> 200\n[http] GET /drift/estado -> 200\n[http] GET /fase2/estado -> 200\n[http] POST /drift/anclar -> 200\n[http] GET /drift/estado -> 200\n[http] POST /resolver -> 200\n[http] GET /salud -> 200\n[http] GET /drift/estado -> 200\n[http] GET /fase2/estado -> 200\n[http] GET /salud -> 200\n"
+    },
+    {
+      "suite": "test_fase26_disparo.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 2.895,
+      "returncode": 0,
+      "output_tail": "PASS - N_B = 100 (aprobado §9.4)\nPASS - N_M = 500 (aprobado §9.4)\nPASS - umbral regresión = −2,8 (§8.2)\nPASS - techo: <7 días no corre\nPASS - borde: exactamente 7 días sí corre\nPASS - ventana fresca: ≥500 trazas corre\nPASS - regresión: se bloquea y avisa\nPASS - nunca corrió: piso satisfecho\nPASS - tráfico ralo: el piso no es opcional\nPASS - loop A terminó\nPASS - 1 benchmark tras 10 trazas con reward\nPASS - 1 fila en la serie de reward real\nPASS - serie: n=10\nPASS - serie: media correcta\nPASS - serie: ventana (0,10]\nPASS - watermark benchmark avanzó a 10\nPASS - trazas sin reward no disparan\nPASS - loop A (2da ventana) terminó\nPASS - 2do benchmark tras la 2da ventana\nPASS - serie: 2da fila ventana (10,21], n=1 (borde cruzado)\nPASS - serie: media de la 2da ventana = 0,9\nPASS - loop A solo mide: scaffold vigente intacto\nPASS - sin rewards medidos no hay benchmark\nPASS - loop A terminó (reward tardío)\nPASS - el reward completado por feedback cuenta\nPASS - serie con los 5 rewards tardíos\nPASS - callback roto no rompe asentar_decision\nPASS - callback roto no rompe actualizar_reward\nPASS - on_decision default None\nPASS - asentar sin callback ok\nPASS - fresco: debe correr (piso semanal)\nPASS - fresco: benchmark_ok True\nPASS - fresco: dias_desde_ultima None\nPASS - corrida reciente: techo bloquea\nPASS - dias_desde_ultima ~ 0\nPASS - regresión post-adopción: benchmark_ok False\nPASS - regresión: debe=False y avisa\nPASS - detalle: 1 regresión detectada\nPASS - aviso: evento disparo_bloqueo_regresion\nPASS - sin regresión: benchmark_ok True y debe True\nPASS - marcar: contexto con 7 trazas frescas\nPASS - marcar: watermark metaloop = 7\nPASS - marcar: definición documentada\nPASS - tras marcar: 0 trazas nuevas\nPASS - watermark sobrevive a la instancia\nPASS - corrida con contexto aceptada\nPASS - pre-registro trae contexto_disparo\nPASS - sin metaloop/benchmark: debe True (piso)\nPASS - notificar sin benchmark no hace nada\nPASS - estado no rompe\n\n50/50 checks en verde\n\n"
+    },
+    {
+      "suite": "test_fase2_benchmark.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.409,
+      "returncode": 0,
+      "output_tail": "PASS - corrida aceptada\nPASS - resultado con mejora\nPASS - baseline vs sí mismo ~ 0\nPASS - n_replicas = 5\nPASS - tendencia con 1 corrida\nPASS - tendencia con 2 corridas\nPASS - estado ok\n\n7/7 checks en verde\n\n"
+    },
+    {
+      "suite": "test_fase2_curator_optin.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.05,
+      "returncode": 0,
+      "output_tail": "PASS - default corta\nPASS - opt-in sin proveedor corta\nPASS - correr_ciclo existe y corre\n\n3/3 checks en verde\n\n"
+    },
+    {
+      "suite": "test_fase2_metaloop.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 1.557,
+      "returncode": 0,
+      "output_tail": "PASS - scaffold inicial = DEFAULT_SCAFFOLD\nPASS - e47.construir_stream intacto\nPASS - e56.correr_replica_param intacto\nPASS - corrida aceptada\nPASS - termina inactivo\nPASS - ultima_corrida registrada\nPASS - ledger: iniciada + finalizada\nPASS - pre-registro en disco\nPASS - pre-registro declara validador congelado\nPASS - ledger con hash encadenado válido\nPASS - revertir sin historial -> False\nPASS - reapertura conserva historial\n\n12/12 checks en verde\n\n"
+    },
+    {
+      "suite": "test_fase2_presupuesto.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.054,
+      "returncode": 0,
+      "output_tail": "PASS - default sin tope -> modo barato\nPASS - autorizar(0) siempre True\nPASS - autorizar(costo>0) False en modo barato\nPASS - limite servicio_diario == 0 sin tope\nPASS - limite metaloop == 0 sin tope\nPASS - limite curator == 0 sin tope\nPASS - limite revision_bg == 0 sin tope\nPASS - con tope -> modo normal\nPASS - reparto suma el tope\nPASS - autoriza dentro del limite\nPASS - deniega sobre el limite\nPASS - cargar registra gasto\nPASS - tras gastar, deniega el resto\nPASS - otros buckets no afectados\nPASS - bucket desconocido corta\nPASS - el gasto persiste\nPASS - lee tope de env\nPASS - sin env -> 0.0 (barato)\n\n18/18 checks en verde\n\n"
+    },
+    {
+      "suite": "test_fase2_revision.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 1.06,
+      "returncode": 0,
+      "output_tail": "PASS - registrar no bloquea\nPASS - hilo terminó\nPASS - pendiente listada\nPASS - rechazar ok\nPASS - rechazada sale de pendientes\nPASS - rechazar no escribe nada\nPASS - aprobar ok\nPASS - aprobar aplica la escritura\nPASS - origen auditado\nPASS - re-aprobar no duplica\n\n10/10 checks en verde\n\n"
+    },
+    {
+      "suite": "test_generador_candidatos.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.288,
+      "returncode": 0,
+      "output_tail": "PASS - historial: 8 propuestas de la corrida fixture\nPASS - prompt trae la fila medida «umbral_base: 1 -> 3»\nPASS - prompt trae la fila medida «-3.0556»\nPASS - prompt trae la fila medida «-3.1667»\nPASS - prompt trae la fila medida «-2.7778»\nPASS - prompt trae la fila medida «-0.3333»\nPASS - prompt trae la fila medida «gate_margin: 0.0 -> 0.1»\nPASS - prompt trae la fila medida «+0.0000»\nPASS - prompt trae la fila medida «umbral_divisor: 3 -> 2»\nPASS - prompt: instrucción de cambios coordinados (≥2)\nPASS - prompt: piso de diversidad declarado\nPASS - prompt: base y espacio completos\nPASS - ledger real: la corrida 87859 está en el historial\nPASS - prompt real trae el Δ medido -3.0556\nPASS - prompt real trae el Δ medido -3.1667\nPASS - prompt real trae el Δ medido -2.7778\nPASS - prompt real trae el Δ medido -0.5000\nPASS - cortafuegos: el evento contaminado se excluye entero; solo entra la propuesta train limpia\nPASS - cortafuegos: las filas solo traen campos de etapa train\nPASS - cortafuegos: el historial no contiene claves de puerta\nPASS - cortafuegos: la fila train limpia SÍ llega al prompt\nPASS - cortafuegos: 777.7777 no llega al prompt\nPASS - cortafuegos: 777.7777 no llega al historial\nPASS - cortafuegos: 999.9999 no llega al prompt\nPASS - cortafuegos: 999.9999 no llega al historial\nPASS - cortafuegos: 888.8888 no llega al prompt\nPASS - cortafuegos: 888.8888 no llega al historial\nPASS - cortafuegos: 666.6666 no llega al prompt\nPASS - cortafuegos: 666.6666 no llega al historial\nPASS - cortafuegos: 555.5555 no llega al prompt\nPASS - cortafuegos: 555.5555 no llega al historial\nPASS - cortafuegos: -6.5432 no llega al prompt\nPASS - cortafuegos: -6.5432 no llega al historial\nPASS - cortafuegos: 111.1111 no llega al prompt\nPASS - cortafuegos: 111.1111 no llega al historial\nPASS - cortafuegos: 222.2222 no llega al prompt\nPASS - cortafuegos: 222.2222 no llega al historial\nPASS - parseo: JSON directo\nPASS - parseo: con fences\nPASS - parseo: con texto alrededor\nPASS - parseo: sin JSON -> error, sin inventar\nPASS - parseo: JSON sin candidatos -> error\nPASS - parseo: vacío -> error\nPASS - validación: los 6 bien formados pasan\nPASS - fuera de rango\nPASS - tipo inválido: string en parámetro entero\nPASS - tipo inválido: float no integral en entero\nPASS - tipo inválido: bool no es número\nPASS - config incompleta\nPASS - parámetro desconocido\nPASS - idéntico a la base\nPASS - movimiento simple (1 parámetro)\nPASS - sin justificación\nPASS - no es objeto\nPASS - sin config\nPASS - duplicado en la tanda\nPASS - piso de diversidad: distancia 1 contra otro válido\nPASS - piso de diversidad también contra previos\nPASS - generación: tanda bien formada de un llamado\nPASS - generación: feedback tras respuesta no parseable\nPASS - generación: el 2º prompt trae los motivos de descarte\nPASS - generación: tanda vacía no rompe ni inventa\nPASS - generación: completa con feedback de diversidad\nPASS - generación: el 2º prompt lista los ya aceptados\nPASS - tanda congelada a disco con candidatos y descartes\nPASS - frontera: importar + ejecutar con mocks no toca ningún archivo protegido\nPASS - frontera: la única escritura fue la tanda pedida\nPASS - integración: la corrida con tanda es aceptada\nPASS - integración: auto-adoptó el candidato bueno de la tanda\nPASS - integración: un audit record por candidato de la tanda\nPASS - integración: el malo revirtió y el bueno hizo keep\nPASS - integración: la tanda quedó en el pre-registro de la corrida\nPASS - integración: adopción resetea la racha del freno\nPASS - integración: tanda sin mejora no adopta\nPASS - integración: la corrida plana suma a la racha (1/3)\nPASS - default intacto: la RSO sin tanda sigue auto-adoptando\nPASS - default intacto: su pre-registro no gana campos de tanda\n\n77/77 checks en verde\n\n"
+    },
+    {
+      "suite": "test_gobernanza_auto_adopcion.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.169,
+      "returncode": 0,
+      "output_tail": "PASS - núcleo: 3 superficies listadas\nPASS - núcleo: presupuesto\nPASS - núcleo: puerta de dos splits\nPASS - núcleo: notificaciones\nPASS - dimensiones protegidas declaradas\nPASS - mejora medida -> adoptada\nPASS - commit ejecutado\nPASS - event log: auto_adopcion asentada\nPASS - event log trae antes/después/puerta/efecto/revertir\nPASS - notificación encolada sin reportar\nPASS - adopción visible en historial\nPASS - igual no se adopta\nPASS - igual no toca producción\nPASS - rechazo trae los números\nPASS - event log: rechazo registrado\nPASS - peor no se adopta\nPASS - regresión en train no se adopta\nPASS - núcleo (presupuesto): raise\nPASS - núcleo (presupuesto): nada aplicado\nPASS - núcleo (presupuesto): logueado\nPASS - núcleo (presupuesto): aviso encolado\nPASS - núcleo (puerta): raise\nPASS - núcleo (puerta): nada aplicado\nPASS - núcleo (puerta): logueado\nPASS - núcleo (puerta): aviso encolado\nPASS - núcleo (notificaciones): raise\nPASS - núcleo (notificaciones): nada aplicado\nPASS - núcleo (notificaciones): logueado\nPASS - núcleo (notificaciones): aviso encolado\nPASS - claves exactas del núcleo declaradas\nPASS - pendiente visible\nPASS - marcar reportada\nPASS - ya no hay pendientes\nPASS - marcar idempotente\nPASS - revertida\nPASS - scaffold previo restaurado\nPASS - event log: reversión asentada\nPASS - reversión notificada\nPASS - revertir inexistente falla explícito\nPASS - freno de presupuesto bloquea\nPASS - sin presupuesto: fail-closed\nPASS - corrida aceptada\nPASS - auto-adoptó: scaffold vigente cambió\nPASS - sin staging pendiente (no espera al humano)\nPASS - notificación de la adopción encolada\nPASS - event log: auto_adopcion del ciclo\nPASS - lateral no adopta: scaffold intacto\nPASS - lateral registrado como rechazo\n\n48/48 checks en verde\n\n"
+    },
+    {
+      "suite": "test_gobernanza_freno_rollback.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.088,
+      "returncode": 0,
+      "output_tail": "PASS - sin token configurado -> rechazado\nPASS - motivo: token_no_configurado\nPASS - el freno sigue activo tras el rechazo\nPASS - la racha no se tocó\nPASS - el rechazo quedó asentado en el ledger\nPASS - el rechazo asienta su motivo\nPASS - la etiqueta origen sola ya no desbloquea\nPASS - el freno sigue activo\nPASS - token incorrecto -> rechazado\nPASS - racha intacta tras token incorrecto\nPASS - los 3 rechazos quedaron asentados\nPASS - ningún desbloqueo asentado todavía\nPASS - token correcto -> desbloquea\nPASS - freno limpio\nPASS - racha en 0\nPASS - desbloqueo asentado en el ledger\nPASS - el estado confirma el desbloqueo\nPASS - vigente inicial = base\nPASS - vigente = B tras dos adopciones\nPASS - 1er rollback revierte\nPASS - 1er rollback vuelve a A\nPASS - vigente = A\nPASS - 2do rollback revierte (deshace A)\nPASS - 2do rollback vuelve a la base (NO restaura B)\nPASS - vigente = base\nPASS - 3er rollback: nada más que deshacer\nPASS - 3er rollback trae motivo\nPASS - la base sigue vigente\nPASS - el ledger registra los 2 rollbacks\nPASS - restaurados en orden: A, base\nPASS - cada rollback identifica la adopción deshecha\nPASS - rollback de A vuelve a la base\nPASS - vigente = C\nPASS - rollback deshace C y vuelve a la base\nPASS - sin adopciones en efecto -> False\nPASS - vigente = base tras el revert del Promotor\nPASS - revertir() tras revert del Promotor -> False\nPASS - la base no se tocó\nPASS - sin adopciones -> False\nPASS - motivo presente\n\n40/40 PASS\n\n"
+    },
+    {
+      "suite": "test_manifiesto.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 3.688,
+      "returncode": 0,
+      "output_tail": "PASS - tier 0: firmada propia → plena\nPASS - cargar_segura tier 0 anota nivel_confianza\nPASS - tier 1: tercero firmado → sandbox\nPASS - tier 2 instruction-only → restringida + fast_track\nPASS - tier 2 instruction-only carga sin aprobación\nPASS - tier 2 con scripts → bloqueada\nPASS - bloqueada sin aprobación levanta\nPASS - con aprobación explícita → restringida\nPASS - webhook sin auth → rechazada\nPASS - rechazada ni con aprobación\nPASS - webhook con HMAC no se rechaza\nPASS - secreto en prompt → rechazada\nPASS - secreto hardcodeado → rechazada\nPASS - placeholder no se flaggea\nPASS - tampering detectado por hash\nPASS - tamperada cae a tier 2\nPASS - archivo extra post-firma detectado\nPASS - checklist con scripts\nPASS - cargar_skill original intacto\n\n19/19 PASS\n\n"
+    },
+    {
+      "suite": "test_manifiesto_loader.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 2.487,
+      "returncode": 0,
+      "output_tail": "PASS - tier 0: carga plena con nivel_confianza=0\nPASS - tier 1: carga sandbox con nivel_confianza=1\nPASS - tier 2 instruction-only: carga restringida\nPASS - tier 2 con scripts: registrar levanta SkillBloqueada\nPASS - tier 2 con scripts: NO entró al índice\nPASS - webhook sin auth: registrar levanta SkillRechazada\nPASS - filtro OFF: legacy con scripts carga como antes (reversible)\nPASS - filtro ON: cargar_completa bloquea la legacy tier 2 con scripts\nPASS - log: tier 0 plena en punto registrar\nPASS - log: tier 1 sandbox en punto cargar\nPASS - log: tier 2 restringida registrada\nPASS - log: tier 2 bloqueada registrada (la que no entró)\nPASS - cache por bytes: mismo veredicto en memoria (no reescanea)\n\n13/13 PASS\n\n"
+    },
+    {
+      "suite": "test_metaloop_freno.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.574,
+      "returncode": 0,
+      "output_tail": "PASS - racha máxima = 3\nPASS - arranca sin freno\nPASS - arranca con racha 0\nPASS - 1ra plana: racha 1\nPASS - 1ra plana: sin freno\nPASS - 2da plana: racha 2\nPASS - 2da plana: sin freno\nPASS - sin evento de freno en el ledger\nPASS - 3ra plana: racha 3\nPASS - 3ra plana: freno activo\nPASS - aviso asentado en el ledger\nPASS - el aviso dice la racha\nPASS - correr() rechazado con freno activo\nPASS - el aviso se emite una sola vez\nPASS - el freno sigue activo\nPASS - adopción resetea la racha\nPASS - adopción no activa el freno\nPASS - desbloquear limpia el freno\nPASS - desbloquear resetea la racha\nPASS - desbloqueo auditado en el ledger\nPASS - tras desbloquear, correr() vuelve a aceptar\nPASS - el freno sobrevive al reinicio\nPASS - estado() expone el freno\n\n23/23 PASS\n\n"
+    },
+    {
+      "suite": "test_piso_ruido_puerta.py",
+      "status": "PASS",
+      "reason": "Código de salida 0.",
+      "duration_seconds": 0.037,
+      "returncode": 0,
+      "output_tail": "PASS - banda: no auto-adopta\nPASS - borde: max==5.4781 (totales) requiere sí explícito\nPASS - sobre la banda: auto-adopta como antes\nPASS - sobre la banda solo en held-out: auto-adopta\nPASS - regresión: rechaza sin flag de sí\nPASS - deltas cero: rechaza sin flag de sí\nPASS - puerta pura intacta: aceptar(0.3, 0.2) sigue True\nPASS - REGLA de la puerta pura intacta\nPASS - PISO_RUIDO_DELTA == 5.4781 (totales)\nPASS - REGLA_AUTO_ADOPCION exige >5.4781\nPASS - solo endurece: auto=True implica puerta pura True\n\n11/11 checks en verde\n\n"
+    }
+  ]
+}

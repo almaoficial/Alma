@@ -1,0 +1,172 @@
+{
+ "tipo": "evaluacion_base_recableado_puerta_v3",
+ "fecha": "2026-10-16",
+ "cableado": {
+  "train_reps": [
+   400,
+   401,
+   402,
+   403,
+   404,
+   405,
+   406,
+   407,
+   408,
+   409,
+   410,
+   411,
+   412,
+   413,
+   414,
+   415,
+   416,
+   417
+  ],
+  "heldout_reps": [
+   600,
+   601,
+   602,
+   603,
+   604,
+   605,
+   606,
+   607,
+   608,
+   609,
+   610,
+   611
+  ],
+  "e3_reps": [
+   500,
+   501
+  ],
+  "piso_ruido_delta": 5.4781,
+  "piso_escala": "totales (equivale a 0,2283 en escala delta)"
+ },
+ "ancla_panel_historico": {
+  "reps": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "reg_pol": [
+   71.0,
+   83.0,
+   90.0,
+   84.0,
+   81.0
+  ],
+  "esperado_paso0_calibraciones": [
+   71.0,
+   83.0,
+   90.0,
+   84.0,
+   81.0
+  ],
+  "identico": true
+ },
+ "panel_nuevo": {
+  "train": {
+   "reps": [
+    400,
+    401,
+    402,
+    403,
+    404,
+    405,
+    406,
+    407,
+    408,
+    409,
+    410,
+    411,
+    412,
+    413,
+    414,
+    415,
+    416,
+    417
+   ],
+   "reg_pol": [
+    89.0,
+    84.0,
+    92.0,
+    94.0,
+    87.0,
+    96.0,
+    96.0,
+    70.0,
+    86.0,
+    87.0,
+    83.0,
+    80.0,
+    92.0,
+    92.0,
+    61.0,
+    64.0,
+    88.0,
+    93.0
+   ],
+   "media": 85.22222222222223
+  },
+  "heldout": {
+   "reps": [
+    600,
+    601,
+    602,
+    603,
+    604,
+    605,
+    606,
+    607,
+    608,
+    609,
+    610,
+    611
+   ],
+   "reg_pol": [
+    87.0,
+    85.0,
+    71.0,
+    84.0,
+    88.0,
+    79.0,
+    75.0,
+    80.0,
+    79.0,
+    77.0,
+    85.0,
+    78.0
+   ],
+   "media": 80.66666666666667
+  },
+  "segunda_evaluacion_identica": true
+ },
+ "delta_base_contra_base": {
+  "delta_in": 0.0,
+  "delta_ho": 0.0,
+  "puerta_aceptado": false,
+  "puerta_motivo": "sin mejora estricta: delta_in=0.0000, delta_ho=0.0000",
+  "auto_adopcion": {
+   "auto": false,
+   "motivo": "sin mejora estricta: delta_in=0.0000, delta_ho=0.0000",
+   "requiere_si": false
+  },
+  "bajo_el_piso_nuevo": true
+ },
+ "e3_contexto": {
+  "reps": [
+   500,
+   501
+  ],
+  "reg_pol": [
+   83.0,
+   87.0
+  ],
+  "media": 85.0
+ },
+ "duracion_s": 1.144,
+ "costo_usd": 0
+}

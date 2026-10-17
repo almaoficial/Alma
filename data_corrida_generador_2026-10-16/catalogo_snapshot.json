@@ -1,0 +1,30 @@
+{
+  "tipo": "snapshot_catalogo_openrouter",
+  "timestamp": 1792189451.7817674,
+  "modelos_total": 467,
+  "modelos_free": [
+    "xingchen-agi/xing4.0-29b-a4b:free",
+    "nvidia/nemotron-3.5-super-vl:free",
+    "dots-studio/dots-3-note-preview:free",
+    "liquid/lfm-2.5-2.6b:free",
+    "nvidia/nemotron-3.5-lightning:free",
+    "thinkingmachines/inkling-small:free",
+    "poolside/laguna-s-2.1:free",
+    "thinkingmachines/inkling:free",
+    "poolside/laguna-xs-2.1:free",
+    "cohere/north-mini-code:free",
+    "nvidia/nemotron-3.5-content-safety:free",
+    "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+    "google/gemma-4-26b-a4b-it:free",
+    "google/gemma-4-31b-it:free",
+    "nvidia/nemotron-3-super-120b-a12b:free"
+  ],
+  "primario_declarado": "inclusionai/ling-3.1-flash:free",
+  "primario_presente": false,
+  "deepseek_free_presente": false,
+  "regla_aplicada": "pre-registro §4 paso (3): primer *:free de chat no-reasoning del catálogo, en su orden",
+  "criterio_clasificacion": "reasoning = diseñado/comercializado como modelo de razonamiento según id/nombre/descripción del catálogo (p. ej. nemotron-3-nano-omni-...-reasoning, lfm-2.5 'compact reasoning model', nemotron-3-ultra 'frontier-reasoning'); la mera presencia del parámetro API 'reasoning' en supported_parameters no clasifica (lo lista casi todo el catálogo, incluidos modelos de chat planos). Excluido por no-chat: nemotron-3.5-content-safety (guardrail/clasificador).",
+  "modelo_efectivo": "xingchen-agi/xing4.0-29b-a4b:free",
+  "nota": "El tier gratuito rotó de nuevo: ni el primario (ling-3.1-flash) ni ningún deepseek/*:free figuran en el catálogo al momento de generar. Xing4.0-29B-A4B es el primer :free del catálogo (índice 0), text->text, sucesor de la serie de chat TeleChat, sin diseño de razonamiento declarado."
+}

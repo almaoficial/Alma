@@ -1,0 +1,169 @@
+{
+  "fecha": "2026-10-16",
+  "preregistro": "/home/hatch/workspace/alma-prototype/preregistro-recalibracion-delta-2026-10-16.md",
+  "B": 5000,
+  "z": 2.0,
+  "seed": 12345,
+  "paso0": {
+    "identicas_10_de_10": true,
+    "max_diferencia_absoluta": 0.0,
+    "reg_pol_base": {
+      "0": 71.0,
+      "1": 83.0,
+      "2": 90.0,
+      "3": 84.0,
+      "4": 81.0
+    },
+    "duracion_evaluacion_completa_s": 0.0973,
+    "duracion_paso0_s": 0.973,
+    "duracion_protocolo_estimada_s": 6.36,
+    "umbral_1h_superado": false
+  },
+  "pool": {
+    "ids": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010,
+      1011,
+      1012,
+      1013,
+      1014,
+      1015,
+      1016,
+      1017,
+      1018,
+      1019
+    ],
+    "reg_pol": {
+      "1000": 74.0,
+      "1001": 101.0,
+      "1002": 85.0,
+      "1003": 79.0,
+      "1004": 72.0,
+      "1005": 80.0,
+      "1006": 81.0,
+      "1007": 69.0,
+      "1008": 79.0,
+      "1009": 84.0,
+      "1010": 80.0,
+      "1011": 72.0,
+      "1012": 95.0,
+      "1013": 89.0,
+      "1014": 72.0,
+      "1015": 80.0,
+      "1016": 71.0,
+      "1017": 91.0,
+      "1018": 80.0,
+      "1019": 96.0
+    },
+    "duracion_s": 0.375
+  },
+  "paso1": {
+    "varianza_entre_bloques_dentro_de_replica": {
+      "por_replica": {
+        "0": 3.519927536231884,
+        "1": 3.128623188405797,
+        "2": 2.9782608695652173,
+        "3": 2.869565217391304,
+        "4": 3.114130434782609
+      },
+      "media": 3.1221014492753625,
+      "sd_bloques_tipica": 1.7669469288225277
+    },
+    "varianza_entre_replicas_del_reg_pol": {
+      "panel_historico_5": {
+        "varianza": 47.699999999999996,
+        "sd": 6.906518659932803,
+        "media": 81.8
+      },
+      "pool_20": {
+        "varianza": 81.73684210526316,
+        "sd": 9.040842997489955,
+        "media": 81.5
+      }
+    },
+    "varianza_medicion_repetida": 0.0,
+    "varianza_medicion_repetida_nota": "Paso 0: 10/10 idénticas, max_dif = 0 (H2 verificada)",
+    "varianza_juez_en_el_camino_del_delta": 0.0,
+    "varianza_juez_nota": "0 por construcción: no hay LLM en el camino del Δ (pre-registro §2); se declara, no se estima"
+  },
+  "paso2A": {
+    "delta_A": 0.532,
+    "sd_s": 0.266,
+    "sd_d_in": 0.2918,
+    "sd_d_ho": 0.347,
+    "duracion_s": 0.659,
+    "reproduce_0.5331": true,
+    "desvio_vs_0.5331": 0.0011
+  },
+  "paso2B": {
+    "delta_B": 13.4947,
+    "sd_s": 6.7474,
+    "sd_d_in": 7.3122,
+    "sd_d_ho": 9.0749,
+    "duracion_s": 0.162,
+    "mecanica_sorteo": "rng.choice(20, size=10, replace=False); P=idx[0:5] (train 0:3, ho 3:5), Q=idx[5:10] (train 5:8, ho 8:10); default_rng(12345)"
+  },
+  "paso2C": {
+    "delta_C": 9.4125,
+    "sd_s": 4.7063,
+    "sd_d_in": 5.2045,
+    "sd_d_ho": 6.2735,
+    "duracion_s": 0.169,
+    "mecanica_sorteo": "rng.choice(20, size=20, replace=False) (permutacion); P=idx[0:10] (train 0:6, ho 6:10), Q=idx[10:20] (train 10:16, ho 16:20); default_rng(12345)"
+  },
+  "hipotesis": {
+    "H1_piso_reducido_al_menos_50pct": false,
+    "H2_varianza_medicion_cero": true,
+    "H3_sd_ho_mayor_sd_in": {
+      "A": true,
+      "B": true,
+      "C": true,
+      "brecha_B": 1.7627,
+      "brecha_C": 1.069,
+      "brecha_se_achica_C_vs_B": true
+    }
+  },
+  "flags_decision": {
+    "delta_B_mayor_o_igual_delta_A": true,
+    "algun_piso_menor_0.05": false,
+    "delta_C_menor_o_igual_0.20": false,
+    "delta_B_menor_o_igual_0.20": false,
+    "menor_piso_BC": 9.4125,
+    "todos_BC_mayor_0.30": true
+  },
+  "estado": "RARO_ARCHIVADO",
+  "duracion_total_s": 2.349,
+  "decision": {
+    "veredicto": "RARO_ARCHIVADO",
+    "rama_tabla": "§5 rareza: delta_B >= delta_A -> no se adopta ningun numero; §6: intento archivado con diagnostico",
+    "delta_A": 0.532,
+    "delta_B": 13.4947,
+    "delta_C": 9.4125,
+    "delta_nuevo": null,
+    "delta_vigente_tras_recalibracion": 0.5331,
+    "panel": "sin cambio (3/2); gate.py sin tocar — recableado separado (§5) y sin numero nuevo no hay nada que recablear",
+    "diagnostico_unidades": {
+      "hecho": "delta_A esta en puntos de media-por-bloque (el bootstrap original difiere medias de 24 bloques remuestreados dentro de cada replica); delta_B y delta_C estan en puntos de regret total (medias de panel de reg_pol, suma sobre 24 bloques, escala 0-240), que son las unidades del Δ de la puerta",
+      "factor": 24,
+      "delta_A_en_puntos_totales": 12.768,
+      "delta_B_en_media_por_bloque": 0.5623,
+      "delta_C_en_media_por_bloque": 0.3922,
+      "lectura_en_unidades_comunes": "en media-por-bloque: A=0.5320, B=0.5623, C=0.3922 — delta_B >= delta_A se sostiene tambien en unidades comunes (el nulo pareado con panel 3/2 no reduce el piso), y C lo reduce ~26% pero queda > 0.30: ninguna lectura coherente produce adopcion",
+      "fuente_dominante": "la varianza entre replicas del reg_pol (sd pool = 9.04 puntos) domina; el bootstrap original solo veia la varianza entre bloques dentro de replica (sd tipica 1.77 por bloque)"
+    },
+    "hipotesis": {
+      "H1": "no confirmada (ni en unidades literales ni comunes: la mayor reduccion es ~26%, < 50%)",
+      "H2": "confirmada (Paso 0: 10/10 identicas)",
+      "H3": "confirmada (sd_ho > sd_in en A, B y C; la brecha se achica de B=1.7627 a C=1.0690)"
+    }
+  }
+}

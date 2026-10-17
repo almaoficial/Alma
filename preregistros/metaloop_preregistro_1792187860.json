@@ -1,0 +1,39 @@
+{
+  "experimento": "metaloop_rso",
+  "seed": 87859,
+  "rondas": 8,
+  "criterio_parada": {
+    "tipo": "rondas_fijas",
+    "n": 8
+  },
+  "scaffold_partida": {
+    "decay": 0.5,
+    "gate_margin": 0.0,
+    "n0": 4,
+    "umbral_base": 1,
+    "umbral_divisor": 3
+  },
+  "heldout_partida": 80.66666666666667,
+  "criterio_adopcion": "puerta de dos splits: Δ_in ≥ 0 ∧ Δ_ho ≥ 0 ∧ max(Δ_in,Δ_ho) > 0 (Self-Harness §3.4) + E3: tercer split ciego siempre exigido, veta ante regresión (endurecimiento 28/9)",
+  "puerta_e3": {
+    "habilitado": true,
+    "margen_min": 5.0,
+    "e3_reps": [
+      500,
+      501
+    ],
+    "superficie_metaloop": "parametro",
+    "regla_e3": "min(d_in,d_ho,d_e3)>=0 & max(d_in,d_ho,d_e3)>0",
+    "datos": "stream mock held-out reservado para auditorías (réplicas 500-501, provisionales)",
+    "politica": "Endurecimiento 28/9 (decisión del usuario): E3 SIEMPRE exigido en el path vivo cuando los dos splits aceptan (forzar_e3=True); el E3 veta ante regresión, nunca relaja la puerta"
+  },
+  "validador": "congelado (e47/e56, splits [0,1,2]/[3,4])",
+  "evidencia_debilidades": {
+    "tipo": "paquete_evidencia",
+    "clusters": [],
+    "total_firmas": 3,
+    "advertencia": "descriptivo, no prescriptivo: los clusters auditan contexto, no dirigen mutaciones"
+  },
+  "contexto_disparo": {},
+  "timestamp": 1792187860.0599577
+}

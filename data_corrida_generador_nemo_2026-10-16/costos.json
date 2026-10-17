@@ -1,0 +1,33 @@
+{
+  "precios_usd_1m": {
+    "prompt": 0.029,
+    "completion": 0.03
+  },
+  "llamados": [
+    {
+      "llamado": 1,
+      "ts": "2026-10-16T23:14:02.618318+00:00",
+      "modelo": "mistralai/mistral-nemo",
+      "prompt_tokens": 918,
+      "completion_tokens": 1435,
+      "costo_usd": 6.97e-05
+    },
+    {
+      "llamado": 2,
+      "ts": "2026-10-16T23:14:15.496979+00:00",
+      "modelo": "mistralai/mistral-nemo",
+      "prompt_tokens": 1429,
+      "completion_tokens": 415,
+      "costo_usd": 5.39e-05
+    },
+    {
+      "llamado": 3,
+      "ts": "2026-10-16T23:14:29.939032+00:00",
+      "modelo": "mistralai/mistral-nemo",
+      "prompt_tokens": 1429,
+      "completion_tokens": 414,
+      "costo_usd": 5.39e-05
+    }
+  ],
+  "total_usd": 0.0001774
+}

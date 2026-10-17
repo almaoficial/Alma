@@ -1,0 +1,356 @@
+{
+  "total": 50,
+  "pass": 50,
+  "suites": [
+    {
+      "suite": "alma_service/test_e3_integracion.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.183,
+      "tail": "todo verde (17/17 checks)"
+    },
+    {
+      "suite": "alma_service/test_evaluador_barato.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.14,
+      "tail": "24/24 checks en verde"
+    },
+    {
+      "suite": "alma_service/test_juez_barato.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.053,
+      "tail": "25/25 checks en verde"
+    },
+    {
+      "suite": "alma_service/test_ruteo.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.084,
+      "tail": "13/13 checks en verde"
+    },
+    {
+      "suite": "test_archivo.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.047,
+      "tail": "11/11 PASS"
+    },
+    {
+      "suite": "test_exp76_handoff.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.093,
+      "tail": "31/31 checks en verde"
+    },
+    {
+      "suite": "test_exp77_auditoria.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.083,
+      "tail": "24/24 checks en verde"
+    },
+    {
+      "suite": "test_exp78_forge.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.488,
+      "tail": "42/42 checks en verde"
+    },
+    {
+      "suite": "test_exp79_cableado.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.26,
+      "tail": "19/19 PASS"
+    },
+    {
+      "suite": "test_exp80_agentskills.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.12,
+      "tail": "55/55 checks en verde"
+    },
+    {
+      "suite": "test_exp81_ecc_formato.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.09,
+      "tail": "39/39 checks en verde"
+    },
+    {
+      "suite": "test_exp82_descripciones.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.101,
+      "tail": "43/43 checks en verde"
+    },
+    {
+      "suite": "test_fase0_curator.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.081,
+      "tail": "PASS - hash encadenado"
+    },
+    {
+      "suite": "test_fase0_harness.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.087,
+      "tail": "PASS - notas registran el scaffold validado"
+    },
+    {
+      "suite": "test_fase0_memoria.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.064,
+      "tail": "PASS - evicci\u00f3n idempotente"
+    },
+    {
+      "suite": "test_fase0_recurrencia.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.032,
+      "tail": "PASS - ventana 0 inv\u00e1lida"
+    },
+    {
+      "suite": "test_fase0_resolver.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.442,
+      "tail": "PASS - bit-identidad total vs runner EXP56 con scaffold validado (5 r\u00e9plicas)"
+    },
+    {
+      "suite": "test_fase0_skills.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.069,
+      "tail": "PASS - habilidad por (categoria, name)"
+    },
+    {
+      "suite": "test_fase1_motor.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.155,
+      "tail": "12/12 checks en verde"
+    },
+    {
+      "suite": "test_fase1_proveedor.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.198,
+      "tail": "21/21 checks en verde"
+    },
+    {
+      "suite": "test_fase21_ablacion.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.123,
+      "tail": "7/7 checks en verde"
+    },
+    {
+      "suite": "test_fase21_aci.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.072,
+      "tail": "10/10 checks en verde"
+    },
+    {
+      "suite": "test_fase21_admision.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.124,
+      "tail": "18/18 checks en verde"
+    },
+    {
+      "suite": "test_fase21_confianza.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.067,
+      "tail": "17/17 checks en verde"
+    },
+    {
+      "suite": "test_fase21_debilidades.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.031,
+      "tail": "12/12 checks en verde"
+    },
+    {
+      "suite": "test_fase21_gate.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.046,
+      "tail": "10/10 checks en verde"
+    },
+    {
+      "suite": "test_fase21_politicas.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.154,
+      "tail": "14/14 checks en verde"
+    },
+    {
+      "suite": "test_fase21_procedencia.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.077,
+      "tail": "13/13 checks en verde"
+    },
+    {
+      "suite": "test_fase21_redteam_fixes.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.139,
+      "tail": "23/23 checks en verde"
+    },
+    {
+      "suite": "test_fase21_rutina.py",
+      "pass": true,
+      "rc": 0,
+      "s": 1.182,
+      "tail": "6/6 checks en verde"
+    },
+    {
+      "suite": "test_fase21_verificacion.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.028,
+      "tail": "7/7 checks en verde"
+    },
+    {
+      "suite": "test_fase21_versiones.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.054,
+      "tail": "10/10 checks en verde"
+    },
+    {
+      "suite": "test_fase22_trazas.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.162,
+      "tail": "36/36 checks en verde"
+    },
+    {
+      "suite": "test_fase23_freno_humano.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.179,
+      "tail": "33/33 checks en verde"
+    },
+    {
+      "suite": "test_fase24_detector.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.294,
+      "tail": "26/26 checks en verde"
+    },
+    {
+      "suite": "test_fase25_drift.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.053,
+      "tail": "35/35 checks en verde"
+    },
+    {
+      "suite": "test_fase25_drift_vivo.py",
+      "pass": true,
+      "rc": 0,
+      "s": 1.296,
+      "tail": "[http] GET /salud -> 200"
+    },
+    {
+      "suite": "test_fase26_disparo.py",
+      "pass": true,
+      "rc": 0,
+      "s": 2.81,
+      "tail": "50/50 checks en verde"
+    },
+    {
+      "suite": "test_fase2_benchmark.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.418,
+      "tail": "7/7 checks en verde"
+    },
+    {
+      "suite": "test_fase2_curator_optin.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.06,
+      "tail": "3/3 checks en verde"
+    },
+    {
+      "suite": "test_fase2_metaloop.py",
+      "pass": true,
+      "rc": 0,
+      "s": 1.465,
+      "tail": "12/12 checks en verde"
+    },
+    {
+      "suite": "test_fase2_presupuesto.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.049,
+      "tail": "18/18 checks en verde"
+    },
+    {
+      "suite": "test_fase2_revision.py",
+      "pass": true,
+      "rc": 0,
+      "s": 1.056,
+      "tail": "10/10 checks en verde"
+    },
+    {
+      "suite": "test_generador_candidatos.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.268,
+      "tail": "77/77 checks en verde"
+    },
+    {
+      "suite": "test_gobernanza_auto_adopcion.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.139,
+      "tail": "48/48 checks en verde"
+    },
+    {
+      "suite": "test_gobernanza_freno_rollback.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.087,
+      "tail": "40/40 PASS"
+    },
+    {
+      "suite": "test_manifiesto.py",
+      "pass": true,
+      "rc": 0,
+      "s": 3.96,
+      "tail": "19/19 PASS"
+    },
+    {
+      "suite": "test_manifiesto_loader.py",
+      "pass": true,
+      "rc": 0,
+      "s": 2.735,
+      "tail": "13/13 PASS"
+    },
+    {
+      "suite": "test_metaloop_freno.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.166,
+      "tail": "23/23 PASS"
+    },
+    {
+      "suite": "test_piso_ruido_puerta.py",
+      "pass": true,
+      "rc": 0,
+      "s": 0.057,
+      "tail": "11/11 checks en verde"
+    }
+  ]
+}

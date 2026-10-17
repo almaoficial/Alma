@@ -1,0 +1,247 @@
+{
+  "fecha": "2026-10-16",
+  "preregistro": "/home/hatch/workspace/alma-prototype/preregistro-recalibracion-delta-v3-2026-10-16.md",
+  "preregistro_md5": "5d4d51875850c160fde4cf30d15f1239",
+  "B": 5000,
+  "z": 2.0,
+  "seed": 12345,
+  "escala_delta": "media por bloque (totales / 24)",
+  "paso0": {
+    "identicas_10_de_10": true,
+    "max_diferencia_absoluta": 0.0,
+    "reg_pol_base": {
+      "0": 71.0,
+      "1": 83.0,
+      "2": 90.0,
+      "3": 84.0,
+      "4": 81.0
+    },
+    "duracion_evaluacion_completa_s": 0.0847,
+    "duracion_paso0_s": 0.847,
+    "duracion_protocolo_estimada_s": 11.36,
+    "umbral_1h_superado": false
+  },
+  "pool": {
+    "ids": [
+      4000,
+      4001,
+      4002,
+      4003,
+      4004,
+      4005,
+      4006,
+      4007,
+      4008,
+      4009,
+      4010,
+      4011,
+      4012,
+      4013,
+      4014,
+      4015,
+      4016,
+      4017,
+      4018,
+      4019,
+      4020,
+      4021,
+      4022,
+      4023,
+      4024,
+      4025,
+      4026,
+      4027,
+      4028,
+      4029
+    ],
+    "reg_pol": {
+      "4000": 88.0,
+      "4001": 86.0,
+      "4002": 83.0,
+      "4003": 77.0,
+      "4004": 77.0,
+      "4005": 69.0,
+      "4006": 86.0,
+      "4007": 77.0,
+      "4008": 90.0,
+      "4009": 104.0,
+      "4010": 82.0,
+      "4011": 60.0,
+      "4012": 80.0,
+      "4013": 85.0,
+      "4014": 79.0,
+      "4015": 72.0,
+      "4016": 84.0,
+      "4017": 76.0,
+      "4018": 87.0,
+      "4019": 84.0,
+      "4020": 93.0,
+      "4021": 68.0,
+      "4022": 93.0,
+      "4023": 82.0,
+      "4024": 70.0,
+      "4025": 76.0,
+      "4026": 79.0,
+      "4027": 80.0,
+      "4028": 86.0,
+      "4029": 84.0
+    },
+    "duracion_s": 0.509,
+    "virginidad": "barrido amplio de §5.6 repetido antes de correr (375 archivos JSON/JSONL del árbol completo, 373 parseados; los 2 no parseables inspeccionados en texto): pool 0 hits; panel solo hits GSM8K declarados en §5.6 (maquinaria ajena). Detalle: barrido_virginidad.json"
+  },
+  "paso1": {
+    "varianza_entre_bloques_dentro_de_replica_pool": {
+      "media": 2.6029589371980673,
+      "sd_bloques_tipica": 1.613368816234548
+    },
+    "varianza_entre_replicas_del_reg_pol": {
+      "pool_fresco_30": {
+        "varianza": 74.80574712643678,
+        "sd": 8.649031571594405,
+        "media": 81.23333333333333
+      },
+      "panel_historico_5_referencia": {
+        "varianza": 47.699999999999996,
+        "sd": 6.906518659932803,
+        "media": 81.8
+      }
+    },
+    "varianza_medicion_repetida": 0.0,
+    "varianza_medicion_repetida_nota": "Paso 0: 10/10 idénticas, max_dif = 0 (H2 verificada)",
+    "varianza_juez_en_el_camino_del_delta": 0.0,
+    "varianza_juez_nota": "0 por construcción: no hay LLM en el camino del Δ (§11.1); se declara, no se estima",
+    "sigma_hat": 8.649,
+    "sigma_usado": 9.04,
+    "regla_sigma": "σ_usado = max(σ̂_pool, 9,04) SOLO para el piso de adopción; la validación (Paso 3) usa σ̂_pool sin max (§2.2)",
+    "clausula_regimen": {
+      "umbral": 11.3,
+      "sigma_hat_supera_umbral": false
+    }
+  },
+  "paso2_control_A": {
+    "delta_A_escala_delta": 0.532,
+    "sd_s": 0.266,
+    "sd_d_in": 0.2918,
+    "sd_d_ho": 0.347,
+    "duracion_s": 0.644,
+    "reproduce_0.5331": true,
+    "desvio_vs_0.5331": 0.0011
+  },
+  "paso3a_empirico_3_2": {
+    "delta_totales": 12.8467,
+    "delta_escala_delta": 0.5353,
+    "sd_s_totales": 6.4234,
+    "sd_d_in_totales": 7.0161,
+    "sd_d_ho_totales": 8.5818,
+    "duracion_s": 0.161,
+    "mecanica_sorteo": "rng.choice(30, size=10, replace=False); P=idx[0:5] (train 0:3, ho 3:5), Q=idx[5:10] (train 5:8, ho 8:10); default_rng(12345) — mecánica de la v1, pool de 30 (§7 Paso 3)"
+  },
+  "paso3b_parametrico_3_2_sigma_hat": {
+    "sd_d_in_totales": 7.1542,
+    "sd_d_ho_totales": 8.6184,
+    "sd_in_teorico_totales": 7.0619,
+    "sd_ho_teorico_totales": 8.649,
+    "sd_s_totales": 6.4191,
+    "delta_totales": 12.8383,
+    "delta_escala_delta": 0.5349,
+    "mecanica": "default_rng(12345) fresco; Δ_in = normal(0, σ√(2/n_in), 5000), luego Δ_ho = normal(0, σ√(2/n_ho), 5000); s = max; δ = 2·sd(s) ddof=1; escala δ = totales / 24"
+  },
+  "paso3c_parametrico_3_2_sigma_usado_informativo": {
+    "sd_d_in_totales": 7.4776,
+    "sd_d_ho_totales": 9.008,
+    "sd_in_teorico_totales": 7.3811,
+    "sd_ho_teorico_totales": 9.04,
+    "sd_s_totales": 6.7093,
+    "delta_totales": 13.4186,
+    "delta_escala_delta": 0.5591,
+    "mecanica": "default_rng(12345) fresco; Δ_in = normal(0, σ√(2/n_in), 5000), luego Δ_ho = normal(0, σ√(2/n_ho), 5000); s = max; δ = 2·sd(s) ddof=1; escala δ = totales / 24"
+  },
+  "paso3_validacion_H4": {
+    "empirico_escala_delta": 0.5353,
+    "parametrico_sigma_hat_escala_delta": 0.5349,
+    "diferencia_absoluta": 0.0004,
+    "tolerancia": 0.1,
+    "valida": true,
+    "especificacion": "§2.2 de la v3: paramétrico con σ̂_pool vs empírico del MISMO pool (mismo pool, mismo σ)",
+    "referencia_informativa_no_puerta": {
+      "parametrico_sigma_usado_escala_delta": 0.5591,
+      "piso_v1_3_2": 0.5623,
+      "desvio_vs_v1": 0.0032,
+      "empirico_vs_v1": 0.027
+    }
+  },
+  "paso4_parametrico_18_12": {
+    "sd_d_in_totales": 3.0527,
+    "sd_d_ho_totales": 3.6775,
+    "sd_in_teorico_totales": 3.0133,
+    "sd_ho_teorico_totales": 3.6906,
+    "sd_s_totales": 2.7391,
+    "delta_totales": 5.4781,
+    "delta_escala_delta": 0.2283,
+    "mecanica": "default_rng(12345) fresco; Δ_in = normal(0, σ√(2/n_in), 5000), luego Δ_ho = normal(0, σ√(2/n_ho), 5000); s = max; δ = 2·sd(s) ddof=1; escala δ = totales / 24"
+  },
+  "hipotesis": {
+    "H1_prima_piso_18_12_menor_o_igual_0.25": true,
+    "H2_varianza_medicion_cero": true,
+    "H3_sd_ho_mayor_sd_in": {
+      "control_A": true,
+      "empirico_3_2": true,
+      "parametrico_18_12": true
+    },
+    "H4_validacion_estimador_v3": true
+  },
+  "flags_decision": {
+    "delta_P_18_12": 0.2283,
+    "delta_P_24_16": null,
+    "rama_18_12": "adoptar_primario",
+    "adoptado_segun_tabla": {
+      "delta_nuevo_escala_delta": 0.2283,
+      "delta_nuevo_totales": 5.4792,
+      "panel": "18/12",
+      "ids_train": [
+        400,
+        401,
+        402,
+        403,
+        404,
+        405,
+        406,
+        407,
+        408,
+        409,
+        410,
+        411,
+        412,
+        413,
+        414,
+        415,
+        416,
+        417
+      ],
+      "ids_heldout": [
+        600,
+        601,
+        602,
+        603,
+        604,
+        605,
+        606,
+        607,
+        608,
+        609,
+        610,
+        611
+      ],
+      "ids_e3_sin_cambio": [
+        500,
+        501
+      ]
+    },
+    "rareza_piso_a_adoptar_mayor_o_igual_delta_A": false,
+    "rareza_algun_piso_menor_0.05": false,
+    "sigma_hat_en_regimen": false,
+    "H4_valida": true
+  },
+  "estado": "PISOS_COMPUTADOS",
+  "duracion_total_s": 2.179
+}

@@ -1,0 +1,21 @@
+EVIDENCIA DE BLOQUEO DE PLATAFORMA — corrida del generador, 16/10/2026
+Modelo designado por la regla de reemplazo: xingchen-agi/xing4.0-29b-a4b:free
+Ruta: or_chat.py (skill openrouter), la existente del sistema.
+
+Intento 1 — generación real de la tanda (~22:24 EDT):
+  python3 correr_generador.py --generar --modelo "xingchen-agi/xing4.0-29b-a4b:free"
+  -> RuntimeError: or_chat falló (stderr vacío; or_chat reporta el
+     error como JSON en stdout y sale con código 1). Sin tanda
+     escrita, sin candidatos, sin evaluación. Log: generar.log.
+
+Sonda 1 — inmediata (~22:26 EDT), prompt mínimo:
+  or_chat --model xingchen-agi/xing4.0-29b-a4b:free --max-tokens 50
+  -> {"error": "HTTPError: HTTP Error 429: Too Many Requests"} EXIT=1
+
+Sonda 2 — espaciada (+4 min, ~22:31 EDT), prompt mínimo:
+  -> {"error": "HTTPError: HTTP Error 429: Too Many Requests"} EXIT=1
+
+Tres 429 consecutivos sobre el modelo designado: la plataforma
+impide generar. Veredicto según pre-registro §7 (bloqueo de
+plataforma, precedente El Probador 002b): CORRIDA NO REALIZADA.
+No se sustituyó modelo ni se pagó ninguna ruta.

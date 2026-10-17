@@ -44,12 +44,21 @@ SUPERFICIES_ALTO_IMPACTO = ("maquinaria", "nucleo")
 # -- configuración del servicio (defaults documentados arriba) ------------
 E3_HABILITADO = True
 MARGEN_MIN_DEFAULT = 5.0
-E3_REPS = [500, 501]
+# E3_REPS: [500, 501] desde la integración del 28/9 (provisional,
+# ver el punto 1 del encabezado). RECABLEADO 16/10/2026 por el
+# ciclo L1 (pre-registro preregistro-L1-panel-grande-2026-10-16.md
+# §3 — decisión declarada con su justificación: con 2 réplicas el
+# SE de media a sd 5,8 es 4,10, veto casi decorativo; con 24 es
+# 1,1840): E3 = [22000..22023], réplicas vírgenes verificadas con
+# el barrido amplio de §4 de ese pre-registro. Su rol no cambia:
+# veto de signo y tercera mirada ciega, no estimador.
+E3_REPS = list(range(22000, 22024))  # [22000..22023]
 # El meta-loop muta hiperparámetros del scaffold (no la maquinaria
 # probe/skip/gate/prior) → superficie "parametro" en la política E3.
 SUPERFICIE_METALOOP = "parametro"
-E3_DATOS_DESCRIPCION = ("stream mock held-out reservado para auditorías"
-                        " (réplicas 500-501, provisionales)")
+E3_DATOS_DESCRIPCION = ("stream mock reservado para el tercer split"
+                        " ciego (réplicas 22000-22023, ciclo L1 "
+                        "16/10/2026; antes 500-501 provisionales)")
 
 
 def resumen_config_e3():

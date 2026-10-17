@@ -87,7 +87,11 @@ def main():
     check("adopción no activa el freno", ra["freno_activo"] is False)
 
     # 7. Solo el humano desbloquea: freno limpio + evento auditado.
-    d = ml.desbloquear_freno(origen="humano")
+    #    (Arreglo 2026-10-16: la etiqueta `origen` ya no autoriza;
+    #    hace falta el token de ALMA_TOKEN_HUMANO. Fixture del test.)
+    os.environ["ALMA_TOKEN_HUMANO"] = "token-fixture-freno"
+    d = ml.desbloquear_freno(origen="humano",
+                             token="token-fixture-freno")
     check("desbloquear limpia el freno", d["freno_activo"] is False)
     check("desbloquear resetea la racha", d["racha_planas"] == 0)
     check("desbloqueo auditado en el ledger",

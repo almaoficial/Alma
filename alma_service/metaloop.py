@@ -11,8 +11,10 @@ Este módulo los importa, no los define ni los toca.
 
 Protocolo de adopción (idéntico al laboratorio hasta la puerta):
   sandbox → pre-registro en disco ANTES de la primera réplica →
-  A/B pareado (réplicas train [0,1,2], held-out [3,4] que el loop no ve
-  durante la búsqueda) → keep/revert greedy → PASS de la PUERTA DE DOS
+  A/B pareado (réplicas train [400..417], held-out [600..611] que el
+  loop no ve durante la búsqueda; panel 18/12 recableado el 16/10/2026
+  por la recalibración de δ v3 — antes [0,1,2]/[3,4]) → keep/revert
+  greedy → PASS de la PUERTA DE DOS
   SPLITS (fase 2.1: Δ_in ≥ 0 ∧ Δ_ho ≥ 0 ∧ max(Δ_in,Δ_ho) > 0) →
   E3 (integración 28/9): tercer split ciego (réplicas reservadas
   [500,501]); endurecimiento 28/9: E3 SIEMPRE exigido cuando los dos
@@ -35,6 +37,7 @@ meta-loop usara modelos reales, pasaría por el bucket 'metaloop'.
 """
 
 import hashlib
+import hmac
 import json
 import os
 import random
@@ -68,8 +71,27 @@ from alma_service.promotor import (  # noqa: E402
 
 # Mismo espacio de mutación validado en EXP56 (pre-registrado, acotado).
 SPACES = dict(e56.SPACES)
-TRAIN_REPS = list(e56.TRAIN_REPS)      # [0, 1, 2]
-HELDOUT_REPS = list(e56.HELDOUT_REPS)  # [3, 4]
+# Panel de evaluación de la puerta (ruta de este servicio).
+# Recableado 16/10/2026 por la recalibración de δ v3 (pre-registro
+# preregistro-recalibracion-delta-v3-2026-10-16.md §5.5; adopción
+# primaria §8; commit b834e3d): panel 18/12 — train [400..417],
+# held-out [600..611]. Reemplaza al panel histórico 3/2 ([0,1,2] /
+# [3,4], los alias de e56) SOLO en esta ruta: e56 conserva sus
+# réplicas (maquinaria del EXP56, intocada) y el E3 sigue en
+# [500,501] (alma_service/puerta_e3.py, sin cambio). El piso que
+# acompaña a este panel es PISO_RUIDO_DELTA = 5,4781 totales
+# (gate.py). Cambiar estos ids o el piso exige otro pre-registro.
+# Recableado 16/10/2026 por el ciclo L1 (pre-registro
+# preregistro-L1-panel-grande-2026-10-16.md §3 y §6.3; evento
+# recalibracion_delta_L1 del ledger): panel 72/48 — train
+# [20000..20071], held-out [21000..21047]; el E3 pasó a 24
+# réplicas [22000..22023] (alma_service/puerta_e3.py, decisión
+# declarada §3 del pre-registro L1). El panel 18/12 queda
+# superado. El piso que acompaña a este panel es
+# PISO_RUIDO_DELTA = 2,7391 totales ≡ δ = 0,1141 (gate.py).
+# Cambiar estos ids o el piso exige otro pre-registro.
+TRAIN_REPS = list(range(20000, 20072))    # [20000..20071]
+HELDOUT_REPS = list(range(21000, 21048))  # [21000..21047]
 RONDAS_DEFAULT = 8  # el servicio usa 8 (EXP56 usó 24); documentado.
 
 # Freno de estancamiento (idea 2, revisión nocturna 7/10): el meta-loop
@@ -213,9 +235,35 @@ class MetaLoop:
                                {"racha_planas": racha})
         return {"racha_planas": racha, "freno_activo": bool(freno)}
 
-    def desbloquear_freno(self, origen="humano"):
-        """Reanuda el loop tras revisar el estancamiento. Solo humano
-        (como el rollback): el loop nunca se desbloquea solo."""
+    def desbloquear_freno(self, origen="humano", token=None):
+        """Reanuda el loop tras revisar el estancamiento.
+
+        Autorización (arreglo 2026-10-16): SOLO un token humano
+        válido. El token esperado se lee de la variable de entorno
+        ALMA_TOKEN_HUMANO en el momento de la llamada — nunca vive en
+        el repo — y sin token configurado todo desbloqueo se rechaza
+        (fail-closed). El parámetro `origen` es solo una etiqueta de
+        auditoría que se asienta en el ledger: no autoriza nada por sí
+        mismo, venga con el valor que venga. Todo intento, aceptado o
+        rechazado, queda asentado en el ledger.
+        """
+        esperado = os.environ.get("ALMA_TOKEN_HUMANO") or ""
+        if not esperado:
+            motivo = "token_no_configurado"
+        elif not token or not hmac.compare_digest(str(token), esperado):
+            motivo = "token_invalido"
+        else:
+            motivo = None
+        if motivo is not None:
+            estado = self.estado_freno()
+            self._ledger_append({
+                "tipo": "metaloop_freno_desbloqueo_rechazado",
+                "origen": origen, "motivo": motivo})
+            self._emitir_ciclo("metaloop_freno_desbloqueo_rechazado",
+                               {"origen": origen, "motivo": motivo})
+            return {"desbloqueado": False, "motivo": motivo,
+                    "freno_activo": estado["freno_activo"],
+                    "racha_planas": estado["racha_planas"]}
         with self._con() as con:
             con.execute(
                 "UPDATE freno_estancamiento SET racha_planas = 0,"
@@ -225,7 +273,8 @@ class MetaLoop:
                              "origen": origen})
         self._emitir_ciclo("metaloop_freno_desbloqueado",
                            {"origen": origen})
-        return {"freno_activo": False, "racha_planas": 0}
+        return {"desbloqueado": True, "freno_activo": False,
+                "racha_planas": 0}
 
     # -- persistencia (aditiva) -------------------------------------------
     def _con(self):
@@ -431,7 +480,7 @@ class MetaLoop:
 
     # -- corrida ---------------------------------------------------------------
     def correr(self, seed=None, rondas=None, bloqueante=False,
-               contexto_disparo=None):
+               contexto_disparo=None, candidatos=None):
         """Lanza el loop RSO en background (nunca en el camino crítico).
 
         Devuelve inmediatamente {"aceptado": bool, ...}. Si ya hay una
@@ -440,6 +489,15 @@ class MetaLoop:
         contexto_disparo (opcional, fase 2.6): dict del trigger por trazas
         (p. ej. {"nuevas_trazas": N}) que se documenta en el pre-registro.
         No cambia el loop: solo contexto auditado.
+
+        candidatos (opt-in, 16/10/2026 — pre-registro del generador de
+        candidatos): lista de configuraciones completas del scaffold,
+        ya validadas en forma por alma_service.generador_candidatos.
+        Si viene, la corrida consume la tanda en orden como propuestas
+        (rondas = len(candidatos)) en vez de mutar con RSO; todo lo
+        demás — keep/revert en train, puerta de dos splits, E3, piso
+        de ruido, archivo, freno — es el camino normal, sin cambios.
+        Sin candidatos (default): la corrida RSO estándar de siempre.
         """
         if not self.presupuesto.autorizar(BUCKET_METALOOP, 0.0):
             return {"aceptado": False,
@@ -458,10 +516,12 @@ class MetaLoop:
                 return {"aceptado": False,
                         "motivo": "ya hay una corrida en curso"}
             self._estado["fase"] = "en_curso"
+            rondas_ef = (len(candidatos) if candidatos is not None
+                         else (rondas or self.rondas))
             self._hilo = threading.Thread(
                 target=self._correr_bg,
                 args=(seed if seed is not None else int(time.time()) % 100000,
-                      rondas or self.rondas, contexto_disparo),
+                      rondas_ef, contexto_disparo, candidatos),
                 daemon=True)
             self._hilo.start()
             hilo = self._hilo
@@ -488,7 +548,8 @@ class MetaLoop:
         except Exception:
             pass  # un ledger viejo/ilegible no frena el arranque
 
-    def _correr_bg(self, seed, rondas, contexto_disparo=None):
+    def _correr_bg(self, seed, rondas, contexto_disparo=None,
+                   candidatos=None):
         # Cherny (f): el meta-loop corre como ROUTINE — memoria compartida
         # (ledger, scaffold_activo, DBs), contexto NO compartido: cada
         # corrida reconstruye su estado efímero desde lo persistido. El
@@ -529,6 +590,11 @@ class MetaLoop:
             "contexto_disparo": contexto_disparo or {},
             "timestamp": time.time(),
         }
+        if candidatos is not None:
+            # La tanda del generador queda declarada en el pre-registro
+            # de la corrida (additivo: la corrida RSO no gana campos).
+            prereg["proponente"] = "generador_candidatos"
+            prereg["tanda_candidatos"] = [dict(c) for c in candidatos]
         d = os.path.dirname(os.path.abspath(self.db_path))
         pr_path = os.path.join(
             d, f"metaloop_preregistro_{int(time.time())}.json")
@@ -545,7 +611,24 @@ class MetaLoop:
                                                  TRAIN_REPS, cache)
         keeps = []
 
+        # Proponente opt-in: con tanda, producir() la consume en orden;
+        # sin tanda, None y la corrida es la RSO de siempre.
+        tanda_iter = iter(candidatos) if candidatos is not None else None
+
         def producir():
+            if tanda_iter is not None:
+                cand = dict(next(tanda_iter))
+                cambios = [k for k in sorted(cand)
+                           if cand[k] != estado["actual"][k]]
+                return {"candidato": cand, "clave": "scaffold_completo",
+                        "prop": {"clave": "scaffold_completo",
+                                 "anterior": dict(estado["actual"]),
+                                 "nuevo": dict(cand),
+                                 "descripcion": (
+                                     "tanda generador: " + "; ".join(
+                                         f"{k}: {estado['actual'][k]}"
+                                         f" -> {cand[k]}"
+                                         for k in cambios))}}
             # producir: muta un parámetro del scaffold (EXP56 keep/revert)
             cand, clave = self._proponer(rng, estado["actual"])
             return {"candidato": cand, "clave": clave,
@@ -577,9 +660,16 @@ class MetaLoop:
             delta_ronda = comp["mejora"]
             cand, clave = prop["candidato"], prop["clave"]
             if keep:
+                # En tanda (clave scaffold_completo) el de/a es la
+                # config completa; en RSO, el valor del parámetro.
+                de_val = (dict(estado["actual"])
+                          if clave == "scaffold_completo"
+                          else estado["actual"][clave])
+                a_val = (dict(cand) if clave == "scaffold_completo"
+                         else cand[clave])
                 keeps.append({"clave": clave,
-                              "de": estado["actual"][clave],
-                              "a": cand[clave],
+                              "de": de_val,
+                              "a": a_val,
                               "train_antes": estado["media_actual"],
                               "train_despues": obs["media_cand"]})
                 estado["actual"] = cand
@@ -776,16 +866,81 @@ class MetaLoop:
                 },
             }
 
+    # Orígenes que DESHACEN una adopción en vez de asentar una nueva:
+    # el rollback manual de revertir() y el revertir_adopcion del
+    # Promotor (que re-asienta el scaffold previo a una adopción).
+    _ORIGENES_DESHACER = ("rollback", "revertir_adopcion")
+
+    def _pila_adopciones(self):
+        """Pila de adopciones EN EFECTO, reproducida del historial de
+        scaffold_activo en orden cronológico.
+
+        La primera entrada es la base y nunca se deshace. Cada
+        asentamiento posterior que no es un deshacer se apila como
+        adopción en efecto, con el scaffold que había justo antes.
+        Cada deshacer (rollback manual o revertir_adopcion del
+        Promotor) desapila las adopciones que deshizo: desde el tope
+        hasta incluir la adopción cuyo scaffold previo coincide con
+        lo restaurado (así, revertir una adopción que no es la última
+        también desapila las que quedaron por encima). Si ninguna
+        coincide —entrada heredada inconsistente— no se desapila
+        nada: ante la duda se podrá saltar una adopción vieja, pero
+        jamás resucitar una ya sacada.
+
+        Devuelve [{"id", "scaffold", "previo", "origen", "es_base"}].
+        """
+        hist = self.historial_scaffold(n=100000)
+        hist.reverse()  # historial_scaffold viene DESC; a cronológico
+        pila = []
+        for fila in hist:
+            origen = fila["origen"] or ""
+            if not pila:
+                pila.append({"id": fila["id"],
+                             "scaffold": fila["scaffold"],
+                             "previo": None, "origen": origen,
+                             "es_base": True})
+                continue
+            if origen.startswith(self._ORIGENES_DESHACER):
+                restaurado = _canonical(fila["scaffold"])
+                corte = None
+                for j in range(len(pila) - 1, 0, -1):
+                    if _canonical(pila[j]["previo"]) == restaurado:
+                        corte = j
+                        break
+                if corte is not None:
+                    del pila[corte:]
+                continue
+            pila.append({"id": fila["id"],
+                         "scaffold": fila["scaffold"],
+                         "previo": pila[-1]["scaffold"],
+                         "origen": origen, "es_base": False})
+        return pila
+
     def revertir(self):
-        """Rollback: vuelve al scaffold anterior al último adoptado."""
-        hist = self.historial_scaffold(n=2)
-        if len(hist) < 2:
+        """Rollback manual: deshace la última adopción EN EFECTO.
+
+        Semántica (arreglo 2026-10-16): camina la pila de adopciones
+        en efecto (ver _pila_adopciones), no las dos últimas filas
+        del historial. Restaura el scaffold previo a la adopción más
+        reciente que ningún rollback haya deshecho todavía y lo
+        asienta como deshacer; por eso un segundo revertir() deshace
+        la adopción ANTERIOR — nunca restaura la que el primer
+        rollback sacó (la versión anterior tomaba historial[1] y,
+        como el propio rollback se asentaba, el segundo rollback
+        re-adoptaba lo revertido). Sin adopciones en efecto devuelve
+        revertido=False con motivo.
+        """
+        pila = self._pila_adopciones()
+        if len(pila) < 2:
             return {"revertido": False,
-                    "motivo": "no hay scaffold anterior"}
-        anterior = hist[1]["scaffold"]
+                    "motivo": "no hay adopción sin revertir"}
+        cima = pila[-1]
+        anterior = cima["previo"]
         self._asentar_scaffold(anterior, origen="rollback_manual")
         self._ledger_append({"tipo": "rollback",
-                             "restaurado": anterior})
+                             "restaurado": anterior,
+                             "adopcion_deshecha_id": cima["id"],
+                             "adopcion_deshecha_origen": cima["origen"]})
         self._emitir_ciclo("metaloop_rollback",
                            {"restaurado": anterior})
         return {"revertido": True, "scaffold": anterior}
