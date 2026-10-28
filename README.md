@@ -245,3 +245,13 @@ Lo que todavía **no** prueba, y lo digo en el README porque es el punto: **el m
 ## Licencia
 
 © 2026 Alejandro Nahuel Salusso (ALMA Labs LLC, en formación). Todos los derechos reservados — ver `LICENSE`. El código está publicado para ser leído, estudiado y verificado; esa es su función.
+
+### ReviewBench line — measured results (Oct 2026)
+- Baseline run #298 (25 real PRs, official scoring), adjudicated finding by finding: grounded precision 53.6% (89/166), recall 18.75% (66/352), F1 27.8%. Cost US$20.41. Still unbeaten.
+- Gate 1.4.1 autopsy (US$0 replay over the 166 baseline findings): 0 accepted, 17 firm rejects, 149 (90%) needs_validation — no rule existed for general claims.
+- Gate 1.5.0 (bar written before the code): 32 emitted, precision 59.4% among emitted; verdict: NOT ADOPTED. It killed false claims (75%) and true ones (78.7%) at the same rate — it selected for tidy paperwork, not truth.
+- Run #373 (reviewer v2.4): F1 16.6% (P 72.5%, R 9.4%), cost US$14.40. Defeat against the pre-registered bar.
+- Run #374 (budget recalibration as the only variable): F1 17.3% (P 72.2%, R 9.8%), cost US$20.33. Autopsy (US$0): the budget hypothesis died — recall stayed at 9.8% because claims were being discarded at conversion over an empty pattern field, before the gate ever saw them: 49 discards, 34 of them overlapping gold true positives.
+- Gate 1.5.1: extraction before discard — a claim's own prose is mined for a concrete pattern before any form-based rejection. Built and verified dry (suite 410/410), pre-registered before the run.
+- Run #382 (gate 1.5.1): F1 23.2% (P 73.3%, R 13.8%), 108 findings vs 80 in #374, cost US$19.71. Recall rose 9.8% → 13.8% with precision intact — the predicted direction — but under the pre-registered bar (win = F1 ≥ 35.4% and net ≥ +133) the verdict is "no signal": one run cannot certify an effect this size. Nothing adopted.
+- Total spent on the line: US$143.09 across 6 runs. Every measurement is published, including the defeats.
